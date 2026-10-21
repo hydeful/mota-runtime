@@ -1,0 +1,10 @@
+{
+  "source_commit": "63bdd80216edf825d887bc5316eb0ad78e7250ad",
+  "failures": [
+    {"step":"initial environment probe","observed":"ModuleNotFoundError: No module named torch","resolution":"Installed original P45 Torch2.14.1+cpu / NumPy2.3.5 in a separate venv; system environment untouched"},
+    {"step":"sparse source checkout","observed":"git sparse-checkout add does not accept --no-cone in this Git version","resolution":"Retained the already configured non-cone mode and used supported add syntax"},
+    {"step":"first background exploratory smoke","observed":"Duplicate start correctly rejected; a later stop request arrived after its 30-second slice, so that attempt alone did not prove safe stopping a live collector","resolution":"Replaced evidence with tests/lifecycle.py which observes live progress, stops, confirms stopped, resumes and observes additional decisions"},
+    {"step":"public repository creation","observed":"GraphQL createRepository: Resource not accessible by integration; REST POST /user/repos: HTTP403 Resource not accessible by integration","resolution":"Blocked on repository-creation capability, not user publication authorization. Finish local code/tests and private handoff; user must create an empty public hydeful/mota-p45-runtime repository accessible to the current GitHub connection. Public publishing/download tests remain unverified."}
+  ],
+  "algorithm_changes": false
+}
