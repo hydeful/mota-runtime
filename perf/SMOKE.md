@@ -76,3 +76,13 @@ Service创建失败也会回收已创建的服务。close的shutdown超时/异�
 安装继续功能核查后复用CPU/CUDA环境，代码更新不触发整套CUDA重装。首次fetch失败留下的空.git可重试；核对完整提交对象和工作区，有用户文件/修改则拒绝覆盖。必须安装CUDA时显示实时输出及持久日志位置，实验计时尚未启动。
 
 本地CPU真实计算、受控输入、逻辑模拟和设备不可用分别记录。没有AutoDL/CUDA实证，不能宣布云端诊断通过；也不能据此宣布性能改善或自动安排一小时实验。
+
+## 本次固定发布命令
+
+固定实验代码：`3a661c965b89886580e9d99b964a7d62f0e26b64`。复制这一条，安装成功后后台启动一次新的`smoke2`：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/hydeful/mota-runtime/3a661c965b89886580e9d99b964a7d62f0e26b64/perf/install.sh -o /root/autodl-tmp/p48-smoke2-install.sh && bash /root/autodl-tmp/p48-smoke2-install.sh 3a661c965b89886580e9d99b964a7d62f0e26b64 auto && /root/autodl-tmp/p48-perf/bin/mota-smoke start smoke2
+```
+
+本发布已做匿名固定源码下载、文件核对、CPU环境复用安装、自检和本地实际CPU路径诊断。GPU和AutoDL实际诊断仍待用户结果包；安装成功、云端诊断通过和性能改善是三个不同结论。
