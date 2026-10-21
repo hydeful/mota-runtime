@@ -2,6 +2,14 @@
 
 本模式检查执行路径，不提供加速、正式产能或学习增强结论。旧CPU入口、`cloud600`、`experiments/probe1`和旧预算均不修改、不读取。所有输出在独立的`smoke-tests/名称/`。
 
+固定实验代码：`7daf30117f3c8228b409a42971d67ba684a4af69`。先复制这一条，安装成功后仅启动一次独立冒烟：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/hydeful/mota-runtime/7daf30117f3c8228b409a42971d67ba684a4af69/perf/install.sh -o /root/autodl-tmp/p48-smoke-install.sh && bash /root/autodl-tmp/p48-smoke-install.sh 7daf30117f3c8228b409a42971d67ba684a4af69 auto && /root/autodl-tmp/p48-perf/bin/mota-smoke start smoke1
+```
+
+安装优先检查并复用`installation.json`中原CPU/CUDA解释器：检查固定软件版本、NumPy转换、CUDA可用性及真实小张量反向计算，代码更新本身不会触发整套CUDA下载。验证失败才尝试独立环境安装，不修改原CPU入口。无可用CUDA环境时明确记设备不可用，不声称GPU覆盖通过。
+
 安装后运行`/root/autodl-tmp/p48-perf/bin/mota-smoke start smoke1`。安装另计，从start命令创建控制状态起，环境检查、预热、失败、调度和打包共享最多600秒绝对截止；可以提前结束。关闭终端继续。不会自动重跑、自动追加预算或启动一小时实验。名称已存在则拒绝覆盖。
 
 日常单行命令：
