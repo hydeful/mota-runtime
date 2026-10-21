@@ -11,7 +11,7 @@ import time
 import zipfile
 from perf.common import dump,load,utc,stamp
 from perf.smoke_export import export
-from perf.smoke_inputs import valid,valid_reference
+from perf.smoke_inputs import valid,valid_reference,candidate_micro
 from perf.control import HOME,SOURCE,revision,lock,alive,environment,child_env,task
 
 # Actual dependencies, not an artificial fixed sequence. Independent paths have[].
@@ -67,15 +67,15 @@ def gpu_inputs(root,finished):
     reference=valid_reference(root/'cases/micro',inputs) if selected and finished.get('micro')=='pass' else None
     if reference:return selected,reference,source,link,detail
     backup=valid(root/'reserve');ref=valid_reference(root/'reserve/cases/micro',backup) if backup else None
-    if ref:return root/'reserve',ref,'validated_fallback_with_matching_CPU_reference','fail' if finished.get('micro') in ('fail','timeout') else 'not_verified','primary CPU reference missing/invalid; matching input+reference bundle substituted'
+    if ref:return root/'reserve',ref,'validated_fallback_with_matching_CPU_reference','fail' if finished.get('micro') in ('fail','timeout','pass') else 'not_verified','primary CPU reference missing/invalid; matching input+reference bundle substituted'
     return None,None,'missing','not_verified','missing CPU golden bound to same model and encoded samples; no validated matching backup'
 
 def real_worker(root,state,held,cap,finished):
     from perf.gates import choose
-    micro=load(root/'cases/micro/micro.json',{})
+    micro=candidate_micro(root/'cases/micro/micro.json')
     source='upstream_micro';link='pass'
     if finished.get('micro')!='pass' or micro.get('hash_correctness',{}).get('status')!='pass':
-        micro=load(root/'reserve/cases/micro/micro.json',{});source='validated_fallback_micro';link='fail' if finished.get('micro') in ('fail','timeout') else 'not_verified'
+        micro=candidate_micro(root/'reserve/cases/micro/micro.json');source='validated_fallback_micro';link='fail' if finished.get('micro') in ('fail','timeout','pass') else 'not_verified'
     if micro.get('hash_correctness',{}).get('status')=='pass':
         candidates=[(sum(micro['hash']['copy_sha256']),{'label':'screen-reference','options':{}}),
                     (sum(micro['hash']['memoryview_sha256']),{'label':'screen-hash','options':{'direct_hash':True}})]
