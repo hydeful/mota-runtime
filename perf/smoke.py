@@ -81,11 +81,14 @@ def controller(root):
                     if name=='controlled_timeout':row['expected_timeout_observed']=status=='timeout'
                 state['coverage'].append(row);finished[name]=row['status'];coverage(root,state);dump(root/'state.json',state)
             # Always retain scheduler/exception/export evidence, independent of earlier numeric failures.
-            check=schedule_check(root,state,held);dump(root/'scheduler.json',check)
-            state['coverage'].append({'path':'candidate_selection_schedule','status':'pass','seconds':0,'detail':check['detail']})
+            if (root/'STOP').exists() or time.time()>deadline-30:
+                state['coverage'].append({'path':'candidate_selection_schedule','status':'not_run','seconds':0,'detail':'stopped or final pack reserve; no new subprocesses'})
+            else:
+                check=schedule_check(root,state,held);dump(root/'scheduler.json',check)
+                state['coverage'].append({'path':'candidate_selection_schedule','status':'pass','seconds':0,'detail':check['detail']})
             fail=next((x for x in state['coverage'] if x['path']=='controlled_failure'),{})
             timeout=next((x for x in state['coverage'] if x['path']=='controlled_timeout'),{})
-            ok=fail.get('expected_fault_observed') and timeout.get('expected_timeout_observed')
+            ok=fail.get('expected_fault_observed') and timeout.get('expected_timeout_observed') and any(x['path']=='candidate_selection_schedule' and x['status']=='pass' for x in state['coverage'])
             state['coverage'].append({'path':'failure_isolation','status':'pass' if ok else 'not_run','seconds':0,'detail':'expected failure then timeout then scheduler/export continued; injected faults are not candidate passes'})
             state['status']='stopped' if (root/'STOP').exists() else 'finished'
         except Exception as exc:
