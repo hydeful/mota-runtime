@@ -22,7 +22,7 @@ def export(root,state,finalizing=False):
             p=root/name
             if p.is_file():add(name,p.read_bytes())
         info={k:state.get(k) for k in ('name','code_commit','budget_seconds','started_utc','deadline_utc','status','installation','finished_utc','execution_elapsed_seconds','selection','decisions')}
-        info['attempts']=[{k:r.get(k) for k in ('label','directory','status','exit_code','wall_seconds','primary_error','cleanup','python','trial')} for r in state['attempts']]
+        info['attempts']=[{k:r.get(k) for k in ('label','directory','status','exit_code','wall_seconds','all_related_cpu_seconds','sampled_peak_sum_rss_bytes','resource_sampling_seconds','gpu_sampling_seconds','primary_error','cleanup','python','trial')} for r in state['attempts']]
         js('run-info.json',info)
         for p in sorted((root/'cases').glob('*/*.json')):
             # Case summaries/negative controls only; no recursively copied training ledgers.
