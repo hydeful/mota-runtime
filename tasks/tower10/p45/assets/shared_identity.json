@@ -1,0 +1,14 @@
+{
+  "repository": "hydeful/mota-project",
+  "sourceCommit": "8555d2242d9f2e8ccd23569abce60ee7857ee1ef",
+  "task": "tower10-boss-A-v2-shop-allowed",
+  "initialSHA256": "80999d2e01da8253510c96bc2f52ba9b61fae19b74516b76bb58f25cd90a05e6",
+  "rulesSHA256": "b78b162ef5a4e9ff353241eebc9f646cef7ed2e3b583f601ed3d1b81c83e806d",
+  "engineSHA256": "f602d445d832904eb54a030bc0bf8ebf4e9b9d76ea8f2860fccd34d8b07355d6",
+  "validation": "fixed fast topology replay, no independent Simulator or H5 recertification",
+  "routeFields": [
+    "topology_actions",
+    "final_result",
+    "end_flag"
+  ]
+}

@@ -1,0 +1,3 @@
+# P45 evidence runtime. CPU wheel; preinstalled exact versions are reused.
+torch==2.14.1
+numpy==2.3.5

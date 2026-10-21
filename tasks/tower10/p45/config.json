@@ -1,0 +1,116 @@
+{
+  "algorithm": "A1.1",
+  "engineering": "E1.3",
+  "topology": {
+    "version": "T1.0",
+    "source_freeze": "d8012475702c948a4af0424930abddd6ac3d7129",
+    "original_name": "T-P41-interaction-v1"
+  },
+  "network": {
+    "blocks": 2,
+    "channels": 32,
+    "input": [
+      550,
+      13,
+      13
+    ],
+    "policy": 713,
+    "value": "tanh",
+    "initialization_seed": 4201
+  },
+  "search": {
+    "new_simulations": 100,
+    "cpuct": 1.25,
+    "cpuct_kind": "constant",
+    "unvisited_Q": 0,
+    "single_player_no_sign_flip": true,
+    "gamma": 1,
+    "root_dirichlet_alpha": 0.3,
+    "root_noise_mix": 0.25,
+    "sample_first_interactions": 30,
+    "arbitrary_depth_cutoff": null,
+    "plan_takeover": false,
+    "PV_cache": "model hash + schema + complete float32 observation SHA256; raw logits/value; LRU20000",
+    "reuse": "same-model same-episode subtree only",
+    "pv_cache_entries": 20000
+  },
+  "reward": {
+    "goal_hp_scale": 6000,
+    "bounds": {
+      "hp": 5976,
+      "atk": 37,
+      "def": 47,
+      "money": 662,
+      "yellowKey": 66,
+      "blueKey": 5,
+      "redKey": 1
+    },
+    "H": "hp/5976",
+    "D": "(atk/37+def/47)/2",
+    "K": "(yellowKey/66+blueKey/5+redKey/1)/3",
+    "M": "money/662",
+    "S": "(H+D+K+M)/4",
+    "failure": "-1+0.9*S",
+    "clip": false
+  },
+  "training": {
+    "replay_window": 8192,
+    "min_new_positions": 512,
+    "logical_cohort": 4,
+    "batch": 64,
+    "exposures_per_new_position": 8,
+    "optimizer": "SGD",
+    "momentum": 0.9,
+    "lr": 0.01,
+    "manual_conv_linear_L2": 0.0001,
+    "optimizer_weight_decay": 0
+  },
+  "evaluation": {
+    "checkpoints": [
+      "N0",
+      "N_floor(final_generation/2)",
+      "final"
+    ],
+    "root_noise": false,
+    "choice": "maxN",
+    "new_simulations": 800,
+    "enters_training": false,
+    "checkpoint_selection_rule": "Use the last published final model, and the integer midpoint generation floor(final_generation/2), strictly between N0 and final. No choice based on evaluation outcomes.",
+    "equal_time_snapshots": [
+      "original first60min last durable published model",
+      "combination first60min last model_ready snapshot"
+    ]
+  },
+  "diagnosis_trigger": {
+    "finished_training_episodes": 8,
+    "committed_decisions": 512,
+    "collection_active_seconds": 1800,
+    "condition": "first reached; never terminates a game"
+  },
+  "advance_diagnostics": [
+    "max floor",
+    "distinct reached floors",
+    "legal T1 count",
+    "legal battle count",
+    "legal door count",
+    "legal growth/supply count",
+    "snapshots at t=0/30/60/...; never rewards"
+  ],
+  "runtime": {
+    "torch_threads": 1,
+    "torch_interop_threads": 1,
+    "deterministic_algorithms": true,
+    "checkpoint_every_search_simulations": 400,
+    "checkpoint_every_decisions": 1
+  },
+  "budget": {
+    "session_start_utc": "2026-10-21T00:40:00+00:00",
+    "deadline_utc": "2026-10-21T02:40:00+00:00",
+    "budget_seconds": 7200,
+    "task_source_commit": "ad92f9b9ee8fa397c64b7a12812acbe71eac3e30",
+    "model": "GPT-6 Codex (session supplied identity)",
+    "reasoning_setting": "not exposed; cannot switch; requested low"
+  },
+  "stage": "P45",
+  "baseline": "V0"
+}
