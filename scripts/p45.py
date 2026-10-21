@@ -142,14 +142,15 @@ def worker(root, seconds, resume):
         signal.signal(signal.SIGINT, stop)
         remaining = max(0, min(seconds, deadline - time.time()))
         # The child inherits the flock, so supervisor death cannot permit a second writer.
-        p = subprocess.Popen([sys.executable, '-B', '-m', 'tasks.tower10.p45_v0', 'collect', '--run', str(root / 'state'), '--seconds', str(remaining)], cwd=SOURCE, env=env(), pass_fds=(held.fileno(),))
+        p = subprocess.Popen([sys.executable, '-B', str(SOURCE / 'scripts/core_entry.py'), 'collect', '--run', str(root / 'state'), '--seconds', str(remaining)], cwd=SOURCE, env=env(), pass_fds=(held.fileno(),))
         while p.poll() is None:
             organize(root)
             time.sleep(.5)
         rc = p.wait()
         organize(root)
         ended = time.time()
-        c.update(core_returncode=rc, finished_utc=dt.datetime.now(dt.timezone.utc).isoformat(), actual_invocation_seconds=ended-began, post_budget_cleanup_seconds=max(0, ended-min(began+seconds, deadline)), state='abnormal_exit' if rc else ('stopped' if (root / 'state/STOP').exists() else ('budget_finished' if ended >= deadline else 'slice_finished')))
+        window = read(root / 'state/p48-window.json', {})
+        c.update(core_returncode=rc, finished_utc=dt.datetime.now(dt.timezone.utc).isoformat(), actual_invocation_seconds=ended-began, collection_window=window, post_budget_cleanup_seconds=window.get('post_cutoff_cleanup_seconds'), state='abnormal_exit' if rc else ('stopped' if (root / 'state/STOP').exists() else ('budget_finished' if ended >= deadline else 'slice_finished')))
         write(root / 'control.json', c)
         if rc:
             raise SystemExit(rc)

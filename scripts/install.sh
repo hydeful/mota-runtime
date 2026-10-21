@@ -7,6 +7,9 @@ export P45_HOME
 if [[ ! -d $(dirname "$P45_HOME") ]]; then echo 'Data parent missing; set P45_HOME to a verified data disk' >&2; exit 1; fi
 mkdir -p "$P45_HOME" "$P45_HOME/bin" "$P45_HOME/envs"
 findmnt -T "$P45_HOME"
+if [[ $P45_HOME == /root/autodl-tmp/p45 && $(findmnt -n -o TARGET -T "$P45_HOME") == / ]]; then
+  echo '/root/autodl-tmp resolves to the system root filesystem; data disk not confirmed' >&2; exit 1
+fi
 available=$(df -PB1 "$P45_HOME" | awk 'NR==2 {print $4}')
 if (( available < 3000000000 )); then echo 'Need at least 3GB free on data disk' >&2; exit 1; fi
 python3 -c 'import sys; assert sys.version_info[:2] == (3,12), "Python 3.12 required"'
