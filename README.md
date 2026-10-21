@@ -128,3 +128,5 @@ NAME 只能用字母、数字、下划线、短横线。已有目录明确拒绝
 
 新的独立实验入口、安装和一小时总预算协议见 [perf/README.md](perf/README.md)。
 它不修改现有 `p45` 环境、`cloud600` 或默认算法。CPU/GPU候选及性能结论须在AutoDL实际运行后判断。
+
+P48性能探测固定代码提交：`7a53d1220bdf21eb7a18e1ae65bc33bdff9f3bab`；安装与后台命令见perf说明。该版本的AutoDL矩阵和CUDA收益尚未实测。

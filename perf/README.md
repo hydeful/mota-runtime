@@ -32,10 +32,10 @@
 
 ## 安装（不启动实验，不动旧环境）
 
-交付消息提供本版本完整40位提交。以该值替换COMMIT，单行执行：
+固定实验代码提交：`7a53d1220bdf21eb7a18e1ae65bc33bdff9f3bab`。本地CPU安装、正确性、后台停止恢复及导出已验证；CUDA和AutoDL完整矩阵待验证。单行安装：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/hydeful/mota-runtime/COMMIT/perf/install.sh -o /root/autodl-tmp/p48-perf-install.sh && bash /root/autodl-tmp/p48-perf-install.sh COMMIT auto
+curl -fsSL https://raw.githubusercontent.com/hydeful/mota-runtime/7a53d1220bdf21eb7a18e1ae65bc33bdff9f3bab/perf/install.sh -o /root/autodl-tmp/p48-perf-install.sh && bash /root/autodl-tmp/p48-perf-install.sh 7a53d1220bdf21eb7a18e1ae65bc33bdff9f3bab auto
 ```
 
 安装写入 `/root/autodl-tmp/p48-perf`，按提交隔离源码/CPU环境/GPU环境。
@@ -73,7 +73,7 @@ CUDA12.8源没有2.14.1 wheel，不会误把CPU安装当GPU。
 
 暂停的600秒片段永远不拼成一个完整600秒结果。resume先收回已完整完成的结果；
 不足窗口的尝试保留为未完成，时间足够才开始单独的新尝试，仍受原总截止时间约束。
-候选自身断点的模型/优化器/RNG/数据恢复在学习门禁中真实核验。
+候选自身断点的模型/优化器/RNG/数据恢复在学习门禁中真实核验。结果ZIP用于分析，不含恢复完整训练所需权重；同机恢复须保留完整实验目录。
 如安装新版本后需恢复旧实验，应使用其原源码提交对应的CPU环境，代码不混用。
 
 程序为完整对照/重复保留预算，临近截止不再开新项；提前停止计算，为保存和导出留余量。
