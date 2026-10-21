@@ -28,6 +28,7 @@ class AcceptanceTests(unittest.TestCase):
             with self.subTest(status=status):
                 x=case_assessment('service',{'status':'pass'},record(clean(remaining=[{'pid':11,'status':status}],complete=False)))
                 self.assertEqual(x['status'],'fail');self.assertEqual(x['reaping_status'],'fail')
+                self.assertEqual(x['live_process_status'],'pass' if status=='zombie' else 'fail')
     def test_cleanup_error_not_hidden_by_empty_remaining(self):
         for c in (clean(complete=False),clean(errors=['wait failed'])):
             x=case_assessment('service',{'status':'pass'},record(c))

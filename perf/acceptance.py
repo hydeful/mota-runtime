@@ -13,12 +13,13 @@ def cleanup_assessment(cleanup):
     unreadable=c.get('unreadable_process_count')
     scope_known=type(unreadable) is int and unreadable==0
     live_left=[r for r in (remaining if known_remaining else []) if isinstance(r,dict) and r.get('status') in LIVE]
-    live_status='fail' if live or live_left else ('pass' if known_before and known_remaining and not unknown and not remaining and scope_known else 'unknown')
+    unknown_left=[r for r in (remaining if known_remaining else []) if not isinstance(r,dict) or r.get('status') not in LIVE|TERMINAL]
+    live_status='fail' if live or live_left else ('pass' if known_before and known_remaining and not unknown and not unknown_left and scope_known else 'unknown')
     if c.get('complete') is False or (known_remaining and remaining) or (isinstance(errors,list) and errors):reaping='fail'
     elif c.get('complete') is True and known_remaining and not remaining and isinstance(errors,list) and not errors:reaping='pass'
     else:reaping='unknown'
     return {'live_process_status':live_status,'reaping_status':reaping,
-            'live_before':live,'terminal_before':terminal,'unknown_before':unknown,
+            'live_before':live,'terminal_before':terminal,'unknown_before':unknown,'unknown_remaining':unknown_left,
             'live_remaining':live_left,'observation_scope_confirmed':scope_known,
             'terminal_records_successfully_reaped':len(terminal) if reaping=='pass' else None,
             'issues':([ 'unexpected live descendants after direct-child exit' ] if live or live_left else [])+
