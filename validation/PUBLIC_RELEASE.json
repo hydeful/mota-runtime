@@ -1,0 +1,309 @@
+{
+  "public_repository": "https://github.com/hydeful/mota-runtime",
+  "fixed_runtime_commit": "f0825385c6bb5914b653679d14635a2b1393cf87",
+  "baseline_commit": "63bdd80216edf825d887bc5316eb0ad78e7250ad",
+  "anonymous_git_clone": "PASS: Git system/global config disabled, credential.helper empty, http.extraHeader empty, prompts disabled. No GitHub token supplied to Git. Inherited network proxy retained.",
+  "anonymous_codeload": {
+    "url": "https://codeload.github.com/hydeful/mota-runtime/zip/f0825385c6bb5914b653679d14635a2b1393cf87",
+    "http_status": 200,
+    "authorization_header_sent": false,
+    "archive_bytes": 213346,
+    "sha256": "3ba2f6ee4d3925a16ddb86da356c537b7891b452cf0bc7563076f77949415f0e",
+    "exact_file_set": true
+  },
+  "raw_bootstrap_readback": true,
+  "files_count": 54,
+  "all_bytes_match": true,
+  "unchanged_original_runtime_files": 22,
+  "changes_from_prior_prepared_release": [
+    "DEPLOYMENT.json",
+    "README.md",
+    "scripts/bootstrap.sh",
+    "validation/PUBLICATION_UPDATE.json"
+  ],
+  "repeat_600_run": false,
+  "AutoDL_tested": false,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 53,
+      "sha256": "a1b0186de29f1a74c8411ac0b8d04ad86aafc20f9045fb9811c4c90e223506f3"
+    },
+    {
+      "path": "DEPLOYMENT.json",
+      "bytes": 2217,
+      "sha256": "c9b34e3eeec3fc2be4dfd7469fc84e0586fa2dad172916290ad132cac2766cf6"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 1414,
+      "sha256": "c99a8aa49b02cb3ab22819f97df00a2c0d0a49076be099f70b7cdd5b471a6085"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6496,
+      "sha256": "6ff053e4ce1d7ebe40516f08895da28dfe045b8ba0600d91cf16f64ae00ceafa"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "bytes": 5476,
+      "sha256": "fb486f412756de70e008309548e73aa5919c4f208efbcc9632ccaa101c240f6a"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 102,
+      "sha256": "24a1fb1bc17741237488e64cb2d4efd6adf0b81449b9cccdbe91a5a54da424ab"
+    },
+    {
+      "path": "scripts/bootstrap.sh",
+      "bytes": 988,
+      "sha256": "969e697d99ae0e775a7ef2c4e53b5dd5b4b3a6c5f4796789d96a531157a39dd9"
+    },
+    {
+      "path": "scripts/core_entry.py",
+      "bytes": 1241,
+      "sha256": "55cc5deb7b1cb776b6bf39d423427961848467a3e32cfa3e45bc17507e9412f1"
+    },
+    {
+      "path": "scripts/install.sh",
+      "bytes": 2068,
+      "sha256": "17950881d16d1b0a23d7f8c8d5420b9e1ff2ebb3bf9d4d29d9f4ac66e9dd0a64"
+    },
+    {
+      "path": "scripts/p45.py",
+      "bytes": 13242,
+      "sha256": "262b40cba71b204e6b6956ca91f120e651e3bd12d4ac1fe99ed48b20f1ee41d5"
+    },
+    {
+      "path": "tasks/tower10/engineering_upgrade/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tasks/tower10/engineering_upgrade/actions.py",
+      "bytes": 3646,
+      "sha256": "9d3587ef2a67361e399c2503d6a765ed2c72390b0997e8483d216e9b93dc1e4a"
+    },
+    {
+      "path": "tasks/tower10/engineering_upgrade/fast.py",
+      "bytes": 3007,
+      "sha256": "d08db70092878454afb571d65bca0bcbb248ef86f1550d631145a2a63a6c6bd7"
+    },
+    {
+      "path": "tasks/tower10/engineering_upgrade/topology.py",
+      "bytes": 1137,
+      "sha256": "344aa8d561dc01ffc71d1fc9ee47438c6737eeada9f5ecd31b4f8bdd63756501"
+    },
+    {
+      "path": "tasks/tower10/neural/common.py",
+      "bytes": 7114,
+      "sha256": "921a99fa7ee7e0516ea794edb78760fdb15e6c2ad0d096e4eb7ea0dd820f4d1c"
+    },
+    {
+      "path": "tasks/tower10/neural/vendor/kernel.py",
+      "bytes": 7790,
+      "sha256": "e357d8785e283a9af2c5255488a9c8ede48ea72e70c9bde2410232d52fe3cc85"
+    },
+    {
+      "path": "tasks/tower10/neural/vendor/path_index.py",
+      "bytes": 1204,
+      "sha256": "48fb3d842f58c6191ec5d306ff50ba6ac85bd57b94c036a6f84a54e93ced7023"
+    },
+    {
+      "path": "tasks/tower10/neural/vendor/topology_engine.py",
+      "bytes": 17499,
+      "sha256": "f602d445d832904eb54a030bc0bf8ebf4e9b9d76ea8f2860fccd34d8b07355d6"
+    },
+    {
+      "path": "tasks/tower10/p45/__init__.py",
+      "bytes": 50,
+      "sha256": "b99190b928c8c48bb4b9c23d33baf2b3abbbf797758b6f8919daaba5456ad1cf"
+    },
+    {
+      "path": "tasks/tower10/p45/assets/SHA256.json",
+      "bytes": 199,
+      "sha256": "b3d08364daab5ad0edb7bba27917955e3e585570863817d060babf75edb03c27"
+    },
+    {
+      "path": "tasks/tower10/p45/assets/shared_identity.json",
+      "bytes": 583,
+      "sha256": "4f5f9f0a173409dbec2871f206f6aa8279afbeed446ca264e3aeaef469842ea6"
+    },
+    {
+      "path": "tasks/tower10/p45/assets/shared_initial_topology.json",
+      "bytes": 327189,
+      "sha256": "80999d2e01da8253510c96bc2f52ba9b61fae19b74516b76bb58f25cd90a05e6"
+    },
+    {
+      "path": "tasks/tower10/p45/cli.py",
+      "bytes": 11004,
+      "sha256": "aba6015fa4832335c2249a9dfc6226242da8a4fcdd8719f9609e6ca03486571e"
+    },
+    {
+      "path": "tasks/tower10/p45/config.json",
+      "bytes": 3173,
+      "sha256": "e9f79eefde0b14dec11c39b6205fbf7dacf96cfdbea4afe890dd9c6d7a59d985"
+    },
+    {
+      "path": "tasks/tower10/p45/contracts.py",
+      "bytes": 3942,
+      "sha256": "bdf83bfce812110eafafa879ac152075a9ea5144b7d064f93acceab671951d2b"
+    },
+    {
+      "path": "tasks/tower10/p45/environment.py",
+      "bytes": 13471,
+      "sha256": "3c7f576d5b4fbc43b0b3376f9c72a08cd5d82453de9fc0dd3d2ef8b4d7ea1928"
+    },
+    {
+      "path": "tasks/tower10/p45/network.py",
+      "bytes": 1770,
+      "sha256": "92d69e1e98706f7cb8691e0e20a5a7eb685d35dff8c6bd1133c21b93c02756d4"
+    },
+    {
+      "path": "tasks/tower10/p45/observation.py",
+      "bytes": 3052,
+      "sha256": "a3a10a3453bf1cbbd14ff2ec54b11e99a668a9c357d7403656233516e8e70b6a"
+    },
+    {
+      "path": "tasks/tower10/p45/parallel.py",
+      "bytes": 11287,
+      "sha256": "ca7f1982c53f2277492dc88e2bcdcd6c0f2312d2efb223b1a0f487335c6c6748"
+    },
+    {
+      "path": "tasks/tower10/p45/runtime.py",
+      "bytes": 27620,
+      "sha256": "fc90ad2e9305ba4daabf7b93a162906284cae78d8090e83b97597f63fdf25c2d"
+    },
+    {
+      "path": "tasks/tower10/p45/search.py",
+      "bytes": 7362,
+      "sha256": "0e674cdb501e5afda336928175c184aa1631ba27390ddd1773d0cb13f42ffcf8"
+    },
+    {
+      "path": "tasks/tower10/p45_v0.py",
+      "bytes": 418,
+      "sha256": "eb7d550c7a4c487aba573e7b3e1361c961eab33c2bd91f6bcb5a2101121489e6"
+    },
+    {
+      "path": "tests/abnormal_exit.py",
+      "bytes": 1874,
+      "sha256": "500cfad01c969e62455152e896be73ac3ef9a56a624b7f6025ca6f4f37bb2f5a"
+    },
+    {
+      "path": "tests/after600_resume.py",
+      "bytes": 1846,
+      "sha256": "9a62b26434db6c926248f75f6bf3e22c086ba1102f57ae109fab307a95e1a2fe"
+    },
+    {
+      "path": "tests/collect_evidence.py",
+      "bytes": 3794,
+      "sha256": "b0a541e18a6a32c2f13fb9c7f8dc1a947dd4038ba7441dcb7ac1cff3dbc1419e"
+    },
+    {
+      "path": "tests/fixed_workload.py",
+      "bytes": 2699,
+      "sha256": "d93c198e503a726de32b30a6aa53c60abc046b40f3218d78639a221b4581c882"
+    },
+    {
+      "path": "tests/lifecycle.py",
+      "bytes": 2514,
+      "sha256": "d80dacb04d6c27034ba47ca4973090d326e436a0288463bb958e38ee70091f01"
+    },
+    {
+      "path": "tests/wrapped_prefix.py",
+      "bytes": 2088,
+      "sha256": "a2ac447db6938932b0ddd213abb37099d871ea944f3d8b46e8e5931bee8b90f6"
+    },
+    {
+      "path": "validation/ABNORMAL_EXIT.json",
+      "bytes": 11228,
+      "sha256": "f268032890db79a414c3adda3655c88fdcb863c1736890307d457e76ddd52eb9"
+    },
+    {
+      "path": "validation/BUDGET_EXHAUSTION.json",
+      "bytes": 3105,
+      "sha256": "49ad5a033552a450b3a60fb9eb1a6d778dee679b172adf74f122e3dbdaa7220c"
+    },
+    {
+      "path": "validation/DIAGNOSTICS_PATH.txt",
+      "bytes": 63,
+      "sha256": "22c3f5b9b4a3cc6ceed2b75fd8c0eb1be1b0620dbc691f6d7c6cbb361edb324d"
+    },
+    {
+      "path": "validation/FINAL_LIFECYCLE.json",
+      "bytes": 134267,
+      "sha256": "9f3891b8f1cdd92cdf7be01948ae60380547080024ff8d181cc9dfb16f6d4747"
+    },
+    {
+      "path": "validation/FIRST_FAILURES.json",
+      "bytes": 3007,
+      "sha256": "09315c451a8a2df33f6c4e23625d7af4a5131bf597b4d222dd95272001b0ff59"
+    },
+    {
+      "path": "validation/FIXED_WORKLOAD.json",
+      "bytes": 1449,
+      "sha256": "bf361cf10a0bd104decced5aae2f4b03879129cba577d1fc198b083ede70fac8"
+    },
+    {
+      "path": "validation/INSTALL_AND_LOCK.json",
+      "bytes": 3984,
+      "sha256": "93fb78ac62d1fb2dffcd7d93b31c0557b391582cb2be7aa036716b0202d79583"
+    },
+    {
+      "path": "validation/LIFECYCLE.json",
+      "bytes": 132231,
+      "sha256": "833da96d8a2304b6dee07d978407d11d335524876fc16ce9d6071686b76f5e41"
+    },
+    {
+      "path": "validation/LOCAL600.json",
+      "bytes": 93719,
+      "sha256": "21be3c336bfc371dd824d8b64475a8206e56df1ada580492e4bc86e391a580f0"
+    },
+    {
+      "path": "validation/LOCAL_ENVIRONMENT.json",
+      "bytes": 3228,
+      "sha256": "70a1580967b8c72cd460c0e25c7e7034ccca5fa47b4f8bf600041f405b639798"
+    },
+    {
+      "path": "validation/NORMAL_OUTPUT_EXAMPLE.json",
+      "bytes": 524,
+      "sha256": "edd5b4284cb62f5c63e436d5265edb946c440682666035e4f7043daf6350246e"
+    },
+    {
+      "path": "validation/PUBLICATION_SCAN.json",
+      "bytes": 533,
+      "sha256": "373c8172e86dd4e063964ed819fed79fb442aaba9dbe5a25a85d943d8b2d53c5"
+    },
+    {
+      "path": "validation/PUBLICATION_UPDATE.json",
+      "bytes": 490,
+      "sha256": "7a8f678689ded5097bde29d440c0fdead6929401abc0ade5db9e5331ef5915f2"
+    },
+    {
+      "path": "validation/SOURCE_VERIFICATION.json",
+      "bytes": 4092,
+      "sha256": "7398d57e004ac661bc83e6738863ab9c39f7a58cf1dd3a7d17727fcf2df5c16b"
+    },
+    {
+      "path": "validation/TRAINED_RESUME.json",
+      "bytes": 456226,
+      "sha256": "6f5e301715cc580a4d5fefcee3f496078a9ab1ddff51fbc91a245655bc5ae85d"
+    },
+    {
+      "path": "validation/WRAPPED_PREFIX.json",
+      "bytes": 10295,
+      "sha256": "624888fd36493e09885862b71708d38e9b7a145b5b8d27ef091b12bd711d0060"
+    }
+  ],
+  "clean_public_install": {
+    "pass": true,
+    "fixed_source_commit": "f0825385c6bb5914b653679d14635a2b1393cf87",
+    "torch": "2.14.1+cpu",
+    "numpy": "2.3.5",
+    "actual_compute_device": "cpu",
+    "installation_success_line": "INSTALL_OK commit=f0825385c6bb5914b653679d14635a2b1393cf87 device=cpu home=/workspace/p48-public-home",
+    "environment": "local managed environment, NOT AutoDL",
+    "no_collection_or_training_started": true
+  },
+  "notes": "Prior600s evidence retained without repeating trial. User-created generic runtime repository; bootstrap URL and docs updated. Runtime commit above is immutable; this receipt is added in a subsequent docs/evidence commit."
+}

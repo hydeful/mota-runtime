@@ -1,15 +1,15 @@
 {
-  "overall": "PUBLIC_TARGET_READY; publication readback pending; AutoDL pending; not overall PASS",
+  "overall": "DEPLOYMENT_PREPARATION_COMPLETE; AutoDL pending; not overall PASS",
   "baseline_commit": "63bdd80216edf825d887bc5316eb0ad78e7250ad",
   "local_tested_runtime_commit": "73b2dd9b70bea25ae1dca5d541beefb2b845fe4c",
   "public_repository_requested": "https://github.com/hydeful/mota-runtime",
   "public_repository_created": true,
-  "public_fixed_commit": null,
+  "public_fixed_commit": "f0825385c6bb5914b653679d14635a2b1393cf87",
   "items": {
     "source": "PASS:22 byte-identical files",
     "scope_and_secret_scan": "PASS for selected source/evidence; no weights/full training payloads/private history",
     "license": "NOTICE records boundaries; no new third-party license granted",
-    "public_download": "PENDING: verify after first push",
+    "public_download": "PASS: anonymous Git clone, credential-free codeload HTTP200 and raw bootstrap readback; exact54-file set and byte hashes",
     "clean_local_install": "PASS: local clone of fixed independent commit; no public-download claim",
     "algorithm_equivalence": "PASS:32 episodes/607 positions/60700 simulations/67 SGD, exact logical fingerprints; wrapper trajectory/training also exact",
     "local_600": "PASS:600.059602718s collection call,0.059606774s cleanup",
@@ -26,8 +26,9 @@
     "abnormal_exit_local": "PASS:actual -9, explicit abnormal status, restore advances",
     "AutoDL_600": "PENDING",
     "AutoDL_browser_closure": "PENDING",
-    "AutoDL_stop_resume_within720": "PENDING"
+    "AutoDL_stop_resume_within720": "PENDING",
+    "clean_public_install": "PASS: fixed public commit bootstrap fetched into fresh local home and isolated venv, environment/network self-check passed"
   },
   "user_minimum_action": "No further repository-creation action required; user created public hydeful/mota-runtime and current connection reports push permission.",
-  "next_authorized_steps": "Publish prepared history; anonymous fixed-commit download and content verification; installation/self-check only. Do not repeat600s trial; AutoDL execution awaits user."
+  "next_authorized_steps": "User executes fixed-commit installation and new600s background commands on AutoDL, closes/reopens terminal and returns diagnostics. Cloud total collection/training budget720s maximum; not yet executed."
 }

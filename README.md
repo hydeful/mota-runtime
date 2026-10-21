@@ -1,6 +1,6 @@
 # mota-runtime：独立运行代码
 
-> 首次发布为已验证的 P45 CPU 运行版；部署准备完成后，AutoDL 实际验收仍需用户返回输出。
+> 部署准备完成：固定公开提交已通过匿名下载、逐文件核对及全新安装自检；AutoDL 云端待验证。
 
 这是长期复用的公开运行代码仓库。后续版本采用独立固定提交；已有运行继续绑定原提交，不自动跟随 main 更新。首次版本沿用已验证的 `p45` 命令和 `/root/autodl-tmp/p45` 目录。
 
@@ -16,7 +16,7 @@ P45 默认串行，工程 E1.3 / 算法 A1.1 / 拓扑 T1.0。搜索、网络推�
 ## 首次安装
 
 需要 Linux、Python3.12、git、可访问 GitHub 和 PyTorch 官方 CPU wheel 源。
-固定公开提交由交付消息给出，必须使用完整40位值替换下列 COMMIT。
+首次 P45 固定运行提交：`f0825385c6bb5914b653679d14635a2b1393cf87`。下列命令已固定该提交；main 的后续文档或收据更新不会改变已有运行。
 先确认 `/root/autodl-tmp` 为数据盘；安装会显示其实际挂载点和可用空间。
 仅把代码/环境/运行写入该数据目录，不修改系统预装环境。
 
@@ -25,7 +25,7 @@ git clone --no-checkout https://github.com/hydeful/mota-runtime.git /root/autodl
 ```
 
 ```bash
-git -C /root/autodl-tmp/mota-runtime-bootstrap checkout --detach COMMIT && bash /root/autodl-tmp/mota-runtime-bootstrap/scripts/bootstrap.sh COMMIT
+git -C /root/autodl-tmp/mota-runtime-bootstrap checkout --detach f0825385c6bb5914b653679d14635a2b1393cf87 && bash /root/autodl-tmp/mota-runtime-bootstrap/scripts/bootstrap.sh f0825385c6bb5914b653679d14635a2b1393cf87
 ```
 
 bootstrap 不读取私有仓库凭据，抓取并核对固定公开提交。
@@ -121,3 +121,5 @@ NAME 只能用字母、数字、下划线、短横线。已有目录明确拒绝
 
 本次公开发布仅调整仓库地址、发行元数据和说明；沿用已记录的600秒实测，未重复该试跑。
 公开下载与固定提交内容核对在发布后记录，不会被当作AutoDL采集验收。
+
+公开发布收据：[PUBLIC_RELEASE.json](validation/PUBLIC_RELEASE.json)。运行提交为上述固定值；本收据/说明随后追加，避免自引用提交。
