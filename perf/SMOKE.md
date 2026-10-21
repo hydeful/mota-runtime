@@ -107,3 +107,5 @@ python3 -B -m perf.reclassify --root /root/autodl-tmp/p48-perf/smoke-tests/smoke
 输出已存在则拒绝覆盖。该命令不调用worker、GPU、搜索、训练或任何实验控制程序。它只复核任务分类，不会补造缺失的功能证据或全链路通过，不授权一小时实验。
 
 分类自检（零训练）：`python3 -B -m perf.acceptance_test`。
+
+分类补丁固定代码：`d8da913bc466db6276ef3222abf0e2bd063820d6`。可在独立源码目录检出此提交，用系统Python运行上述`perf.reclassify`；不需要更新原run绑定版本、重装CUDA或重跑诊断。此补丁不启动任何云端实验。
