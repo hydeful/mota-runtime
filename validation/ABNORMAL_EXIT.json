@@ -1,0 +1,340 @@
+{
+  "pass": true,
+  "first_test_failures": [
+    "/proc/PID/task/PID/children unavailable; initial disposable slice ended before manual retry",
+    "Retry demonstrated crash/restore but test omitted name on stop; explicit safe stop sent. Neither incomplete attempt claimed a full pass. Final harness always supplies the name."
+  ],
+  "scope": "Actual SIGKILL of a disposable collector, supervisor recorded -9/abnormal_exit; restored same run, advanced, safe-stopped; deadline unchanged",
+  "before": {
+    "state": "running",
+    "source_commit": "73b2dd9b70bea25ae1dca5d541beefb2b845fe4c",
+    "actual_compute_device": "cpu",
+    "seed": 4811,
+    "budget_seconds": 60.0,
+    "deadline_utc": "2026-10-21T04:19:42.966670+00:00",
+    "remaining_wall_budget_seconds": 54.94823241233826,
+    "elapsed_core_seconds": 0.3235583180000958,
+    "completed_episodes": 0,
+    "qualified_training_positions": 0,
+    "model_updates": 0,
+    "real_sgd_steps": 0,
+    "decisions": 1,
+    "model_id": "abnormal-exit-3-N0",
+    "model_hash": "96f70c039993aa5c14f99bdcede2d5ee6cf176fc1156746739c6d44624fb8fcd",
+    "updated_model_consumption_records": 0,
+    "first_updated_model_consumption": [],
+    "invocation": {
+      "state": "running",
+      "pid": 1590,
+      "started_utc": "2026-10-21T04:18:45.752177+00:00",
+      "requested_seconds": 30.0,
+      "core_returncode": null
+    },
+    "log": "/workspace/p48-final-home/runs/abnormal-exit-3/logs/console.log",
+    "checkpoint": "/workspace/p48-final-home/runs/abnormal-exit-3/state/checkpoint.pt",
+    "models": "/workspace/p48-final-home/runs/abnormal-exit-3/models",
+    "models_ledger": "/workspace/p48-final-home/runs/abnormal-exit-3/state/models.json",
+    "training_data": "/workspace/p48-final-home/runs/abnormal-exit-3/data",
+    "last_durable_core_status": {
+      "run_id": "abnormal-exit-3",
+      "seed": 4811,
+      "generation": 0,
+      "model_id": "abnormal-exit-3-N0",
+      "next_episode": 1,
+      "episodes": [],
+      "new_positions": 0,
+      "total_positions": 0,
+      "total_decisions": 1,
+      "total_simulations": 100,
+      "sgd_steps": 0,
+      "elapsed_seconds": 0.3235583180000958,
+      "resume_count": 1,
+      "budget": {
+        "session_start_utc": "2026-10-21T04:18:42.966670+00:00",
+        "deadline_utc": "2026-10-21T04:19:42.966670+00:00",
+        "budget_seconds": 60.0,
+        "task_source_commit": "63bdd80216edf825d887bc5316eb0ad78e7250ad",
+        "authorization": "P48 explicit new run budget",
+        "active_seconds": 0.3235583180000958,
+        "wall_elapsed_seconds": 4.9720070362091064,
+        "remaining_seconds": 55.02798533439636
+      },
+      "stats": {
+        "process_cpu_seconds": 0.31903365299999975,
+        "checkpoint_writes": 3,
+        "checkpoint_seconds": 0.0548606170000312
+      },
+      "actor": {
+        "episode_id": 0,
+        "step": 1,
+        "model_id": "abnormal-exit-3-N0",
+        "pending_simulations": 0,
+        "task": {
+          "status": "ACTIVE"
+        },
+        "hero": {
+          "animate": false,
+          "atk": 10,
+          "def": 10,
+          "direction": "right",
+          "equipment": [],
+          "experience": null,
+          "floorId": "MT2",
+          "followers": [],
+          "hp": 976,
+          "hpmax": -1,
+          "image": "hero.png",
+          "items": {
+            "constants": {
+              "I300": 1,
+              "I333": 1,
+              "book": 1,
+              "fly": 1
+            },
+            "equips": {},
+            "tools": {
+              "yellowKey": 5
+            }
+          },
+          "lv": 1,
+          "mana": 0,
+          "manamax": -1,
+          "mdef": 0,
+          "money": 5,
+          "name": "\u52c7\u8005",
+          "steps": 105,
+          "x": 2,
+          "y": 1
+        }
+      },
+      "trainer": null,
+      "rss_mib": 354.16015625
+    }
+  },
+  "failed": {
+    "state": "abnormal_exit",
+    "source_commit": "73b2dd9b70bea25ae1dca5d541beefb2b845fe4c",
+    "actual_compute_device": "cpu",
+    "seed": 4811,
+    "budget_seconds": 60.0,
+    "deadline_utc": "2026-10-21T04:19:42.966670+00:00",
+    "remaining_wall_budget_seconds": 54.64083552360535,
+    "elapsed_core_seconds": 0.3235583180000958,
+    "completed_episodes": 0,
+    "qualified_training_positions": 0,
+    "model_updates": 0,
+    "real_sgd_steps": 0,
+    "decisions": 1,
+    "model_id": "abnormal-exit-3-N0",
+    "model_hash": "96f70c039993aa5c14f99bdcede2d5ee6cf176fc1156746739c6d44624fb8fcd",
+    "updated_model_consumption_records": 0,
+    "first_updated_model_consumption": [],
+    "invocation": {
+      "state": "abnormal_exit",
+      "pid": 1590,
+      "started_utc": "2026-10-21T04:18:45.752177+00:00",
+      "requested_seconds": 30.0,
+      "core_returncode": -9,
+      "finished_utc": "2026-10-21T04:18:48.258886+00:00",
+      "actual_invocation_seconds": 2.506690740585327,
+      "collection_window": {},
+      "post_budget_cleanup_seconds": null
+    },
+    "log": "/workspace/p48-final-home/runs/abnormal-exit-3/logs/console.log",
+    "checkpoint": "/workspace/p48-final-home/runs/abnormal-exit-3/state/checkpoint.pt",
+    "models": "/workspace/p48-final-home/runs/abnormal-exit-3/models",
+    "models_ledger": "/workspace/p48-final-home/runs/abnormal-exit-3/state/models.json",
+    "training_data": "/workspace/p48-final-home/runs/abnormal-exit-3/data",
+    "last_durable_core_status": {
+      "run_id": "abnormal-exit-3",
+      "seed": 4811,
+      "generation": 0,
+      "model_id": "abnormal-exit-3-N0",
+      "next_episode": 1,
+      "episodes": [],
+      "new_positions": 0,
+      "total_positions": 0,
+      "total_decisions": 1,
+      "total_simulations": 100,
+      "sgd_steps": 0,
+      "elapsed_seconds": 0.3235583180000958,
+      "resume_count": 1,
+      "budget": {
+        "session_start_utc": "2026-10-21T04:18:42.966670+00:00",
+        "deadline_utc": "2026-10-21T04:19:42.966670+00:00",
+        "budget_seconds": 60.0,
+        "task_source_commit": "63bdd80216edf825d887bc5316eb0ad78e7250ad",
+        "authorization": "P48 explicit new run budget",
+        "active_seconds": 0.3235583180000958,
+        "wall_elapsed_seconds": 4.9720070362091064,
+        "remaining_seconds": 55.02798533439636
+      },
+      "stats": {
+        "process_cpu_seconds": 0.31903365299999975,
+        "checkpoint_writes": 3,
+        "checkpoint_seconds": 0.0548606170000312
+      },
+      "actor": {
+        "episode_id": 0,
+        "step": 1,
+        "model_id": "abnormal-exit-3-N0",
+        "pending_simulations": 0,
+        "task": {
+          "status": "ACTIVE"
+        },
+        "hero": {
+          "animate": false,
+          "atk": 10,
+          "def": 10,
+          "direction": "right",
+          "equipment": [],
+          "experience": null,
+          "floorId": "MT2",
+          "followers": [],
+          "hp": 976,
+          "hpmax": -1,
+          "image": "hero.png",
+          "items": {
+            "constants": {
+              "I300": 1,
+              "I333": 1,
+              "book": 1,
+              "fly": 1
+            },
+            "equips": {},
+            "tools": {
+              "yellowKey": 5
+            }
+          },
+          "lv": 1,
+          "mana": 0,
+          "manamax": -1,
+          "mdef": 0,
+          "money": 5,
+          "name": "\u52c7\u8005",
+          "steps": 105,
+          "x": 2,
+          "y": 1
+        }
+      },
+      "trainer": null,
+      "rss_mib": 354.16015625
+    }
+  },
+  "after": {
+    "state": "stopped",
+    "source_commit": "73b2dd9b70bea25ae1dca5d541beefb2b845fe4c",
+    "actual_compute_device": "cpu",
+    "seed": 4811,
+    "budget_seconds": 60.0,
+    "deadline_utc": "2026-10-21T04:19:42.966670+00:00",
+    "remaining_wall_budget_seconds": 51.02379059791565,
+    "elapsed_core_seconds": 0.8039471889999277,
+    "completed_episodes": 0,
+    "qualified_training_positions": 0,
+    "model_updates": 0,
+    "real_sgd_steps": 0,
+    "decisions": 2,
+    "model_id": "abnormal-exit-3-N0",
+    "model_hash": "96f70c039993aa5c14f99bdcede2d5ee6cf176fc1156746739c6d44624fb8fcd",
+    "updated_model_consumption_records": 0,
+    "first_updated_model_consumption": [],
+    "invocation": {
+      "state": "stopped",
+      "pid": 1615,
+      "started_utc": "2026-10-21T04:18:48.389076+00:00",
+      "requested_seconds": 15.0,
+      "core_returncode": 0,
+      "finished_utc": "2026-10-21T04:18:51.892738+00:00",
+      "actual_invocation_seconds": 3.5034756660461426,
+      "collection_window": {
+        "started_utc": "2026-10-21T04:18:50.364648+00:00",
+        "requested_window_seconds": 14.99999551299993,
+        "returned_utc": "2026-10-21T04:18:50.879605+00:00",
+        "collection_call_seconds": 0.5149731659998906,
+        "post_cutoff_cleanup_seconds": 0
+      },
+      "post_budget_cleanup_seconds": 0
+    },
+    "log": "/workspace/p48-final-home/runs/abnormal-exit-3/logs/console.log",
+    "checkpoint": "/workspace/p48-final-home/runs/abnormal-exit-3/state/checkpoint.pt",
+    "models": "/workspace/p48-final-home/runs/abnormal-exit-3/models",
+    "models_ledger": "/workspace/p48-final-home/runs/abnormal-exit-3/state/models.json",
+    "training_data": "/workspace/p48-final-home/runs/abnormal-exit-3/data",
+    "last_durable_core_status": {
+      "run_id": "abnormal-exit-3",
+      "seed": 4811,
+      "generation": 0,
+      "model_id": "abnormal-exit-3-N0",
+      "next_episode": 1,
+      "episodes": [],
+      "new_positions": 0,
+      "total_positions": 0,
+      "total_decisions": 2,
+      "total_simulations": 216,
+      "sgd_steps": 0,
+      "elapsed_seconds": 0.8039471889999277,
+      "resume_count": 2,
+      "budget": {
+        "session_start_utc": "2026-10-21T04:18:42.966670+00:00",
+        "deadline_utc": "2026-10-21T04:19:42.966670+00:00",
+        "budget_seconds": 60.0,
+        "task_source_commit": "63bdd80216edf825d887bc5316eb0ad78e7250ad",
+        "authorization": "P48 explicit new run budget",
+        "active_seconds": 0.8039471889999277,
+        "wall_elapsed_seconds": 7.855636119842529,
+        "remaining_seconds": 52.14435625076294
+      },
+      "stats": {
+        "process_cpu_seconds": 0.7979542449999997,
+        "checkpoint_writes": 4,
+        "checkpoint_seconds": 0.13383891600005882
+      },
+      "actor": {
+        "episode_id": 0,
+        "step": 2,
+        "model_id": "abnormal-exit-3-N0",
+        "pending_simulations": 16,
+        "task": {
+          "status": "ACTIVE"
+        },
+        "hero": {
+          "animate": false,
+          "atk": 10,
+          "def": 10,
+          "direction": "down",
+          "equipment": [],
+          "experience": null,
+          "floorId": "MT1",
+          "followers": [],
+          "hp": 976,
+          "hpmax": -1,
+          "image": "hero.png",
+          "items": {
+            "constants": {
+              "I300": 1,
+              "I333": 1,
+              "book": 1,
+              "fly": 1
+            },
+            "equips": {},
+            "tools": {
+              "yellowKey": 4
+            }
+          },
+          "lv": 1,
+          "mana": 0,
+          "manamax": -1,
+          "mdef": 0,
+          "money": 5,
+          "name": "\u52c7\u8005",
+          "steps": 123,
+          "x": 10,
+          "y": 8
+        }
+      },
+      "trainer": null,
+      "rss_mib": 358.75390625
+    }
+  }
+}

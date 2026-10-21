@@ -1,0 +1,15 @@
+{
+  "state": "slice_finished",
+  "source_commit": "73b2dd9b70bea25ae1dca5d541beefb2b845fe4c",
+  "actual_compute_device": "cpu",
+  "budget_seconds": 720.0,
+  "completed_episodes": 108,
+  "qualified_training_positions": 1901,
+  "model_updates": 3,
+  "real_sgd_steps": 205,
+  "elapsed_core_seconds": 600.04481996,
+  "remaining_wall_budget_seconds": 109.6183180809021,
+  "model_id": "trial600-N3",
+  "model_hash": "0ee9252eebce285f562b8327287a12f009ae3211f17d16798677d0dad6c734ee",
+  "updated_model_consumption_records": 1411
+}

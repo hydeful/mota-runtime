@@ -1,0 +1,266 @@
+{
+  "pass": true,
+  "positions": 607,
+  "complete_episodes": 32,
+  "real_sgd_steps": 67,
+  "training_semantic_sha256": "0a5bf2eafd9f62d8df82e1ba74478a587d4da78ff3b930e5ba2d8c6ece3d4d56",
+  "exact_comparison": "Full observations, actions, visits, pi, priors, predictions, terminal states/labels, training sampled pairs, loss/gradient and parameter-group hashes. Excludes only timing/cost fields and renamed run/model identities. Weight hashes are NOT excluded.",
+  "episodes": [
+    {
+      "episode_id": 0,
+      "positions": 14,
+      "semantic_sha256": "ef053c577b2bc4272f071e45a08a7fc4f704a053e4ff794d26ef6faf8150ffc0",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.918942648893167
+    },
+    {
+      "episode_id": 1,
+      "positions": 17,
+      "semantic_sha256": "c44a4a03478fd0f1761a0c8eeaf9e7add57a75e3bed3f9251c58b357aae70d92",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9359912056579907
+    },
+    {
+      "episode_id": 2,
+      "positions": 23,
+      "semantic_sha256": "e7d7d75bfe2f28b3d79aa74f39eecd636437d9f871bacf46236988d020f8a905",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9293728341561427
+    },
+    {
+      "episode_id": 3,
+      "positions": 21,
+      "semantic_sha256": "213ccf6ae7ef7b3488e3ae0318f6a49c29c6faa5af3255f284c23081d536bc37",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9290815638123411
+    },
+    {
+      "episode_id": 4,
+      "positions": 16,
+      "semantic_sha256": "91572bfec223849a29e06faf786d1be49de370a06ff09fb384f0607afae01d18",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9290897536714755
+    },
+    {
+      "episode_id": 5,
+      "positions": 19,
+      "semantic_sha256": "6960e8f3d75c23a7658bd37e6d8ac00d5bab777cd1d6d5a9b2e85bcb65b57202",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9234545787879729
+    },
+    {
+      "episode_id": 6,
+      "positions": 19,
+      "semantic_sha256": "b955c0b76f9e542af02f75b40b4c22ae8d84eca799721bf89b0eb10d70e955ef",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9333577109540996
+    },
+    {
+      "episode_id": 7,
+      "positions": 21,
+      "semantic_sha256": "f2527be43ee94dd1a310b2f01369f9d0ef6c1371bdeaff37da6be7cf1b044e47",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9241383766888112
+    },
+    {
+      "episode_id": 8,
+      "positions": 22,
+      "semantic_sha256": "15e047c697043bda98c393460f8a9f5296009d7b7b5692ab2b54e4040d05a411",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9296353646406184
+    },
+    {
+      "episode_id": 9,
+      "positions": 20,
+      "semantic_sha256": "be0685b2da619ccdd96b734b3beeb7c233a3267eccc3f1ef2a2b04bc5494f0b9",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9314751808336177
+    },
+    {
+      "episode_id": 10,
+      "positions": 19,
+      "semantic_sha256": "b4e6c76366095e756f521cc82f5acdab73e13575a8f5c0a9e53e6d2164a0aa8f",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9282779508259738
+    },
+    {
+      "episode_id": 11,
+      "positions": 17,
+      "semantic_sha256": "0070f56ab4db5df19c80003d9850c1d94ec1a5d01cfc7364af9e720981d2fd4f",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9309582543869147
+    },
+    {
+      "episode_id": 12,
+      "positions": 19,
+      "semantic_sha256": "2d5b030b09c0a854306b7c15a4c294213e8335e2c04be092b077e5ba63670313",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9273903579010827
+    },
+    {
+      "episode_id": 13,
+      "positions": 20,
+      "semantic_sha256": "942684129929113bfd7b5345663e27c8e66552ef2f1a4a82986552aadd0f3ba0",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9314751808336177
+    },
+    {
+      "episode_id": 14,
+      "positions": 20,
+      "semantic_sha256": "a8da8b1acd7f4bee001b52bef89d36b91d22a4db1e9830c1fae2a54f91335097",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9314751808336177
+    },
+    {
+      "episode_id": 15,
+      "positions": 18,
+      "semantic_sha256": "b45f5094dd6a88e2942dd26474acd05bfd392e12c5e283f687e17dfcf9e4d704",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9364471078164736
+    },
+    {
+      "episode_id": 16,
+      "positions": 24,
+      "semantic_sha256": "6756d16fc9b0f9329515fef16e2483c941f392323cfa75ce67d437cbbf9d67b6",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9309500645277803
+    },
+    {
+      "episode_id": 17,
+      "positions": 26,
+      "semantic_sha256": "670e567cec8373bf58c62f50fddf815eae20ac603a841d00c313643d94e45846",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9281056640099798
+    },
+    {
+      "episode_id": 18,
+      "positions": 17,
+      "semantic_sha256": "dda0c10475e3fe04d72034fa65290144b43f3517c9100360e0e4fc372c11dfbc",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9234545787879729
+    },
+    {
+      "episode_id": 19,
+      "positions": 15,
+      "semantic_sha256": "45d4a5ecf049151e82e454cbac377714c6c2892a9b48dacd3348db2cd70d63ec",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.922139878900811
+    },
+    {
+      "episode_id": 20,
+      "positions": 21,
+      "semantic_sha256": "09696b92ced16ee86e2cfa7ea1c9e5deae7bd559304d5c103c0c57244d155f1d",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9288180095954736
+    },
+    {
+      "episode_id": 21,
+      "positions": 19,
+      "semantic_sha256": "6623f571e94489ee065d7bf9a5d170bd5961697a5847e79038b85af45d7fdc8b",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9234545787879729
+    },
+    {
+      "episode_id": 22,
+      "positions": 17,
+      "semantic_sha256": "f19e0fa8ca3a985e64c4585ccb6e7ba5f65965471318e0f6a8984bcec6a3784b",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9329527125822338
+    },
+    {
+      "episode_id": 23,
+      "positions": 17,
+      "semantic_sha256": "d841b0cf2e7b9dc9d1ef09ee5562c9e37d8660ad44c8a075f5752d02f235626c",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9344696948864866
+    },
+    {
+      "episode_id": 24,
+      "positions": 13,
+      "semantic_sha256": "266af918204ac43dc69036beec96b890a58099634287c7c590b68a649f24a60e",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9266599986547511
+    },
+    {
+      "episode_id": 25,
+      "positions": 18,
+      "semantic_sha256": "f87ebb1394f2c8c59149160d11b29977120edaefdd9bbf63dbf6f6047146792b",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9301604809464558
+    },
+    {
+      "episode_id": 26,
+      "positions": 16,
+      "semantic_sha256": "690c538f72e03c88c520933989f95a9684f9397c650f7305de19a6fb240c3a5d",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9202573487803289
+    },
+    {
+      "episode_id": 27,
+      "positions": 24,
+      "semantic_sha256": "ec8010298058258040686acc9945e5ba3b6f0fad15231810127bc7176db0f85c",
+      "weight_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9309500645277803
+    },
+    {
+      "episode_id": 28,
+      "positions": 16,
+      "semantic_sha256": "e3bf6239a773f82a88b3f59af549cce8c7c7079dfc8fad02bf2522d06acfcfa1",
+      "weight_hash": "440e380155480198e1c6af3be8a5bea1f88887d4364a204ced1c27f998377b34",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9346806007003959
+    },
+    {
+      "episode_id": 29,
+      "positions": 20,
+      "semantic_sha256": "df0ef45985093789a0f1b7557cc8ba503cbb0d7cceb5d59aff95ae24cad9f218",
+      "weight_hash": "440e380155480198e1c6af3be8a5bea1f88887d4364a204ced1c27f998377b34",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9296353646406184
+    },
+    {
+      "episode_id": 30,
+      "positions": 19,
+      "semantic_sha256": "1b86509e4863e8fc6440bb8fc21e46f62803b5e19785ad5bf620195d3a968041",
+      "weight_hash": "440e380155480198e1c6af3be8a5bea1f88887d4364a204ced1c27f998377b34",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9333577109540996
+    },
+    {
+      "episode_id": 31,
+      "positions": 20,
+      "semantic_sha256": "0161c70f61f55ca3205fe171bf47f1c8340161e639e58b0245e3f25b4545dbf5",
+      "weight_hash": "440e380155480198e1c6af3be8a5bea1f88887d4364a204ced1c27f998377b34",
+      "end": "T1_NO_INTERACTION",
+      "z": -0.9314751808336177
+    }
+  ]
+}

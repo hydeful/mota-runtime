@@ -1,0 +1,797 @@
+{
+  "pass": true,
+  "scope": "detached worker survives initiating command exit; safe stop, same-run restore, no budget reset, duplicate new/start rejection; browser closure requires AutoDL user evidence",
+  "initial": {
+    "state": "new",
+    "source_commit": "73b2dd9b70bea25ae1dca5d541beefb2b845fe4c",
+    "actual_compute_device": "cpu",
+    "seed": 4803,
+    "budget_seconds": 120.0,
+    "deadline_utc": "2026-10-21T04:11:07.953183+00:00",
+    "remaining_wall_budget_seconds": 117.35267114639282,
+    "elapsed_core_seconds": 0.018538435999971625,
+    "completed_episodes": 0,
+    "qualified_training_positions": 0,
+    "model_updates": 0,
+    "real_sgd_steps": 0,
+    "decisions": 0,
+    "model_id": "lifecycle-1192-N0",
+    "model_hash": "a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b",
+    "updated_model_consumption_records": 0,
+    "first_updated_model_consumption": [],
+    "invocation": {
+      "state": "new"
+    },
+    "log": "/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log",
+    "checkpoint": "/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt",
+    "models": "/workspace/p48-final-home/runs/lifecycle-1192/models",
+    "models_ledger": "/workspace/p48-final-home/runs/lifecycle-1192/state/models.json",
+    "training_data": "/workspace/p48-final-home/runs/lifecycle-1192/data",
+    "last_durable_core_status": {
+      "run_id": "lifecycle-1192",
+      "seed": 4803,
+      "generation": 0,
+      "model_id": "lifecycle-1192-N0",
+      "next_episode": 0,
+      "episodes": [],
+      "new_positions": 0,
+      "total_positions": 0,
+      "total_decisions": 0,
+      "total_simulations": 0,
+      "sgd_steps": 0,
+      "elapsed_seconds": 0.018538435999971625,
+      "resume_count": 0,
+      "budget": {
+        "session_start_utc": "2026-10-21T04:09:07.953183+00:00",
+        "deadline_utc": "2026-10-21T04:11:07.953183+00:00",
+        "budget_seconds": 120.0,
+        "task_source_commit": "63bdd80216edf825d887bc5316eb0ad78e7250ad",
+        "authorization": "P48 explicit new run budget",
+        "active_seconds": 0.018538435999971625,
+        "wall_elapsed_seconds": 1.9554443359375,
+        "remaining_seconds": 118.04454970359802
+      },
+      "stats": {
+        "process_cpu_seconds": 0.01572629300000017,
+        "checkpoint_writes": 2,
+        "checkpoint_seconds": 0.010201685000083671
+      },
+      "actor": null,
+      "trainer": null,
+      "rss_mib": 329.0
+    }
+  },
+  "stopped": {
+    "state": "stopped",
+    "source_commit": "73b2dd9b70bea25ae1dca5d541beefb2b845fe4c",
+    "actual_compute_device": "cpu",
+    "seed": 4803,
+    "budget_seconds": 120.0,
+    "deadline_utc": "2026-10-21T04:11:07.953183+00:00",
+    "remaining_wall_budget_seconds": 113.71158194541931,
+    "elapsed_core_seconds": 0.6359681919999502,
+    "completed_episodes": 0,
+    "qualified_training_positions": 0,
+    "model_updates": 0,
+    "real_sgd_steps": 0,
+    "decisions": 2,
+    "model_id": "lifecycle-1192-N0",
+    "model_hash": "a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b",
+    "updated_model_consumption_records": 0,
+    "first_updated_model_consumption": [],
+    "invocation": {
+      "state": "stopped",
+      "pid": 1203,
+      "started_utc": "2026-10-21T04:09:10.708386+00:00",
+      "requested_seconds": 60.0,
+      "core_returncode": 0,
+      "finished_utc": "2026-10-21T04:09:14.215306+00:00",
+      "actual_invocation_seconds": 3.5068514347076416,
+      "collection_window": {
+        "started_utc": "2026-10-21T04:09:12.677844+00:00",
+        "requested_window_seconds": 59.999996494000015,
+        "returned_utc": "2026-10-21T04:09:13.311445+00:00",
+        "collection_call_seconds": 0.6336171159999822,
+        "post_cutoff_cleanup_seconds": 0
+      },
+      "post_budget_cleanup_seconds": 0
+    },
+    "log": "/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log",
+    "checkpoint": "/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt",
+    "models": "/workspace/p48-final-home/runs/lifecycle-1192/models",
+    "models_ledger": "/workspace/p48-final-home/runs/lifecycle-1192/state/models.json",
+    "training_data": "/workspace/p48-final-home/runs/lifecycle-1192/data",
+    "last_durable_core_status": {
+      "run_id": "lifecycle-1192",
+      "seed": 4803,
+      "generation": 0,
+      "model_id": "lifecycle-1192-N0",
+      "next_episode": 1,
+      "episodes": [],
+      "new_positions": 0,
+      "total_positions": 0,
+      "total_decisions": 2,
+      "total_simulations": 200,
+      "sgd_steps": 0,
+      "elapsed_seconds": 0.6359681919999502,
+      "resume_count": 1,
+      "budget": {
+        "session_start_utc": "2026-10-21T04:09:07.953183+00:00",
+        "deadline_utc": "2026-10-21T04:11:07.953183+00:00",
+        "budget_seconds": 120.0,
+        "task_source_commit": "63bdd80216edf825d887bc5316eb0ad78e7250ad",
+        "authorization": "P48 explicit new run budget",
+        "active_seconds": 0.6359681919999502,
+        "wall_elapsed_seconds": 5.335377216339111,
+        "remaining_seconds": 114.66461706161499
+      },
+      "stats": {
+        "process_cpu_seconds": 0.6277473599999999,
+        "checkpoint_writes": 5,
+        "checkpoint_seconds": 0.09567292899987478
+      },
+      "actor": {
+        "episode_id": 0,
+        "step": 2,
+        "model_id": "lifecycle-1192-N0",
+        "pending_simulations": 0,
+        "task": {
+          "status": "ACTIVE"
+        },
+        "hero": {
+          "animate": false,
+          "atk": 10,
+          "def": 10,
+          "direction": "right",
+          "equipment": [],
+          "experience": null,
+          "floorId": "MT3",
+          "followers": [],
+          "hp": 976,
+          "hpmax": -1,
+          "image": "hero.png",
+          "items": {
+            "constants": {
+              "I300": 1,
+              "I333": 1,
+              "book": 1,
+              "fly": 1
+            },
+            "equips": {},
+            "tools": {
+              "blueKey": 1,
+              "yellowKey": 3
+            }
+          },
+          "lv": 1,
+          "mana": 0,
+          "manamax": -1,
+          "mdef": 0,
+          "money": 5,
+          "name": "\u52c7\u8005",
+          "steps": 183,
+          "x": 8,
+          "y": 2
+        }
+      },
+      "trainer": null,
+      "rss_mib": 354.30859375
+    }
+  },
+  "resumed": {
+    "state": "running",
+    "source_commit": "73b2dd9b70bea25ae1dca5d541beefb2b845fe4c",
+    "actual_compute_device": "cpu",
+    "seed": 4803,
+    "budget_seconds": 120.0,
+    "deadline_utc": "2026-10-21T04:11:07.953183+00:00",
+    "remaining_wall_budget_seconds": 111.1854202747345,
+    "elapsed_core_seconds": 0.9657833909999454,
+    "completed_episodes": 0,
+    "qualified_training_positions": 0,
+    "model_updates": 0,
+    "real_sgd_steps": 0,
+    "decisions": 3,
+    "model_id": "lifecycle-1192-N0",
+    "model_hash": "a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b",
+    "updated_model_consumption_records": 0,
+    "first_updated_model_consumption": [],
+    "invocation": {
+      "state": "running",
+      "pid": 1225,
+      "started_utc": "2026-10-21T04:09:14.305423+00:00",
+      "requested_seconds": 20.0,
+      "core_returncode": null
+    },
+    "log": "/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log",
+    "checkpoint": "/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt",
+    "models": "/workspace/p48-final-home/runs/lifecycle-1192/models",
+    "models_ledger": "/workspace/p48-final-home/runs/lifecycle-1192/state/models.json",
+    "training_data": "/workspace/p48-final-home/runs/lifecycle-1192/data",
+    "last_durable_core_status": {
+      "run_id": "lifecycle-1192",
+      "seed": 4803,
+      "generation": 0,
+      "model_id": "lifecycle-1192-N0",
+      "next_episode": 1,
+      "episodes": [],
+      "new_positions": 0,
+      "total_positions": 0,
+      "total_decisions": 3,
+      "total_simulations": 300,
+      "sgd_steps": 0,
+      "elapsed_seconds": 0.9657833909999454,
+      "resume_count": 2,
+      "budget": {
+        "session_start_utc": "2026-10-21T04:09:07.953183+00:00",
+        "deadline_utc": "2026-10-21T04:11:07.953183+00:00",
+        "budget_seconds": 120.0,
+        "task_source_commit": "63bdd80216edf825d887bc5316eb0ad78e7250ad",
+        "authorization": "P48 explicit new run budget",
+        "active_seconds": 0.9657833909999454,
+        "wall_elapsed_seconds": 8.557231426239014,
+        "remaining_seconds": 111.44275903701782
+      },
+      "stats": {
+        "process_cpu_seconds": 0.9573956849999998,
+        "checkpoint_writes": 5,
+        "checkpoint_seconds": 0.10773684199989475
+      },
+      "actor": {
+        "episode_id": 0,
+        "step": 3,
+        "model_id": "lifecycle-1192-N0",
+        "pending_simulations": 0,
+        "task": {
+          "status": "ACTIVE"
+        },
+        "hero": {
+          "animate": false,
+          "atk": 10,
+          "def": 10,
+          "direction": "right",
+          "equipment": [],
+          "experience": null,
+          "floorId": "MT2",
+          "followers": [],
+          "hp": 976,
+          "hpmax": -1,
+          "image": "hero.png",
+          "items": {
+            "constants": {
+              "I300": 1,
+              "I333": 1,
+              "book": 1,
+              "fly": 1
+            },
+            "equips": {},
+            "tools": {
+              "yellowKey": 3
+            }
+          },
+          "lv": 1,
+          "mana": 0,
+          "manamax": -1,
+          "mdef": 0,
+          "money": 5,
+          "name": "\u52c7\u8005",
+          "steps": 209,
+          "x": 2,
+          "y": 1
+        }
+      },
+      "trainer": null,
+      "rss_mib": 356.76171875
+    }
+  },
+  "final": {
+    "state": "stopped",
+    "source_commit": "73b2dd9b70bea25ae1dca5d541beefb2b845fe4c",
+    "actual_compute_device": "cpu",
+    "seed": 4803,
+    "budget_seconds": 120.0,
+    "deadline_utc": "2026-10-21T04:11:07.953183+00:00",
+    "remaining_wall_budget_seconds": 109.9318835735321,
+    "elapsed_core_seconds": 1.2603050989998792,
+    "completed_episodes": 0,
+    "qualified_training_positions": 0,
+    "model_updates": 0,
+    "real_sgd_steps": 0,
+    "decisions": 3,
+    "model_id": "lifecycle-1192-N0",
+    "model_hash": "a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b",
+    "updated_model_consumption_records": 0,
+    "first_updated_model_consumption": [],
+    "invocation": {
+      "state": "stopped",
+      "pid": 1225,
+      "started_utc": "2026-10-21T04:09:14.305423+00:00",
+      "requested_seconds": 20.0,
+      "core_returncode": 0,
+      "finished_utc": "2026-10-21T04:09:17.813880+00:00",
+      "actual_invocation_seconds": 3.508315324783325,
+      "collection_window": {
+        "started_utc": "2026-10-21T04:09:16.201950+00:00",
+        "requested_window_seconds": 19.999997054999994,
+        "returned_utc": "2026-10-21T04:09:16.882199+00:00",
+        "collection_call_seconds": 0.6802666049999289,
+        "post_cutoff_cleanup_seconds": 0
+      },
+      "post_budget_cleanup_seconds": 0
+    },
+    "log": "/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log",
+    "checkpoint": "/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt",
+    "models": "/workspace/p48-final-home/runs/lifecycle-1192/models",
+    "models_ledger": "/workspace/p48-final-home/runs/lifecycle-1192/state/models.json",
+    "training_data": "/workspace/p48-final-home/runs/lifecycle-1192/data",
+    "last_durable_core_status": {
+      "run_id": "lifecycle-1192",
+      "seed": 4803,
+      "generation": 0,
+      "model_id": "lifecycle-1192-N0",
+      "next_episode": 1,
+      "episodes": [],
+      "new_positions": 0,
+      "total_positions": 0,
+      "total_decisions": 3,
+      "total_simulations": 396,
+      "sgd_steps": 0,
+      "elapsed_seconds": 1.2603050989998792,
+      "resume_count": 2,
+      "budget": {
+        "session_start_utc": "2026-10-21T04:09:07.953183+00:00",
+        "deadline_utc": "2026-10-21T04:11:07.953183+00:00",
+        "budget_seconds": 120.0,
+        "task_source_commit": "63bdd80216edf825d887bc5316eb0ad78e7250ad",
+        "authorization": "P48 explicit new run budget",
+        "active_seconds": 1.2603050989998792,
+        "wall_elapsed_seconds": 8.851752758026123,
+        "remaining_seconds": 111.14823818206787
+      },
+      "stats": {
+        "process_cpu_seconds": 1.250231693,
+        "checkpoint_writes": 6,
+        "checkpoint_seconds": 0.18420655399984298
+      },
+      "actor": {
+        "episode_id": 0,
+        "step": 3,
+        "model_id": "lifecycle-1192-N0",
+        "pending_simulations": 96,
+        "task": {
+          "status": "ACTIVE"
+        },
+        "hero": {
+          "animate": false,
+          "atk": 10,
+          "def": 10,
+          "direction": "right",
+          "equipment": [],
+          "experience": null,
+          "floorId": "MT2",
+          "followers": [],
+          "hp": 976,
+          "hpmax": -1,
+          "image": "hero.png",
+          "items": {
+            "constants": {
+              "I300": 1,
+              "I333": 1,
+              "book": 1,
+              "fly": 1
+            },
+            "equips": {},
+            "tools": {
+              "yellowKey": 3
+            }
+          },
+          "lv": 1,
+          "mana": 0,
+          "manamax": -1,
+          "mdef": 0,
+          "money": 5,
+          "name": "\u52c7\u8005",
+          "steps": 209,
+          "x": 2,
+          "y": 1
+        }
+      },
+      "trainer": null,
+      "rss_mib": 364.453125
+    }
+  },
+  "events": [
+    {
+      "args": [
+        "new",
+        "lifecycle-1192",
+        "--seed",
+        "4803",
+        "--budget",
+        "120"
+      ],
+      "rc": 0,
+      "stdout": "NEW /workspace/p48-final-home/runs/lifecycle-1192\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"new\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 117.35267114639282,\n  \"elapsed_core_seconds\": 0.018538435999971625,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 0,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"new\"\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 0,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 0,\n    \"total_simulations\": 0,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.018538435999971625,\n    \"resume_count\": 0,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.018538435999971625,\n      \"wall_elapsed_seconds\": 1.9554443359375,\n      \"remaining_seconds\": 118.04454970359802\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.01572629300000017,\n      \"checkpoint_writes\": 2,\n      \"checkpoint_seconds\": 0.010201685000083671\n    },\n    \"actor\": null,\n    \"trainer\": null,\n    \"rss_mib\": 329.0\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "new",
+        "lifecycle-1192",
+        "--seed",
+        "4803",
+        "--budget",
+        "120"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "FileExistsError: [Errno 17] File exists: '/workspace/p48-final-home/runs/lifecycle-1192'\n"
+    },
+    {
+      "args": [
+        "start",
+        "lifecycle-1192",
+        "--seconds",
+        "60"
+      ],
+      "rc": 0,
+      "stdout": "STARTED pid=1203 log=/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "start",
+        "lifecycle-1192",
+        "--seconds",
+        "60"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "RuntimeError: ALREADY_RUNNING\n"
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 117.15079379081726,\n  \"elapsed_core_seconds\": 0.018538435999971625,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 0,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 0,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 0,\n    \"total_simulations\": 0,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.018538435999971625,\n    \"resume_count\": 0,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.018538435999971625,\n      \"wall_elapsed_seconds\": 1.9554443359375,\n      \"remaining_seconds\": 118.04454970359802\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.01572629300000017,\n      \"checkpoint_writes\": 2,\n      \"checkpoint_seconds\": 0.010201685000083671\n    },\n    \"actor\": null,\n    \"trainer\": null,\n    \"rss_mib\": 329.0\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 116.91253757476807,\n  \"elapsed_core_seconds\": 0.018538435999971625,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 0,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 0,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 0,\n    \"total_simulations\": 0,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.018538435999971625,\n    \"resume_count\": 0,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.018538435999971625,\n      \"wall_elapsed_seconds\": 1.9554443359375,\n      \"remaining_seconds\": 118.04454970359802\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.01572629300000017,\n      \"checkpoint_writes\": 2,\n      \"checkpoint_seconds\": 0.010201685000083671\n    },\n    \"actor\": null,\n    \"trainer\": null,\n    \"rss_mib\": 329.0\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 116.66431498527527,\n  \"elapsed_core_seconds\": 0.018538435999971625,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 0,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 0,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 0,\n    \"total_simulations\": 0,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.018538435999971625,\n    \"resume_count\": 0,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.018538435999971625,\n      \"wall_elapsed_seconds\": 1.9554443359375,\n      \"remaining_seconds\": 118.04454970359802\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.01572629300000017,\n      \"checkpoint_writes\": 2,\n      \"checkpoint_seconds\": 0.010201685000083671\n    },\n    \"actor\": null,\n    \"trainer\": null,\n    \"rss_mib\": 329.0\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 116.41950225830078,\n  \"elapsed_core_seconds\": 0.018538435999971625,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 0,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 0,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 0,\n    \"total_simulations\": 0,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.018538435999971625,\n    \"resume_count\": 0,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.018538435999971625,\n      \"wall_elapsed_seconds\": 1.9554443359375,\n      \"remaining_seconds\": 118.04454970359802\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.01572629300000017,\n      \"checkpoint_writes\": 2,\n      \"checkpoint_seconds\": 0.010201685000083671\n    },\n    \"actor\": null,\n    \"trainer\": null,\n    \"rss_mib\": 329.0\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 116.17239212989807,\n  \"elapsed_core_seconds\": 0.018538435999971625,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 0,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 0,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 0,\n    \"total_simulations\": 0,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.018538435999971625,\n    \"resume_count\": 0,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.018538435999971625,\n      \"wall_elapsed_seconds\": 1.9554443359375,\n      \"remaining_seconds\": 118.04454970359802\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.01572629300000017,\n      \"checkpoint_writes\": 2,\n      \"checkpoint_seconds\": 0.010201685000083671\n    },\n    \"actor\": null,\n    \"trainer\": null,\n    \"rss_mib\": 329.0\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 115.92566657066345,\n  \"elapsed_core_seconds\": 0.018538435999971625,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 0,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 0,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 0,\n    \"total_simulations\": 0,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.018538435999971625,\n    \"resume_count\": 0,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.018538435999971625,\n      \"wall_elapsed_seconds\": 1.9554443359375,\n      \"remaining_seconds\": 118.04454970359802\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.01572629300000017,\n      \"checkpoint_writes\": 2,\n      \"checkpoint_seconds\": 0.010201685000083671\n    },\n    \"actor\": null,\n    \"trainer\": null,\n    \"rss_mib\": 329.0\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 115.67852544784546,\n  \"elapsed_core_seconds\": 0.018538435999971625,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 0,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 0,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 0,\n    \"total_simulations\": 0,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.018538435999971625,\n    \"resume_count\": 0,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.018538435999971625,\n      \"wall_elapsed_seconds\": 1.9554443359375,\n      \"remaining_seconds\": 118.04454970359802\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.01572629300000017,\n      \"checkpoint_writes\": 2,\n      \"checkpoint_seconds\": 0.010201685000083671\n    },\n    \"actor\": null,\n    \"trainer\": null,\n    \"rss_mib\": 329.0\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 115.44072222709656,\n  \"elapsed_core_seconds\": 0.018538435999971625,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 0,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 0,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 0,\n    \"total_simulations\": 0,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.018538435999971625,\n    \"resume_count\": 0,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.018538435999971625,\n      \"wall_elapsed_seconds\": 1.9554443359375,\n      \"remaining_seconds\": 118.04454970359802\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.01572629300000017,\n      \"checkpoint_writes\": 2,\n      \"checkpoint_seconds\": 0.010201685000083671\n    },\n    \"actor\": null,\n    \"trainer\": null,\n    \"rss_mib\": 329.0\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 115.20426082611084,\n  \"elapsed_core_seconds\": 0.025476454999989073,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 0,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 0,\n    \"total_simulations\": 0,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.025476454999989073,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.025476454999989073,\n      \"wall_elapsed_seconds\": 4.7248852252960205,\n      \"remaining_seconds\": 115.2751111984253\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.022658745000000202,\n      \"checkpoint_writes\": 2,\n      \"checkpoint_seconds\": 0.024332064999953218\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 0,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"up\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 5\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 79,\n        \"x\": 11,\n        \"y\": 5\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 332.109375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 114.96826839447021,\n  \"elapsed_core_seconds\": 0.025476454999989073,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 0,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 0,\n    \"total_simulations\": 0,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.025476454999989073,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.025476454999989073,\n      \"wall_elapsed_seconds\": 4.7248852252960205,\n      \"remaining_seconds\": 115.2751111984253\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.022658745000000202,\n      \"checkpoint_writes\": 2,\n      \"checkpoint_seconds\": 0.024332064999953218\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 0,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"up\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 5\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 79,\n        \"x\": 11,\n        \"y\": 5\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 332.109375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 114.72919225692749,\n  \"elapsed_core_seconds\": 0.3156600879999587,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 1,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 1,\n    \"total_simulations\": 100,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.3156600879999587,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.3156600879999587,\n      \"wall_elapsed_seconds\": 5.015070676803589,\n      \"remaining_seconds\": 114.98492002487183\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.31095738500000025,\n      \"checkpoint_writes\": 3,\n      \"checkpoint_seconds\": 0.04973042299991448\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 1,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"left\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT1\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 4\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 131,\n        \"x\": 5,\n        \"y\": 3\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 353.84375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "stop",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "STOP_REQUESTED: saving at search/SGD boundary; use status to confirm stopped\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 114.64844274520874,\n  \"elapsed_core_seconds\": 0.6112603330000184,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6112603330000184,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6112603330000184,\n      \"wall_elapsed_seconds\": 5.310670375823975,\n      \"remaining_seconds\": 114.68932151794434\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6046372349999998,\n      \"checkpoint_writes\": 4,\n      \"checkpoint_seconds\": 0.07366629099988131\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 114.41401433944702,\n  \"elapsed_core_seconds\": 0.6359681919999502,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6359681919999502,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6359681919999502,\n      \"wall_elapsed_seconds\": 5.335377216339111,\n      \"remaining_seconds\": 114.66461706161499\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6277473599999999,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.09567292899987478\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 114.17820644378662,\n  \"elapsed_core_seconds\": 0.6359681919999502,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6359681919999502,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6359681919999502,\n      \"wall_elapsed_seconds\": 5.335377216339111,\n      \"remaining_seconds\": 114.66461706161499\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6277473599999999,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.09567292899987478\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 113.9445641040802,\n  \"elapsed_core_seconds\": 0.6359681919999502,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6359681919999502,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6359681919999502,\n      \"wall_elapsed_seconds\": 5.335377216339111,\n      \"remaining_seconds\": 114.66461706161499\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6277473599999999,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.09567292899987478\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"stopped\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 113.71158194541931,\n  \"elapsed_core_seconds\": 0.6359681919999502,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"stopped\",\n    \"pid\": 1203,\n    \"started_utc\": \"2026-10-21T04:09:10.708386+00:00\",\n    \"requested_seconds\": 60.0,\n    \"core_returncode\": 0,\n    \"finished_utc\": \"2026-10-21T04:09:14.215306+00:00\",\n    \"actual_invocation_seconds\": 3.5068514347076416,\n    \"collection_window\": {\n      \"started_utc\": \"2026-10-21T04:09:12.677844+00:00\",\n      \"requested_window_seconds\": 59.999996494000015,\n      \"returned_utc\": \"2026-10-21T04:09:13.311445+00:00\",\n      \"collection_call_seconds\": 0.6336171159999822,\n      \"post_cutoff_cleanup_seconds\": 0\n    },\n    \"post_budget_cleanup_seconds\": 0\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6359681919999502,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6359681919999502,\n      \"wall_elapsed_seconds\": 5.335377216339111,\n      \"remaining_seconds\": 114.66461706161499\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6277473599999999,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.09567292899987478\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "resume",
+        "lifecycle-1192",
+        "--seconds",
+        "20"
+      ],
+      "rc": 0,
+      "stdout": "STARTED pid=1225 log=/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 113.59126710891724,\n  \"elapsed_core_seconds\": 0.6359681919999502,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6359681919999502,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6359681919999502,\n      \"wall_elapsed_seconds\": 5.335377216339111,\n      \"remaining_seconds\": 114.66461706161499\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6277473599999999,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.09567292899987478\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 113.35755968093872,\n  \"elapsed_core_seconds\": 0.6359681919999502,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6359681919999502,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6359681919999502,\n      \"wall_elapsed_seconds\": 5.335377216339111,\n      \"remaining_seconds\": 114.66461706161499\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6277473599999999,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.09567292899987478\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 113.12097120285034,\n  \"elapsed_core_seconds\": 0.6359681919999502,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6359681919999502,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6359681919999502,\n      \"wall_elapsed_seconds\": 5.335377216339111,\n      \"remaining_seconds\": 114.66461706161499\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6277473599999999,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.09567292899987478\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 112.87518453598022,\n  \"elapsed_core_seconds\": 0.6359681919999502,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6359681919999502,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6359681919999502,\n      \"wall_elapsed_seconds\": 5.335377216339111,\n      \"remaining_seconds\": 114.66461706161499\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6277473599999999,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.09567292899987478\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 112.63251113891602,\n  \"elapsed_core_seconds\": 0.6359681919999502,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6359681919999502,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6359681919999502,\n      \"wall_elapsed_seconds\": 5.335377216339111,\n      \"remaining_seconds\": 114.66461706161499\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6277473599999999,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.09567292899987478\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 112.38518142700195,\n  \"elapsed_core_seconds\": 0.6359681919999502,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6359681919999502,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6359681919999502,\n      \"wall_elapsed_seconds\": 5.335377216339111,\n      \"remaining_seconds\": 114.66461706161499\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6277473599999999,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.09567292899987478\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 112.13838243484497,\n  \"elapsed_core_seconds\": 0.6359681919999502,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6359681919999502,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6359681919999502,\n      \"wall_elapsed_seconds\": 5.335377216339111,\n      \"remaining_seconds\": 114.66461706161499\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6277473599999999,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.09567292899987478\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 111.90137124061584,\n  \"elapsed_core_seconds\": 0.6359681919999502,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6359681919999502,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6359681919999502,\n      \"wall_elapsed_seconds\": 5.335377216339111,\n      \"remaining_seconds\": 114.66461706161499\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6277473599999999,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.09567292899987478\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 111.66446423530579,\n  \"elapsed_core_seconds\": 0.6359681919999502,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6359681919999502,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6359681919999502,\n      \"wall_elapsed_seconds\": 5.335377216339111,\n      \"remaining_seconds\": 114.66461706161499\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6277473599999999,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.09567292899987478\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 111.42470359802246,\n  \"elapsed_core_seconds\": 0.6359681919999502,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 2,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 2,\n    \"total_simulations\": 200,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.6359681919999502,\n    \"resume_count\": 1,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.6359681919999502,\n      \"wall_elapsed_seconds\": 5.335377216339111,\n      \"remaining_seconds\": 114.66461706161499\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.6277473599999999,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.09567292899987478\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 2,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT3\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"blueKey\": 1,\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 183,\n        \"x\": 8,\n        \"y\": 2\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 354.30859375\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 111.1854202747345,\n  \"elapsed_core_seconds\": 0.9657833909999454,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 3,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 3,\n    \"total_simulations\": 300,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.9657833909999454,\n    \"resume_count\": 2,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.9657833909999454,\n      \"wall_elapsed_seconds\": 8.557231426239014,\n      \"remaining_seconds\": 111.44275903701782\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.9573956849999998,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.10773684199989475\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 3,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT2\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 209,\n        \"x\": 2,\n        \"y\": 1\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 356.76171875\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "stop",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "STOP_REQUESTED: saving at search/SGD boundary; use status to confirm stopped\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 111.1141185760498,\n  \"elapsed_core_seconds\": 0.9657833909999454,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 3,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 3,\n    \"total_simulations\": 300,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.9657833909999454,\n    \"resume_count\": 2,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.9657833909999454,\n      \"wall_elapsed_seconds\": 8.557231426239014,\n      \"remaining_seconds\": 111.44275903701782\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.9573956849999998,\n      \"checkpoint_writes\": 5,\n      \"checkpoint_seconds\": 0.10773684199989475\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 3,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 0,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT2\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 209,\n        \"x\": 2,\n        \"y\": 1\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 356.76171875\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 110.8762583732605,\n  \"elapsed_core_seconds\": 1.2603050989998792,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 3,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 3,\n    \"total_simulations\": 396,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 1.2603050989998792,\n    \"resume_count\": 2,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 1.2603050989998792,\n      \"wall_elapsed_seconds\": 8.851752758026123,\n      \"remaining_seconds\": 111.14823818206787\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 1.250231693,\n      \"checkpoint_writes\": 6,\n      \"checkpoint_seconds\": 0.18420655399984298\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 3,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 96,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT2\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 209,\n        \"x\": 2,\n        \"y\": 1\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 364.453125\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 110.63593006134033,\n  \"elapsed_core_seconds\": 1.2603050989998792,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 3,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 3,\n    \"total_simulations\": 396,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 1.2603050989998792,\n    \"resume_count\": 2,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 1.2603050989998792,\n      \"wall_elapsed_seconds\": 8.851752758026123,\n      \"remaining_seconds\": 111.14823818206787\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 1.250231693,\n      \"checkpoint_writes\": 6,\n      \"checkpoint_seconds\": 0.18420655399984298\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 3,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 96,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT2\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 209,\n        \"x\": 2,\n        \"y\": 1\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 364.453125\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 110.40003752708435,\n  \"elapsed_core_seconds\": 1.2603050989998792,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 3,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 3,\n    \"total_simulations\": 396,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 1.2603050989998792,\n    \"resume_count\": 2,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 1.2603050989998792,\n      \"wall_elapsed_seconds\": 8.851752758026123,\n      \"remaining_seconds\": 111.14823818206787\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 1.250231693,\n      \"checkpoint_writes\": 6,\n      \"checkpoint_seconds\": 0.18420655399984298\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 3,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 96,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT2\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 209,\n        \"x\": 2,\n        \"y\": 1\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 364.453125\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"running\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 110.1662232875824,\n  \"elapsed_core_seconds\": 1.2603050989998792,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 3,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"running\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": null\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 3,\n    \"total_simulations\": 396,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 1.2603050989998792,\n    \"resume_count\": 2,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 1.2603050989998792,\n      \"wall_elapsed_seconds\": 8.851752758026123,\n      \"remaining_seconds\": 111.14823818206787\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 1.250231693,\n      \"checkpoint_writes\": 6,\n      \"checkpoint_seconds\": 0.18420655399984298\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 3,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 96,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT2\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 209,\n        \"x\": 2,\n        \"y\": 1\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 364.453125\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"stopped\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 109.9318835735321,\n  \"elapsed_core_seconds\": 1.2603050989998792,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 3,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"stopped\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": 0,\n    \"finished_utc\": \"2026-10-21T04:09:17.813880+00:00\",\n    \"actual_invocation_seconds\": 3.508315324783325,\n    \"collection_window\": {\n      \"started_utc\": \"2026-10-21T04:09:16.201950+00:00\",\n      \"requested_window_seconds\": 19.999997054999994,\n      \"returned_utc\": \"2026-10-21T04:09:16.882199+00:00\",\n      \"collection_call_seconds\": 0.6802666049999289,\n      \"post_cutoff_cleanup_seconds\": 0\n    },\n    \"post_budget_cleanup_seconds\": 0\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 3,\n    \"total_simulations\": 396,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 1.2603050989998792,\n    \"resume_count\": 2,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 1.2603050989998792,\n      \"wall_elapsed_seconds\": 8.851752758026123,\n      \"remaining_seconds\": 111.14823818206787\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 1.250231693,\n      \"checkpoint_writes\": 6,\n      \"checkpoint_seconds\": 0.18420655399984298\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 3,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 96,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT2\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 209,\n        \"x\": 2,\n        \"y\": 1\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 364.453125\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "diagnose",
+        "lifecycle-1192"
+      ],
+      "rc": 0,
+      "stdout": "{\n  \"state\": \"stopped\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4803,\n  \"budget_seconds\": 120.0,\n  \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n  \"remaining_wall_budget_seconds\": 109.89300513267517,\n  \"elapsed_core_seconds\": 1.2603050989998792,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 3,\n  \"model_id\": \"lifecycle-1192-N0\",\n  \"model_hash\": \"a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"stopped\",\n    \"pid\": 1225,\n    \"started_utc\": \"2026-10-21T04:09:14.305423+00:00\",\n    \"requested_seconds\": 20.0,\n    \"core_returncode\": 0,\n    \"finished_utc\": \"2026-10-21T04:09:17.813880+00:00\",\n    \"actual_invocation_seconds\": 3.508315324783325,\n    \"collection_window\": {\n      \"started_utc\": \"2026-10-21T04:09:16.201950+00:00\",\n      \"requested_window_seconds\": 19.999997054999994,\n      \"returned_utc\": \"2026-10-21T04:09:16.882199+00:00\",\n      \"collection_call_seconds\": 0.6802666049999289,\n      \"post_cutoff_cleanup_seconds\": 0\n    },\n    \"post_budget_cleanup_seconds\": 0\n  },\n  \"log\": \"/workspace/p48-final-home/runs/lifecycle-1192/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/lifecycle-1192/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/lifecycle-1192/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/lifecycle-1192/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"lifecycle-1192\",\n    \"seed\": 4803,\n    \"generation\": 0,\n    \"model_id\": \"lifecycle-1192-N0\",\n    \"next_episode\": 1,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 3,\n    \"total_simulations\": 396,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 1.2603050989998792,\n    \"resume_count\": 2,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:09:07.953183+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:11:07.953183+00:00\",\n      \"budget_seconds\": 120.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 1.2603050989998792,\n      \"wall_elapsed_seconds\": 8.851752758026123,\n      \"remaining_seconds\": 111.14823818206787\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 1.250231693,\n      \"checkpoint_writes\": 6,\n      \"checkpoint_seconds\": 0.18420655399984298\n    },\n    \"actor\": {\n      \"episode_id\": 0,\n      \"step\": 3,\n      \"model_id\": \"lifecycle-1192-N0\",\n      \"pending_simulations\": 96,\n      \"task\": {\n        \"status\": \"ACTIVE\"\n      },\n      \"hero\": {\n        \"animate\": false,\n        \"atk\": 10,\n        \"def\": 10,\n        \"direction\": \"right\",\n        \"equipment\": [],\n        \"experience\": null,\n        \"floorId\": \"MT2\",\n        \"followers\": [],\n        \"hp\": 976,\n        \"hpmax\": -1,\n        \"image\": \"hero.png\",\n        \"items\": {\n          \"constants\": {\n            \"I300\": 1,\n            \"I333\": 1,\n            \"book\": 1,\n            \"fly\": 1\n          },\n          \"equips\": {},\n          \"tools\": {\n            \"yellowKey\": 3\n          }\n        },\n        \"lv\": 1,\n        \"mana\": 0,\n        \"manamax\": -1,\n        \"mdef\": 0,\n        \"money\": 5,\n        \"name\": \"\u52c7\u8005\",\n        \"steps\": 209,\n        \"x\": 2,\n        \"y\": 1\n      }\n    },\n    \"trainer\": null,\n    \"rss_mib\": 364.453125\n  }\n}\nDIAGNOSTICS /workspace/p48-final-home/lifecycle-1192-diagnostics.zip\n",
+      "stderr": ""
+    }
+  ]
+}

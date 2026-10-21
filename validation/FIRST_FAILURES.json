@@ -1,10 +1,50 @@
 {
   "source_commit": "63bdd80216edf825d887bc5316eb0ad78e7250ad",
   "failures": [
-    {"step":"initial environment probe","observed":"ModuleNotFoundError: No module named torch","resolution":"Installed original P45 Torch2.14.1+cpu / NumPy2.3.5 in a separate venv; system environment untouched"},
-    {"step":"sparse source checkout","observed":"git sparse-checkout add does not accept --no-cone in this Git version","resolution":"Retained the already configured non-cone mode and used supported add syntax"},
-    {"step":"first background exploratory smoke","observed":"Duplicate start correctly rejected; a later stop request arrived after its 30-second slice, so that attempt alone did not prove safe stopping a live collector","resolution":"Replaced evidence with tests/lifecycle.py which observes live progress, stops, confirms stopped, resumes and observes additional decisions"},
-    {"step":"public repository creation","observed":"GraphQL createRepository: Resource not accessible by integration; REST POST /user/repos: HTTP403 Resource not accessible by integration","resolution":"Blocked on repository-creation capability, not user publication authorization. Finish local code/tests and private handoff; user must create an empty public hydeful/mota-p45-runtime repository accessible to the current GitHub connection. Public publishing/download tests remain unverified."}
+    {
+      "step": "initial environment probe",
+      "observed": "ModuleNotFoundError: No module named torch",
+      "resolution": "Installed original P45 Torch2.14.1+cpu / NumPy2.3.5 in a separate venv; system environment untouched"
+    },
+    {
+      "step": "sparse source checkout",
+      "observed": "git sparse-checkout add does not accept --no-cone in this Git version",
+      "resolution": "Retained the already configured non-cone mode and used supported add syntax"
+    },
+    {
+      "step": "first background exploratory smoke",
+      "observed": "Duplicate start correctly rejected; a later stop request arrived after its 30-second slice, so that attempt alone did not prove safe stopping a live collector",
+      "resolution": "Replaced evidence with tests/lifecycle.py which observes live progress, stops, confirms stopped, resumes and observes additional decisions"
+    },
+    {
+      "step": "public repository creation",
+      "observed": "GraphQL createRepository: Resource not accessible by integration; REST POST /user/repos: HTTP403 Resource not accessible by integration",
+      "resolution": "Blocked on repository-creation capability, not user publication authorization. Finish local code/tests and private handoff; user must create an empty public hydeful/mota-p45-runtime repository accessible to the current GitHub connection. Public publishing/download tests remain unverified."
+    },
+    {
+      "step": "first timed deployment attempt",
+      "observed": "Supervisor duration included Python startup and therefore could not isolate post-collection cutoff cleanup time. This infrastructure attempt was safely stopped and not counted as a 600-second result.",
+      "retained_control": {
+        "state": "stopped",
+        "pid": 1122,
+        "started_utc": "2026-10-21T04:07:23.335337+00:00",
+        "requested_seconds": 600.0,
+        "core_returncode": 0,
+        "finished_utc": "2026-10-21T04:08:19.386306+00:00",
+        "actual_invocation_seconds": 56.05096912384033,
+        "post_budget_cleanup_seconds": 0
+      },
+      "resolution": "Added scripts/core_entry.py timing-only wrapper; core source unchanged; clean final clone 73b2dd9b70bea25ae1dca5d541beefb2b845fe4c starts a fresh independent 600-second run. No interrupted time is concatenated."
+    },
+    {
+      "step": "additional abnormal-exit validation harness",
+      "observed": [
+        "managed /proc/PID/task/PID/children unavailable; ps --ppid used instead",
+        "initial disposable slice ended before manual retry",
+        "retry harness omitted run name on stop after successful abnormal-exit/restore assertions; explicit stop sent"
+      ],
+      "resolution": "Final automated fresh short run used ps and always supplied name; actual -9/abnormal_exit, restore advancement and safe stop all verified; see ABNORMAL_EXIT.json. No incomplete attempt counted as pass."
+    }
   ],
   "algorithm_changes": false
 }

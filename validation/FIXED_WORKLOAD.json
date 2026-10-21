@@ -1,0 +1,26 @@
+{
+  "pass": true,
+  "seed": 4801,
+  "scope": "first real trigger-driven model update, then four complete episodes consuming N1; original P45 versus byte-identical extraction",
+  "comparison": "exact logical fingerprints: actions, search targets/pi/visits, terminal labels, model/optimizer/RNG/replay and counters; only measured costs/timestamps excluded by original fingerprint",
+  "fingerprint": {
+    "model": "440e380155480198e1c6af3be8a5bea1f88887d4364a204ced1c27f998377b34",
+    "optimizer": "b92b6463cf394448304d135629402f91258e09ebe371c52106100fdd5da5469d",
+    "rng": "468482e19689b49a89c79aee76d2e56958ce236a872d108049d8e89e0e70013a",
+    "committed_samples": "d9d87ce81f1f04db957404e6196c9563a7df99b304a98b640b1d41e4588e289b",
+    "cohort_samples": "a330395cc0a53ad1207736546afff4735940937564bbf75ce1edad40780d9139",
+    "replay": "692ae75533048260d42326f5ab7fe32c1976e442d780070e69013e548ebb5e35",
+    "pending_records": "a330395cc0a53ad1207736546afff4735940937564bbf75ce1edad40780d9139",
+    "pending_tree": "99bf08d8dc95c6aeb2d65ed7025a39215e31b4c92fccc2b5ed130b640db2cd7d",
+    "pending_decision": "99bf08d8dc95c6aeb2d65ed7025a39215e31b4c92fccc2b5ed130b640db2cd7d",
+    "trainer": "99bf08d8dc95c6aeb2d65ed7025a39215e31b4c92fccc2b5ed130b640db2cd7d",
+    "logical": {
+      "generation": 1,
+      "sgd_steps": 67,
+      "decisions": 607,
+      "simulations": 60700,
+      "pending_step": null,
+      "pending_simulations": 0
+    }
+  }
+}

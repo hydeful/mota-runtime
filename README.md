@@ -1,5 +1,7 @@
 # P45 AutoDL 最小独立运行版
 
+> 当前交付状态：本地验证完成；GitHub连接创建仓库返回403，公开发布/公开下载尚未完成，AutoDL待验证。
+
 基于私有工程固定提交 `63bdd80216edf825d887bc5316eb0ad78e7250ad`。
 P45 原始源码、资产、算法配置逐字节保留；独立 Git 历史只包含运行所需内容。
 来源和许可边界见 [SOURCE_MANIFEST.json](SOURCE_MANIFEST.json)、[NOTICE.md](NOTICE.md)。

@@ -1,0 +1,16 @@
+{
+  "credential_pattern_findings": [],
+  "tracked_models_or_training_payloads": [],
+  "scope": "Runtime source, selected bounded diagnostics and validation receipts. Not a general guarantee of all possible secrets. No process environment or credential files read.",
+  "excluded": [
+    "private Git history",
+    "model weights",
+    "optimizer checkpoints",
+    "full episode/training data",
+    "replay pools",
+    "historical routes",
+    "cache/temp files",
+    "unrelated reports",
+    "third-party JS/media/font bundles"
+  ]
+}

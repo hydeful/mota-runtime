@@ -1,0 +1,40 @@
+{
+  "check": "PASS",
+  "source_commit": "73b2dd9b70bea25ae1dca5d541beefb2b845fe4c",
+  "source": "/workspace/p48-final-clean",
+  "home": "/workspace/p48-final-home",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "torch": "2.14.1+cpu",
+  "numpy": "2.3.5",
+  "os": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "os_release": "PRETTY_NAME=\"Debian GNU/Linux 13 (trixie)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"13\"\nVERSION=\"13 (trixie)\"\nVERSION_CODENAME=trixie\nDEBIAN_VERSION_FULL=13.6\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"",
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "visible_cpus": 5,
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "cgroup": "0::/",
+  "cpu_max": "400000 100000",
+  "cpu_quota_v1": null,
+  "cpu_period_v1": null,
+  "memory_max": "17179869184",
+  "memory_limit_v1": null,
+  "meminfo": "MemTotal:       18440112 kB\nMemFree:        10789176 kB\nMemAvailable:   16584032 kB\nBuffers:           51556 kB\nCached:          5761984 kB\nSwapCached:            0 kB\nActive:          1524572 kB\nInactive:        5294832 kB\nActive(anon):         68 kB\nInactive(anon):  1035708 kB\nActive(file):    1524504 kB\nInactive(file):  4259124 kB\nUnevictable:       29924 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:             10164 kB\nWriteback:            72 kB\nAnonPages:       1035640 kB\nMapped:           319604 kB\nShmem:                16 kB\nKReclaimable:     363240 kB\nSlab:             433384 kB\nSReclaimable:     363240 kB\nSUnreclaim:        70144 kB\nKernelStack:        2368 kB\nPageTables:         5524 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     9220056 kB\nCommitted_AS:    1619260 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4668 kB\nVmallocChunk:          0 kB\nPercpu:             1296 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:     22528 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       18432 kB\nDirectMap2M:     3182592 kB\nDirectMap1G:    32505856 kB",
+  "disk_bytes": {
+    "total": 33770192896,
+    "used": 5894488064,
+    "free": 26140942336
+  },
+  "mount": "{\n   \"filesystems\": [\n      {\n         \"target\": \"/\",\n         \"source\": \"overlay\",\n         \"fstype\": \"overlay\",\n         \"options\": \"rw,relatime,lowerdir=/run/kata-containers/erofs-multi-layer/c0801a581488453085e5d396ceaa9015/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/c0801a581488453085e5d396ceaa9015/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/c0801a581488453085e5d396ceaa9015/upper/work,index=off,metacopy=off\"\n      }\n   ]\n}\n",
+  "torch_cuda_build": null,
+  "gpu_visible": false,
+  "actual_compute_device": "cpu",
+  "search_device": "cpu",
+  "inference_device": "cpu",
+  "sgd_device": "cpu",
+  "gpu": ""
+}

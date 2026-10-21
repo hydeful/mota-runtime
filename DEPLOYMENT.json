@@ -1,0 +1,33 @@
+{
+  "overall": "BLOCKED_PUBLIC_REPOSITORY_CREATION; AutoDL pending; not overall PASS",
+  "baseline_commit": "63bdd80216edf825d887bc5316eb0ad78e7250ad",
+  "local_tested_runtime_commit": "73b2dd9b70bea25ae1dca5d541beefb2b845fe4c",
+  "public_repository_requested": "https://github.com/hydeful/mota-p45-runtime",
+  "public_repository_created": false,
+  "public_fixed_commit": null,
+  "items": {
+    "source": "PASS:22 byte-identical files",
+    "scope_and_secret_scan": "PASS for selected source/evidence; no weights/full training payloads/private history",
+    "license": "NOTICE records boundaries; no new third-party license granted",
+    "public_download": "BLOCKED: repository creation HTTP403",
+    "clean_local_install": "PASS: local clone of fixed independent commit; no public-download claim",
+    "algorithm_equivalence": "PASS:32 episodes/607 positions/60700 simulations/67 SGD, exact logical fingerprints; wrapper trajectory/training also exact",
+    "local_600": "PASS:600.059602718s collection call,0.059606774s cleanup",
+    "completed_episodes_local": 110,
+    "committed_episodes_local": 108,
+    "qualified_positions_local": 1901,
+    "model_updates_local": 3,
+    "real_sgd_local": 205,
+    "updated_model_consumption_local": "82 complete episodes with verified updated model hash",
+    "background_local": "PASS: detached session survives initiating process exit; browser closure remains AutoDL pending",
+    "stop_resume_local": "PASS: same trained run 1943 to1944 decisions; deadline unchanged",
+    "duplicate_start_local": "PASS:flock and nonzero ALREADY_RUNNING",
+    "expired_budget_local": "PASS:resume refused",
+    "abnormal_exit_local": "PASS:actual -9, explicit abnormal status, restore advances",
+    "AutoDL_600": "PENDING",
+    "AutoDL_browser_closure": "PENDING",
+    "AutoDL_stop_resume_within720": "PENDING"
+  },
+  "user_minimum_action": "Create empty public hydeful/mota-p45-runtime without README/license/gitignore and grant current GitHub connection access. No tokens/passwords/private keys required.",
+  "next_authorized_steps": "Push independent runtime history; remote readback; credential-free pinned download and clean verification; deliver actual AutoDL commands. No cloud training has been initiated."
+}

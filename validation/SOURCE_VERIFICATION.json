@@ -1,0 +1,121 @@
+{
+  "source_commit": "63bdd80216edf825d887bc5316eb0ad78e7250ad",
+  "unchanged_files": 22,
+  "bytes": 452517,
+  "all_exact": true,
+  "files": [
+    {
+      "path": "tasks/tower10/p45/cli.py",
+      "sha256": "aba6015fa4832335c2249a9dfc6226242da8a4fcdd8719f9609e6ca03486571e",
+      "bytes": 11004
+    },
+    {
+      "path": "tasks/tower10/p45/search.py",
+      "sha256": "0e674cdb501e5afda336928175c184aa1631ba27390ddd1773d0cb13f42ffcf8",
+      "bytes": 7362
+    },
+    {
+      "path": "tasks/tower10/p45/__init__.py",
+      "sha256": "b99190b928c8c48bb4b9c23d33baf2b3abbbf797758b6f8919daaba5456ad1cf",
+      "bytes": 50
+    },
+    {
+      "path": "tasks/tower10/p45/network.py",
+      "sha256": "92d69e1e98706f7cb8691e0e20a5a7eb685d35dff8c6bd1133c21b93c02756d4",
+      "bytes": 1770
+    },
+    {
+      "path": "tasks/tower10/p45/contracts.py",
+      "sha256": "bdf83bfce812110eafafa879ac152075a9ea5144b7d064f93acceab671951d2b",
+      "bytes": 3942
+    },
+    {
+      "path": "tasks/tower10/p45/environment.py",
+      "sha256": "3c7f576d5b4fbc43b0b3376f9c72a08cd5d82453de9fc0dd3d2ef8b4d7ea1928",
+      "bytes": 13471
+    },
+    {
+      "path": "tasks/tower10/p45/observation.py",
+      "sha256": "a3a10a3453bf1cbbd14ff2ec54b11e99a668a9c357d7403656233516e8e70b6a",
+      "bytes": 3052
+    },
+    {
+      "path": "tasks/tower10/p45/runtime.py",
+      "sha256": "fc90ad2e9305ba4daabf7b93a162906284cae78d8090e83b97597f63fdf25c2d",
+      "bytes": 27620
+    },
+    {
+      "path": "tasks/tower10/p45/config.json",
+      "sha256": "e9f79eefde0b14dec11c39b6205fbf7dacf96cfdbea4afe890dd9c6d7a59d985",
+      "bytes": 3173
+    },
+    {
+      "path": "tasks/tower10/p45/parallel.py",
+      "sha256": "ca7f1982c53f2277492dc88e2bcdcd6c0f2312d2efb223b1a0f487335c6c6748",
+      "bytes": 11287
+    },
+    {
+      "path": "tasks/tower10/p45/assets/SHA256.json",
+      "sha256": "b3d08364daab5ad0edb7bba27917955e3e585570863817d060babf75edb03c27",
+      "bytes": 199
+    },
+    {
+      "path": "tasks/tower10/p45/assets/shared_initial_topology.json",
+      "sha256": "80999d2e01da8253510c96bc2f52ba9b61fae19b74516b76bb58f25cd90a05e6",
+      "bytes": 327189
+    },
+    {
+      "path": "tasks/tower10/p45/assets/shared_identity.json",
+      "sha256": "4f5f9f0a173409dbec2871f206f6aa8279afbeed446ca264e3aeaef469842ea6",
+      "bytes": 583
+    },
+    {
+      "path": "tasks/tower10/p45_v0.py",
+      "sha256": "eb7d550c7a4c487aba573e7b3e1361c961eab33c2bd91f6bcb5a2101121489e6",
+      "bytes": 418
+    },
+    {
+      "path": "tasks/tower10/neural/common.py",
+      "sha256": "921a99fa7ee7e0516ea794edb78760fdb15e6c2ad0d096e4eb7ea0dd820f4d1c",
+      "bytes": 7114
+    },
+    {
+      "path": "tasks/tower10/neural/vendor/kernel.py",
+      "sha256": "e357d8785e283a9af2c5255488a9c8ede48ea72e70c9bde2410232d52fe3cc85",
+      "bytes": 7790
+    },
+    {
+      "path": "tasks/tower10/neural/vendor/path_index.py",
+      "sha256": "48fb3d842f58c6191ec5d306ff50ba6ac85bd57b94c036a6f84a54e93ced7023",
+      "bytes": 1204
+    },
+    {
+      "path": "tasks/tower10/neural/vendor/topology_engine.py",
+      "sha256": "f602d445d832904eb54a030bc0bf8ebf4e9b9d76ea8f2860fccd34d8b07355d6",
+      "bytes": 17499
+    },
+    {
+      "path": "tasks/tower10/engineering_upgrade/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tasks/tower10/engineering_upgrade/actions.py",
+      "sha256": "9d3587ef2a67361e399c2503d6a765ed2c72390b0997e8483d216e9b93dc1e4a",
+      "bytes": 3646
+    },
+    {
+      "path": "tasks/tower10/engineering_upgrade/topology.py",
+      "sha256": "344aa8d561dc01ffc71d1fc9ee47438c6737eeada9f5ecd31b4f8bdd63756501",
+      "bytes": 1137
+    },
+    {
+      "path": "tasks/tower10/engineering_upgrade/fast.py",
+      "sha256": "d08db70092878454afb571d65bca0bcbb248ef86f1550d631145a2a63a6c6bd7",
+      "bytes": 3007
+    }
+  ],
+  "agents": "No AGENTS.md in base Git tree or /workspace ancestors",
+  "third_party_bundled_libraries": [],
+  "license_boundary": "NOTICE.md; no blanket relicensing; no JS/assets/audio/fonts bundled"
+}

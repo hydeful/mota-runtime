@@ -1,0 +1,40 @@
+{
+  "pass": true,
+  "budget_never_extended": true,
+  "events": [
+    {
+      "args": [
+        "new",
+        "expired-budget",
+        "--seed",
+        "4810",
+        "--budget",
+        "2"
+      ],
+      "returncode": 0,
+      "stdout": "NEW /workspace/p48-final-home/runs/expired-budget\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "resume",
+        "expired-budget",
+        "--seconds",
+        "120"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "RuntimeError: START_FAILED: see /workspace/p48-final-home/runs/expired-budget/logs/console.log\n"
+    },
+    {
+      "args": [
+        "status",
+        "expired-budget"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"state\": \"new\",\n  \"source_commit\": \"73b2dd9b70bea25ae1dca5d541beefb2b845fe4c\",\n  \"actual_compute_device\": \"cpu\",\n  \"seed\": 4810,\n  \"budget_seconds\": 2.0,\n  \"deadline_utc\": \"2026-10-21T04:17:00.951077+00:00\",\n  \"remaining_wall_budget_seconds\": 0,\n  \"elapsed_core_seconds\": 0.02046759400013798,\n  \"completed_episodes\": 0,\n  \"qualified_training_positions\": 0,\n  \"model_updates\": 0,\n  \"real_sgd_steps\": 0,\n  \"decisions\": 0,\n  \"model_id\": \"expired-budget-N0\",\n  \"model_hash\": \"a91c1e77daf1886202e1b9a5a623a1d9fe5c63a0e7aef71dbdb5176b261e33ae\",\n  \"updated_model_consumption_records\": 0,\n  \"first_updated_model_consumption\": [],\n  \"invocation\": {\n    \"state\": \"new\"\n  },\n  \"log\": \"/workspace/p48-final-home/runs/expired-budget/logs/console.log\",\n  \"checkpoint\": \"/workspace/p48-final-home/runs/expired-budget/state/checkpoint.pt\",\n  \"models\": \"/workspace/p48-final-home/runs/expired-budget/models\",\n  \"models_ledger\": \"/workspace/p48-final-home/runs/expired-budget/state/models.json\",\n  \"training_data\": \"/workspace/p48-final-home/runs/expired-budget/data\",\n  \"last_durable_core_status\": {\n    \"run_id\": \"expired-budget\",\n    \"seed\": 4810,\n    \"generation\": 0,\n    \"model_id\": \"expired-budget-N0\",\n    \"next_episode\": 0,\n    \"episodes\": [],\n    \"new_positions\": 0,\n    \"total_positions\": 0,\n    \"total_decisions\": 0,\n    \"total_simulations\": 0,\n    \"sgd_steps\": 0,\n    \"elapsed_seconds\": 0.02046759400013798,\n    \"resume_count\": 0,\n    \"budget\": {\n      \"session_start_utc\": \"2026-10-21T04:16:58.951077+00:00\",\n      \"deadline_utc\": \"2026-10-21T04:17:00.951077+00:00\",\n      \"budget_seconds\": 2.0,\n      \"task_source_commit\": \"63bdd80216edf825d887bc5316eb0ad78e7250ad\",\n      \"authorization\": \"P48 explicit new run budget\",\n      \"active_seconds\": 0.02046759400013798,\n      \"wall_elapsed_seconds\": 2.288803815841675,\n      \"remaining_seconds\": 0\n    },\n    \"stats\": {\n      \"process_cpu_seconds\": 0.0168930679999999,\n      \"checkpoint_writes\": 2,\n      \"checkpoint_seconds\": 0.012195161000136068\n    },\n    \"actor\": null,\n    \"trainer\": null,\n    \"rss_mib\": 329.00390625\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "worker_log": "RuntimeError: BUDGET_EXHAUSTED: resume never resets budget\n"
+}
