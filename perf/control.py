@@ -128,9 +128,14 @@ def task(root,state,label,argv,python,limit,held,trial=None):
         record['cleanup']=cleanup
         if primary_error:record['primary_error']=primary_error
         elif rc:record['primary_error']={'error':'CHILD_EXIT_'+str(rc),'error_path':str(directory/'console.log')}
+    from perf.acceptance import task_assessment
+    assessment=task_assessment(rc,requested is not None,primary_error,cleanup)
+    record['process_assessment']=assessment
+    record['termination_requested']=requested is not None
+    record['termination_reason']=('user_stop' if (root/'STOP').exists() else 'timeout') if requested is not None else None
     children1=resource.getrusage(resource.RUSAGE_CHILDREN)
     related_cpu=time.process_time()-cpu0+children1.ru_utime+children1.ru_stime-children_cpu0
-    record.update(status='finished' if rc==0 and requested is None and primary_error is None and cleanup['complete'] and not cleanup['before_cleanup'] else 'incomplete',exit_code=rc,
+    record.update(status='finished' if assessment['accepted'] else 'incomplete',exit_code=rc,
                   wall_seconds=time.monotonic()-start,finished_utc=utc(),sampled_peak_sum_rss_bytes=peak,
                   sampled_cpu_seconds_lower_bound=sum(totals.values()),controller_monitor_cpu_seconds=time.process_time()-cpu0,
                   all_related_cpu_seconds=related_cpu,cpu_accounting_complete=rc==0 and cleanup['complete'],

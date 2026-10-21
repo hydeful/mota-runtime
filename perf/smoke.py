@@ -27,11 +27,11 @@ def coverage(root,state):
     dump(root/'coverage.json',{'smoke_only':True,'not_performance_comparison':True,'paths':rows})
     import csv
     with (root/'coverage.csv').open('w',newline='') as f:
-        w=csv.DictWriter(f,fieldnames=['path','status','chain_status','link_status','input_source','seconds','exit_code','error_path','detail']);w.writeheader()
-        for x in rows:w.writerow({k:x.get(k) for k in w.fieldnames})
+        w=csv.DictWriter(f,fieldnames=['path','status','functional_status','live_process_status','unexpected_live_process_status','reaping_status','expected_fault_status','chain_status','link_status','input_source','seconds','exit_code','error_path','detail']);w.writeheader()
+        for x in rows:w.writerow({k:x.get('acceptance',{}).get(k,x.get(k)) for k in w.fieldnames})
     names={'pass':'通过','fail':'失败','timeout':'超时','not_run':'未执行','device_unavailable':'设备不可用'}
     text=['P48 600秒流程冒烟：不证明提速，不计正式产能。']
-    text += [x['path']+'：自身='+names[x['status']]+'；衔接='+x.get('link_status','not_applicable')+'；整条依赖链='+x.get('chain_status','not_applicable')+'；输入='+x.get('input_source','independent')+'；'+x.get('detail','') for x in rows]
+    text += [x['path']+'：验收='+names[x['status']]+'；衔接='+x.get('link_status','not_applicable')+'；功能='+x.get('acceptance',{}).get('functional_status',x['status'])+'；活进程='+x.get('acceptance',{}).get('live_process_status','not_applicable')+'；回收='+x.get('acceptance',{}).get('reaping_status','not_applicable')+'；预期故障='+x.get('acceptance',{}).get('expected_fault_status','not_applicable')+'；整条依赖链='+x.get('chain_status','not_applicable')+'；输入='+x.get('input_source','independent')+'；'+x.get('detail','') for x in rows]
     (root/'COVERAGE.txt').write_text('\n'.join(text)+'\n')
 
 def schedule_check(root,state,held):
@@ -137,15 +137,16 @@ def controller(root):
                             if name=='fixture' and state.get('inject_fixture_failure'):argv+=['--inject-fixture-failure']
                             rec=task(root,state,name,argv,python,cap,held)
                             result=load(out/'case.json',{})
-                            status=result.get('status','timeout' if rec['status']!='finished' and rec.get('exit_code',0)<0 else 'fail')
-                            if rec['status']!='finished' and status=='pass':status='fail'
-                            if name=='orphan_parent':
-                                ok=rec.get('exit_code')==17 and rec['cleanup']['before_cleanup'] and rec['cleanup']['complete']
-                                status='pass' if ok else 'fail';detail='controlled parent exit17; detached descendant identified/reaped; primary exit retained in attempt'
+                            from perf.acceptance import case_assessment
+                            orphan=load(out/'orphan.json',{}) if name=='orphan_parent' else {}
+                            expected_pids=[orphan['child_pid']] if type(orphan.get('child_pid')) is int else None
+                            assessment=case_assessment(name,result,rec,(out/'timeout-entered.json').exists(),expected_pids)
+                            status=assessment['status'];row['acceptance']=assessment
+                            row['raw_case_result']=result
                             if status!='pass' and link=='pass':row['link_status']='not_verified'
                             row.update(status=status,seconds=rec['wall_seconds'],exit_code=rec.get('exit_code'),error_path=rec['directory']+'/console.log',detail=result.get('error',detail),cleanup_complete=rec.get('cleanup',{}).get('complete'))
-                            if name=='controlled_failure':row['expected_fault_observed']=status=='fail' and 'EXPECTED_INJECTED' in result.get('error','')
-                            if name=='controlled_timeout':row['expected_timeout_observed']=status=='timeout' and (out/'timeout-entered.json').exists()
+                            if name=='controlled_failure':row['expected_fault_observed']=assessment['expected_fault_status']=='pass' and assessment['unexpected_live_process_status']=='pass' and assessment['reaping_status']=='pass'
+                            if name=='controlled_timeout':row['expected_timeout_observed']=assessment['expected_fault_status']=='pass' and assessment['unexpected_live_process_status']=='pass' and assessment['reaping_status']=='pass'
                 except Exception as exc:
                     import traceback
                     row.update(status='fail',detail=repr(exc),traceback=traceback.format_exc())
@@ -174,7 +175,7 @@ def controller(root):
             export(root,state,finalizing=True)
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('command',choices=['start','status','stop','resume','export','_controller']);p.add_argument('name');p.add_argument('--budget',type=int,default=600);p.add_argument('--inject-fixture-failure',action='store_true');p.add_argument('--full',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('command',choices=['start','status','stop','resume','export','reclassify','_controller']);p.add_argument('name');p.add_argument('--budget',type=int,default=600);p.add_argument('--inject-fixture-failure',action='store_true');p.add_argument('--full',action='store_true');a=p.parse_args()
     if a.full and a.command!='export':p.error('--full only applies to explicit export')
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,63}',a.name):p.error('invalid name')
     root=HOME/'smoke-tests'/a.name
@@ -199,6 +200,10 @@ def main():
         raise RuntimeError('SMOKE_START_CONFIRM_TIMEOUT')
     if a.command=='_controller':controller(root);return
     state=load(root/'state.json')
+    if a.command=='reclassify':
+        from perf.reclassify import write_review
+        target=root/('acceptance-reclassified-'+str(time.time_ns())+'.json')
+        print('只读重分类侧表：'+str(write_review(root,target)));return
     if a.command=='stop':(root/'STOP').touch();print('已请求停止；不会重置预算；结果将自动导出。');return
     if a.command=='export':
         if a.full:
@@ -210,6 +215,6 @@ def main():
     print('流程冒烟：'+state['status']+'；当前='+label+'；剩余='+str(round(max(0,stamp(state['deadline_utc'])-time.time())))+'秒；进程锁='+str(alive(root)))
     elapsed=state.get('execution_elapsed_seconds',time.time()-stamp(state['started_utc']))
     print('实际执行耗时='+str(round(elapsed,2))+'秒；结束时间='+str(state.get('finished_utc','尚未结束'))+'；绝对预算截止='+state['deadline_utc'])
-    for row in {r['path']:r for r in state['coverage']}.values():print(row['path']+': 自身='+row['status']+'；衔接='+row.get('link_status','not_applicable')+'；整条依赖链='+row.get('chain_status','not_applicable')+'；输入='+row.get('input_source','independent'))
+    for row in {r['path']:r for r in state['coverage']}.values():print(row['path']+': 验收='+row['status']+'；功能='+row.get('acceptance',{}).get('functional_status',row['status'])+'；非预期活进程='+row.get('acceptance',{}).get('unexpected_live_process_status','not_applicable')+'；回收='+row.get('acceptance',{}).get('reaping_status','not_applicable')+'；预期故障='+row.get('acceptance',{}).get('expected_fault_status','not_applicable')+'；衔接='+row.get('link_status','not_applicable')+'；整条依赖链='+row.get('chain_status','not_applicable')+'；输入='+row.get('input_source','independent'))
     print('结果包：'+str(root/'results.zip'))
 if __name__=='__main__':main()

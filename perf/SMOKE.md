@@ -1,3 +1,5 @@
+> 本轮为验收分类修复。已有smoke2无需重新运行；只读重分类入口见下文。保留下方DDC首次诊断命令作为历史操作说明，本轮不要据此重启实验。
+
 # P48：600秒流程诊断
 
 沿用状态比较器、独立`mota-smoke`入口及原P45；不改冻结算法文件。本模式用于排错，**不是600秒性能对照，不证明提速，不自动进入一小时实验**。安装另计；从start开始，子进程导入、预热、失败、检查和打包均共用不可重置的最多600秒绝对预算，可提前结束。关闭终端继续，不自动重跑或追加预算。
@@ -32,7 +34,7 @@
 
 备用材料在主fixture之前一次性新建：新鲜随机网络、真实原版一局终局样本，参考规则重放，未完成100模拟决策的树和两种actor RNG，实际模型/优化器/全局RNG。一个终局被放入明确标记的**诊断单局账本**，不是正式四局提交。所有必需文件封存SHA清单；CPU金标准绑定同一输入basis_id和参考文件SHA。备用材料不是历史权重或数据，不使用损坏断点训练。
 
-`status`表示阶段自身；`link_status`表示直接上下游衔接；`chain_status`继承整个实际依赖链的失败/未验证。备用输入自身通过，原衔接仍失败或未验证，后面阶段通过不会洗掉它。设备不可用时不声称其消费路径已验证。文件完整性在控制器及消费入口都校验，包内记录输入来源与basis_id。
+`status`表示综合验收；`acceptance.functional_status`保留阶段功能结果，`unexpected_live_process_status`、`reaping_status`、`expected_fault_status`分别报告非预期活进程、回收和受控故障；`link_status`表示直接上下游衔接；`chain_status`继承整个实际依赖链的失败/未验证。备用输入自身通过，原衔接仍失败或未验证，后面阶段通过不会洗掉它。设备不可用时不声称其消费路径已验证。文件完整性在控制器及消费入口都校验，包内记录输入来源与basis_id。
 
 为了覆盖训练发布路径，测试仍明确注入`new_positions=512`，不改正式512门槛、网络、100模拟、批量64、优化器/学习率或曝光公式。构造阶段执行63次真实SGD（仅跳过构造过程的中间写盘），两种保存各恢复后完成最后一次真实SGD及N1后续搜索。实际位置和合成计数分开，**不计正式产能或学习收益**。
 
@@ -86,3 +88,22 @@ curl -fsSL https://raw.githubusercontent.com/hydeful/mota-runtime/ddc29d4d12a4ec
 ```
 
 本发布已做匿名固定源码下载、文件核对、CPU环境复用安装、自检和本地实际CPU路径诊断。GPU和AutoDL实际诊断仍待用户结果包；安装成功、云端诊断通过和性能改善是三个不同结论。
+
+
+## 僵尸退出记录的验收分类修复
+
+`cleanup.before_cleanup`非空本身不是失败。case.json功能结果与进程验收分开：已退出的zombie/dead记录在成功回收、remaining为空、无清理错误且观察范围可确认时通过；发现仍运行的非预期后代，即使随后被清理也保留泄漏问题；剩余退出记录、回收错误或无法确认的情况保留失败/unknown。不会为了消除FAIL而删除清理记录。
+
+受控孤儿故障只能豁免该case明确记录的child_pid，不能豁免额外活进程。受控shutdown超时/worker异常单独验证，原始功能结果和故障仍保留。coverage.status是综合验收，不再标为“自身功能”；四项明细在acceptance字段和CSV中。
+
+本修复不改变任何信号、等待、回收、服务关闭、超时、训练或预算行为。不需要因此重跑云端进程测试；已有smoke2证据可以离线重分类。完整原文件未提供时，不从摘要推断未报告的errors/观察范围/其余验收项已通过。
+
+新版本入口可执行`mota-smoke reclassify smoke2`，只读取原state/cases/coverage，生成独立`acceptance-reclassified-*.json`侧表。原case、cleanup、coverage、results.zip、结束时间及旧预算均不改。也可在独立源码目录用系统Python（不需要Torch/CUDA或安装依赖）运行：
+
+```bash
+python3 -B -m perf.reclassify --root /root/autodl-tmp/p48-perf/smoke-tests/smoke2 --output /root/autodl-tmp/p48-perf/smoke-tests/smoke2/acceptance-reclassified.json
+```
+
+输出已存在则拒绝覆盖。该命令不调用worker、GPU、搜索、训练或任何实验控制程序。它只复核任务分类，不会补造缺失的功能证据或全链路通过，不授权一小时实验。
+
+分类自检（零训练）：`python3 -B -m perf.acceptance_test`。
