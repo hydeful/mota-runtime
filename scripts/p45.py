@@ -51,6 +51,24 @@ def running(root):
     except RuntimeError:
         return True
 
+def organize(root):
+    """Keep P45's canonical paths, place immutable artifacts in separate folders."""
+    for folder, pattern in [('models', root.name+'-N*.pt'), ('data', 'episode-*.json.gz'), ('data', 'training-N*.json')]:
+        dest = root / folder
+        dest.mkdir(exist_ok=True)
+        for src in (root / 'state').glob(pattern):
+            if src.is_symlink():
+                continue
+            target = dest / src.name
+            if target.exists():
+                raise RuntimeError('ARTIFACT_DESTINATION_EXISTS ' + str(target))
+            # Hard-link the complete immutable publication, then atomically install
+            # a relative link. The P45 reader always sees complete original bytes.
+            os.link(src, target)
+            temp = src.with_name(src.name + '.p48-link')
+            temp.symlink_to(os.path.relpath(target, src.parent))
+            os.replace(temp, src)
+
 def check(root=None):
     import platform
     import shutil
@@ -99,7 +117,7 @@ def status(root):
                 continue
             if x.get('event') == 'decision' and '-N0' not in x.get('model_id', '-N0'):
                 consumed.append({k: x[k] for k in ('episode_id', 'step', 'model_id', 'weight_hash')})
-    result = {'state': state, 'source_commit': m['source_commit'], 'actual_compute_device': 'cpu', 'seed': m['seed'], 'budget_seconds': m['budget_seconds'], 'deadline_utc': m['deadline_utc'], 'remaining_wall_budget_seconds': max(0, end - time.time()), 'elapsed_core_seconds': s.get('elapsed_seconds', 0), 'completed_episodes': len(s.get('episodes', [])), 'qualified_training_positions': s.get('total_positions', 0), 'model_updates': s.get('generation', 0), 'real_sgd_steps': s.get('sgd_steps', 0), 'decisions': s.get('total_decisions', 0), 'model_id': s.get('model_id'), 'model_hash': models[-1]['hash'] if models else None, 'updated_model_consumption_records': len(consumed), 'first_updated_model_consumption': consumed[:1], 'invocation': c, 'log': str(log), 'checkpoint': str(root / 'state/checkpoint.pt'), 'models_ledger': str(root / 'state/models.json'), 'training_data': str(root / 'state'), 'last_durable_core_status': s}
+    result = {'state': state, 'source_commit': m['source_commit'], 'actual_compute_device': 'cpu', 'seed': m['seed'], 'budget_seconds': m['budget_seconds'], 'deadline_utc': m['deadline_utc'], 'remaining_wall_budget_seconds': max(0, end - time.time()), 'elapsed_core_seconds': s.get('elapsed_seconds', 0), 'completed_episodes': len(s.get('episodes', [])), 'qualified_training_positions': s.get('total_positions', 0), 'model_updates': s.get('generation', 0), 'real_sgd_steps': s.get('sgd_steps', 0), 'decisions': s.get('total_decisions', 0), 'model_id': s.get('model_id'), 'model_hash': models[-1]['hash'] if models else None, 'updated_model_consumption_records': len(consumed), 'first_updated_model_consumption': consumed[:1], 'invocation': c, 'log': str(log), 'checkpoint': str(root / 'state/checkpoint.pt'), 'models': str(root / 'models'), 'models_ledger': str(root / 'state/models.json'), 'training_data': str(root / 'data'), 'last_durable_core_status': s}
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return result
 
@@ -125,7 +143,11 @@ def worker(root, seconds, resume):
         remaining = max(0, min(seconds, deadline - time.time()))
         # The child inherits the flock, so supervisor death cannot permit a second writer.
         p = subprocess.Popen([sys.executable, '-B', '-m', 'tasks.tower10.p45_v0', 'collect', '--run', str(root / 'state'), '--seconds', str(remaining)], cwd=SOURCE, env=env(), pass_fds=(held.fileno(),))
+        while p.poll() is None:
+            organize(root)
+            time.sleep(.5)
         rc = p.wait()
+        organize(root)
         ended = time.time()
         c.update(core_returncode=rc, finished_utc=dt.datetime.now(dt.timezone.utc).isoformat(), actual_invocation_seconds=ended-began, post_budget_cleanup_seconds=max(0, ended-min(began+seconds, deadline)), state='abnormal_exit' if rc else ('stopped' if (root / 'state/STOP').exists() else ('budget_finished' if ended >= deadline else 'slice_finished')))
         write(root / 'control.json', c)
@@ -159,6 +181,7 @@ def main():
         write(root / 'config.json', config)
         write(root / 'run.json', {'name': a.name, 'seed': a.seed, 'budget_seconds': a.budget, 'deadline_utc': deadline.isoformat(), 'source_commit': revision(), 'initialization': 'fresh random network; no historical models or samples'})
         core('init', root / 'state', '--seed', a.seed, '--run-id', a.name, '--config', root / 'config.json')
+        organize(root)
         write(root / 'control.json', {'state': 'new'})
         print('NEW ' + str(root)); return
     if not (root / 'run.json').is_file():
