@@ -123,3 +123,8 @@ NAME 只能用字母、数字、下划线、短横线。已有目录明确拒绝
 公开下载与固定提交内容核对在发布后记录，不会被当作AutoDL采集验收。
 
 公开发布收据：[PUBLIC_RELEASE.json](validation/PUBLIC_RELEASE.json)。运行提交为上述固定值；本收据/说明随后追加，避免自引用提交。
+
+## P48 自动性能探测（保持旧入口）
+
+新的独立实验入口、安装和一小时总预算协议见 [perf/README.md](perf/README.md)。
+它不修改现有 `p45` 环境、`cloud600` 或默认算法。CPU/GPU候选及性能结论须在AutoDL实际运行后判断。
