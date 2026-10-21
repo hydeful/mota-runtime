@@ -263,8 +263,10 @@ def controller(root):
                 if gpu.get('correctness',{}).get('cuda',{}).get('pass'):
                     options.append(('gpu-serial',{'serial_gpu':True,'gpu_train':True}))
                     if quota>=4:
-                        best_gpu_cpu=min((k for k in gpu['nn'] if k.startswith('cpu')),key=lambda k:gpu['nn'][k]['sgd_step_seconds'])
-                        train_gpu=gpu['nn']['cuda']['sgd_step_seconds']<gpu['nn'][best_gpu_cpu]['sgd_step_seconds']*.95
+                        gpu_cpu_choices=[k for k in gpu['nn'] if k.startswith('cpu')]
+                        best_gpu_cpu=min(gpu_cpu_choices,key=lambda k:gpu['nn'][k]['sgd_step_seconds']) if gpu_cpu_choices else None
+                        train_gpu=best_gpu_cpu is None or gpu['nn']['cuda']['sgd_step_seconds']<gpu['nn'][best_gpu_cpu]['sgd_step_seconds']*.95
+                        if best_gpu_cpu is None:state['decisions'].append('GPU nativeCPU numeric checks failed butCUDA check passed; only validatedCUDA training allowed in GPU environment')
                         for wait in (.0002,.001):
                             options.append((f'gpu-shared-{wait}',{'workers':4,'persistent_cache':True,'packed':True,'direct_hash':True,'completion_order':True,'rpc_device':'cuda','rpc_batch_wait':wait,'gpu_train':train_gpu,'threads':1 if train_gpu else gpu['nn'][best_gpu_cpu]['threads']}))
                 else:state['decisions'].append('CUDA numeric/availability gate did not pass; GPU full-loop candidates excluded')
