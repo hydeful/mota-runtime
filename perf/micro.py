@@ -13,10 +13,11 @@ from perf.common import configure, dump, load, TOLERANCES
 from perf.patches import direct_hash, packed_save
 from tasks.tower10.p45.environment import Environment
 from tasks.tower10.p45.network import Network, manual_l2, gradients
-from tasks.tower10.p45.runtime import atomic_torch, structure_hash
+from tasks.tower10.p45.runtime import atomic_torch
+from perf.semantic import compare
 BATCHES=(1,2,3,4,16,64)
 
-def run(baseline,out,gpu=False,reference_file=None):
+def run(baseline,out,gpu=False,reference_file=None,inject_save_failure=None):
     configure();out.mkdir(parents=True,exist_ok=True);env=Environment()
     saved=torch.load(baseline/'checkpoint.pt',map_location='cpu',weights_only=False)
     first=saved['state']['models'][0]
@@ -33,33 +34,49 @@ def run(baseline,out,gpu=False,reference_file=None):
     for i,(r,z) in enumerate(rows):mask[i,r['legal_action_ids']]=True;pi[i,r['legal_action_ids']]=r['pi']
     z=torch.tensor([z for _,z in rows],dtype=torch.float32);x=torch.from_numpy(xs)
     masks=torch.from_numpy(mask);targets=torch.from_numpy(pi)
-    for obs in list(xs)+[xs[0,:,::2,::2]]:
-        assert env.observation_hash(obs)==direct_hash(obs)
-    hashes={}
-    for name,fn in [('copy_sha256',env.observation_hash),('memoryview_sha256',direct_hash)]:
-        values=[]
-        for _ in range(3):
-            began=time.perf_counter()
-            for obs in xs:fn(obs)
-            values.append(time.perf_counter()-began)
-        hashes[name]=values
+    hashes={};hash_correctness={'status':'pass'}
+    try:
+        for obs in list(xs)+[xs[0,:,::2,::2]]:
+            assert env.observation_hash(obs)==direct_hash(obs)
+        for name,fn in [('copy_sha256',env.observation_hash),('memoryview_sha256',direct_hash)]:
+            values=[]
+            for _ in range(3):
+                began=time.perf_counter()
+                for obs in xs:fn(obs)
+                values.append(time.perf_counter()-began)
+            hashes[name]=values
+    except Exception as exc:
+        import traceback
+        hash_correctness={'status':'fail','error':repr(exc),'traceback':traceback.format_exc()}
+    dump(out/'hash.json',dict(hash_correctness,timings=hashes))
     # Restore the complete actual state, including NumPy writeability, tensors,
     # optimizer and RNG; an original P45 reader must need no perf class.
     io_result={}
     for name,fn in [('original',atomic_torch),('packed',packed_save)]:
-        timings=[]
-        for _ in range(2):
-            began=time.perf_counter();fn(out/(name+'.pt'),saved);timings.append(time.perf_counter()-began)
-        restored=torch.load(out/(name+'.pt'),map_location='cpu',weights_only=False)
-        assert structure_hash(restored)==structure_hash(saved),'SERIALIZATION_SEMANTIC_DIFFERENCE'
-        io_result[name]={'seconds':timings,'median':statistics.median(timings),'bytes':(out/(name+'.pt')).stat().st_size}
-    json_io={}
-    value=load(baseline/'status.json')
-    for name,fn in [('stream',lambda f:json.dump(value,f,ensure_ascii=False,separators=(',',':'),allow_nan=False)),('buffer',lambda f:f.write(json.dumps(value,ensure_ascii=False,separators=(',',':'),allow_nan=False)))]:
-        began=time.perf_counter()
-        with gzip.open(out/(name+'.json.gz'),'wt',encoding='utf-8') as f:fn(f)
-        json_io[name]=time.perf_counter()-began
-    with gzip.open(out/'stream.json.gz','rt') as a,gzip.open(out/'buffer.json.gz','rt') as b:assert a.read()==b.read()
+        try:
+            if inject_save_failure==name:raise RuntimeError('EXPECTED_INJECTED_SAVE_FAILURE '+name)
+            timings=[]
+            for _ in range(2):
+                began=time.perf_counter();fn(out/(name+'.pt'),saved);timings.append(time.perf_counter()-began)
+            restored=torch.load(out/(name+'.pt'),map_location='cpu',weights_only=False)
+            compare(saved,restored)
+            io_result[name]={'status':'pass','seconds':timings,'median':statistics.median(timings),'bytes':(out/(name+'.pt')).stat().st_size}
+        except Exception as exc:
+            import traceback
+            io_result[name]={'status':'fail','error':str(exc),'traceback':traceback.format_exc()}
+        dump(out/'serialization.json',io_result)
+    json_io={};json_correctness={'status':'pass'}
+    try:
+        value=load(baseline/'status.json')
+        for name,fn in [('stream',lambda f:json.dump(value,f,ensure_ascii=False,separators=(',',':'),allow_nan=False)),('buffer',lambda f:f.write(json.dumps(value,ensure_ascii=False,separators=(',',':'),allow_nan=False)))]:
+            began=time.perf_counter()
+            with gzip.open(out/(name+'.json.gz'),'wt',encoding='utf-8') as f:fn(f)
+            json_io[name]=time.perf_counter()-began
+        with gzip.open(out/'stream.json.gz','rt') as a,gzip.open(out/'buffer.json.gz','rt') as b:assert a.read()==b.read()
+    except Exception as exc:
+        import traceback
+        json_correctness={'status':'fail','error':repr(exc),'traceback':traceback.format_exc()}
+    dump(out/'json-check.json',dict(json_correctness,timings=json_io))
     def forward(net,batch):
         net.eval()
         with torch.inference_mode():return tuple(t.detach().cpu() for t in net(x[:batch]))
@@ -113,9 +130,17 @@ def run(baseline,out,gpu=False,reference_file=None):
             np.testing.assert_allclose(loss,lref,atol=TOLERANCES['sgd_atol'],rtol=TOLERANCES['sgd_rtol'])
             correct[name]={'pass':True,'forward_batches':list(BATCHES),'real_batch64_step':True,'loss':loss,'data_gradients':g}
             nn[name]={'forward_seconds':timings,'sgd_step_seconds':sgd,'threads':threads,'device':'cuda' if name=='cuda' else 'cpu','cuda_peak_allocated_bytes':torch.cuda.max_memory_allocated() if name=='cuda' else None,'training_split':'CUDA network forward/backward and optimizer, CPU target/loss and encoding' if name=='cuda' else 'all CPU'}
-        except Exception as exc:correct[name]={'pass':False,'error':repr(exc)}
-    result={'current_baseline':str(baseline),'torch':str(torch.__version__),'torch_cuda':torch.version.cuda,'isolated_probe_not_a_learning_run':True,'tolerances_preregistered':TOLERANCES,'cpu_gpu_numeric_basis':'GPU compares to savedCPU2.14.1 golden outputs and real one-step update, including across Torch versions. float32, deterministic kernels, TF32 disabled; output abs1e-5/rel1e-4, one-step loss/grad/parameters abs1e-5/rel1e-3; no relaxation after observing results','encode64_seconds':encode_seconds,'hash':hashes,'serialization':io_result,'json_gzip_seconds':json_io,'nn':nn,'correctness':correct,'layout_cache':'NOT RETRIED: P46 full-loop0.891/0.953/0.922, only58% hits and key/allocation overhead. No new mechanism justifies retry.','note':'All launch/CUDA warmup/micro failures count against controller budget. Isolated medians cannot be multiplied into a full-loop speedup.'}
+        except Exception as exc:
+            import traceback
+            correct[name]={'pass':False,'error':repr(exc),'traceback':traceback.format_exc()}
+        dump(out/'neural-subitems.json',{'correctness':correct,'nn':nn})
+    result={'current_baseline':str(baseline),'torch':str(torch.__version__),'torch_cuda':torch.version.cuda,'isolated_probe_not_a_learning_run':True,'controlled_save_failure':inject_save_failure,'tolerances_preregistered':TOLERANCES,'cpu_gpu_numeric_basis':'GPU compares to savedCPU2.14.1 golden outputs and real one-step update, including across Torch versions. float32, deterministic kernels, TF32 disabled; output abs1e-5/rel1e-4, one-step loss/grad/parameters abs1e-5/rel1e-3; no relaxation after observing results','encode64_seconds':encode_seconds,'hash':hashes,'hash_correctness':hash_correctness,'json_correctness':json_correctness,'serialization':io_result,'json_gzip_seconds':json_io,'nn':nn,'correctness':correct,'layout_cache':'NOT RETRIED: P46 full-loop0.891/0.953/0.922, only58% hits and key/allocation overhead. No new mechanism justifies retry.','note':'All launch/CUDA warmup/micro failures count against controller budget. Isolated medians cannot be multiplied into a full-loop speedup.'}
     dump(out/'micro.json',result);return result
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--baseline',required=True);p.add_argument('--out',required=True);p.add_argument('--gpu',action='store_true');p.add_argument('--reference');a=p.parse_args();run(Path(a.baseline),Path(a.out),a.gpu,a.reference)
+    p=argparse.ArgumentParser();p.add_argument('--baseline',required=True);p.add_argument('--out',required=True);p.add_argument('--gpu',action='store_true');p.add_argument('--reference');p.add_argument('--inject-save-failure',choices=['original','packed']);a=p.parse_args()
+    try:run(Path(a.baseline),Path(a.out),a.gpu,a.reference,a.inject_save_failure)
+    except Exception as exc:
+        import traceback
+        dump(Path(a.out)/'common-failure.json',{'status':'fail','error':repr(exc),'traceback':traceback.format_exc(),'blocked':'subitems requiring this common checkpoint/encoded training data; prior independent subitem files retained'})
+        raise

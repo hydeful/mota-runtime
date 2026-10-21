@@ -99,7 +99,7 @@ def task(root,state,label,argv,python,limit,held,trial=None):
                     else:
                         try:os.killpg(p.pid,signal.SIGTERM)
                         except ProcessLookupError:pass
-                if time.monotonic()-requested>7:
+                if time.monotonic()-requested>(2 if state.get('smoke_only') else 7):
                     try:os.killpg(p.pid,signal.SIGKILL)
                     except ProcessLookupError:pass
             time.sleep(.5)
@@ -238,7 +238,7 @@ def controller(root):
                 micro_dir=root/'micro-cpu'
                 cpu_probe=task(root,state,'micro-cpu',['-B','-m','perf.micro','--baseline',str(baseline_path),'--out',str(micro_dir)],sys.executable,120,held)
                 micro=load(micro_dir/'micro.json',{})
-                if not micro.get('correctness',{}).get('cpu1',{}).get('pass'):raise RuntimeError('CPU_MICRO_CORRECTNESS_GATE_FAILED')
+                state['decisions'].append('CPU micro subitems recorded independently; failed serialization blocks only dependent options')
                 gpu_python=state.get('installation',{}).get('gpu_python');gpu={}
                 if gpu_python and allowed(1400):
                     task(root,state,'micro-gpu',['-B','-m','perf.micro','--baseline',str(baseline_path),'--out',str(root/'micro-gpu'),'--gpu','--reference',str(micro_dir/'cpu-reference.npz')],gpu_python,150,held)
@@ -248,7 +248,7 @@ def controller(root):
                 options=[('serial-packed',{'packed':True}),('serial-hash',{'direct_hash':True}),('serial-combined',{'packed':True,'direct_hash':True})]
                 for n in (2,4):
                     row=micro.get('nn',{}).get('cpu'+str(n))
-                    if row and row['forward_seconds']['1']<micro['nn']['cpu1']['forward_seconds']['1']*.95:
+                    if row and row['forward_seconds']['1']<micro.get('nn',{}).get('cpu1',{}).get('forward_seconds',{}).get('1',0)*.95:
                         options.append((f'serial-threads{n}',{'threads':n}))
                         state['decisions'].append(f'CPU{n} threads batch1 micro improved>5%; include full4-episode screen')
                     else:state['decisions'].append(f'NoCPU{n}-thread serial screen: no>5% batch1 micro gain')
@@ -257,7 +257,7 @@ def controller(root):
                     options += [(f'cpu{n}',{'workers':n}),
                                 (f'cpu{n}-persistent',{'workers':n,'persistent_cache':True}),
                                 (f'cpu{n}-combined',{'workers':n,'persistent_cache':True,'packed':True,'direct_hash':True,'completion_order':True})]
-                best_threads=min(micro.get('nn',{'cpu1':{}}),key=lambda k:micro['nn'][k]['sgd_step_seconds'])
+                best_threads=min(micro.get('nn',{'cpu1':{'sgd_step_seconds':float('inf')}}),key=lambda k:micro['nn'][k]['sgd_step_seconds'])
                 if best_threads!='cpu1':options.append(('cpu4-trainthreads',{'workers':min(4,int(quota)),'persistent_cache':True,'packed':True,'direct_hash':True,'threads':micro['nn'][best_threads]['threads']}))
                 if quota>=4:options.append(('cpu-shared-batch',{'workers':4,'persistent_cache':True,'packed':True,'direct_hash':True,'rpc_device':'cpu'}))
                 if gpu.get('correctness',{}).get('cuda',{}).get('pass'):
@@ -272,6 +272,12 @@ def controller(root):
                 else:state['decisions'].append('CUDA numeric/availability gate did not pass; GPU full-loop candidates excluded')
                 state['decisions'].append('8/16 actors not run: original logical cohort is4, synchronous training barrier permits at most4 active episodes. More processes only idle; no cohort expansion/training delay allowed.')
                 state['decisions'].append('Object-plane cache not retried: three prior full-loop slowdowns; no new mechanism to overcome key/copy/miss costs.')
+                if not micro.get('correctness',{}).get('cpu1',{}).get('pass') or micro.get('serialization',{}).get('original',{}).get('status')!='pass':
+                    raise RuntimeError('COMMON_CPU_OR_ORIGINAL_RESTORE_FAILED; independentGPU diagnostics retained; full-loop candidates blocked')
+                from perf.gates import blocked,choose
+                rejected=[label for label,opt in options if blocked(opt,micro)]
+                options=[(label,opt) for label,opt in options if label not in rejected]
+                state['decisions'].append('Blocked failed packed-save dependent candidates: '+str(rejected))
                 screen_end=min(time.time()+1200,stamp(state['deadline_utc'])-1740)
                 screens=[]
                 # Same seed, same N0, same four complete episodes; order fixed before seeing results.
@@ -299,9 +305,7 @@ def controller(root):
                     score=x['collection_seconds']/x['qualified_positions']+.125*(nn['sgd_step_seconds']+io)
                     ranked.append((score,row))
                 if not ranked:raise RuntimeError('NO_COMPLETE_CORRECT_SHORT_CANDIDATE')
-                ranked.sort(key=lambda x:x[0]);chosen=ranked[0][1]
-                # If original wins, still run one actual optimization candidate for the required comparison.
-                if chosen['label']=='screen-reference' and len(ranked)>1:chosen=ranked[1][1]
+                ranked.sort(key=lambda x:x[0]);chosen=choose(ranked)
                 state['selection']={'label':chosen['label'],'options':chosen['trial']['options'],'python':chosen['python'],
                                     'basis':'fixed4-episode time/qualified position plus measured one-stepSGD+checkpoint cost/8 positions; prediction only, not speedup; full600s decides',
                                     'ranking':[{'label':r['label'],'predicted_seconds_per_position':s} for s,r in ranked]}
@@ -322,10 +326,11 @@ def controller(root):
                     gate=trial(root,state,'fallback-learning-gate',selected['options'],300,4803,held,python=selected['python'],learning_gate=True)
                     if not gate.get('result',{}).get('learning_gate_pass'):raise RuntimeError('CPU_BACKUP_LEARNING_GATE_FAILED')
                 state['learning_gate_passed_for']=selected['label'];dump(root/'state.json',state)
-            if not good(state,'candidate600') and allowed(650):trial(root,state,'candidate600',selected['options'],600,4801,held,python=selected['python'])
-            if not good(state,'candidate600'):raise RuntimeError('CANDIDATE600_INCOMPLETE_OR_FAILED_AUDIT; no invalid comparison reported')
-            if not good(state,'repeat-candidate300') and allowed(650):trial(root,state,'repeat-candidate300',selected['options'],300,4802,held,python=selected['python'])
-            if not good(state,'repeat-baseline300') and allowed(340):trial(root,state,'repeat-baseline300',{},300,4802,held)
+            from perf.gates import dispatch_comparisons
+            def comparison_run(label,seconds,seed):
+                base=label=='repeat-baseline300'
+                return trial(root,state,label,{} if base else selected['options'],seconds,seed,held,python=sys.executable if base else selected['python'])
+            dispatch_comparisons(comparison_run,lambda label:good(state,label),allowed)
             for label in ('baseline600','candidate600','repeat-candidate300','repeat-baseline300'):
                 if not good(state,label):state['decisions'].append(label+' incomplete/not run; retain evidence, no concatenation or budget extension')
             state['status']='stopped' if (root/'STOP').exists() else ('finished' if good(state,'candidate600') else 'incomplete')

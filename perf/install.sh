@@ -26,14 +26,26 @@ if [[ ! -d "$src/.git" ]]; then
 fi
 [[ $(git -C "$src" rev-parse HEAD) == "$commit" ]] || exit 1
 [[ -z $(git -C "$src" status --porcelain --untracked-files=no) ]] || { echo 'Modified tracked source refused' >&2; exit 1; }
+# Reuse only functionally verified prior interpreters; code revision alone is
+# never a reason to download another Torch/CUDA distribution.
+prior_cpu=$(python3 -c 'import json,pathlib,sys;p=pathlib.Path(sys.argv[1]);print(json.loads(p.read_text()).get("cpu_python", "") if p.exists() else "")' "$P48_PERF_HOME/installation.json")
 cpu="$P48_PERF_HOME/envs/$commit-cpu"
+if [[ -x $prior_cpu ]] && "$prior_cpu" -c 'import torch,numpy,psutil;assert str(torch.__version__)=="2.14.1+cpu" and numpy.__version__=="2.3.5";x=torch.ones(2,requires_grad=True);x.square().sum().backward();assert torch.equal(x.grad,torch.full((2,),2.))' >/dev/null 2>&1; then
+ cpu=$(dirname "$(dirname "$prior_cpu")")
+ echo "Reusing verified CPU environment: $cpu"
+fi
 [[ -x "$cpu/bin/python" ]] || python3 -m venv --system-site-packages "$cpu"
 if ! "$cpu/bin/python" -c 'import torch,numpy;assert str(torch.__version__)=="2.14.1+cpu" and numpy.__version__=="2.3.5"' >/dev/null 2>&1; then
  "$cpu/bin/pip" install 'torch==2.14.1+cpu' 'numpy==2.3.5' --index-url https://download.pytorch.org/whl/cpu
 fi
 "$cpu/bin/python" -c 'import psutil' >/dev/null 2>&1 || "$cpu/bin/pip" install 'psutil==7.2.2'
 gpu_python=''
-if [[ $gpu_mode != off ]] && command -v nvidia-smi >/dev/null && nvidia-smi -L >/dev/null 2>&1; then
+prior_gpu=$(python3 -c 'import json,pathlib,sys;p=pathlib.Path(sys.argv[1]);print(json.loads(p.read_text()).get("gpu_python") or "" if p.exists() else "")' "$P48_PERF_HOME/installation.json")
+if [[ $gpu_mode != off && -x $prior_gpu ]] && "$prior_gpu" -c 'import torch,numpy,psutil;assert str(torch.__version__).split("+")[0] in ("2.14.1","2.11.0") and numpy.__version__=="2.3.5" and torch.cuda.is_available();x=torch.ones(2,device="cuda",requires_grad=True);x.square().sum().backward();torch.cuda.synchronize();assert bool((x.grad==2).all())' >/dev/null 2>&1; then
+ gpu_python=$prior_gpu
+ echo "Reusing verified CUDA environment: $gpu_python"
+fi
+if [[ $gpu_mode != off && -z $gpu_python ]] && command -v nvidia-smi >/dev/null && nvidia-smi -L >/dev/null 2>&1; then
  if (( free < 10000000000 )); then echo 'GPU environment skipped: need>=10GB free' >&2
  else
   gpu="$P48_PERF_HOME/envs/$commit-gpu"
@@ -65,7 +77,9 @@ gpu_info=json.loads(subprocess.check_output([gpu,'-c','import json,torch;print(j
 (root/'installation.json').write_text(json.dumps({'source':src,'cpu_python':cpu+'/bin/python','gpu_python':gpu or None,'gpu_software':gpu_info,'install_seconds':time.time()-int(started),'gpu_install_log':str(root/'gpu-install.log'),'installation_outside_experiment_budget':True},indent=2)+'\n')
 p=root/'bin/mota-perf'
 p.write_text('#!/bin/bash\nset -euo pipefail\nexport P48_PERF_HOME='+shlex.quote(home)+'\nexport PYTHONPATH='+shlex.quote(src)+'\nexec '+shlex.quote(cpu+'/bin/python')+' -B -m perf.control "$@"\n');p.chmod(0o755)
+s=root/'bin/mota-smoke';s.write_text(p.read_text().replace('perf.control','perf.smoke'));s.chmod(0o755)
 PY
+"$cpu/bin/python" -B -m perf.semantic_test
 "$cpu/bin/python" -B -m perf.control check
 "$cpu/bin/python" -B -m perf.selftest --out "$P48_PERF_HOME/checks/$commit-$(date +%s)"
 "$cpu/bin/python" - "$P48_PERF_HOME/installation.json" "$started" <<'PY'
