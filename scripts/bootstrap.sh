@@ -11,7 +11,7 @@ src="$P45_HOME/code/$commit"
 if [[ ! -d "$src/.git" ]]; then
   [[ ! -e "$src" ]] || { echo 'Existing non-git directory; refusing overwrite' >&2; exit 1; }
   git init "$src"
-  git -C "$src" remote add origin https://github.com/hydeful/mota-p45-runtime.git
+  git -C "$src" remote add origin https://github.com/hydeful/mota-runtime.git
   GIT_TERMINAL_PROMPT=0 git -C "$src" -c credential.helper= fetch --depth=1 origin "$commit"
   git -C "$src" checkout --detach FETCH_HEAD
 fi

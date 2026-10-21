@@ -1,0 +1,11 @@
+{
+  "target": "hydeful/mota-runtime",
+  "visibility": "public",
+  "initial_refs": [],
+  "reported_push_permission": true,
+  "baseline_commit": "63bdd80216edf825d887bc5316eb0ad78e7250ad",
+  "prior_prepared_runtime_commit": "f970d4d51bdd12264c16281c3acbe3c642cd8a6b",
+  "changes": "Only bootstrap repository URL, README and deployment metadata. All 22 extracted P45 files unchanged. Original historical failure receipts preserved.",
+  "repeat_600_requested": false,
+  "cloud_tested": false
+}

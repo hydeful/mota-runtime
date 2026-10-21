@@ -1,6 +1,8 @@
-# P45 AutoDL 最小独立运行版
+# mota-runtime：独立运行代码
 
-> 当前交付状态：本地验证完成；GitHub连接创建仓库返回403，公开发布/公开下载尚未完成，AutoDL待验证。
+> 首次发布为已验证的 P45 CPU 运行版；部署准备完成后，AutoDL 实际验收仍需用户返回输出。
+
+这是长期复用的公开运行代码仓库。后续版本采用独立固定提交；已有运行继续绑定原提交，不自动跟随 main 更新。首次版本沿用已验证的 `p45` 命令和 `/root/autodl-tmp/p45` 目录。
 
 基于私有工程固定提交 `63bdd80216edf825d887bc5316eb0ad78e7250ad`。
 P45 原始源码、资产、算法配置逐字节保留；独立 Git 历史只包含运行所需内容。
@@ -19,11 +21,11 @@ P45 默认串行，工程 E1.3 / 算法 A1.1 / 拓扑 T1.0。搜索、网络推�
 仅把代码/环境/运行写入该数据目录，不修改系统预装环境。
 
 ```bash
-git clone https://github.com/hydeful/mota-p45-runtime.git /root/autodl-tmp/p45-bootstrap
+git clone --no-checkout https://github.com/hydeful/mota-runtime.git /root/autodl-tmp/mota-runtime-bootstrap
 ```
 
 ```bash
-bash /root/autodl-tmp/p45-bootstrap/scripts/bootstrap.sh COMMIT
+git -C /root/autodl-tmp/mota-runtime-bootstrap checkout --detach COMMIT && bash /root/autodl-tmp/mota-runtime-bootstrap/scripts/bootstrap.sh COMMIT
 ```
 
 bootstrap 不读取私有仓库凭据，抓取并核对固定公开提交。
@@ -116,3 +118,6 @@ NAME 只能用字母、数字、下划线、短横线。已有目录明确拒绝
 验证记录发布于仓库 `validation/`，注明被测固定运行提交。
 本地独立验证与用户AutoDL实际验收分开；没有AutoDL实际输出时，结论只能是
 “部署准备完成，云端待验证”。部署成功不代表学习增强。短测吞吐不冒充一小时实测。
+
+本次公开发布仅调整仓库地址、发行元数据和说明；沿用已记录的600秒实测，未重复该试跑。
+公开下载与固定提交内容核对在发布后记录，不会被当作AutoDL采集验收。
