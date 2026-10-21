@@ -15,7 +15,9 @@ def review(root):
     originals={r['path']:r for r in coverage};rows=[]
     for rec in state.get('attempts',[]):
         name=rec['label'];out=root/'cases'/name;case=read(out/'case.json',{})
-        if not case and rec.get('result',{}).get('pass') is True:case={'status':'pass','official_worker_result':rec['result']}
+        if not case and rec.get('result',{}).get('pass') is True:
+            result=rec['result'];valid=name!='real_candidate_worker' or (result.get('decisions',0)>=1 and result.get('simulations',0)>=100)
+            case={'status':'pass' if valid else 'fail','official_worker_result':result}
         if not case and name.startswith('dispatch-'):case={'status':'pass' if rec.get('exit_code')==0 else 'fail','logic_only':True}
         if not case and name not in originals:continue
         adapted=dict(rec)

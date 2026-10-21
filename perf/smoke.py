@@ -88,10 +88,13 @@ def real_worker(root,state,held,cap,finished):
     path=root/'real-candidate-run';path.mkdir();dump(path/'options.json',chosen['options'])
     argv=['-B','-m','perf.worker','--root',str(path),'--options',str(path/'options.json'),'--seconds',str(max(1,cap-5)),'--deadline',str(stamp(state['deadline_utc'])-35),'--seed','4812','--until-decisions','1']
     rec=task(root,state,'real_candidate_worker',argv,sys.executable,cap,held,{'run':str(path),'options':chosen['options'],'requested_seconds':max(1,cap-5),'seed':4812,'smoke_until_decisions':1})
-    data=rec.get('result',{});ok=rec['status']=='finished' and data.get('pass') and data.get('decisions',0)>=1 and data.get('simulations',0)>=100
-    summary={'status':'pass' if ok else 'fail','input_source':source,'link_status':link,'official_worker_argv':argv,'options':chosen['options'],'real_computation':True,'formal_full_loop':False,'exit_code':rec.get('exit_code'),'result_path':str(path/'result.json'),'software':data.get('software'),'metrics':{k:data.get(k) for k in ('decisions','simulations','model_updates','sgd_steps','qualified_positions','full_window_complete','pass')}}
+    from perf.acceptance import case_assessment
+    data=rec.get('result',{});functional_ok=bool(data.get('pass') and data.get('decisions',0)>=1 and data.get('simulations',0)>=100)
+    assessment=case_assessment('real_candidate_worker',{'status':'pass' if functional_ok else ('fail' if data else 'not_run')},rec)
+    ok=assessment['status']=='pass'
+    summary={'status':'pass' if ok else 'fail','acceptance':assessment,'input_source':source,'link_status':link,'official_worker_argv':argv,'options':chosen['options'],'real_computation':True,'formal_full_loop':False,'exit_code':rec.get('exit_code'),'result_path':str(path/'result.json'),'software':data.get('software'),'metrics':{k:data.get(k) for k in ('decisions','simulations','model_updates','sgd_steps','qualified_positions','full_window_complete','pass')}}
     dump(root/'real-worker-summary.json',summary)
-    return {'path':'real_candidate_worker','status':summary['status'],'link_status':link,'input_source':source,'seconds':rec['wall_seconds'],'exit_code':rec.get('exit_code'),'error_path':rec['directory']+'/console.log','detail':'actual selected options -> official worker -> search/audit -> parsed result/summary; not a full learning-loop comparison'}
+    return {'path':'real_candidate_worker','status':summary['status'],'acceptance':assessment,'raw_worker_result':data,'link_status':link,'input_source':source,'seconds':rec['wall_seconds'],'exit_code':rec.get('exit_code'),'error_path':rec['directory']+'/console.log','detail':'actual selected options -> official worker -> search/audit -> parsed result/summary; not a full learning-loop comparison'}
 
 def controller(root):
     with lock(root) as held:
