@@ -214,6 +214,8 @@ def controller(root):
         if state['code_commit']!=revision():raise RuntimeError('USE_ORIGINAL_EXPERIMENT_CODE_COMMIT')
         if state['started_utc'] is None:
             state['started_utc']=utc();state['deadline_utc']=dt.datetime.fromtimestamp(time.time()+state['budget_seconds'],dt.timezone.utc).isoformat()
+        if state.get('error'):
+            state.setdefault('prior_errors',[]).append({'error':state.pop('error'),'resumed_utc':utc()})
         state['controller_pid']=os.getpid();state['status']='running';dump(root/'state.json',state)
         # Reconcile a normally completed child after controller interruption.
         for r in state['attempts']:
@@ -303,14 +305,27 @@ def controller(root):
                                     'ranking':[{'label':r['label'],'predicted_seconds_per_position':s} for s,r in ranked]}
                 state['screened']=True;dump(root/'state.json',state)
             selected=state['selection']
-            gate=next((r for r in state['attempts'] if r['label']=='selected-learning-gate' and r.get('result',{}).get('learning_gate_pass')),None)
-            if gate is None:
+            if state.get('learning_gate_passed_for')!=selected['label']:
                 if not allowed(980):raise RuntimeError('INSUFFICIENT_BUDGET_FOR_PRECONDITION_AND600S')
                 gate=trial(root,state,'selected-learning-gate',selected['options'],300,4803,held,python=selected['python'],learning_gate=True)
-                if not gate.get('result',{}).get('learning_gate_pass'):raise RuntimeError('SELECTED_CANDIDATE_FAILED_REAL_TRAINING_RECOVERY_OR_MODEL_CONSUMPTION_GATE')
+                if not gate.get('result',{}).get('learning_gate_pass'):
+                    backup=None
+                    for item in selected['ranking']:
+                        row=next((r for r in reversed(state['attempts']) if r['label']==item['label']),None)
+                        if row and row['label'] not in (selected['label'],'screen-reference') and row['python']==sys.executable:
+                            backup=row;break
+                    if backup is None or not allowed(980):raise RuntimeError('SELECTED_GATE_FAILED_AND_NO_BUDGETED_CPU_BACKUP')
+                    state['decisions'].append('Selected learning/recovery gate failed; try one already-audited CPU fallback, retain failure and reserve600s; no tolerance relaxation')
+                    selected=dict(selected,label=backup['label'],options=backup['trial']['options'],python=backup['python']);state['selection']=selected
+                    gate=trial(root,state,'fallback-learning-gate',selected['options'],300,4803,held,python=selected['python'],learning_gate=True)
+                    if not gate.get('result',{}).get('learning_gate_pass'):raise RuntimeError('CPU_BACKUP_LEARNING_GATE_FAILED')
+                state['learning_gate_passed_for']=selected['label'];dump(root/'state.json',state)
             if not good(state,'candidate600') and allowed(650):trial(root,state,'candidate600',selected['options'],600,4801,held,python=selected['python'])
+            if not good(state,'candidate600'):raise RuntimeError('CANDIDATE600_INCOMPLETE_OR_FAILED_AUDIT; no invalid comparison reported')
             if not good(state,'repeat-candidate300') and allowed(650):trial(root,state,'repeat-candidate300',selected['options'],300,4802,held,python=selected['python'])
             if not good(state,'repeat-baseline300') and allowed(340):trial(root,state,'repeat-baseline300',{},300,4802,held)
+            for label in ('baseline600','candidate600','repeat-candidate300','repeat-baseline300'):
+                if not good(state,label):state['decisions'].append(label+' incomplete/not run; retain evidence, no concatenation or budget extension')
             state['status']='stopped' if (root/'STOP').exists() else ('finished' if good(state,'candidate600') else 'incomplete')
         except Exception as exc:
             state['status']='stopped' if (root/'STOP').exists() else 'incomplete';state['error']=repr(exc)
