@@ -146,7 +146,7 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--options',required=True)
     p.add_argument('--seconds',type=float,required=True);p.add_argument('--deadline',type=float,required=True)
     p.add_argument('--seed',type=int,default=4801);p.add_argument('--cohorts',type=int,default=0)
-    p.add_argument('--learning-gate',action='store_true')
+    p.add_argument('--learning-gate',action='store_true');p.add_argument('--until-decisions',type=int)
     a=p.parse_args();root=Path(a.root);root.mkdir(parents=True,exist_ok=True)
     # Independent watchdog also works if the controller dies. Stop before the
     # global deadline; all child processes inherit this process group.
@@ -156,7 +156,7 @@ def main():
             (root/'STOP').touch()
             if not done.wait(5):os.killpg(os.getpgrp(),signal.SIGTERM)
     threading.Thread(target=watchdog,daemon=True).start()
-    try:execute(root,load(a.options),a.seconds,a.deadline,a.seed,a.cohorts,learning_gate=a.learning_gate)
+    try:execute(root,load(a.options),a.seconds,a.deadline,a.seed,a.cohorts,until_decisions=a.until_decisions,learning_gate=a.learning_gate)
     finally:done.set()
 
 if __name__=='__main__':main()

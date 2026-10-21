@@ -39,7 +39,36 @@ def fixture(root,out,deadline):
     value=torch.load(r.root/'checkpoint.pt',weights_only=False)
     runtime.atomic_torch(root/'pending.pt',value)
     dump(root/'fixture.json',{'source':'Fresh seed4811 original P45, four actual complete episodes plus partial search; smoke-only, never formal productivity','result':data,'pending_simulations':r.s['actor']['decision']['completed']})
+    from perf.smoke_inputs import seal
+    r.validate_pending_actor()
+    seal(root,{'kind':'upstream_real_output','seed':4811,'four_real_complete_episodes':True,'formal_productivity':False})
     return {'real_complete_episodes':data['complete_episodes'],'real_qualified_positions':data['qualified_positions'],'partial_tree_and_actor_generators':True}
+
+def reserve_inputs(root,out,deadline):
+    from tasks.tower10.p45.parallel import OneEpisodeRunner,EpisodeComplete
+    from tasks.tower10.p45.contracts import validate_episode
+    from perf.smoke_inputs import seal,seal_reference
+    reserve=root/'reserve';reserve.mkdir()
+    global_deadline=stamp(load(root/'state.json')['deadline_utc'])
+    e=env(global_deadline);r=OneEpisodeRunner(reserve/'fixture',e,create=True,seed=4811,run_id='P48-smoke-reserve')
+    try:r.collect(time.monotonic()+max(1,deadline-time.time()-8),no_train=True)
+    except EpisodeComplete:pass
+    assert len(r.s['cohort'])==1,'NO_VALID_BACKUP_EPISODE'
+    ep=r.load_episode(r.s['cohort'][0]['episode_id']);validate_episode(e,ep,reference=True)
+    # Explicit diagnostic one-episode ledger; never a formal four-episode commit.
+    r.s['episodes']=r.s['cohort'];r.s['cohort']=[]
+    n=len(ep['records']);r.s['total_positions']=n;r.s['new_positions']=n
+    r.s['replay']=[(ep['episode_id'],i) for i in range(n)];r.save()
+    r.collect(time.monotonic()+max(1,deadline-time.time()-7),no_train=True,until_simulations=r.s['total_simulations']+7)
+    assert r.s['actor'] and r.s['actor']['decision']['completed']==7
+    r.validate_pending_actor();saved=torch.load(r.root/'checkpoint.pt',weights_only=False)
+    compare(saved,copy.deepcopy(saved));runtime.atomic_torch(reserve/'pending.pt',saved)
+    inputs=seal(reserve,{'kind':'fresh_fallback_test_input','seed':4811,'source':'one real original-search episode, independently reference-replayed before any downstream use','synthetic_one_episode_commit':True,'formal_productivity':False})
+    from perf.micro import run
+    reference=run(reserve/'fixture',reserve/'cases/micro')
+    assert reference['correctness']['cpu1']['pass']
+    seal_reference(reserve/'cases/micro',inputs)
+    return {'input_manifest':inputs,'CPU_reference_validated':True,'NOT_A_PRODUCTION_LEDGER':True}
 
 def legacy_first(a,b,path='$'):
     if isinstance(a,dict):
@@ -140,7 +169,12 @@ def service(root,out,deadline,device='cpu'):
         finally:remote.close()
         stats=svc.call('stats');assert stats['invalidations']==2 and stats['cache_hits']>=1 and stats['max_batch']>=2
         return {'status':'pass','actual_device':str(next(net.parameters()).device),'real_sgd_steps':1,'batch_kernel_rows_at_least':stats['max_batch'],'updated_model_inference':True,'stale_rejected':True,'stats':stats,'synthetic_inputs_not_training_production':True}
-    finally:dump(out/'service-close.json',svc.close())
+    finally:
+        from perf.devices import cleanup_record
+        primary=sys.exc_info()[1];closed=svc.close();cleanup_record(out/'service-close.json',closed)
+        if closed.get('cleanup_errors') or not closed['cleanup_complete']:
+            if primary is not None:primary.add_note('Service cleanup: '+str(closed))
+            else:raise RuntimeError('SERVICE_CLEANUP_FAILED '+str(closed))
 
 def learning(root,out,deadline):
     saved=torch.load(root/'fixture/checkpoint.pt',weights_only=False)
@@ -187,24 +221,70 @@ def micro(root,out,deadline):
     assert result['correctness']['cpu1']['pass']
     from perf.gates import blocked
     assert blocked({'packed':True},result)==['packed_restore'] and not blocked({},result)
+    from perf.smoke_inputs import valid,seal_reference
+    seal_reference(out,valid(root))
     return {'cpu_correctness':result['correctness'],'serialization':result['serialization']}
 
-def gpu_micro(root,out,deadline):
+def gpu_micro(root,out,deadline,reference=None):
     if not torch.cuda.is_available():return {'status':'device_unavailable'}
     from perf.micro import run
-    result=run(root/'fixture',out,True,root/'cases/micro/cpu-reference.npz')
+    result=run(root/'fixture',out,True,reference)
     assert result['correctness'].get('cuda',{}).get('pass'),'CUDA_NUMERIC_GATE_FAILED'
-    return {'status':'pass','numeric':result['correctness']['cuda'],'service':service(root,out,deadline,'cuda')}
+    return {'status':'pass','numeric':result['correctness']['cuda']}
+
+def orphan_parent(root,out,deadline):
+    # Child creates its own session, proving cleanup is not only killpg(parent).
+    import subprocess
+    child=subprocess.Popen([sys.executable,'-c','import time; time.sleep(90)'],start_new_session=True)
+    dump(out/'orphan.json',{'child_pid':child.pid,'parent_exit':17,'separate_session':True})
+    os._exit(17)
+
+def shutdown_timeout(root,out,deadline):
+    from perf.devices import Service
+    svc=Service('cpu',close_timeout=.2,_test_shutdown_stall=True)
+    primary='INJECTED_PRIMARY_WORKER_ERROR'
+    try:raise RuntimeError(primary)
+    except RuntimeError as exc:
+        original=repr(exc)
+        result=svc.close()
+    assert result['cleanup_complete'] and result['cleanup_errors']
+    assert 'RPC_CONTROL_TIMEOUT shutdown' in str(result['cleanup_errors'])
+    assert not svc.process.is_alive()
+    return {'status':'pass','primary_error_preserved':original,'cleanup':result,'controlled_actual_service_shutdown_stall':True}
+
+def worker_failure(root,out,deadline):
+    from perf.parallel import ParallelRunner
+    e=env(deadline);r=ParallelRunner(out/'run',e,create=True,seed=4811,run_id='P48-controlled-worker-error',workers=2,options={'rpc_device':'cpu'})
+    original=r.resolved_job
+    def faulty(job):
+        value=original(job);value['snapshot']=str(out/'MISSING_WORKER_SNAPSHOT.pt');return value
+    r.resolved_job=faulty
+    try:r.collect_probe(time.monotonic()+max(1,deadline-time.time()-2),max_cohorts=1)
+    except FileNotFoundError as exc:
+        assert 'MISSING_WORKER_SNAPSHOT' in str(exc)
+        assert (r.root/'checkpoint.pt').exists() and (r.root/'rpc-metrics.json').exists()
+        cleanup=load(r.root/'rpc-metrics.json');assert cleanup['cleanup_complete']
+        return {'status':'pass','controlled_fault':'real parallel job missing snapshot','primary_error_preserved':repr(exc),'primary_error_message':str(exc),'primary_traceback':traceback.format_exc(),'finally_checkpoint_saved':True,'service_cleanup':cleanup}
+    raise AssertionError('EXPECTED_REAL_WORKER_ERROR_NOT_OBSERVED')
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('case',choices=['fixture','serialization','cpu_parallel','service','learning','micro','gpu_micro','controlled_failure','controlled_timeout']);p.add_argument('--root',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--deadline',type=float,required=True);a=p.parse_args();a.out.mkdir(parents=True,exist_ok=True)
+    p=argparse.ArgumentParser();p.add_argument('case',choices=['reserve_inputs','fixture','serialization','cpu_parallel','service','gpu_service','learning','micro','gpu_micro','orphan_parent','shutdown_timeout','worker_failure','controlled_failure','controlled_timeout']);p.add_argument('--root',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--deadline',type=float,required=True);p.add_argument('--input-root',type=Path);p.add_argument('--reference',type=Path);p.add_argument('--inject-fixture-failure',action='store_true');a=p.parse_args();a.out.mkdir(parents=True,exist_ok=True)
     try:
         # micro.run owns configure; avoid setting interop threads twice.
         if a.case not in ('fixture','cpu_parallel','micro','gpu_micro'):configure()
         verify_source()
+        if a.case=='fixture' and a.inject_fixture_failure:raise RuntimeError('EXPECTED_UPSTREAM_FIXTURE_FAILURE')
         if a.case=='controlled_failure':raise RuntimeError('EXPECTED_INJECTED_SUBITEM_FAILURE')
-        if a.case=='controlled_timeout':time.sleep(60)
-        value=globals()[a.case](a.root,a.out,a.deadline)
+        if a.case=='controlled_timeout':
+            dump(a.out/'timeout-entered.json',{'actual_timeout_work_entered':True});time.sleep(60)
+        selected=a.input_root or a.root
+        if a.case in ('serialization','learning','micro','gpu_micro'):
+            from perf.smoke_inputs import valid
+            inputs=valid(selected);assert inputs,'INVALID_SMOKE_INPUT_BUNDLE'
+            dump(a.out/'input-consumption.json',{'basis_id':inputs['basis_id'],'source':str(selected),'integrity_verified_at_entry':True,'provenance':inputs['provenance']})
+        if a.case=='gpu_service':value=service(selected,a.out,a.deadline,'cuda')
+        elif a.case=='gpu_micro':value=gpu_micro(selected,a.out,a.deadline,a.reference)
+        else:value=globals()[a.case](selected,a.out,a.deadline)
         dump(a.out/'case.json',{'status':'pass',**(value or {})})
     except Exception as exc:
         dump(a.out/'case.json',{'status':'fail','error':repr(exc),'traceback':traceback.format_exc()});raise

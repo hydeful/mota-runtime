@@ -34,7 +34,7 @@ def verify_source():
 def configure():
     import torch
     torch.set_num_threads(1)
-    torch.set_num_interop_threads(1)
+    if torch.get_num_interop_threads()!=1:torch.set_num_interop_threads(1)
     torch.use_deterministic_algorithms(True)
     torch.backends.cuda.matmul.allow_tf32 = False
     torch.backends.cudnn.allow_tf32 = False

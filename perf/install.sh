@@ -17,14 +17,27 @@ free=$(df -PB1 "$P48_PERF_HOME" | awk 'NR==2{print $4}')
 python3 -c 'import sys; assert sys.version_info[:2]==(3,12), "Python3.12 required"'
 started=$(date +%s)
 src="$P48_PERF_HOME/code/$commit"
-if [[ ! -d "$src/.git" ]]; then
- [[ ! -e "$src" ]] || { echo 'Existing directory refused' >&2; exit 1; }
+if [[ ! -e "$src" ]]; then
  git init "$src"
  git -C "$src" remote add origin https://github.com/hydeful/mota-runtime.git
+fi
+[[ -d "$src/.git" ]] || { echo 'Existing non-repository directory refused' >&2; exit 1; }
+remote=$(git -C "$src" remote get-url origin 2>/dev/null || true)
+[[ $remote == https://github.com/hydeful/mota-runtime.git ]] || { echo 'Unexpected/missing origin refused; no files overwritten' >&2; exit 1; }
+if git -C "$src" rev-parse --verify HEAD >/dev/null 2>&1; then
+ [[ $(git -C "$src" rev-parse HEAD) == "$commit" ]] || { echo 'Existing different checkout refused' >&2; exit 1; }
+ [[ -z $(git -C "$src" status --porcelain --untracked-files=no) ]] || { echo 'Modified tracked source refused' >&2; exit 1; }
+else
+ # Retry a previously failed fetch only if it has no working/index payload.
+ [[ -z $(git -C "$src" ls-files) && -z $(git -C "$src" ls-files --others --exclude-standard) ]] || { echo 'Incomplete checkout has user files; refused' >&2; exit 1; }
+ echo 'Downloading/retrying fixed source commit (an existing .git is not completion).'
  GIT_TERMINAL_PROMPT=0 git -C "$src" -c credential.helper= fetch --depth=1 origin "$commit"
- git -C "$src" checkout --detach FETCH_HEAD
+ git -C "$src" cat-file -e "$commit^{commit}"
+ git -C "$src" fsck --connectivity-only --no-dangling "$commit"
+ git -C "$src" checkout --detach "$commit"
 fi
 [[ $(git -C "$src" rev-parse HEAD) == "$commit" ]] || exit 1
+git -C "$src" fsck --connectivity-only --no-dangling "$commit"
 [[ -z $(git -C "$src" status --porcelain --untracked-files=no) ]] || { echo 'Modified tracked source refused' >&2; exit 1; }
 # Reuse only functionally verified prior interpreters; code revision alone is
 # never a reason to download another Torch/CUDA distribution.
@@ -50,7 +63,7 @@ if [[ $gpu_mode != off && -z $gpu_python ]] && command -v nvidia-smi >/dev/null 
  else
   gpu="$P48_PERF_HOME/envs/$commit-gpu"
   [[ -x "$gpu/bin/python" ]] || python3 -m venv "$gpu"
-  echo 'Preparing isolated CUDA environment; CPU baseline and cloud600 are untouched.'
+  echo "Preparing isolated CUDA environment. Live progress below; persistent log: $P48_PERF_HOME/gpu-install.log"
   driver=$(nvidia-smi --query-gpu=driver_version --format=csv,noheader | head -1)
   flavor=cu128; version=2.11.0
   # Official2.14.1 CUDA wheels are cu130, not cu128. Driver580+ may use
@@ -58,9 +71,9 @@ if [[ $gpu_mode != off && -z $gpu_python ]] && command -v nvidia-smi >/dev/null 
   if (( ${driver%%.*} >= 580 )); then flavor=cu130; version=2.14.1; fi
   : > "$P48_PERF_HOME/gpu-install.log"
   gpu_ready() {
-   "$gpu/bin/pip" install "torch==$1" 'numpy==2.3.5' --index-url "https://download.pytorch.org/whl/$2" >> "$P48_PERF_HOME/gpu-install.log" 2>&1 &&
-   "$gpu/bin/pip" install 'psutil==7.2.2' >> "$P48_PERF_HOME/gpu-install.log" 2>&1 &&
-   "$gpu/bin/python" -c 'import torch,numpy as np; assert torch.cuda.is_available() and torch.version.cuda, "CUDA environment unusable"; assert torch.from_numpy(np.ones(1,np.float32)).numpy()[0]==1' >> "$P48_PERF_HOME/gpu-install.log" 2>&1
+   "$gpu/bin/pip" install "torch==$1" 'numpy==2.3.5' --index-url "https://download.pytorch.org/whl/$2" 2>&1 | tee -a "$P48_PERF_HOME/gpu-install.log" &&
+   "$gpu/bin/pip" install 'psutil==7.2.2' 2>&1 | tee -a "$P48_PERF_HOME/gpu-install.log" &&
+   "$gpu/bin/python" -c 'import torch,numpy as np; assert torch.cuda.is_available() and torch.version.cuda, "CUDA environment unusable"; assert torch.from_numpy(np.ones(1,np.float32)).numpy()[0]==1' 2>&1 | tee -a "$P48_PERF_HOME/gpu-install.log"
   }
   if gpu_ready "$version" "$flavor"; then gpu_python="$gpu/bin/python"
   elif [[ $flavor == cu130 ]] && gpu_ready 2.11.0 cu128; then gpu_python="$gpu/bin/python"

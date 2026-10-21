@@ -75,41 +75,65 @@ def task(root,state,label,argv,python,limit,held,trial=None):
     start=time.monotonic();cpu0=time.process_time();children0=resource.getrusage(resource.RUSAGE_CHILDREN)
     children_cpu0=children0.ru_utime+children0.ru_stime;peak=0;totals={};gpu_next=0
     stop_at=min(time.time()+limit,stamp(state['deadline_utc'])-22)
-    with (directory/'console.log').open('wb') as log:
-        p=subprocess.Popen([python,*argv],stdout=log,stderr=log,stdin=subprocess.DEVNULL,cwd=SOURCE,env=child_env(),start_new_session=True,pass_fds=(held.fileno(),))
-        record['pid']=p.pid;dump(root/'state.json',state);requested=None
-        while p.poll() is None:
-            rows,rss=monitor(p.pid);peak=max(peak,rss)
-            for row in rows:totals[(row['pid'],row['created'])]=max(totals.get((row['pid'],row['created']),0),row['cpu_seconds'])
-            import psutil
-            controller_rss=psutil.Process().memory_info().rss
-            peak=max(peak,rss+controller_rss)
-            sample={'utc':utc(),'elapsed':time.monotonic()-start,'processes':rows,'child_tree_sum_rss_bytes':rss,'controller_rss_bytes':controller_rss,'sum_rss_bytes':rss+controller_rss}
-            if time.monotonic()>=gpu_next and shutil.which('nvidia-smi'):
-                try:
-                    g=subprocess.run(['nvidia-smi','--query-gpu=timestamp,index,utilization.gpu,memory.used,memory.total','--format=csv,noheader,nounits'],capture_output=True,text=True,timeout=2)
-                    sample['gpu_machine_csv']=g.stdout.strip();sample['gpu_exit_code']=g.returncode
-                except subprocess.TimeoutExpired:sample['gpu_error']='nvidia-smi timeout'
-                gpu_next=time.monotonic()+2
-            event(directory/'resources.jsonl',**sample)
-            if time.time()>=stop_at or (root/'STOP').exists():
-                if requested is None:
-                    requested=time.monotonic()
-                    if trial:(Path(trial['run'])/'STOP').touch()
-                    else:
-                        try:os.killpg(p.pid,signal.SIGTERM)
+    from perf.processes import OwnedTask
+    owner=OwnedTask();p=None;requested=None;primary_error=None;rc=None
+    try:
+        with (directory/'console.log').open('wb') as log:
+            p=subprocess.Popen([python,*argv],stdout=log,stderr=log,stdin=subprocess.DEVNULL,cwd=SOURCE,env=owner.environment(child_env()),start_new_session=True,pass_fds=(held.fileno(),))
+            owner.attach(p)
+            record['pid']=p.pid;dump(root/'state.json',state);requested=None
+            while p.poll() is None:
+                owner.observe()
+                rows,rss=monitor(p.pid);peak=max(peak,rss)
+                for row in rows:totals[(row['pid'],row['created'])]=max(totals.get((row['pid'],row['created']),0),row['cpu_seconds'])
+                import psutil
+                controller_rss=psutil.Process().memory_info().rss
+                peak=max(peak,rss+controller_rss)
+                sample={'utc':utc(),'elapsed':time.monotonic()-start,'processes':rows,'child_tree_sum_rss_bytes':rss,'controller_rss_bytes':controller_rss,'sum_rss_bytes':rss+controller_rss}
+                if time.monotonic()>=gpu_next and shutil.which('nvidia-smi'):
+                    try:
+                        g=subprocess.run(['nvidia-smi','--query-gpu=timestamp,index,utilization.gpu,memory.used,memory.total','--format=csv,noheader,nounits'],capture_output=True,text=True,timeout=2)
+                        sample['gpu_machine_csv']=g.stdout.strip();sample['gpu_exit_code']=g.returncode
+                    except subprocess.TimeoutExpired:sample['gpu_error']='nvidia-smi timeout'
+                    gpu_next=time.monotonic()+2
+                event(directory/'resources.jsonl',**sample)
+                if time.time()>=stop_at or (root/'STOP').exists():
+                    if requested is None:
+                        requested=time.monotonic()
+                        if trial:(Path(trial['run'])/'STOP').touch()
+                        else:
+                            try:os.killpg(p.pid,signal.SIGTERM)
+                            except ProcessLookupError:pass
+                    if time.monotonic()-requested>(2 if state.get('smoke_only') else 7):
+                        try:os.killpg(p.pid,signal.SIGKILL)
                         except ProcessLookupError:pass
-                if time.monotonic()-requested>(2 if state.get('smoke_only') else 7):
-                    try:os.killpg(p.pid,signal.SIGKILL)
-                    except ProcessLookupError:pass
-            time.sleep(.5)
-        rc=p.wait()
+                time.sleep(.5)
+            rc=p.wait()
+    except Exception as exc:
+        import traceback
+        primary_error={'error':repr(exc),'traceback':traceback.format_exc()}
+    finally:
+        try:cleanup=owner.cleanup()
+        except BaseException as exc:
+            cleanup={'complete':False,'before_cleanup':[],'remaining':'scan unavailable','errors':['cleanup failure: '+repr(exc)]}
+            if p is not None and p.poll() is None:
+                try:
+                    p.terminate()
+                    try:p.wait(timeout=.5)
+                    except subprocess.TimeoutExpired:p.kill();p.wait(timeout=.5)
+                except Exception as direct_error:cleanup['errors'].append('owned direct-child fallback: '+repr(direct_error))
+        if p is not None:
+            try:rc=p.wait(timeout=1)
+            except Exception as exc:cleanup['errors'].append('direct child wait: '+repr(exc))
+        record['cleanup']=cleanup
+        if primary_error:record['primary_error']=primary_error
+        elif rc:record['primary_error']={'error':'CHILD_EXIT_'+str(rc),'error_path':str(directory/'console.log')}
     children1=resource.getrusage(resource.RUSAGE_CHILDREN)
     related_cpu=time.process_time()-cpu0+children1.ru_utime+children1.ru_stime-children_cpu0
-    record.update(status='finished' if rc==0 and requested is None else 'incomplete',exit_code=rc,
+    record.update(status='finished' if rc==0 and requested is None and primary_error is None and cleanup['complete'] and not cleanup['before_cleanup'] else 'incomplete',exit_code=rc,
                   wall_seconds=time.monotonic()-start,finished_utc=utc(),sampled_peak_sum_rss_bytes=peak,
                   sampled_cpu_seconds_lower_bound=sum(totals.values()),controller_monitor_cpu_seconds=time.process_time()-cpu0,
-                  all_related_cpu_seconds=related_cpu,cpu_accounting_complete=rc==0,
+                  all_related_cpu_seconds=related_cpu,cpu_accounting_complete=rc==0 and cleanup['complete'],
                   resource_sampling_seconds=.5,gpu_sampling_seconds=2,
                   resource_note='sumRSS counts shared pages more than once; sampled peak is a lower bound. Worker result provides exact waited-descendant CPU for normal exits. GPU utilisation/memory is machine-wide, may include other jobs.')
     if trial:
@@ -170,7 +194,7 @@ def summarize(root,state):
     summary={'experiment_status':state['status'],'comparisons':pairs,'performance_improvement':'pending' if not pairs else 'see measured per-pair ratios',
              'default_recommendation':'eligible for review, not automatically changed' if recommend else 'keep original P45 default; insufficient repeated>=20% evidence or training debt',
              'script_delivery_and_performance_are_separate':True,'hourly_rates_are_extrapolations_not_one_hour_measurements':True,
-             'elapsed_controller_seconds':time.time()-stamp(state['started_utc']),'budget_seconds':state['budget_seconds'],
+             'elapsed_controller_seconds':(stamp(state['finished_utc']) if state.get('finished_utc') else time.time())-stamp(state['started_utc']),'budget_seconds':state['budget_seconds'],
              'remaining_seconds':max(0,stamp(state['deadline_utc'])-time.time()),'errors':[{'label':r['label'],'status':r['status'],'exit_code':r.get('exit_code')} for r in state['attempts'] if r['status']!='finished'],
              'controller_total_cpu_seconds':time.process_time(),'controller_peak_rss_mib':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024,
              'all_recorded_related_cpu_seconds':sum(r.get('all_related_cpu_seconds',0)-r.get('controller_monitor_cpu_seconds',0) for r in state['attempts'])+time.process_time(),
@@ -197,14 +221,14 @@ def _export(root,state):
             if p.suffix=='.log' and p.stat().st_size>5_000_000:
                 with p.open('rb') as f:f.seek(-5_000_000,2);z.writestr(str(p.relative_to(root))+'.tail',f.read())
             else:z.write(p,p.relative_to(root),compress_type=zipfile.ZIP_STORED if p.name.endswith('.gz') else zipfile.ZIP_DEFLATED)
-        marker={'measured_utc':utc(),'controller_elapsed_including_payload_pack_seconds':time.time()-stamp(state['started_utc']),
+        marker={'measured_utc':utc(),'controller_elapsed_including_payload_pack_seconds':(stamp(state['finished_utc']) if state.get('finished_utc') else time.time())-stamp(state['started_utc']),
                 'payload_pack_seconds':time.time()-started,'late_past_global_deadline_seconds':max(0,time.time()-stamp(state['deadline_utc'])),
                 'budget_seconds':state['budget_seconds'],'measurement_point':'All result payloads packed; only this tiny marker and ZIP central directory/atomic rename follow.'}
         z.writestr('FINAL_BUDGET_MARKER.json',json.dumps(marker,indent=2))
     os.replace(tmp,target)
     dump(root/'export.json',{'path':str(target),'bytes':target.stat().st_size,'pack_seconds':time.time()-started,'finished_utc':utc(),
                              'late_past_global_deadline_seconds':max(0,time.time()-stamp(state['deadline_utc'])),
-                             'total_controller_seconds_including_pack':time.time()-stamp(state['started_utc']),
+                             'total_controller_seconds_including_pack':(stamp(state['finished_utc']) if state.get('finished_utc') else time.time())-stamp(state['started_utc']),
                              'excluded':'weights, optimizer/checkpoints, temporary files, credentials/environment variables. Only this experiment directory is read.'})
     return target
 

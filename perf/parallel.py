@@ -42,7 +42,11 @@ def job(payload):
         if not r.s['cohort']:r.collect(payload['deadline'],no_train=True)
     except EpisodeComplete:pass
     finally:
-        if remote:remote.close()
+        if remote:
+            error=remote.close()
+            if error:
+                import sys
+                if sys.exc_info()[1] is not None:sys.exc_info()[1].add_note('Remote connection cleanup: '+error)
     result={'episode_id':payload['episode_id'],'finished':bool(r.s['cohort']),
             'decisions':r.s['total_decisions'],'simulations':r.s['total_simulations'],
             'wall_seconds':time.perf_counter()-began,'cpu_seconds':time.process_time()-cpu,
@@ -65,11 +69,11 @@ class ParallelRunner(MultiActorRunner):
 
     def collect_probe(self,deadline,max_cohorts=0,until_generation=None):
         deadline=cap_deadline(deadline,self.s['budget']);cohorts=0;service=None
-        if self.options.get('rpc_device'):
-            from perf.devices import Service
-            service=Service(self.options['rpc_device'],self.options.get('rpc_batch_wait',.0002))
-        rpc=(service.address,service.auth) if service else None
         try:
+            if self.options.get('rpc_device'):
+                from perf.devices import Service
+                service=Service(self.options['rpc_device'],self.options.get('rpc_batch_wait',.0002))
+            rpc=(service.address,service.auth) if service else None
             with ProcessPoolExecutor(max_workers=self.workers,mp_context=mp.get_context('spawn'),initializer=setup,initargs=(self.env.config,self.options,rpc)) as pool:
                 sent=None
                 while time.monotonic()<deadline and not self.should_stop():
@@ -104,5 +108,18 @@ class ParallelRunner(MultiActorRunner):
                     self.s['parallel_coordinator_wait_seconds']=self.s.get('parallel_coordinator_wait_seconds',0.)+time.perf_counter()-began
                     if not all(j['finished'] for j in self.s['parallel_jobs']):break
         finally:
-            if service:dump(self.root/'rpc-metrics.json',service.close())
-            self.save()
+            import sys
+            from perf.devices import cleanup_record
+            primary=sys.exc_info()[1];errors=[]
+            if service:
+                try:
+                    result=service.close();cleanup_record(self.root/'rpc-metrics.json',result)
+                    if result.get('cleanup_errors') or not result['cleanup_complete']:errors.append(result)
+                except Exception as exc:errors.append('cleanup evidence: '+repr(exc))
+            try:self.save()
+            except Exception as exc:
+                if primary is not None:primary.add_note('Final save failed: '+repr(exc))
+                else:raise
+            if errors:
+                if primary is not None:primary.add_note('Service cleanup errors: '+str(errors))
+                else:raise RuntimeError('SERVICE_CLEANUP_FAILED '+str(errors))

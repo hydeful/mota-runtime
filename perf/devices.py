@@ -20,7 +20,7 @@ class DeviceNetwork(Network):
         logits,value=super().forward(x.to('cuda'))
         return logits.cpu(),value.cpu()
 
-def _server(pipe, auth, device, batch_wait):
+def _server(pipe, auth, device, batch_wait, test_shutdown_stall=False):
     from perf.common import configure
     configure()
     listener=Listener(('127.0.0.1',0),authkey=auth)
@@ -61,6 +61,7 @@ def _server(pipe, auth, device, batch_wait):
                 current=identity;reply.put(('ok',None))
             elif kind=='stats':reply.put(('ok',dict(counters,device=device,weight_hash=current)))
             elif kind=='shutdown':
+                if test_shutdown_stall:time.sleep(60) # explicit smoke fault only
                 extra={'cuda_peak_allocated_bytes':torch.cuda.max_memory_allocated(),'gpu_name':torch.cuda.get_device_name()} if device=='cuda' and torch.cuda.is_initialized() else {}
                 reply.put(('ok',dict(counters,device=device,**extra)));stopping.set()
             continue
@@ -106,26 +107,63 @@ def _server(pipe, auth, device, batch_wait):
     listener.close()
 
 class Service:
-    def __init__(self,device,batch_wait=.0002):
-        self.auth=secrets.token_bytes(32)
+    def __init__(self,device,batch_wait=.0002,*,close_timeout=2.,_test_shutdown_stall=False):
+        self.auth=secrets.token_bytes(32);self.connection=None;self.process=None
+        self.close_timeout=close_timeout;self.close_result=None
         recv,send=mp.get_context('spawn').Pipe(duplex=False)
-        self.process=mp.get_context('spawn').Process(target=_server,args=(send,self.auth,device,batch_wait))
-        self.process.start();send.close()
-        if not recv.poll(30):raise RuntimeError('RPC_SERVER_START_TIMEOUT')
-        self.address=recv.recv();recv.close()
-        self.connection=Client(self.address,authkey=self.auth)
-    def call(self,kind,payload=None):
+        try:
+            self.process=mp.get_context('spawn').Process(target=_server,args=(send,self.auth,device,batch_wait,_test_shutdown_stall))
+            self.process.start();send.close()
+            if not recv.poll(20):raise RuntimeError('RPC_SERVER_START_TIMEOUT')
+            self.address=recv.recv()
+            self.connection=Client(self.address,authkey=self.auth)
+        except BaseException as exc:
+            cleanup=self.close(shutdown=False)
+            exc.add_note('Service startup cleanup: '+str(cleanup))
+            raise
+        finally:recv.close();send.close()
+    def call(self,kind,payload=None,timeout=30):
         self.connection.send((kind,payload))
-        if not self.connection.poll(30):raise RuntimeError('RPC_CONTROL_TIMEOUT')
+        if not self.connection.poll(timeout):raise TimeoutError('RPC_CONTROL_TIMEOUT '+kind)
         state,result=self.connection.recv()
         if state!='ok':raise RuntimeError(result)
         return result
     def publish(self,model):
         return self.call('publish',({k:v.detach().cpu().numpy().copy() for k,v in model.state_dict().items()},model_hash(model)))
-    def close(self):
-        result=self.call('shutdown');self.connection.close();self.process.join(5)
-        if self.process.is_alive():self.process.kill();self.process.join()
-        return result
+    def close(self,shutdown=True):
+        # Always return cleanup evidence; never mask the caller's original error.
+        if self.close_result is not None:return self.close_result
+        result={};errors=[]
+        try:
+            if shutdown and self.connection is not None:
+                result=self.call('shutdown',timeout=self.close_timeout)
+                if not isinstance(result,dict):result={};raise RuntimeError('INVALID_SHUTDOWN_REPLY')
+        except BaseException as exc:errors.append({'phase':'shutdown','error':repr(exc)})
+        finally:
+            if self.connection is not None:
+                try:self.connection.close()
+                except Exception as exc:errors.append({'phase':'connection_close','error':repr(exc)})
+            if self.process is not None and self.process.pid is not None:
+                try:
+                    self.process.join(.4)
+                    if self.process.is_alive():self.process.terminate();self.process.join(.4)
+                    if self.process.is_alive():self.process.kill();self.process.join(.4)
+                except Exception as exc:errors.append({'phase':'process_reap','error':repr(exc)})
+        try:alive=self.process is not None and self.process.pid is not None and self.process.is_alive()
+        except Exception as exc:alive=True;errors.append({'phase':'liveness_check','error':repr(exc)})
+        self.close_result=dict(result,cleanup_errors=errors,cleanup_complete=not alive,service_pid=self.process.pid if self.process is not None else None)
+        return self.close_result
+
+
+def cleanup_record(path,value):
+    """Persist cleanup even on failure; a write error cannot replace an active root error."""
+    import sys
+    from perf.common import dump
+    primary=sys.exc_info()[1]
+    try:dump(path,value)
+    except Exception as exc:
+        if primary is not None:primary.add_note('Cleanup evidence write failed: '+repr(exc))
+        else:raise
 
 class RemoteForward:
     def __init__(self,address,auth,weight_hash,schema):
@@ -140,4 +178,6 @@ class RemoteForward:
         if state!='ok':raise RuntimeError(result)
         logits,v=result
         return torch.from_numpy(logits[None]),torch.tensor([v],dtype=torch.float32)
-    def close(self):self.conn.close()
+    def close(self):
+        try:self.conn.close();return None
+        except Exception as exc:return repr(exc)

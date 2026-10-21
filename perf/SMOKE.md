@@ -1,63 +1,78 @@
-# P48 600秒流程冒烟
+# P48：600秒流程诊断
 
-本模式检查执行路径，不提供加速、正式产能或学习增强结论。旧CPU入口、`cloud600`、`experiments/probe1`和旧预算均不修改、不读取。所有输出在独立的`smoke-tests/名称/`。
+沿用状态比较器、独立`mota-smoke`入口及原P45；不改冻结算法文件。本模式用于排错，**不是600秒性能对照，不证明提速，不自动进入一小时实验**。安装另计；从start开始，子进程导入、预热、失败、检查和打包均共用不可重置的最多600秒绝对预算，可提前结束。关闭终端继续，不自动重跑或追加预算。
 
-固定实验代码：`7daf30117f3c8228b409a42971d67ba684a4af69`。先复制这一条，安装成功后仅启动一次独立冒烟：
+首次安装与后台启动的固定提交命令见本页末尾的发布命令。新版使用新名称`smoke2`，只写入`/root/autodl-tmp/p48-perf/smoke-tests/smoke2/`，不读取或修改`cloud600`、`probe1`或其预算。
+
+## 实际阶段及依赖
+
+| 阶段 | 上限秒 | 正常输入/依赖 | 上游失败时 |
+|---|---:|---|---|
+| reserve_inputs | 30 | 独立、新鲜随机网络及一局实际搜索 | 失败照实记录；其他独立路径继续 |
+| fixture | 50 | 独立、原版四局及7次模拟的未完成树 | 不伪造成功 |
+| serialization | 30 | fixture完整断点、树、RNG及样本 | 已验证备用完整输入 |
+| micro | 25 | fixture模型、样本、状态 | 备用输入；故意packed检查失败不阻断CPU计算 |
+| cpu_parallel | 45 | 独立、两个CPU采集进程/一个学习器 | 不依赖fixture |
+| service | 20 | 独立CPU批量服务、初始编码 | 不依赖fixture/micro |
+| gpu_micro | 40 | 同模型/样本及匹配CPU金标准 | 整组替换成匹配备用输入+参考值，不混用 |
+| gpu_service | 25 | 独立CUDA前向、真实批量内核及SGD | 不依赖CPU金标准；无可用环境明确报告 |
+| learning | 80 | 有效样本账本和断点 | 备用有效测试账本 |
+| orphan_parent | 6 | 受控异常父退出，子进程另建会话 | 独立验证任务归属清理 |
+| shutdown_timeout | 12 | 真实服务故意不回复shutdown | 保留原始错误，强制回收 |
+| worker_failure | 15 | 正式并行job故意缺失snapshot、真实CPU服务 | 验证原始异常/最终保存/服务关闭 |
+| controlled_failure | 8 | 受控单项异常 | 后续真实路径继续 |
+| controlled_timeout | 5 | 留下已进入超时工作的标记，再等待 | 到点清理，后续真实路径继续 |
+| fallback_serialization | 20 | 故意令该项看不到主上游，使用备用材料 | 自身和失败衔接分别记录 |
+| real_candidate_worker | 25 | 实际micro验证过的候选配置 | 备用micro；都无效时只尝试冻结参考配置，候选衔接未验证 |
+| scheduling_logic | 余量 | 正式选择/调度函数，print占位子进程 | **仅调度逻辑检查** |
+
+主体上限共436秒；后项保留启动机会，最后35秒用于收尾和小包。临近截止缩短单项上限或记录未执行，不拼接中断结果。正常情况下优先使用实际上游输出，所有材料先校验清单SHA；无有效主/备输入时明确列出缺失条件，继续独立路径。
+
+## 备用材料及衔接结论
+
+备用材料在主fixture之前一次性新建：新鲜随机网络、真实原版一局终局样本，参考规则重放，未完成100模拟决策的树和两种actor RNG，实际模型/优化器/全局RNG。一个终局被放入明确标记的**诊断单局账本**，不是正式四局提交。所有必需文件封存SHA清单；CPU金标准绑定同一输入basis_id和参考文件SHA。备用材料不是历史权重或数据，不使用损坏断点训练。
+
+`status`表示阶段自身；`link_status`表示直接上下游衔接；`chain_status`继承整个实际依赖链的失败/未验证。备用输入自身通过，原衔接仍失败或未验证，后面阶段通过不会洗掉它。设备不可用时不声称其消费路径已验证。文件完整性在控制器及消费入口都校验，包内记录输入来源与basis_id。
+
+为了覆盖训练发布路径，测试仍明确注入`new_positions=512`，不改正式512门槛、网络、100模拟、批量64、优化器/学习率或曝光公式。构造阶段执行63次真实SGD（仅跳过构造过程的中间写盘），两种保存各恢复后完成最后一次真实SGD及N1后续搜索。实际位置和合成计数分开，**不计正式产能或学习收益**。
+
+新比较器逐字段、精确比较模型/优化器/进度、树/子节点、数组dtype/shape/data/writeable、Python/NumPy/Torch随机状态及Generator/BitGenerator内部状态。未知类型明确失败；不推进随机状态、不修改对象、不依赖地址repr。人工只读数组负例独立记录原版Torch的属性损失，不静默忽略。
+
+## 实际worker与调度逻辑分开
+
+`real_candidate_worker`把实际通过micro门的`direct_hash`配置写入options.json，经正式`perf.worker`命令行入口执行至少一个真实100模拟决策，规则审计后解析result.json，输出`real-worker-summary.json`。没有合格优化门时只测试原版参考入口。它是参数/路径/入口/结果解析的实际衔接，**不是完整学习闭环通过**，不会把零训练位置包装为产能。
+
+`scheduling_logic`保留原有正式函数+print子进程测试，仅写逻辑检查。两者在覆盖表和结果包中分别列项。
+
+## 异常进程清理
+
+每项获得随机任务归属标记。控制器在直接子进程退出后继续扫描和清理本项后代，包括继承标记但另建会话/已被重挂的进程；记录PID+创建时间、清理前/后状态及可观测范围。Linux子收割器可用时回收本项被收养的后代。绝不按进程名称批量结束进程，也不杀其他任务。不可读取的进程数量和扫描限制保留；AutoDL实际完整树仍待云端证据。
+
+Service创建失败也会回收已创建的服务。close的shutdown超时/异常仍关闭连接、join/terminate/kill；清理错误单独保留，不覆盖原始worker/调用错误，不阻止最终断点/证据保存。包内保留异常路径和退出码。停止诊断可能中断当前case，明确标记未完成；真正安全保存/恢复另由学习case的真实Runner STOP验证，不假称强制中断已保存。
+
+## 操作与结果
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/hydeful/mota-runtime/7daf30117f3c8228b409a42971d67ba684a4af69/perf/install.sh -o /root/autodl-tmp/p48-smoke-install.sh && bash /root/autodl-tmp/p48-smoke-install.sh 7daf30117f3c8228b409a42971d67ba684a4af69 auto && /root/autodl-tmp/p48-perf/bin/mota-smoke start smoke1
+/root/autodl-tmp/p48-perf/bin/mota-smoke status smoke2
+/root/autodl-tmp/p48-perf/bin/mota-smoke stop smoke2
+/root/autodl-tmp/p48-perf/bin/mota-smoke resume smoke2
+/root/autodl-tmp/p48-perf/bin/mota-smoke export smoke2
 ```
 
-安装优先检查并复用`installation.json`中原CPU/CUDA解释器：检查固定软件版本、NumPy转换、CUDA可用性及真实小张量反向计算，代码更新本身不会触发整套CUDA下载。验证失败才尝试独立环境安装，不修改原CPU入口。无可用CUDA环境时明确记设备不可用，不声称GPU覆盖通过。
+已记录项不自动重跑，resume保留原截止。完成后拒绝自动重复恢复。状态分别显示固定的实际执行耗时、结束时间和随当前时间变化的剩余绝对预算；再次查看或导出不增长执行耗时。
 
-安装后运行`/root/autodl-tmp/p48-perf/bin/mota-smoke start smoke1`。安装另计，从start命令创建控制状态起，环境检查、预热、失败、调度和打包共享最多600秒绝对截止；可以提前结束。关闭终端继续。不会自动重跑、自动追加预算或启动一小时实验。名称已存在则拒绝覆盖。
+自动小诊断包：`/root/autodl-tmp/p48-perf/smoke-tests/smoke2/results.zip`，上限5MB，默认只收覆盖表、环境/配置、每项耗时/输入来源/退出码/清理及错误路径、8KB日志和资源记录尾部、真实worker摘要及预算/导出检查。不包含终局样本、权重或重复工件。
 
-日常单行命令：
+`export-verification.json`确实在包内：先校验payload CRC和清单SHA，再加入验证记录，完成后再校验整个ZIP的CRC。清楚区分验证范围；最终小标记和ZIP封口耗时另记在包旁export.json，实际执行结束计时保持固定。手动导出时间与执行时间分开。
+
+完整资料保留在同一目录，必要时显式另导出（可能包含测试断点和权重；默认不需要）：
 
 ```bash
-/root/autodl-tmp/p48-perf/bin/mota-smoke status smoke1
-/root/autodl-tmp/p48-perf/bin/mota-smoke stop smoke1
-/root/autodl-tmp/p48-perf/bin/mota-smoke resume smoke1
-/root/autodl-tmp/p48-perf/bin/mota-smoke export smoke1
+/root/autodl-tmp/p48-perf/bin/mota-smoke export smoke2 --full
 ```
 
-resume保留原截止时间，已记录项不重跑；结束后拒绝再次恢复。停止会终止当前诊断子进程，而安全保存/恢复由独立的真实Runner STOP检查覆盖；诊断被强制中断时标记未完成，绝不宣称已保存。
+输出`full-results.zip`，不替换小包。不要默认上传全量资料。
 
-## 覆盖和上限
+安装继续功能核查后复用CPU/CUDA环境，代码更新不触发整套CUDA重装。首次fetch失败留下的空.git可重试；核对完整提交对象和工作区，有用户文件/修改则拒绝覆盖。必须安装CUDA时显示实时输出及持久日志位置，实验计时尚未启动。
 
-| 项目 | 子进程上限 | 验证 |
-|---|---:|---|
-| 新鲜断点 | 65秒 | 原版串行、四局真实结束和样本、100模拟规则审计、保留7次模拟的未完成树 |
-| 保存恢复 | 65秒 | 原版和packed完整语义比较，负例，恢复后的下一真实决策 |
-| CPU局部检查 | 35秒 | 编码、哈希、神经网络和真实SGD；故意使packed保存检查失败，其他子项继续 |
-| 两个CPU进程 | 65秒 | 四局合并至一个协调器，单一共享训练循环执行真实SGD |
-| 共享批量服务 | 25秒 | CPU批量内核、缓存命中、模型更新、失效和旧版本拒绝 |
-| CUDA | 80秒 | 独立已验证环境，CPU金标准数值检查、真实CUDA前向/批量/SGD；无设备明确报告 |
-| 学习和恢复 | 125秒 | 接近完成的测试断点、两种保存恢复后下一SGD一致、N1继续100模拟搜索、STOP/恢复/预算/互斥 |
-| 受控失败/超时 | 3秒/2秒 | 故意失败后继续超时检查、真实调度和导出 |
-
-合计525秒子项上限；终止宽限、调度、监测和打包使用余量。前项到上限即终止进程组，不吃掉后项配额；剩余时间不足单项上限加42秒时标记未执行。最后保留打包时间，不启动新计算。硬中断的子项保留日志，不拼接成完整结果。
-
-`candidate_selection_schedule`使用正式代码的依赖筛选、选择和后续对照调度函数，派发缩小工作量的真实子进程；600/300标签只表示所覆盖的正式分支，绝不是600/300秒性能对照。完整搜索和学习正确性另由上面的真实Runner检查，不靠调度占位输出证明。
-
-## 测试断点来源
-
-只使用本次新鲜随机网络及其四局实际样本。为了在时间内覆盖训练发布路径，明确注入`new_positions=512`测试计数，正式配置的门槛512、网络、搜索100、批量64、SGD/学习率/曝光公式均不修改。构造阶段执行63次真实SGD，仅跳过构造阶段中间写盘；随后保存真实的63/64训练断点，两种保存各恢复后执行最后一次真实SGD及后续搜索。测试计数与真实合格位置分别记录，**这不是合格的正式训练账本，不能计入产能**。恢复前后必须保持同一绝对预算。
-
-## 修复和失败隔离
-
-冻结的P45文件不变。新`semantic.compare`逐字段比较Node树、数组dtype/shape/data/writeable、模型、优化器、进度、Python/NumPy/Torch随机状态以及Generator和BitGenerator的类型/内部状态。比较不抽样、不前进RNG、不修改对象。未知对象明确报类型和路径，禁止repr地址作为等价依据。精确比较，不放宽浮点容差。
-
-原版Torch对人工只读数组会丢失只读标志；这个负例必须被检测，并与真实断点的结果分开。优化保存必须保留它，不能静默修正比较对象。
-
-micro保存、哈希、JSON、各CPU/CUDA配置分别落盘并带traceback。packed失败只排除依赖packed的候选；原版保存或共同CPU基础失败会阻断正式完整闭环，先保留独立GPU诊断。GPU依赖CPU金标准文件；该文件缺失时明确阻断数值门，不声称验证完成。冒烟额外注入一次保存失败，验证CPU局部计算和GPU派发仍继续。
-
-## 结果
-
-自动结果包：`/root/autodl-tmp/p48-perf/smoke-tests/smoke1/results.zip`。
-
-包内`COVERAGE.txt`、`coverage.csv/json`为覆盖表，状态为通过/失败/超时/未执行/设备不可用。`controlled_failure`和`controlled_timeout`必须保留真实失败/超时状态，并由`failure_isolation`说明是否符合预期；不能把它们改为候选通过。包含环境、逐项日志、资源采样、错误路径及最终预算标记，排除权重和全量断点。必要完整断点留在本机测试目录以便排错。
-
-`export.json`及`export-verification.json`在结果包旁，记录含打包总耗时/完整性；后者在首次打包完成后写入，手动export可将其收入结果包。
-
-当前发布只证明本地CPU准备与检查。实际AutoDL和CUDA覆盖必须以用户返回结果包判断，不能根据设备型号预先标通过。流程通过后再单独安排正式一小时实验。
+本地CPU真实计算、受控输入、逻辑模拟和设备不可用分别记录。没有AutoDL/CUDA实证，不能宣布云端诊断通过；也不能据此宣布性能改善或自动安排一小时实验。
