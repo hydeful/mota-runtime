@@ -1,0 +1,28 @@
+{
+  "version": "0.1",
+  "status": "external_review_draft_not_implemented",
+  "date_asia_shanghai": "2026-10-22",
+  "repository": "hydeful/mota-runtime",
+  "expected_repository_visibility": "public",
+  "source_base_commit": "840eccef6bcfdbbb2219e64d4a9f4a5f4db9184f",
+  "scope": "CPU-first engineering project plan; GPU implementation and deployment excluded",
+  "files": {
+    "EXTERNAL_REVIEW.md": {
+      "bytes": 4178,
+      "sha256": "c1f86c68450645e04e12fb7ec372e9cbb107184e872085191cba541549eabf09"
+    },
+    "MILESTONES.md": {
+      "bytes": 21566,
+      "sha256": "2f5472011ecfc13eafd85a02749f036db2d528d98e9b5b1e13cf0c5e6f2c3abb"
+    },
+    "PROJECT.md": {
+      "bytes": 28523,
+      "sha256": "7c1d932d65f966a90b289db01d50a3cac273e23943f54ca19f8fd0e1d02bfd55"
+    },
+    "README.md": {
+      "bytes": 1970,
+      "sha256": "0862fdacdd99cbebd184594485e2e5f04b7c486f1b71788dfd9313a7ff29cd24"
+    }
+  },
+  "note": "Manifest excludes itself. It records local publication bytes; fixed remote commit and readback are verified after upload."
+}
