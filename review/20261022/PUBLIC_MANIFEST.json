@@ -1,0 +1,1226 @@
+{
+  "date": "2026-10-22",
+  "baseline_public_commit": "49ef801d2846e45edb9ec196b5d7f6744a340ff7",
+  "p49_source_commit": "4407df153d5419d4b9deeba02254d553c3e62528",
+  "note": "Manifest excludes itself and PUBLICATION_VALIDATION.json; unchanged base files belong to baseline tree. Original episode samples are decompressed archive bytes.",
+  "files": [
+    {
+      "path": "NOTICE.md",
+      "size": 2087,
+      "sha256": "b2814270bb26355fb0c97f2a71fcc741a60a40a82dfc4721679d319f0040cbeb",
+      "git_blob_sha": "758a94c31a25184c302bc8a305936aa46ba6a5d1"
+    },
+    {
+      "path": "README.md",
+      "size": 1124,
+      "sha256": "17e432822ac38e48ae0f798490b3c01b08da8fd1a102a772eb62d4d9a9d16c66",
+      "git_blob_sha": "ab806168484ab5d443a03b4c544e65ad405b1c45"
+    },
+    {
+      "path": "tasks/tower10/p49/certify.py",
+      "size": 7678,
+      "sha256": "2a04b40233953ba95e98e1b2b79e8d2827717479b1574e3f061ad80f708bc97e",
+      "git_blob_sha": "a94c9a605232fea18b28e57df19566ee4068cda8"
+    },
+    {
+      "path": "tasks/tower10/p49/test_environment.py",
+      "size": 4253,
+      "sha256": "f3d330d730f1d73000165648d8c88bf7c2a478d98fe56caf70a8cf90c6620f5e",
+      "git_blob_sha": "68f5bc81e0e666c90a82e37268cda24cb6da6592"
+    },
+    {
+      "path": "tasks/tower10/p49/SOURCE_MANIFEST.json",
+      "size": 2204,
+      "sha256": "e31d0e40d41f62c6092f65efdc05be09ca4dc33db4d2b2d0dbaf2988ebc9e7a5",
+      "git_blob_sha": "2df14e4e3fd05a4e2079eda48a538850615f1e71"
+    },
+    {
+      "path": "tasks/tower10/p49/initial_topology.json",
+      "size": 38126,
+      "sha256": "4da65616300f8218430e1cd59919d0593e290fac665eeac0e5deb5220f603d87",
+      "git_blob_sha": "0e2c944046d90585c370d79fa9e4cde30475d8fa"
+    },
+    {
+      "path": "tasks/tower10/p49/build_web.py",
+      "size": 3322,
+      "sha256": "db49a64bd0f301267f3ffe460c0eb21e4562af04048f8feec7180e67373df6bf",
+      "git_blob_sha": "de98ba54fe7d3bc9ed389db3cccee346782b19a3"
+    },
+    {
+      "path": "tasks/tower10/p49/DELIVERY.json",
+      "size": 1358,
+      "sha256": "39a5f8084d765380577f0c65bfad12d1f0c9edfba142e0c1eee1675e4e9695be",
+      "git_blob_sha": "f4e9643d7c117f9e10967028765f057f6ac9c469"
+    },
+    {
+      "path": "tasks/tower10/p49/environment.py",
+      "size": 6775,
+      "sha256": "77754056d47d293f6c9ac0a8e4471454f98fd46f7fa8322c2bf37ab9cb6f57c2",
+      "git_blob_sha": "c475dcaccc06ab6c5036848fc91d61641b46847e"
+    },
+    {
+      "path": "tasks/tower10/p49/COMPARISON.md",
+      "size": 2939,
+      "sha256": "f2e3c52906d00bff837a9f9b2b12d2210bfa0870adc89ea6673413dc7ff311df",
+      "git_blob_sha": "4a4f21ece13e377b770385caded181d4f265b690"
+    },
+    {
+      "path": "tasks/tower10/p49/__init__.py",
+      "size": 76,
+      "sha256": "fda28107357bb75be8f8baf60b45ced710f651db23bd0da1203abe200cb32240",
+      "git_blob_sha": "8257d0c810233106e6cc58f1d860d73ef970ad2e"
+    },
+    {
+      "path": "tasks/tower10/p49/identity.json",
+      "size": 715,
+      "sha256": "5224abe71bc4123883ee0d3d28118cf82d5137a4e3a40b1d99ccaff351e8e871",
+      "git_blob_sha": "b0333af722e46bde09a50da9f4cd20b52dfd64e3"
+    },
+    {
+      "path": "tasks/tower10/p49/map.json",
+      "size": 629,
+      "sha256": "bd318c642dac5505ba60aa26e7debf0cb17947b1eee2ae8c51fab5d883de3ed6",
+      "git_blob_sha": "f6dc69428407b5b1b7590078ffab0c213d86d719"
+    },
+    {
+      "path": "tasks/tower10/p49/README.md",
+      "size": 7771,
+      "sha256": "71286d75628b12dc9fe5a545468233855979eb3189ed1593a93a448d090707d5",
+      "git_blob_sha": "95193460ca07d2fb7b235b671de75a73135fbc71"
+    },
+    {
+      "path": "tasks/tower10/p49/CONTROLLED.md",
+      "size": 1136,
+      "sha256": "a8fc5d57d35cd44f3da6c2e309fbda83cc918ea8d8dd2b2ffc204cf2efdc78eb",
+      "git_blob_sha": "f7a0cc1e171c1bdcc03ebd94e6e41a5595ff7149"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/certify.py",
+      "size": 6277,
+      "sha256": "b82eaa27b1a1d62c4ef9d28ae1f094e0d2d5032aa465964a70d8cc35f454fb42",
+      "git_blob_sha": "2b8ef2471961cc93e9d23f7ddc0a822c00bb5083"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/build.py",
+      "size": 3834,
+      "sha256": "f5324d92562b145ac95b42827b4a4ea903b072b4df35fba7dd40973add3436aa",
+      "git_blob_sha": "f7f28804b27173b535120282c0f53bbd7987ba9d"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/runtime.py",
+      "size": 6183,
+      "sha256": "0703723bbad821f6e37d85468b8314f5795d3dcb8ff5072509ed55cb99d9ed0f",
+      "git_blob_sha": "019b296b25d7ef3260ee6a70343de2dd34fac6ac"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/guard.py",
+      "size": 1972,
+      "sha256": "6ed1051c7f9891af77df97fafe271b46199512125e66487c1ead0bb05e1a5f05",
+      "git_blob_sha": "08924f84d12f61158a730741ddd26e4f0a8ef16d"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/tensor_example.json",
+      "size": 20814,
+      "sha256": "ead9e5d86ceef61072c6f1c172a72a02e715d763fb5f3c82a478df149121d222",
+      "git_blob_sha": "659c3e66601eddeaa303fdaff3fad4af95ff25a3"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/EXPERIMENT_PLAN.md",
+      "size": 4877,
+      "sha256": "49937fcb02e5d68a3b1be9b8ef32794bdb747eb71696317de8f2d80f9329cea8",
+      "git_blob_sha": "9beb95b7a66211750fddff46cabff3a3cb5a11a3"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/environment.py",
+      "size": 5108,
+      "sha256": "4362b34dd1b4364d627f6da62480a3964e709f3e7b359eeb54f8391ead8f0506",
+      "git_blob_sha": "d6d86da273bba4e39d3e07f0eec8875c2d2a3859"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/contracts.py",
+      "size": 718,
+      "sha256": "c4507e782e09cde201c191d4690b5096782cf663c0dacc8d7aa80948d8b2638d",
+      "git_blob_sha": "9f4318057e8f2e9408f4a8288484080d07b2d216"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/CERTIFICATION.json",
+      "size": 1091,
+      "sha256": "88bc383e10f793eb3519daf4d9806e5c3c670fe2f8f6d49cc823121fcf69027a",
+      "git_blob_sha": "a6ca5653cab4d96e6e56df554a32b05b47c39b82"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/ADAPTATION.md",
+      "size": 7330,
+      "sha256": "921006ee4ad71f6fce79da2902ed94171f58a83e3da1904611e438857c26f56d",
+      "git_blob_sha": "2d3747d723eb2d8524a6a1f1f0fa48891ab01909"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/observation.py",
+      "size": 3441,
+      "sha256": "65f9886253a98583a0c590e75fee9f5cba8a47ead86e9eae12abcb0bd8f753a0",
+      "git_blob_sha": "d4c723e288bef2250c40485d078ea4837fd276cc"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/__init__.py",
+      "size": 71,
+      "sha256": "e8db4c1078505fa1a8a5e1743f1e28682ce78d1111f0480f844cdbf98df1d836",
+      "git_blob_sha": "cf36d7e3e00b576eeb7bda4225d04b5e1ee45892"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/report.py",
+      "size": 14272,
+      "sha256": "445d6dad49093436654268c47f4a46842aae184f9454c8af5f4e8f06218bedfd",
+      "git_blob_sha": "105f04c07692c2cf803aa3b8cf624f6f8871cfe8"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/identity.json",
+      "size": 701,
+      "sha256": "f63eef0e04a9861bb4fa27d6736174df2df0b5669cd080d5684261fd577a14d1",
+      "git_blob_sha": "5c56db1461c2cbef50893792681355569415691c"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/search.py",
+      "size": 478,
+      "sha256": "36dd020bd2608cb3773cd10ecda96fb2673e6386e0648da7ce051c8a1ef07f1e",
+      "git_blob_sha": "8fc15e555ff653014ef3b6614333feba9093b8af"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/README.md",
+      "size": 1375,
+      "sha256": "e3b9768c71e521c5b8e48a0996b2c3e9fcda9b540570169835ffa85eff7a516c",
+      "git_blob_sha": "d4ecd297caa4278bc697df11f4e5152d1c2e767b"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/evaluation.py",
+      "size": 478,
+      "sha256": "6129de1e1fa17f4c6e24d9bb5755bf8ec681bf17389ad7ae63e959812941b151",
+      "git_blob_sha": "99a028107c8ebe16612a6bf4f3af2c775d1db2e2"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/display_mapping.json",
+      "size": 2628,
+      "sha256": "ed35c3d7d0f7283708fd8cecc2a6deb3f6c552d9cda5134e30b9b090cc8e6b64",
+      "git_blob_sha": "7b77c38cdeb0d2bfee9a656f04c65264f14f23df"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/experiment.py",
+      "size": 7939,
+      "sha256": "cdf5d87e5887af737bad33e9e74c6ac4035fedc7e5dcf7177427b4c07f34528e",
+      "git_blob_sha": "e33534f76a6f04eb40fa63d7126bb0d32895f6ea"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/initial.json",
+      "size": 16739,
+      "sha256": "e126a0f6940cdaad8e0cd710a2fbff228add00b556dd0b73bae7b2ca050b122d",
+      "git_blob_sha": "ce4204398125087906f49d25822b060349db63d1"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/preflight.py",
+      "size": 3472,
+      "sha256": "e119d3f176b0aa71d096dc386aa8845e03bc6e0157b4557deb4a7bff6de196c1",
+      "git_blob_sha": "44b9a4735f076a200b59df31f1a04c23b4ac00d4"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/FIRST_FAILURES.md",
+      "size": 1584,
+      "sha256": "67cd1bb7eb92fa75d7b98776d80d758119fd90ecd7ebf38e24660921499f8744",
+      "git_blob_sha": "4559e9296ed3deb07c7bf10f7e18b4e4fbe7ba0e"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/network.py",
+      "size": 2378,
+      "sha256": "ae4cfdbfbc0e7441de928ede4f983bdd6a14712e770e6765460f663c5e3d6d7d",
+      "git_blob_sha": "87cfda24b8b4ba387860caf6f383265c19ca5b77"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/kernel.py",
+      "size": 2560,
+      "sha256": "c0da62ddacecacb05ada1fcca7c586a22bfc9bfb477577243acc98525f21a340",
+      "git_blob_sha": "1599791e037bf91204c3fa52c580ba5de558d834"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/runtime.py",
+      "size": 5568,
+      "sha256": "53d0a92fc798422c0e01f04d7adde6bcc4ef910a5471f73470f60b460ecf81c4",
+      "git_blob_sha": "4709c470cbe452012fb036a8843fa92a1c08865f"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/guard.py",
+      "size": 1697,
+      "sha256": "89413d88a9fa6fc2b2b06f4eb1889e46902c083e917a208335b4dbe5da4573f7",
+      "git_blob_sha": "e0dbfd279e7ca181a14420813588525491cce335"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/EXPERIMENT_PLAN.md",
+      "size": 4701,
+      "sha256": "a6f6a16edff1032d9664c5f4ab7fc40146344cd74aaabbb953800c1d695126fb",
+      "git_blob_sha": "fe155c94ce07627476c3b3f2429ce987893fb67e"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/environment.py",
+      "size": 5169,
+      "sha256": "a89814dab5c87f7bde7ac20b1ba43c3550dc38f9f9b7ad9c9d88dab5c2a1fe26",
+      "git_blob_sha": "8ea3e58db0212130d87ef666b3e899d73190e15c"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/requirements.txt",
+      "size": 44,
+      "sha256": "f5576a8e5c07782c0c0870eec08dff394fefafb05703a7798558f6c1a0b7d67c",
+      "git_blob_sha": "1e0353afdcaeecc3571855165d3ec921c5a7e2ad"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/contracts.py",
+      "size": 157,
+      "sha256": "486c1c6212f1cf986acb8a37c2868ce4f1296ebbd18a333aa2600688d191deff",
+      "git_blob_sha": "de024436cd8cbe4bb5bea262768aadb7432776bc"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/ADAPTATION.md",
+      "size": 7873,
+      "sha256": "5513e792c0d73166b1471dfe7777a04deeab485af4f24a0ff32decb93190ea52",
+      "git_blob_sha": "d4a5bf633e400dcf0ef127c8a29082c4dbbc3db8"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/observation.py",
+      "size": 2513,
+      "sha256": "34859c9ee7d3b0ba3e64740098975fdd4b711cf8a9bf957e1e2ec638c9a5175e",
+      "git_blob_sha": "8f485fd3100b944b6a9276bf724f721039611d7e"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/__init__.py",
+      "size": 65,
+      "sha256": "564c8c9742149af1392e66a4c192ab5b318d090167ced13aa0eb480b6b32d04a",
+      "git_blob_sha": "1a64fc20643d62a2e5ca861b7fb4b44943da358f"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/report.py",
+      "size": 12144,
+      "sha256": "7b4ec6c4bee77eef43e03423628969a279ac0910216588571ceeacfce494e559",
+      "git_blob_sha": "4d624eaf198496447b6c01c1847992e86dae6947"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/search.py",
+      "size": 488,
+      "sha256": "58ca8f52ddaefe6bb39804189663137cda0946412f97ee161b8b7904d0cd162b",
+      "git_blob_sha": "1d7dbb4f82fea9e26894039476b108ab0baf9494"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/evaluation.py",
+      "size": 5200,
+      "sha256": "d6a14dbc6823ef1a4af728614aabe35b06ada78b4f9536a78ddb0346133118ce",
+      "git_blob_sha": "1b11d5c0054c29b4eb9117fb2e9ff5457fef4e21"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/experiment.py",
+      "size": 7931,
+      "sha256": "1891330d2317b2515d8bd8e20831d2c3c4a88d43bcb6ff4b5c60c61a55eb1c96",
+      "git_blob_sha": "47a2c52b84453f4549c9c75c7b116f014970eaf7"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/preflight.py",
+      "size": 5476,
+      "sha256": "cc378b4a6eb8125134c4f15177f8a3f1d1776f0508cb500c10b2ed2fd9f24db0",
+      "git_blob_sha": "4157b059afc1f1179081ce3ae997156100f02ad5"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/FIRST_FAILURES.md",
+      "size": 2360,
+      "sha256": "3823328a4e5e70a4de935baa95037575e9d6f83a8b3669ebe7a25243d2174364",
+      "git_blob_sha": "a5f5006de0c6aff4a2e4bc5e63ba8d1b98151a47"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/network.py",
+      "size": 1350,
+      "sha256": "81b2845a2c03249f6322037ed4f39289dd6bd88e83eeeae5b40d779aa1257340",
+      "git_blob_sha": "6402fd52ff7f7068529307b383322ecf6235077d"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/REPORT.md",
+      "size": 1953,
+      "sha256": "d2ec0c37b5183c6d579baced70ad4a9407de2af1d34361005ee5ff491f4b3c08",
+      "git_blob_sha": "8be035b29fd7f52d5c5d5e41cc65274dcb96d2e7"
+    },
+    {
+      "path": "tasks/tower10/p49/acceptance/browser_qa.json",
+      "size": 424,
+      "sha256": "3a4daa5e0960a9ff031ccd9b25f40ea23f8641b8e3654348eb961b8e0906c82f",
+      "git_blob_sha": "05e367043524a337992a1a0b3259738bfb2fa5e4"
+    },
+    {
+      "path": "tasks/tower10/p49/acceptance/exhaustive.json",
+      "size": 9313,
+      "sha256": "f6f0031f706cb8e2bb831d3e66e23aa53039aafc96a24923e81d32c355fefd7d",
+      "git_blob_sha": "2fef8310ae3b6088bd7951aa0fb451d8207b5b8b"
+    },
+    {
+      "path": "tasks/tower10/p49/acceptance/sample.json",
+      "size": 5915,
+      "sha256": "5f7c514be740cf113152c4e654e731960a0dd532c0d1742d7e670781f2718b12",
+      "git_blob_sha": "47c10e8f4292145e44a5cac124534927ab8c0b02"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/CONTROLLED_PLAN.md",
+      "size": 8816,
+      "sha256": "663df5d21d5fe7ad20168143988fc969fbcc8147f0dcd998a933143dfee9ca15",
+      "git_blob_sha": "5d4c0677792594a4f3fd1147c3cf6fc21a7e14b7"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/data.py",
+      "size": 6943,
+      "sha256": "abf689eafbb4decaacfa368c9da96c002e46882d48434cd375e98a39af3a6a7b",
+      "git_blob_sha": "2297d71a014d69696a73afa13929b62a2c48d3c8"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/config_A.json",
+      "size": 2682,
+      "sha256": "3d5e8bea9291981d83f7d950b73c948ad3210ec95a9cab06d91143d412e18267",
+      "git_blob_sha": "e0327a4ae612261224ce15dd7ba927363b81f090"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/runtime.py",
+      "size": 6009,
+      "sha256": "1b09daa7be1821dd81b6c21c248b3b9c18ae12455ba6802680afefb61869b891",
+      "git_blob_sha": "88d70c62448052b3ab9b42dac5753a83b91f47f8"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/guard.py",
+      "size": 1488,
+      "sha256": "65d0733e9c797b0f05e9d9f7db6673e2c5e53fb6801fe729ed821eeeb332da6d",
+      "git_blob_sha": "d235bebe647df78694499e26e806d22e6003bf03"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/environment.py",
+      "size": 3488,
+      "sha256": "112879c65a89109a1aaa8d0ab34a52952dcc423c17f63a0d2841ba104d60cda0",
+      "git_blob_sha": "4ce55504c8b85400c4d49adddf9c7de52ad44d12"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/contracts.py",
+      "size": 74,
+      "sha256": "c16fb2ce1f2714ab372b85168cdb9b3446df4ec9faf832dac5665ba6a282e381",
+      "git_blob_sha": "fedb5abef825d0ca40f40d997af8012aadc9241b"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/worker.py",
+      "size": 6779,
+      "sha256": "024a531f90c44e0eac6c3de774f4f405aea20a5c024808e81da2921ca5d6d390",
+      "git_blob_sha": "0cd31d263c15962fd882653a21c0d7670f1d4bb4"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/ADAPTATION.md",
+      "size": 2482,
+      "sha256": "68c84d3004db2ca1413b77a33ab53e008f512edc431cec7ba2c2b3a986bd3370",
+      "git_blob_sha": "b37039838cb2dfde12a815425c9a2acdf6db4f2e"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/observation.py",
+      "size": 1048,
+      "sha256": "5511c9a5d6126a4a9a24954298175603fc05558871db00117c955727552579a4",
+      "git_blob_sha": "af9550e241dc8aea4dea2c1ac7965b9b837d5d38"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/__init__.py",
+      "size": 79,
+      "sha256": "3d8d10fc85d69149dcbfe8c5125d635c18f2ffddd79710ddf7768f33875039f2",
+      "git_blob_sha": "3d9077cf53e2ae9dffb802d5a7004df00d68677b"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/DELIVERY_FAILURES.md",
+      "size": 783,
+      "sha256": "dbdda40db2172a72b148a8647f9da247432b0f53b661ed851dd91351264d6407",
+      "git_blob_sha": "57c4c3b64dbf19bc9d1ffae761a583d8521c3829"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/report.py",
+      "size": 16463,
+      "sha256": "ca5616d8a77971c27a1d14c222a1ff3e10f50012844057fc14b9b4f448c42a2e",
+      "git_blob_sha": "316d133979603d6cf14acc104b3927302f9d2ae1"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/search.py",
+      "size": 933,
+      "sha256": "20477034ab1434d27c411a4fd45a85fe29e9cbd62e6bc7189c98815e6d0e5605",
+      "git_blob_sha": "fd0ff7b6a4764e47f401552522312779e86d414c"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/README.md",
+      "size": 1382,
+      "sha256": "db24aad1fba235b7e0afbe630ba53c59f3920b0265d3520524dd10931b5fa203",
+      "git_blob_sha": "b7d0da509e34def4d35d866e979010afcacb8cda"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/evaluation.py",
+      "size": 4500,
+      "sha256": "37158f43bce0bd122b32fe565b3b4dc3edb333b024d455877e0e96bf9bc628bb",
+      "git_blob_sha": "2a65999482299fd23a5953d110550859b801056f"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/config_B.json",
+      "size": 2733,
+      "sha256": "a1b13f6612f9d796167573bd2402a324f45995bed92a8774c548ba04acfa9881",
+      "git_blob_sha": "e9e186f139f278c6a8fffb1f3df5a71eb8c4c9fe"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/DATA_FREEZE.json",
+      "size": 7290,
+      "sha256": "16af971cd5a1e5bfa7e22b61d5a0821349773333607d28ed026d9e3f1a969fdb",
+      "git_blob_sha": "b6d8124ac48dd5db4c829e22b030b4de9484d274"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/experiment.py",
+      "size": 7479,
+      "sha256": "5ca94c20537e1aa33c3dd3b7676d2f72cb459cd083ce518482d43556c7324bc3",
+      "git_blob_sha": "2b3bfc24ddfdea79842c4483e49dc89c4e490a84"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/fitting.py",
+      "size": 6768,
+      "sha256": "a59e3b9fe4f300303c230160ee3ac57f27a2e5ab4f8e0666fc8bd540973a2359",
+      "git_blob_sha": "439c42f7f5eb081579216e85c7dfd2761a810b24"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/preflight.py",
+      "size": 3386,
+      "sha256": "03c64a369c3ac5b3b0b56bd2a04900fc7b230cde462c7c50c95f8e6de6663cb3",
+      "git_blob_sha": "e1ddde06a963d50a684d295b3dd7b3ac568572ba"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/PREFLIGHT.json",
+      "size": 4546,
+      "sha256": "0abe902bae82c99331b7c35b8483941f550f15db5a8c6e758210b45a19b9367a",
+      "git_blob_sha": "fdf5398accbd3818149e2a72c8ac7fd45c13b4c7"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/FIRST_FAILURES.md",
+      "size": 1395,
+      "sha256": "473d9abdb78e43d8ce2eb29e40ee7c53111c522bf7809061e1d3cee90d402618",
+      "git_blob_sha": "d225ee6d794bf23ce037a45f5547ca4b5f96bd75"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/BATCH_INDICES.json",
+      "size": 52737,
+      "sha256": "25116c6ac7b0e1d2f681d790d42cf068e72c521ec8c2e4f8d49791500e8ae928",
+      "git_blob_sha": "9244fb876d1183b405758aed1bea041462aba219"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/network.py",
+      "size": 162,
+      "sha256": "6175005a35cd6370f2cf4f1b6b22ff66be2f6ec455932f5fe17150ba3d1fd2e3",
+      "git_blob_sha": "ea701d4e67daf808b4d371e63db88c05cfeda8e6"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/REPORT.md",
+      "size": 7622,
+      "sha256": "384fef979ff5d5590651b209b2f5861891391e38f5c78d553e433ce7b618b6f2",
+      "git_blob_sha": "2d73e9bab80661e9a8c6150d31f81a05c84ad612"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/postrun_validation.json",
+      "size": 6308,
+      "sha256": "8956aef81c8a14e4974d745d6fe93ef6162247364000dfb4b4740d13bdc8fe37",
+      "git_blob_sha": "76ebf2e8024771637543a735a13f297b37a319ed"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/evaluation_curves.svg",
+      "size": 49575,
+      "sha256": "a9cd9a467fc90c24b5cd8ae1c1b6f8d67c896b68953c18466a66c97817fbd115",
+      "git_blob_sha": "f95105a3e0375d136459fc89b96ec3a633207598"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/schema.json",
+      "size": 2338,
+      "sha256": "5160439e9a362fe5723f1538596bc504794d236a762ca8a808dc24c464531efa",
+      "git_blob_sha": "4f72b6730fa253cb0ca15c971ea2b02ea49948f3"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/evaluation_summary.json",
+      "size": 7565,
+      "sha256": "35aeb596649cc0b016eef85423029a2cb3c1c04ac03f40c41a846bcb0f8e6682",
+      "git_blob_sha": "74740db10ce5ca2f2751e94301621a14d824f645"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/tensor_example.json",
+      "size": 20814,
+      "sha256": "ead9e5d86ceef61072c6f1c172a72a02e715d763fb5f3c82a478df149121d222",
+      "git_blob_sha": "659c3e66601eddeaa303fdaff3fad4af95ff25a3"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/evaluation_games.jsonl",
+      "size": 115628,
+      "sha256": "e96b2080fde3e1345bd49ed4f9cbfbfc30a492f503d3716f7963bf49a4c19f0d",
+      "git_blob_sha": "59ae40cb1b99eedd61112510004a8a6783822480"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/config.json",
+      "size": 2784,
+      "sha256": "a7ba06f41eeea4d4d86735953279eeb6aa7cdf2e8067c8ff6cb989b9fada5535",
+      "git_blob_sha": "b76434a948d1dde3389fbd9c3d0779f7ef3697ce"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/summary.json",
+      "size": 19411,
+      "sha256": "88b2a11239400b82f3f5cf59fca87271cd8efbb5f108433a36c7e1bbad75e81c",
+      "git_blob_sha": "35298c4e9df939b6f30c68ef76bbfbe9ecd6d03a"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/CERTIFICATION.json",
+      "size": 1091,
+      "sha256": "88bc383e10f793eb3519daf4d9806e5c3c670fe2f8f6d49cc823121fcf69027a",
+      "git_blob_sha": "a6ca5653cab4d96e6e56df554a32b05b47c39b82"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/ADAPTATION.md",
+      "size": 7330,
+      "sha256": "921006ee4ad71f6fce79da2902ed94171f58a83e3da1904611e438857c26f56d",
+      "git_blob_sha": "2d3747d723eb2d8524a6a1f1f0fa48891ab01909"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/development_time.json",
+      "size": 252,
+      "sha256": "beee8540429037a27768ccb3fd5344863210953a00bc44c52f7db8f99db46cae",
+      "git_blob_sha": "51b9d669d11cb5a728970daf58130c0c8fa711c4"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/progress.json",
+      "size": 2282,
+      "sha256": "6d44156c12a37fa5f96f15e7f92cacea7a36bea3b4e5b58c4d7cb24bc784a378",
+      "git_blob_sha": "cd151fd2a01bc0f6a887be68c43e1c0894a4dc35"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/N5-reflow.json",
+      "size": 5307,
+      "sha256": "e79a6743de4788e326dc3617dde7d23d699db6f5df580336ed43a609fe52d890",
+      "git_blob_sha": "7efb7d477280d482f693e42093fcc87bc56b0ede"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/evaluation_summary.csv",
+      "size": 2458,
+      "sha256": "e2f94112cff5ead6715cc7b12f01851e3b5257c08fda36805871f1bd228e18a4",
+      "git_blob_sha": "3f27fc4ac364ed06e56a9864749ffd720039b121"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/restore.py",
+      "size": 1399,
+      "sha256": "28f5784b85bdc5aff0207889ba3f994f4b348786debd800d116e1a49d035d155",
+      "git_blob_sha": "9dd2504f784a81f3af1ccff3234c517cb6a44a40"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/sources.json",
+      "size": 3190,
+      "sha256": "0ebf7f001f180d2368ec1cd3fe2397cb1c71d4875daad0100ccf9350003de834",
+      "git_blob_sha": "5f984b34326707309e64323fe62cf80a8c42dda2"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/FIRST_FAILURES.md",
+      "size": 1584,
+      "sha256": "67cd1bb7eb92fa75d7b98776d80d758119fd90ecd7ebf38e24660921499f8744",
+      "git_blob_sha": "4559e9296ed3deb07c7bf10f7e18b4e4fbe7ba0e"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/postrun-first-failure.txt",
+      "size": 405,
+      "sha256": "25080e656e6a1f00be6a5b676d8cd5ea1abd951efe27a33d160f256c8f18cd98",
+      "git_blob_sha": "ce16855c979a48c8ed519e931b1a3f0af59ecef6"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/ARTIFACTS.json",
+      "size": 17694,
+      "sha256": "c417a3801a466ab06cb0869c23d3ff25897feb666efe246df9f57cff6613a33a",
+      "git_blob_sha": "67a30cbd7193621d5c175db5437e3a6d68372866"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/interface.json",
+      "size": 1211,
+      "sha256": "7c1e6f8c92ff8904c0ae6b0f0415906584d4225fcf89c58ec1c2d261e941a386",
+      "git_blob_sha": "05218b67aa9ae559dbc8e7f1280dad45188b620a"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/REPORT.md",
+      "size": 5233,
+      "sha256": "8666e1842f9ae7cf2f7dcc0b43bb992c803f24d1ef7e34217504dba31a5e4da8",
+      "git_blob_sha": "a3bc1fc18f422cb443b27b2fc0dbdf7a2c8c7382"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/training/training-N5.json",
+      "size": 33919,
+      "sha256": "1669822eb000eb519ac62b248de884a78044d35fb2ea6a2c9ac29729e20da917",
+      "git_blob_sha": "e8c0e7f69a1f24b0d5776e533cab396046559296"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/training/training-N3.json",
+      "size": 30410,
+      "sha256": "ff668bd3354f8270ee85b9a980b356a53929612b591686d71933ed8f11b13a57",
+      "git_blob_sha": "8589b6d3bb3687c0be0eff7f353ba2b42888ce81"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/training/training-N1.json",
+      "size": 33521,
+      "sha256": "e02f32c7e2e31e666b911bc16201ac4515db79cea5c23396df9c0f9000e899c3",
+      "git_blob_sha": "cea9c31ba5ea7b76501396a52d556dcf79983dc9"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/training/training-N2.json",
+      "size": 30301,
+      "sha256": "08f0044c02e2c31bc5cff44c6d74c044013a239aae0587b023c2a4a93c56da17",
+      "git_blob_sha": "45f8c0b331e7d168f778fd0050aec8cce97f35f7"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/training/first-formal-step.json",
+      "size": 4533,
+      "sha256": "1829718ec08d38f4a6d7d5c0f785d0c287371a5fadb529773dcc07ecd39e8754",
+      "git_blob_sha": "dc988bec1aebe380d45e1cddb515313bbdc981c6"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/training/models.json",
+      "size": 9197,
+      "sha256": "d836562907e2865de9b3d14edaba5e73a02aecba1e09a790935d195618d94c24",
+      "git_blob_sha": "b1107587fbb1baeab2a1edb54178cd277b138a49"
+    },
+    {
+      "path": "tasks/tower10/p49/topology/results/seed49001/training/training-N4.json",
+      "size": 37125,
+      "sha256": "0b6835c2e4a707fbdd24b3877e6b46a19f154bc30ebd8cfdbc2fef7749632437",
+      "git_blob_sha": "0560ac92ce9bf4230e435362b1be34562af7b764"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/postrun_validation.json",
+      "size": 764,
+      "sha256": "4dac411040df16bc7446a97abf28cc3e8e6a4a8fa0889627583f242aab997893",
+      "git_blob_sha": "fbd9a21f5365ed5445293d9efb59309687da8434"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/evaluation_curves.svg",
+      "size": 49392,
+      "sha256": "8bab322b6d06a6f20a9597e9707b5742678ef5d3b3d3bc436ef8c1feda67531b",
+      "git_blob_sha": "6258347353947a89e02d3f224aeec48d5a2921e7"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/schema.json",
+      "size": 1919,
+      "sha256": "cb1b6395c5af78860b4322bc36dc918d0e86c6b1be5465a91855b450c9fd1bd1",
+      "git_blob_sha": "5705b8b8029b9e6e0b3ae13f3b67a90e9b243f8d"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/evaluation_summary.json",
+      "size": 7466,
+      "sha256": "93bfffeeeed8f826921b25fed9ecbd482fc3e403965ce6c62726f0714a650dca",
+      "git_blob_sha": "7efbf8dcb8dd2077fecacb88c0136b415d6f20a5"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/evaluation_games.jsonl",
+      "size": 108726,
+      "sha256": "2247c0de9b232de7b45cbde48cfaa4f4c72f290d53a583a917a0b31973a8f7df",
+      "git_blob_sha": "641a10e7b988d273edaf56891dc083f16f8250a5"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/config.json",
+      "size": 2691,
+      "sha256": "2562798af1de3ccadc3a22da7c7884369ec03a875373a055a9b446c5bea62d69",
+      "git_blob_sha": "2543f0e71bdd3c5d2fc82844fa7c6081b2730b51"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/summary.json",
+      "size": 19689,
+      "sha256": "c7606c544a017a3ccbfb1e06e8da28ccb15ea22c221ac2fc88f76544cbf18206",
+      "git_blob_sha": "eba29bf3f489a5293f2e658d8aea600958c772b4"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/progress.json",
+      "size": 2133,
+      "sha256": "4ceef26b916c02029a6a29abcb058cbab8257bf07d0a7cdd3b58bbfc863fc138",
+      "git_blob_sha": "0332769aa60fb8e988113977400d702da2d4a2fb"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/N5-reflow.json",
+      "size": 5169,
+      "sha256": "985d58e8796417da850af2cb7c53a25b52d48633d43ba6f0c8420a51fc407ee2",
+      "git_blob_sha": "b2643e797fd36ce1bec1c0c0b10c72a316c11ac6"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/README.md",
+      "size": 2184,
+      "sha256": "431c14ccc75ce5e41362c6c2ad2d9dc6b3ac862ec19de112d328034513195241",
+      "git_blob_sha": "707a1ef009d90dc21b4f755f5454caa98babc036"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/evaluation_summary.csv",
+      "size": 2359,
+      "sha256": "42dabdf558e07ded6bd0834bc4b0439b1e91f44cf2c9f930362d517cff91d390",
+      "git_blob_sha": "88df5aa505444e2d458b973967d0ebf090692dbf"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/restore.py",
+      "size": 1399,
+      "sha256": "28f5784b85bdc5aff0207889ba3f994f4b348786debd800d116e1a49d035d155",
+      "git_blob_sha": "9dd2504f784a81f3af1ccff3234c517cb6a44a40"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/sources.json",
+      "size": 3630,
+      "sha256": "d8967970c7089f754b71869b63d4993c4e89d2001f1e04e8728f0b49f45f4a7c",
+      "git_blob_sha": "ae34572f9cabb5dfe8a9a13a10ac6ac9087e1b8c"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/ARTIFACTS.json",
+      "size": 17174,
+      "sha256": "2af1a5463cb42380f1ce14b0e4bf526602c5efbcfbc6ff3f9f1a284898a4d1bc",
+      "git_blob_sha": "bbab4538ea98afb253f8943937580924a3fecf3c"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/interface.json",
+      "size": 2827,
+      "sha256": "ac333275cfc948d5f5a43c630836b1ea065c957a40b0356be068f479284db356",
+      "git_blob_sha": "26063a10a7a2fd0b371a1ad735ab70c7be736759"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/REPORT.md",
+      "size": 6073,
+      "sha256": "1169c0f31b6bd6b73b38de646f68af8d780034ed4999934f3d92a79ff8af64d0",
+      "git_blob_sha": "3963e6d0cd60b347f07e6af5c571b50511f7b35b"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/training/training-N5.json",
+      "size": 30619,
+      "sha256": "8d02fa85759aeb3da00b8a0d39740ce78ca7c4b9263b376f85bed39ad7e62eff",
+      "git_blob_sha": "85b240bf509d8db944c8c9b615302fcac9509d69"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/training/training-N3.json",
+      "size": 33741,
+      "sha256": "98a04d589912857443cbb098690b06d49b83e2f867be3ace04ec72abe4c6d165",
+      "git_blob_sha": "d7d15baaf559d1ca43dc017194581e38b3102af8"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/training/training-N1.json",
+      "size": 33496,
+      "sha256": "a8dba9900021ece50aacfaf9f813a5952fbc4147c56f35153940fbe2ba354d7a",
+      "git_blob_sha": "6684ceae49e3a116641a5ae1c90ac31946231177"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/training/training-N2.json",
+      "size": 56396,
+      "sha256": "5b73583de7b9f84942e68d2955e1e3940ededcc0561eec8c460b09938c22b47d",
+      "git_blob_sha": "70f2c676c8b386091b1e5bbc4ddf24ffa199b34d"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/training/first-formal-step.json",
+      "size": 4424,
+      "sha256": "ea5f12c55c6c2b9b1b6f7f382d7a10b197fe7b9b0ae641eb45ca9b21233b06fe",
+      "git_blob_sha": "67bb577b841bab1a63b651ac259ba979852be405"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/training/models.json",
+      "size": 9608,
+      "sha256": "3ca01188f76856dd6092f81378e578442c56f176b37fac82e02873f1a79e02b2",
+      "git_blob_sha": "3efd5fbda0bf612ba9a0c33196a21fbfab42cf24"
+    },
+    {
+      "path": "tasks/tower10/p49/learning/results/seed49001/training/training-N4.json",
+      "size": 33861,
+      "sha256": "68188e2dd390d96ce020bce5dabd1efd049bb973fdc74f4ea8344c56ed7c2efa",
+      "git_blob_sha": "ac62fc84a4dfaaef1e9024fac76200f739661c53"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/CONTROLLED_PLAN.md",
+      "size": 8816,
+      "sha256": "663df5d21d5fe7ad20168143988fc969fbcc8147f0dcd998a933143dfee9ca15",
+      "git_blob_sha": "5d4c0677792594a4f3fd1147c3cf6fc21a7e14b7"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/config_A.json",
+      "size": 2682,
+      "sha256": "3d5e8bea9291981d83f7d950b73c948ad3210ec95a9cab06d91143d412e18267",
+      "git_blob_sha": "e0327a4ae612261224ce15dd7ba927363b81f090"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/VALIDATION.json",
+      "size": 4104,
+      "sha256": "e27be0e2f69bab777cebc2f3436bb62d529ae3ee2f5bc70e7004f6cf1d7f767f",
+      "git_blob_sha": "5329c28089f2f66798b35ac9fcff083efebc28c3"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/online_curves.svg",
+      "size": 176180,
+      "sha256": "01d36713e19bd92eb1e1c1921fe33d858a457db9b0961393fa2c700247a8768d",
+      "git_blob_sha": "f40d6f824d05805cab6d6ae1a51170f969565bde"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/evaluation_summary.json",
+      "size": 62890,
+      "sha256": "7a67304f36b4ae015d9d234fc48f5d3b5adfef45da97d5bc6d7f8351b97bff1f",
+      "git_blob_sha": "d14341e0be2a847e16193ea4e844bd7148bcfca8"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/evaluation_games.jsonl",
+      "size": 549997,
+      "sha256": "a821f46632f455a3f76c5b91fc4273d85412d50b0622160741786bcd3d110b6b",
+      "git_blob_sha": "0cf6718199ea46c4a4934f94fe5ad376f4e931c2"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/EXTRA_VALIDATION.json",
+      "size": 11213,
+      "sha256": "da011b05ce61513de4918469da57a38464a1175b7834e15014da1f5a86ec5265",
+      "git_blob_sha": "3e86ed9a817e65cfbfd5e35747324337f8355f0d"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/TASK_TIMING.json",
+      "size": 2660,
+      "sha256": "3f7fcd58417e6e95b23d68614a1dd81e3f64c73e718cec094a4c3467b6d370e0",
+      "git_blob_sha": "614090c416a3dfaaaad116e2c28bfc8130a8559a"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/summary.json",
+      "size": 155159,
+      "sha256": "e5538615736826138fd842f1f89bbe138f7712ab4db235d429896b8681631b0c",
+      "git_blob_sha": "18bc56b03939bd850c870dd39c3b533e8902b17b"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/ADAPTATION.md",
+      "size": 2482,
+      "sha256": "68c84d3004db2ca1413b77a33ab53e008f512edc431cec7ba2c2b3a986bd3370",
+      "git_blob_sha": "b37039838cb2dfde12a815425c9a2acdf6db4f2e"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/POSTHOC.md",
+      "size": 2969,
+      "sha256": "462f6c66c8a22a357de7ae74315a3148c3522e076f0608ebcbbe87efd3fac352",
+      "git_blob_sha": "1e0607dfeeb4a0f0c7fca544e65e7956f5057228"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/progress.json",
+      "size": 2434,
+      "sha256": "b2b7abe2bcc46cda84b4d3fb2de00b30586cee30987a145846fa4bd98b7ae2c6",
+      "git_blob_sha": "f311afa48430ac2416c2ffb594564d3a513c0676"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/paired_differences.json",
+      "size": 20911,
+      "sha256": "333fbda24301bfa4f2fb7d83a593f8b49e6fb0e56f76c8bbef2d6408a11895b2",
+      "git_blob_sha": "eb8a8410dbbacca082eac690b1939ede54eb6215"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/fitting_metrics.json",
+      "size": 422886,
+      "sha256": "1c3d6243c05e7fdaf6b04208ff16561f033ee249c896e17b07226768c198aa6f",
+      "git_blob_sha": "6f4f6405bc207afb9245bdf3fca6c7ac6f1fc8cf"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/config_B.json",
+      "size": 2733,
+      "sha256": "a1b13f6612f9d796167573bd2402a324f45995bed92a8774c548ba04acfa9881",
+      "git_blob_sha": "e9e186f139f278c6a8fffb1f3df5a71eb8c4c9fe"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/DATA_FREEZE.json",
+      "size": 7290,
+      "sha256": "16af971cd5a1e5bfa7e22b61d5a0821349773333607d28ed026d9e3f1a969fdb",
+      "git_blob_sha": "b6d8124ac48dd5db4c829e22b030b4de9484d274"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/evaluation_summary.csv",
+      "size": 13968,
+      "sha256": "4447d28e93e98d3f7774318dc303c5e84899fc22850788068c6d04accf1419aa",
+      "git_blob_sha": "42f0704a3483ee545507f6de878b02b40fc598c6"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/restore.py",
+      "size": 1295,
+      "sha256": "8cc074008bfff389c32134ff798ea7b149dd85ddd8a5d637f65d07f0da6af357",
+      "git_blob_sha": "9067b9f386476a3b65a00b744775892356dd9edc"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/PRIOR_CERTIFICATION.json",
+      "size": 1091,
+      "sha256": "88bc383e10f793eb3519daf4d9806e5c3c670fe2f8f6d49cc823121fcf69027a",
+      "git_blob_sha": "a6ca5653cab4d96e6e56df554a32b05b47c39b82"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/PREFLIGHT.json",
+      "size": 4546,
+      "sha256": "0abe902bae82c99331b7c35b8483941f550f15db5a8c6e758210b45a19b9367a",
+      "git_blob_sha": "fdf5398accbd3818149e2a72c8ac7fd45c13b4c7"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/sources.json",
+      "size": 8107,
+      "sha256": "cb6c5302e53fe229023c18005352c6d679240e738184541aeb925473af9f981a",
+      "git_blob_sha": "37d3808a6fa2ca44e9cbda1ce6404fc858d1a959"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/POSTHOC.json",
+      "size": 405996,
+      "sha256": "19f61f8aed24a4cb7d26d7b21b4741e071566b9aa9eef16963fc514ec156fa82",
+      "git_blob_sha": "382546fabce8e7c6f93362066063adae57cf9fc6"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/FIRST_FAILURES.md",
+      "size": 1244,
+      "sha256": "a6c689dac568e7fbb0744bd07b99c181ae25f0146aa630cfe2c18e4337df4c3c",
+      "git_blob_sha": "0646789d8ea0eca31dee6958c804c18144489ddf"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/BATCH_INDICES.json",
+      "size": 52737,
+      "sha256": "25116c6ac7b0e1d2f681d790d42cf068e72c521ec8c2e4f8d49791500e8ae928",
+      "git_blob_sha": "9244fb876d1183b405758aed1bea041462aba219"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/ARTIFACTS.json",
+      "size": 139979,
+      "sha256": "919af7e84fe82225b201f8e7255764a62ff52725655d21ce351eef6f7be4e35c",
+      "git_blob_sha": "4b1dec8283a8582bf680c2b628f51aedd80307ae"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/CONCLUSIONS.md",
+      "size": 7462,
+      "sha256": "5811cd9f9cd14ac7cd4d7d073959808926c091edea56d3c78a45ead814d68a04",
+      "git_blob_sha": "16914cb1968e7043b85050e0a5e7460bad720140"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/REPORT.md",
+      "size": 9293,
+      "sha256": "f2402c9e0adb2c443935097e8810d6cde1be61c2f0c90863e9c7d7dfed53f3bb",
+      "git_blob_sha": "47c764e30bf384fe4b4ec199f519f6736569c301"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/data/tensor_example.json",
+      "size": 44193,
+      "sha256": "41e37778102fecc6d93e823a31218a8c43902b1feae71b9048786b977aabe5e0",
+      "git_blob_sha": "9fe3d2aeb5ffe6658ebd64e146f0b11e48724532"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/data/actions.json",
+      "size": 1253,
+      "sha256": "6cdd8bf5fcbe2481fc7d353c7d0cbb7ded2099881156d22b256a2624758e67ff",
+      "git_blob_sha": "bb2bac3e889832a3914a471c65d894cacf329bf1"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/data/sources.json",
+      "size": 18627,
+      "sha256": "1746077e20d54b5d8967e06ce0f005eb316c0aff497eba24fa14286e45f40e07",
+      "git_blob_sha": "1988f0fb410b95628fc29bc42d4dcb7862f330d4"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/data/MANIFEST.json",
+      "size": 7201,
+      "sha256": "190dda81be7fc9e329635ec601cbc8dcc25b71d5d006eb93719ea06b6f6ba0f8",
+      "git_blob_sha": "3b122043ab6218e042046ec8a35a2cd3fd6e9281"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/models/online-49002-B.json",
+      "size": 9401,
+      "sha256": "0aa1a45168226ab5b36b7a1b1ebd4f7bff5480dc9905b1a6bce19c70ca409cc1",
+      "git_blob_sha": "1d9dca44f75042cd9966fef439195f736cdf4257"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/models/online-49003-A.json",
+      "size": 9902,
+      "sha256": "f7d718bde40b9c451efe0633908a436b4290a637bf4d84735e266d76648c4036",
+      "git_blob_sha": "f1397630abd0bcf00dbd855d8aa396cba094ee69"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/models/online-49002-A.json",
+      "size": 9905,
+      "sha256": "33da0b2f31bc5dd696e9e48841e36b5e5086f48a6ef146558aa00ae29f43391b",
+      "git_blob_sha": "f7ff55f2bb015bc07bd11d5f86f1aeae4d132afb"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/models/online-49003-B.json",
+      "size": 9398,
+      "sha256": "00fcbcd4f3b6901e2e81efdfadda8569e114f1c60a0a86a4f330c67169c82f15",
+      "git_blob_sha": "993e8844674a856258a7c60c55c4b17b3ecbb00d"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/models/online-49001-A.json",
+      "size": 9904,
+      "sha256": "f013e5ed6695041c01bd4546fa865025a3c7e59d4c0b228677971fcac9595d3b",
+      "git_blob_sha": "ede2a9fa70cf7ac86c997d4f1af019daf6db9a05"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/models/online-49001-B.json",
+      "size": 9400,
+      "sha256": "da87b84376d14eb7cae0112cbdc9af64d2d3f12b9ee996a4a538f7f9207a6fdf",
+      "git_blob_sha": "a120a808fed60bd513dcfcd10b6fee400ce14829"
+    },
+    {
+      "path": "tasks/tower10/p49/controlled/results/three_pairs/models/MANIFEST.json",
+      "size": 73291,
+      "sha256": "ac3b95d41bfa5b02b55e4da2875b305a12142fb9c02248117241f0b18062185e",
+      "git_blob_sha": "6dd62f19b64c441cef3b26c1941693913c8c2be9"
+    },
+    {
+      "path": "tasks/tower10/p49/web/src/bridge.py",
+      "size": 2146,
+      "sha256": "460daa1187f1e90cf563e271b1094f9af4505eacc6afe51e9a73771a372cd062",
+      "git_blob_sha": "109ff22d4290ebebca383fd0bbe93ecd49a2ccb4"
+    },
+    {
+      "path": "review/20261022/COLD_START.md",
+      "size": 2502,
+      "sha256": "20b91229507865eb278c0154e165907e6216cf07c4284b63aa914d1080ef2c40",
+      "git_blob_sha": "0d56a8b34b9a04458ffb42696c7f2f67df971c34"
+    },
+    {
+      "path": "review/20261022/EXPERIMENTS.md",
+      "size": 6826,
+      "sha256": "24e681b5612604a57e61b5b9e901ef20a076c4ec1649e0a1e118fcf435d551fc",
+      "git_blob_sha": "1cb3ef9122a1cdf09db2ed7226b9eb68317c585a"
+    },
+    {
+      "path": "review/20261022/REVIEW_CONTRACT.md",
+      "size": 4556,
+      "sha256": "12ef0efad862d2727fbf09c285128aa49cce702031f8d5336c6f65e28f71512b",
+      "git_blob_sha": "2c1900128a949be318163e1ef4a89bf7b1dd5174"
+    },
+    {
+      "path": "review/20261022/BASELINE.md",
+      "size": 5059,
+      "sha256": "3dc8d56a63c8fb43b76ed8d4f21864a65724a0a26c91b892eaa5fde506a0dc80",
+      "git_blob_sha": "53d97e30de2a2ce1baf9d3d1e0077dcaa8b8a6e9"
+    },
+    {
+      "path": "review/20261022/P49_SOURCE_TREE.json",
+      "size": 41612,
+      "sha256": "cd17f39d0d3529bcb7e4f6f924a42f5d350cf1cd0d125d514fc8df20ba3b5f93",
+      "git_blob_sha": "1fc80d74361efdac8f45ed8b44444a0c824ccef3"
+    },
+    {
+      "path": "review/20261022/CONTEXT.md",
+      "size": 7153,
+      "sha256": "1d7c0ae048e5494927ed007b427d29a8f229171345ea05ef94bab39c8f50f719",
+      "git_blob_sha": "160987366b4da1eb2b64ed3e2f799a0a8ebfbaa1"
+    },
+    {
+      "path": "review/20261022/REPRODUCE.md",
+      "size": 3543,
+      "sha256": "cc443dd10bbd14a55949bb7c350b4f9e8f54207caf8a81527c2c7ecf59ce1508",
+      "git_blob_sha": "135cb6a803545430a5964cae1f6cef425cec0055"
+    },
+    {
+      "path": "review/20261022/REFERENCE_SYSTEMS.md",
+      "size": 9137,
+      "sha256": "54ee4f0d1d60e4e4b8fb5191c1a23ba65ba0b81f248dce7d1d3d55e564d10140",
+      "git_blob_sha": "e16996075fa2fc87264a908e80add7cfd9ca7fc1"
+    },
+    {
+      "path": "review/20261022/README.md",
+      "size": 2955,
+      "sha256": "9f1c0a579d70d435e81744a3f6a02f6b2fc256b33aaf023d9e4a43febe7d126a",
+      "git_blob_sha": "39691148baca97274d4433a98acdd914ca40f3ec"
+    },
+    {
+      "path": "review/20261022/PUBLICATION_NOTES.md",
+      "size": 842,
+      "sha256": "803f5897632f925487a0a8df77244591f74fd50773082473102cb24c9682f426",
+      "git_blob_sha": "516219210a400b71af9db9c65279bf92c3f02699"
+    },
+    {
+      "path": "review/20261022/verify.py",
+      "size": 945,
+      "sha256": "9966a184082040d0c2e567fb0d2d5aa08a7df3d1435bbde5e71a980cb5d19253",
+      "git_blob_sha": "5d5ba2b12ce89d997b9abbcb9d2573fab9942f35"
+    },
+    {
+      "path": "review/20261022/evidence/history/P48_HANDOFF.md",
+      "size": 27901,
+      "sha256": "4f25c854913630b8627d7f56a290bf18ebe2e8946331b002a3a53eb152a268f4",
+      "git_blob_sha": "8851a98eba74761c8cb828f85e3585860d465781"
+    },
+    {
+      "path": "review/20261022/evidence/history/p45_v0_integration_20261021.md",
+      "size": 8292,
+      "sha256": "1184d0205973e3b25851d8e27ecaf077093e496ff07ce7c770e3a4525b5b9694",
+      "git_blob_sha": "11ff8e7dbbf1d9452d04239622e170b89207e61f"
+    },
+    {
+      "path": "review/20261022/evidence/history/p42_small_scale_20261020.md",
+      "size": 10478,
+      "sha256": "51526ddc3d1a896a93b100e1f3623cb86eb7f98168cad81c8bbff22a77ff9903",
+      "git_blob_sha": "afa2ed40b9807bf9e7e62733bfa913b424e3c5ce"
+    },
+    {
+      "path": "review/20261022/evidence/p48/state.json",
+      "size": 835782,
+      "sha256": "170720c4aca2d7fda404b51d5a585c4af4aace637f3fdab500b0a6e1422416af",
+      "git_blob_sha": "bf66df87c9fb4f42f43f0ebf3c388ae311558e85"
+    },
+    {
+      "path": "review/20261022/evidence/p48/summary.json",
+      "size": 4478,
+      "sha256": "9b72eb551b5b7d1cfd0b170d544dc39e448e4a5cd3e8e62e4c4739e1c8dd748c",
+      "git_blob_sha": "bb7064132edd9bea3aa5eadbe91f688353bb1940"
+    },
+    {
+      "path": "review/20261022/evidence/p48/MEASUREMENTS.json",
+      "size": 131927,
+      "sha256": "bf77667f8390dee3e9706ed296035bf545d7501b9e51d70377b174b3a8b22a8b",
+      "git_blob_sha": "c89ee8136b25a488d79e8b81eda63037c1e2ad0d"
+    },
+    {
+      "path": "review/20261022/evidence/p48/REVIEW.md",
+      "size": 27252,
+      "sha256": "a940dc9cbd45b4e5dbf8d81f727918a9aa06a40b816c20a50112c4893f7d697a",
+      "git_blob_sha": "4915069f8547e26f2a71313cdca7dea113917403"
+    },
+    {
+      "path": "review/20261022/evidence/p48/RANDOM_SWORD_PROBE.json",
+      "size": 49022,
+      "sha256": "9304f310a6061cd59c9791faa5d566f41d566f69e6cd4fb62995b4604129cee1",
+      "git_blob_sha": "f484a8fe41920770504e67ab3a01cf0395e5f01e"
+    },
+    {
+      "path": "review/20261022/evidence/p48/summary.csv",
+      "size": 5679,
+      "sha256": "82bcbc76e3197487ad90572c138a6fc7812ea4911f81322fe49e08dc0c229486",
+      "git_blob_sha": "eed9ec6675729d3951847b21654b9aea7a47f02a"
+    },
+    {
+      "path": "review/20261022/evidence/episode_samples/object/episode-000001.json",
+      "size": 131986,
+      "sha256": "1f1447eb427de39652a6789f7c1a02a437f1c90df275c05b50354494415721e0",
+      "git_blob_sha": "0ebe079eeb64645d22da830bfd8baaafdf3ce9f9"
+    },
+    {
+      "path": "review/20261022/evidence/episode_samples/object/episode-000000.json",
+      "size": 182813,
+      "sha256": "cbb8ab0de332d929e270101d2a77623e58a49ed7b546548fb02609343dfb38f4",
+      "git_blob_sha": "b165802de615894202b9e4038c20dbac20916b9c"
+    },
+    {
+      "path": "review/20261022/evidence/episode_samples/object/episode-000003.json",
+      "size": 182891,
+      "sha256": "84ea41ab6a33ba3f28e5ff04239a1b2b32d96728c6703f99748bb9c634090d14",
+      "git_blob_sha": "0385593a190b3162b32ee4c25f5e517238ff2e90"
+    },
+    {
+      "path": "review/20261022/evidence/episode_samples/object/episode-000002.json",
+      "size": 182745,
+      "sha256": "1f674d4c08f9751f179ca4c939f621a687f08f9841b43fea1e68391fd036e790",
+      "git_blob_sha": "c24fab258aeab39e51c4d930b2c1c1fc30f02b6e"
+    },
+    {
+      "path": "review/20261022/evidence/episode_samples/map/episode-000001.json",
+      "size": 145884,
+      "sha256": "4305193a8c2cc612f78295eea64258783a200695cf457489707fad4465b44f63",
+      "git_blob_sha": "78755946b2cce892232db8b81eae6a12ee10e138"
+    },
+    {
+      "path": "review/20261022/evidence/episode_samples/map/episode-000000.json",
+      "size": 202281,
+      "sha256": "e063bb7de74ffa8cd51fc0b69fef9d0bf81a8f87470f75dd1de656d0e28a93a9",
+      "git_blob_sha": "798ee0871b65704146f16805017741355b7cd787"
+    },
+    {
+      "path": "review/20261022/evidence/episode_samples/map/episode-000003.json",
+      "size": 201494,
+      "sha256": "c7a9d747dc301a20c3bf4ee946c29c27f54e0db861af7862c8593731036c4ad5",
+      "git_blob_sha": "7e12069cdf355ce7e6d4dcd746dcfe3a9300b978"
+    },
+    {
+      "path": "review/20261022/evidence/episode_samples/map/episode-000002.json",
+      "size": 202213,
+      "sha256": "0a8f9466de8506e02cbf76f343b94cd31de00adb2017788b6e232d24280e9509",
+      "git_blob_sha": "90a7eed25a116fc07eef03cd42f4dcb19698efd9"
+    }
+  ]
+}

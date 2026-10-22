@@ -1,0 +1,70 @@
+{
+  "phase": "summarize",
+  "generation": 5,
+  "complete": true,
+  "formal_start_utc": "2026-10-22T02:43:46.532886+00:00",
+  "budget_seconds": 3600,
+  "rounds": [
+    {
+      "generation": 1,
+      "new_positions": 78,
+      "new_episodes": 4,
+      "SGD_steps": 10,
+      "SGD_target": 10,
+      "collect_train_publish_seconds": 7.379521556000327,
+      "model_id": "P49-seed49001-N1",
+      "weight_hash": "a9062097c2a57c465c8b141d931d245dd365518b9651a9724f8ea407015627ca"
+    },
+    {
+      "generation": 2,
+      "new_positions": 130,
+      "new_episodes": 8,
+      "SGD_steps": 17,
+      "SGD_target": 17,
+      "collect_train_publish_seconds": 11.927550685000824,
+      "model_id": "P49-seed49001-N2",
+      "weight_hash": "64ff06d06d2c9d9cd53615d8005ca1bd6c768d5301a18179d1886e5ff3c3cf57"
+    },
+    {
+      "generation": 3,
+      "new_positions": 75,
+      "new_episodes": 4,
+      "SGD_steps": 10,
+      "SGD_target": 10,
+      "collect_train_publish_seconds": 7.232436164000319,
+      "model_id": "P49-seed49001-N3",
+      "weight_hash": "45ef14e5c63789828944390f39c1f626f0703794cbe38df6bc53b4beccb83eb9"
+    },
+    {
+      "generation": 4,
+      "new_positions": 73,
+      "new_episodes": 4,
+      "SGD_steps": 10,
+      "SGD_target": 10,
+      "collect_train_publish_seconds": 7.870974399000261,
+      "model_id": "P49-seed49001-N4",
+      "weight_hash": "e49db2d258118c8666987db77dd5b34197002575bf0e905fbd1462e7fa47d387"
+    },
+    {
+      "generation": 5,
+      "new_positions": 69,
+      "new_episodes": 4,
+      "SGD_steps": 9,
+      "SGD_target": 9,
+      "collect_train_publish_seconds": 7.275407964999431,
+      "model_id": "P49-seed49001-N5",
+      "weight_hash": "80c864fb1586e778235bc6399ae7ecfa13d38d5e0e35505b7dbeb79f813ccfc1"
+    }
+  ],
+  "evaluation_files": [],
+  "elapsed_seconds": 138.69236085600005,
+  "last_event": {
+    "event": "learning_chain_complete",
+    "generation": 5
+  },
+  "denied_behavior_reads": [],
+  "experiment_seconds_before_report": 138.69264699999985,
+  "report_returncode": 0,
+  "total_formal_wall_seconds": 140.56392406800023,
+  "finished_utc": "2026-10-22T02:46:07.096822+00:00"
+}

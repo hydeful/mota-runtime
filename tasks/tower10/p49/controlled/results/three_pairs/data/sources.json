@@ -1,0 +1,522 @@
+[
+  {
+    "source": "map",
+    "episode": 0,
+    "path": "raw_sources/map/episode-000000.json.gz",
+    "sha256": "7a5d0a7368079d32df5d0bfc6b255ca7175fdec04a9ef3d1a04a0769a307a54e",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-seed49001-N0",
+    "weight_hash": "c08e52b9a01230abacc4cbc03292a36e6b237807775f4082e7a2a92b5d7d8251"
+  },
+  {
+    "source": "map",
+    "episode": 1,
+    "path": "raw_sources/map/episode-000001.json.gz",
+    "sha256": "05bf0f4de583d953fa5108174e207df6224f48d9c1077cfe017b3c7aeed365dc",
+    "split": "train",
+    "positions": 15,
+    "model_id": "P49-seed49001-N0",
+    "weight_hash": "c08e52b9a01230abacc4cbc03292a36e6b237807775f4082e7a2a92b5d7d8251"
+  },
+  {
+    "source": "map",
+    "episode": 2,
+    "path": "raw_sources/map/episode-000002.json.gz",
+    "sha256": "316ca83707c87566f386c9346d09a5eb3fcaddba91ef71923fb6ad022cc07d3b",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-seed49001-N0",
+    "weight_hash": "c08e52b9a01230abacc4cbc03292a36e6b237807775f4082e7a2a92b5d7d8251"
+  },
+  {
+    "source": "map",
+    "episode": 3,
+    "path": "raw_sources/map/episode-000003.json.gz",
+    "sha256": "eac9851924e66cf5fd252fa215d4efc4ebbe55269c3a4d25a5d4254dc10d0deb",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-seed49001-N0",
+    "weight_hash": "c08e52b9a01230abacc4cbc03292a36e6b237807775f4082e7a2a92b5d7d8251"
+  },
+  {
+    "source": "map",
+    "episode": 4,
+    "path": "raw_sources/map/episode-000004.json.gz",
+    "sha256": "3b9a4ad80bccd40a35cf818d7024368397241c7aaa8e588fb04759421ea6db27",
+    "split": "train",
+    "positions": 15,
+    "model_id": "P49-seed49001-N1",
+    "weight_hash": "a9062097c2a57c465c8b141d931d245dd365518b9651a9724f8ea407015627ca"
+  },
+  {
+    "source": "map",
+    "episode": 5,
+    "path": "raw_sources/map/episode-000005.json.gz",
+    "sha256": "316a4e107ad2b79643eda28fa7096eb65dc0239fea82fc3b3a402cfe14bd935f",
+    "split": "train",
+    "positions": 18,
+    "model_id": "P49-seed49001-N1",
+    "weight_hash": "a9062097c2a57c465c8b141d931d245dd365518b9651a9724f8ea407015627ca"
+  },
+  {
+    "source": "map",
+    "episode": 6,
+    "path": "raw_sources/map/episode-000006.json.gz",
+    "sha256": "a6b48983ac370ff5d541df93001dcfcdf5942befac0aad41abf1228d5327cc6a",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-seed49001-N1",
+    "weight_hash": "a9062097c2a57c465c8b141d931d245dd365518b9651a9724f8ea407015627ca"
+  },
+  {
+    "source": "map",
+    "episode": 7,
+    "path": "raw_sources/map/episode-000007.json.gz",
+    "sha256": "439eea18f4984ffe28b8a88738ecae1295dd26b9d6c929c916433379ef0819d4",
+    "split": "train",
+    "positions": 8,
+    "model_id": "P49-seed49001-N1",
+    "weight_hash": "a9062097c2a57c465c8b141d931d245dd365518b9651a9724f8ea407015627ca"
+  },
+  {
+    "source": "map",
+    "episode": 8,
+    "path": "raw_sources/map/episode-000008.json.gz",
+    "sha256": "a2bfcc61318ceb52e374c2c944b81e520536a0a3baa1fbc44734bc8dbea0dcbe",
+    "split": "train",
+    "positions": 7,
+    "model_id": "P49-seed49001-N1",
+    "weight_hash": "a9062097c2a57c465c8b141d931d245dd365518b9651a9724f8ea407015627ca"
+  },
+  {
+    "source": "map",
+    "episode": 9,
+    "path": "raw_sources/map/episode-000009.json.gz",
+    "sha256": "02d479b62d33e0fd69a2db2ec0db4c44f9e13ac7c756a6e1c9d23eaad3695449",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-seed49001-N1",
+    "weight_hash": "a9062097c2a57c465c8b141d931d245dd365518b9651a9724f8ea407015627ca"
+  },
+  {
+    "source": "map",
+    "episode": 10,
+    "path": "raw_sources/map/episode-000010.json.gz",
+    "sha256": "979d2ea971e76551a1d4666681e4c675d930e5f98874fa2126c1c3bd4234fe81",
+    "split": "train",
+    "positions": 19,
+    "model_id": "P49-seed49001-N1",
+    "weight_hash": "a9062097c2a57c465c8b141d931d245dd365518b9651a9724f8ea407015627ca"
+  },
+  {
+    "source": "map",
+    "episode": 11,
+    "path": "raw_sources/map/episode-000011.json.gz",
+    "sha256": "86e10b53a2cb19acc21d5fb563b3c5e4b4d7b506c78b094e869b2fff0f796f7b",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-seed49001-N1",
+    "weight_hash": "a9062097c2a57c465c8b141d931d245dd365518b9651a9724f8ea407015627ca"
+  },
+  {
+    "source": "map",
+    "episode": 12,
+    "path": "raw_sources/map/episode-000012.json.gz",
+    "sha256": "f3d9ad4408ea315647179d2a2b052c661af81be0208e3ea423e415ce3e9aa7e1",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-seed49001-N2",
+    "weight_hash": "64ff06d06d2c9d9cd53615d8005ca1bd6c768d5301a18179d1886e5ff3c3cf57"
+  },
+  {
+    "source": "map",
+    "episode": 13,
+    "path": "raw_sources/map/episode-000013.json.gz",
+    "sha256": "790f20ba03357b8142684f04792f2e935aa2d9337325bd6957e93e58ef3495d5",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-seed49001-N2",
+    "weight_hash": "64ff06d06d2c9d9cd53615d8005ca1bd6c768d5301a18179d1886e5ff3c3cf57"
+  },
+  {
+    "source": "map",
+    "episode": 14,
+    "path": "raw_sources/map/episode-000014.json.gz",
+    "sha256": "59e9f2ba16191a9c25dbd09cea463a00c3111d5c83e28b79b39db4ff5efe4bc3",
+    "split": "train",
+    "positions": 12,
+    "model_id": "P49-seed49001-N2",
+    "weight_hash": "64ff06d06d2c9d9cd53615d8005ca1bd6c768d5301a18179d1886e5ff3c3cf57"
+  },
+  {
+    "source": "map",
+    "episode": 15,
+    "path": "raw_sources/map/episode-000015.json.gz",
+    "sha256": "1931a64889ecc69ff9dabe3380d33ef247107b9bce3a23a07af5b2091e4626ce",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-seed49001-N2",
+    "weight_hash": "64ff06d06d2c9d9cd53615d8005ca1bd6c768d5301a18179d1886e5ff3c3cf57"
+  },
+  {
+    "source": "map",
+    "episode": 16,
+    "path": "raw_sources/map/episode-000016.json.gz",
+    "sha256": "f182b6a7ee85e5027cee1e17e1c0ee64d21e95322fce0800647eee689389eb6e",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-seed49001-N3",
+    "weight_hash": "45ef14e5c63789828944390f39c1f626f0703794cbe38df6bc53b4beccb83eb9"
+  },
+  {
+    "source": "map",
+    "episode": 17,
+    "path": "raw_sources/map/episode-000017.json.gz",
+    "sha256": "e995c264b8d5a96e9a8b4408304c0f992f96576c8d2292583dc4bf803e4afc89",
+    "split": "train",
+    "positions": 13,
+    "model_id": "P49-seed49001-N3",
+    "weight_hash": "45ef14e5c63789828944390f39c1f626f0703794cbe38df6bc53b4beccb83eb9"
+  },
+  {
+    "source": "map",
+    "episode": 18,
+    "path": "raw_sources/map/episode-000018.json.gz",
+    "sha256": "ebdcf200d818903b2f1e3fe601558c9e1e821dfeaa16e5b6c799d5fe4b709a38",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-seed49001-N3",
+    "weight_hash": "45ef14e5c63789828944390f39c1f626f0703794cbe38df6bc53b4beccb83eb9"
+  },
+  {
+    "source": "map",
+    "episode": 19,
+    "path": "raw_sources/map/episode-000019.json.gz",
+    "sha256": "5a2b90027c283fdc95da742be36e49db5500dc8dde1bfd236252aff35c7bd37d",
+    "split": "train",
+    "positions": 18,
+    "model_id": "P49-seed49001-N3",
+    "weight_hash": "45ef14e5c63789828944390f39c1f626f0703794cbe38df6bc53b4beccb83eb9"
+  },
+  {
+    "source": "map",
+    "episode": 20,
+    "path": "raw_sources/map/episode-000020.json.gz",
+    "sha256": "476caa574432f5eea7b1e2d32fde8b1571e3cbfd724f0bc5a3ed3d9c1bc8e82e",
+    "split": "train",
+    "positions": 19,
+    "model_id": "P49-seed49001-N4",
+    "weight_hash": "e49db2d258118c8666987db77dd5b34197002575bf0e905fbd1462e7fa47d387"
+  },
+  {
+    "source": "map",
+    "episode": 21,
+    "path": "raw_sources/map/episode-000021.json.gz",
+    "sha256": "1371975e3e77781b9dca4d71581e3f64de533db746d51da14f4110a25d88d772",
+    "split": "train",
+    "positions": 19,
+    "model_id": "P49-seed49001-N4",
+    "weight_hash": "e49db2d258118c8666987db77dd5b34197002575bf0e905fbd1462e7fa47d387"
+  },
+  {
+    "source": "map",
+    "episode": 22,
+    "path": "raw_sources/map/episode-000022.json.gz",
+    "sha256": "170d90f023176104fc34f3bbb4c4fdb25f15b3b309679b4914b76e342205a115",
+    "split": "train",
+    "positions": 16,
+    "model_id": "P49-seed49001-N4",
+    "weight_hash": "e49db2d258118c8666987db77dd5b34197002575bf0e905fbd1462e7fa47d387"
+  },
+  {
+    "source": "map",
+    "episode": 23,
+    "path": "raw_sources/map/episode-000023.json.gz",
+    "sha256": "2b03f89055136c957806a4e002d797e8eae5cf3bff937f5abd45dec5bfcf2f5f",
+    "split": "train",
+    "positions": 15,
+    "model_id": "P49-seed49001-N4",
+    "weight_hash": "e49db2d258118c8666987db77dd5b34197002575bf0e905fbd1462e7fa47d387"
+  },
+  {
+    "source": "map",
+    "episode": 24,
+    "path": "raw_sources/map/episode-000024.json.gz",
+    "sha256": "bc024bcfccb3bd405c5025bee76c6bd64da6703bd7e3d866ebcdbc8cc327f981",
+    "split": "held",
+    "positions": 15,
+    "model_id": "P49-seed49001-N5",
+    "weight_hash": "80c864fb1586e778235bc6399ae7ecfa13d38d5e0e35505b7dbeb79f813ccfc1"
+  },
+  {
+    "source": "map",
+    "episode": 25,
+    "path": "raw_sources/map/episode-000025.json.gz",
+    "sha256": "da2b08dd04bf9b4db19766ac011b08a472856a4ee81c7d82627ce53b835a5f16",
+    "split": "held",
+    "positions": 18,
+    "model_id": "P49-seed49001-N5",
+    "weight_hash": "80c864fb1586e778235bc6399ae7ecfa13d38d5e0e35505b7dbeb79f813ccfc1"
+  },
+  {
+    "source": "map",
+    "episode": 26,
+    "path": "raw_sources/map/episode-000026.json.gz",
+    "sha256": "3ad625c4e6f2232ca34d2b04fe636eafe11fee711a256715ece4959dcbb531e7",
+    "split": "held",
+    "positions": 17,
+    "model_id": "P49-seed49001-N5",
+    "weight_hash": "80c864fb1586e778235bc6399ae7ecfa13d38d5e0e35505b7dbeb79f813ccfc1"
+  },
+  {
+    "source": "map",
+    "episode": 27,
+    "path": "raw_sources/map/episode-000027.json.gz",
+    "sha256": "81b5d73d27019e54bd037ab11541e55282f3db7cf59e6743c24c12c63e925957",
+    "split": "held",
+    "positions": 19,
+    "model_id": "P49-seed49001-N5",
+    "weight_hash": "80c864fb1586e778235bc6399ae7ecfa13d38d5e0e35505b7dbeb79f813ccfc1"
+  },
+  {
+    "source": "topology",
+    "episode": 0,
+    "path": "raw_sources/topology/episode-000000.json.gz",
+    "sha256": "ee779cf8e9c1fa4a3176fc3e2e4ccb8598739b822765d0d3ba6a0d7f8a03a558",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-topology-seed49001-N0",
+    "weight_hash": "1e2ab234fd5eaf9a4edb3398e68eeaa2e6011adf2395781582742728ba344f31"
+  },
+  {
+    "source": "topology",
+    "episode": 1,
+    "path": "raw_sources/topology/episode-000001.json.gz",
+    "sha256": "74a95b9bec5b096b656b54c8e9b9bebb6356c393e31dc67395ed39738421e24c",
+    "split": "train",
+    "positions": 15,
+    "model_id": "P49-topology-seed49001-N0",
+    "weight_hash": "1e2ab234fd5eaf9a4edb3398e68eeaa2e6011adf2395781582742728ba344f31"
+  },
+  {
+    "source": "topology",
+    "episode": 2,
+    "path": "raw_sources/topology/episode-000002.json.gz",
+    "sha256": "8df78f27a2fce622e45ca66fd20157e4ac61c0d9f9436335e02d170736d61690",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-topology-seed49001-N0",
+    "weight_hash": "1e2ab234fd5eaf9a4edb3398e68eeaa2e6011adf2395781582742728ba344f31"
+  },
+  {
+    "source": "topology",
+    "episode": 3,
+    "path": "raw_sources/topology/episode-000003.json.gz",
+    "sha256": "9cba8d6d71cd193b788f3d0bdfe1a75f25a20b3137c826a06af0c8be02061979",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-topology-seed49001-N0",
+    "weight_hash": "1e2ab234fd5eaf9a4edb3398e68eeaa2e6011adf2395781582742728ba344f31"
+  },
+  {
+    "source": "topology",
+    "episode": 4,
+    "path": "raw_sources/topology/episode-000004.json.gz",
+    "sha256": "a8792440e2ff8f32f1413aa75c3090462a23c0015360528d4c506d9e0bcb3686",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-topology-seed49001-N1",
+    "weight_hash": "5a05115dbf77e7aa00e19c84c0446af6d5112f51812bb7c134cdbaabb5d0a9d8"
+  },
+  {
+    "source": "topology",
+    "episode": 5,
+    "path": "raw_sources/topology/episode-000005.json.gz",
+    "sha256": "a810e06713038b0afe010e403f550e1842ac5d06ed2126ccd120fac42773f9c2",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-topology-seed49001-N1",
+    "weight_hash": "5a05115dbf77e7aa00e19c84c0446af6d5112f51812bb7c134cdbaabb5d0a9d8"
+  },
+  {
+    "source": "topology",
+    "episode": 6,
+    "path": "raw_sources/topology/episode-000006.json.gz",
+    "sha256": "a8dfbbe5c78f259a75ff255972678cbee68363da2e835b9581275b7eb74e9fc8",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-topology-seed49001-N1",
+    "weight_hash": "5a05115dbf77e7aa00e19c84c0446af6d5112f51812bb7c134cdbaabb5d0a9d8"
+  },
+  {
+    "source": "topology",
+    "episode": 7,
+    "path": "raw_sources/topology/episode-000007.json.gz",
+    "sha256": "0e2f779db935e8442ea23034c8f6ed387e6e7b23c9ea94ceec2d85471911b9ea",
+    "split": "train",
+    "positions": 8,
+    "model_id": "P49-topology-seed49001-N1",
+    "weight_hash": "5a05115dbf77e7aa00e19c84c0446af6d5112f51812bb7c134cdbaabb5d0a9d8"
+  },
+  {
+    "source": "topology",
+    "episode": 8,
+    "path": "raw_sources/topology/episode-000008.json.gz",
+    "sha256": "c6e12777d165677cb4aa15f4e2aa96dcf2af261bf7f8f2538f2786dcb3b99e50",
+    "split": "train",
+    "positions": 7,
+    "model_id": "P49-topology-seed49001-N2",
+    "weight_hash": "3685e6c0195feb207cf7d09ead9defcc4a9521c59d67532bf36953bab50ec440"
+  },
+  {
+    "source": "topology",
+    "episode": 9,
+    "path": "raw_sources/topology/episode-000009.json.gz",
+    "sha256": "0f302c1cbff0c41839dcb461d6460f60b762568064d59ac7e88cf388a38619e7",
+    "split": "train",
+    "positions": 20,
+    "model_id": "P49-topology-seed49001-N2",
+    "weight_hash": "3685e6c0195feb207cf7d09ead9defcc4a9521c59d67532bf36953bab50ec440"
+  },
+  {
+    "source": "topology",
+    "episode": 10,
+    "path": "raw_sources/topology/episode-000010.json.gz",
+    "sha256": "45da91493deaca75af2cd47f687dcf4661a162e12a05ee49f698d8eda3ecd127",
+    "split": "train",
+    "positions": 20,
+    "model_id": "P49-topology-seed49001-N2",
+    "weight_hash": "3685e6c0195feb207cf7d09ead9defcc4a9521c59d67532bf36953bab50ec440"
+  },
+  {
+    "source": "topology",
+    "episode": 11,
+    "path": "raw_sources/topology/episode-000011.json.gz",
+    "sha256": "d0a6bbccffc89f8d037467a7070111dd271cdac546eb95e88e562e91db4ccd35",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-topology-seed49001-N2",
+    "weight_hash": "3685e6c0195feb207cf7d09ead9defcc4a9521c59d67532bf36953bab50ec440"
+  },
+  {
+    "source": "topology",
+    "episode": 12,
+    "path": "raw_sources/topology/episode-000012.json.gz",
+    "sha256": "cc0007253f1ccd545f22b73aa92b51c685b232f9b446e34ccbc991599f8a5f6d",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-topology-seed49001-N3",
+    "weight_hash": "e3e3f200e95e5a5302e6207ca073b2809d9c9897c47c072c95978f4478921d70"
+  },
+  {
+    "source": "topology",
+    "episode": 13,
+    "path": "raw_sources/topology/episode-000013.json.gz",
+    "sha256": "8bd3fe3c617fa67d5a2d543e3e5a0d833e774e2e525843fa9bcd4e291fd8fb51",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-topology-seed49001-N3",
+    "weight_hash": "e3e3f200e95e5a5302e6207ca073b2809d9c9897c47c072c95978f4478921d70"
+  },
+  {
+    "source": "topology",
+    "episode": 14,
+    "path": "raw_sources/topology/episode-000014.json.gz",
+    "sha256": "1b37670145dc2b0235ed3f7b0debd8f7f4a6922e2c98ceaa2153fe8127e40ef4",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-topology-seed49001-N3",
+    "weight_hash": "e3e3f200e95e5a5302e6207ca073b2809d9c9897c47c072c95978f4478921d70"
+  },
+  {
+    "source": "topology",
+    "episode": 15,
+    "path": "raw_sources/topology/episode-000015.json.gz",
+    "sha256": "52e03567b758f2d166e367a5f0ae7193c307ffa27f4e35f2c34486d393b5c49d",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-topology-seed49001-N3",
+    "weight_hash": "e3e3f200e95e5a5302e6207ca073b2809d9c9897c47c072c95978f4478921d70"
+  },
+  {
+    "source": "topology",
+    "episode": 16,
+    "path": "raw_sources/topology/episode-000016.json.gz",
+    "sha256": "c5ffc68609456d4eb652f6b5e17e52895162d567ff0d6308c09226abe00a5072",
+    "split": "train",
+    "positions": 21,
+    "model_id": "P49-topology-seed49001-N4",
+    "weight_hash": "2c7a80f3ddf2dc801dc9cadaebae93a099de7cd320f21d1511a54a0318f9be58"
+  },
+  {
+    "source": "topology",
+    "episode": 17,
+    "path": "raw_sources/topology/episode-000017.json.gz",
+    "sha256": "505eb366645c583464c35e0cbc7c63242f5d4634ace92c67197fdef4f1548021",
+    "split": "train",
+    "positions": 19,
+    "model_id": "P49-topology-seed49001-N4",
+    "weight_hash": "2c7a80f3ddf2dc801dc9cadaebae93a099de7cd320f21d1511a54a0318f9be58"
+  },
+  {
+    "source": "topology",
+    "episode": 18,
+    "path": "raw_sources/topology/episode-000018.json.gz",
+    "sha256": "7728335796af93ca185bd9772e1795352d0d4e832a975444b1be001173bba4ad",
+    "split": "train",
+    "positions": 20,
+    "model_id": "P49-topology-seed49001-N4",
+    "weight_hash": "2c7a80f3ddf2dc801dc9cadaebae93a099de7cd320f21d1511a54a0318f9be58"
+  },
+  {
+    "source": "topology",
+    "episode": 19,
+    "path": "raw_sources/topology/episode-000019.json.gz",
+    "sha256": "c07fba0ac3842a0b419d0f1300cae42ce0bd77934c2ef7fcc2377a447700fb27",
+    "split": "train",
+    "positions": 15,
+    "model_id": "P49-topology-seed49001-N4",
+    "weight_hash": "2c7a80f3ddf2dc801dc9cadaebae93a099de7cd320f21d1511a54a0318f9be58"
+  },
+  {
+    "source": "topology",
+    "episode": 20,
+    "path": "raw_sources/topology/episode-000020.json.gz",
+    "sha256": "8a55b32a7c95ae1d5d2bd092cfb2769ecc0dded6cadcc2f239803bc88c93b934",
+    "split": "held",
+    "positions": 10,
+    "model_id": "P49-topology-seed49001-N5",
+    "weight_hash": "b8544a5000becda38a88fe7b0f2f2a4a0a84778d9cabc972e32bd3a0c77d079a"
+  },
+  {
+    "source": "topology",
+    "episode": 21,
+    "path": "raw_sources/topology/episode-000021.json.gz",
+    "sha256": "ab068ad6c188e6af36e4003e846ec36d4516e04c7bd5f482e1a7239c9da09c0d",
+    "split": "held",
+    "positions": 21,
+    "model_id": "P49-topology-seed49001-N5",
+    "weight_hash": "b8544a5000becda38a88fe7b0f2f2a4a0a84778d9cabc972e32bd3a0c77d079a"
+  },
+  {
+    "source": "topology",
+    "episode": 22,
+    "path": "raw_sources/topology/episode-000022.json.gz",
+    "sha256": "8210db4e6954109b41ece0b8704b2c27cebd5d50541cff149431a9b20a0cba36",
+    "split": "held",
+    "positions": 18,
+    "model_id": "P49-topology-seed49001-N5",
+    "weight_hash": "b8544a5000becda38a88fe7b0f2f2a4a0a84778d9cabc972e32bd3a0c77d079a"
+  },
+  {
+    "source": "topology",
+    "episode": 23,
+    "path": "raw_sources/topology/episode-000023.json.gz",
+    "sha256": "2614094d532534a205a3cb56fe6f16570f9f660e234db0990b7f8602326833a7",
+    "split": "held",
+    "positions": 21,
+    "model_id": "P49-topology-seed49001-N5",
+    "weight_hash": "b8544a5000becda38a88fe7b0f2f2a4a0a84778d9cabc972e32bd3a0c77d079a"
+  }
+]

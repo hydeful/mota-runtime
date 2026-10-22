@@ -1,0 +1,113 @@
+{
+  "algorithm": "A1.1",
+  "engineering": "P49-binding-v1",
+  "topology": {
+    "version": "T1.0",
+    "source_freeze": "d8012475702c948a4af0424930abddd6ac3d7129",
+    "original_name": "T-P41-interaction-v1"
+  },
+  "network": {
+    "blocks": 2,
+    "channels": 32,
+    "input": [
+      34,
+      5,
+      9
+    ],
+    "policy": 713,
+    "value": "tanh",
+    "initialization_seed": 49001
+  },
+  "search": {
+    "new_simulations": 100,
+    "cpuct": 1.25,
+    "cpuct_kind": "constant",
+    "unvisited_Q": 0,
+    "single_player_no_sign_flip": true,
+    "gamma": 1,
+    "root_dirichlet_alpha": 0.3,
+    "root_noise_mix": 0.25,
+    "sample_first_interactions": 30,
+    "arbitrary_depth_cutoff": null,
+    "plan_takeover": false,
+    "PV_cache": "model hash + schema + complete float32 observation SHA256; raw logits/value; LRU20000",
+    "reuse": "same-model same-episode subtree only",
+    "pv_cache_entries": 20000,
+    "evaluation_new_simulations": 100
+  },
+  "reward": {
+    "success": "terminal_hp/H_bound",
+    "failure": -1,
+    "gamma": 1,
+    "shaping": false,
+    "bound_derivation": "initial HP plus all positive HP pickups"
+  },
+  "training": {
+    "replay_window": 8192,
+    "min_new_positions": 64,
+    "logical_cohort": 4,
+    "batch": 64,
+    "exposures_per_new_position": 8,
+    "optimizer": "SGD",
+    "momentum": 0.9,
+    "lr": 0.01,
+    "manual_conv_linear_L2": 0.0001,
+    "optimizer_weight_decay": 0
+  },
+  "evaluation": {
+    "episodes_per_condition": 16,
+    "conditions": [
+      "direct_policy_sample",
+      "MCTS100_no_noise_maxN"
+    ],
+    "seeds": [
+      49201,
+      49202,
+      49203,
+      49204,
+      49205,
+      49206,
+      49207,
+      49208,
+      49209,
+      49210,
+      49211,
+      49212,
+      49213,
+      49214,
+      49215,
+      49216
+    ],
+    "enters_training": false
+  },
+  "diagnosis_trigger": {
+    "finished_training_episodes": 8,
+    "committed_decisions": 512,
+    "collection_active_seconds": 1800,
+    "condition": "first reached; never terminates a game"
+  },
+  "advance_diagnostics": [
+    "max floor",
+    "distinct reached floors",
+    "legal T1 count",
+    "legal battle count",
+    "legal door count",
+    "legal growth/supply count",
+    "snapshots at t=0/30/60/...; never rewards"
+  ],
+  "runtime": {
+    "torch_threads": 1,
+    "torch_interop_threads": 1,
+    "deterministic_algorithms": true,
+    "checkpoint_every_search_simulations": 100,
+    "checkpoint_every_decisions": 1
+  },
+  "budget": {
+    "budget_seconds": 3600,
+    "session_start_utc": "2026-10-22T02:43:46.532886+00:00",
+    "deadline_utc": "2026-10-22T03:43:46.532886+00:00"
+  },
+  "stage": "P49",
+  "baseline": "V0",
+  "task": "p49-handdrawn-learning-v1"
+}

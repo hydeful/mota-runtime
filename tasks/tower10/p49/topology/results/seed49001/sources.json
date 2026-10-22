@@ -1,0 +1,33 @@
+{
+  "base_commit": "61899150c73d401d73ff0ac45626d921e98e5d5c",
+  "files": {
+    "tasks/tower10/p49/topology/network.py": "ae4cfdbfbc0e7441de928ede4f983bdd6a14712e770e6765460f663c5e3d6d7d",
+    "tasks/tower10/p49/topology/certify.py": "b82eaa27b1a1d62c4ef9d28ae1f094e0d2d5032aa465964a70d8cc35f454fb42",
+    "tasks/tower10/p49/topology/report.py": "445d6dad49093436654268c47f4a46842aae184f9454c8af5f4e8f06218bedfd",
+    "tasks/tower10/p49/topology/observation.py": "65f9886253a98583a0c590e75fee9f5cba8a47ead86e9eae12abcb0bd8f753a0",
+    "tasks/tower10/p49/topology/evaluation.py": "6129de1e1fa17f4c6e24d9bb5755bf8ec681bf17389ad7ae63e959812941b151",
+    "tasks/tower10/p49/topology/search.py": "36dd020bd2608cb3773cd10ecda96fb2673e6386e0648da7ce051c8a1ef07f1e",
+    "tasks/tower10/p49/topology/runtime.py": "0703723bbad821f6e37d85468b8314f5795d3dcb8ff5072509ed55cb99d9ed0f",
+    "tasks/tower10/p49/topology/environment.py": "4362b34dd1b4364d627f6da62480a3964e709f3e7b359eeb54f8391ead8f0506",
+    "tasks/tower10/p49/topology/preflight.py": "e119d3f176b0aa71d096dc386aa8845e03bc6e0157b4557deb4a7bff6de196c1",
+    "tasks/tower10/p49/topology/__init__.py": "e8db4c1078505fa1a8a5e1743f1e28682ce78d1111f0480f844cdbf98df1d836",
+    "tasks/tower10/p49/topology/kernel.py": "c0da62ddacecacb05ada1fcca7c586a22bfc9bfb477577243acc98525f21a340",
+    "tasks/tower10/p49/topology/guard.py": "6ed1051c7f9891af77df97fafe271b46199512125e66487c1ead0bb05e1a5f05",
+    "tasks/tower10/p49/topology/build.py": "f5324d92562b145ac95b42827b4a4ea903b072b4df35fba7dd40973add3436aa",
+    "tasks/tower10/p49/topology/experiment.py": "cdf5d87e5887af737bad33e9e74c6ac4035fedc7e5dcf7177427b4c07f34528e",
+    "tasks/tower10/p49/topology/contracts.py": "c4507e782e09cde201c191d4690b5096782cf663c0dacc8d7aa80948d8b2638d",
+    "tasks/tower10/p45/network.py": "92d69e1e98706f7cb8691e0e20a5a7eb685d35dff8c6bd1133c21b93c02756d4",
+    "tasks/tower10/p45/runtime.py": "fc90ad2e9305ba4daabf7b93a162906284cae78d8090e83b97597f63fdf25c2d",
+    "tasks/tower10/p45/search.py": "0e674cdb501e5afda336928175c184aa1631ba27390ddd1773d0cb13f42ffcf8",
+    "tasks/tower10/p45/contracts.py": "bdf83bfce812110eafafa879ac152075a9ea5144b7d064f93acceab671951d2b",
+    "tasks/tower10/p45/config.json": "e9f79eefde0b14dec11c39b6205fbf7dacf96cfdbea4afe890dd9c6d7a59d985",
+    "tasks/tower10/neural/common.py": "921a99fa7ee7e0516ea794edb78760fdb15e6c2ad0d096e4eb7ea0dd820f4d1c",
+    "tasks/tower10/neural/vendor/kernel.py": "e357d8785e283a9af2c5255488a9c8ede48ea72e70c9bde2410232d52fe3cc85",
+    "tasks/tower10/neural/vendor/topology_engine.py": "f602d445d832904eb54a030bc0bf8ebf4e9b9d76ea8f2860fccd34d8b07355d6",
+    "tasks/tower10/p49/learning/evaluation.py": "d6a14dbc6823ef1a4af728614aabe35b06ada78b4f9536a78ddb0346133118ce",
+    "tasks/tower10/p49/topology/initial.json": "e126a0f6940cdaad8e0cd710a2fbff228add00b556dd0b73bae7b2ca050b122d",
+    "tasks/tower10/p49/topology/identity.json": "f63eef0e04a9861bb4fa27d6736174df2df0b5669cd080d5684261fd577a14d1"
+  },
+  "plan_sha256": "49937fcb02e5d68a3b1be9b8ef32794bdb747eb71696317de8f2d80f9329cea8",
+  "local_checkout": "selected source snapshot; no local Git HEAD; private remote branch is authoritative"
+}

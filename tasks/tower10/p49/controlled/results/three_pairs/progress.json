@@ -1,0 +1,107 @@
+{
+  "phase": "local_report",
+  "complete": true,
+  "formal_start_utc": "2026-10-22T05:14:46.858202+00:00",
+  "formal_budget_seconds": 3600,
+  "execution_commit": "8073025dc9ce94727baf3d12ca5c8df3bcd30ac8",
+  "completed_jobs": [
+    {
+      "phase": "fit",
+      "seed": 49001,
+      "condition": "A",
+      "seconds": 4.326127506003104
+    },
+    {
+      "phase": "fit",
+      "seed": 49001,
+      "condition": "B",
+      "seconds": 9.356445896999503
+    },
+    {
+      "phase": "fit",
+      "seed": 49002,
+      "condition": "A",
+      "seconds": 4.50749980999899
+    },
+    {
+      "phase": "fit",
+      "seed": 49002,
+      "condition": "B",
+      "seconds": 8.202820008002163
+    },
+    {
+      "phase": "fit",
+      "seed": 49003,
+      "condition": "A",
+      "seconds": 3.982860519001406
+    },
+    {
+      "phase": "fit",
+      "seed": 49003,
+      "condition": "B",
+      "seconds": 7.476803104997089
+    },
+    {
+      "phase": "online",
+      "seed": 49001,
+      "condition": "A",
+      "seconds": 51.5847299149973
+    },
+    {
+      "phase": "online",
+      "seed": 49001,
+      "condition": "B",
+      "seconds": 163.5759129149992
+    },
+    {
+      "phase": "online",
+      "seed": 49002,
+      "condition": "A",
+      "seconds": 53.76322031499876
+    },
+    {
+      "phase": "online",
+      "seed": 49002,
+      "condition": "B",
+      "seconds": 177.1857321159987
+    },
+    {
+      "phase": "online",
+      "seed": 49003,
+      "condition": "A",
+      "seconds": 50.87120759000027
+    },
+    {
+      "phase": "online",
+      "seed": 49003,
+      "condition": "B",
+      "seconds": 185.01183048299936
+    }
+  ],
+  "pair_seed": 49003,
+  "condition": "B",
+  "active_job": "online/49003/B",
+  "last_completed_step": {
+    "event": "formal_finish",
+    "complete": true
+  },
+  "elapsed_seconds": 751.6468662200023,
+  "last_update_utc": "2026-10-22T05:27:18.505063+00:00",
+  "worker_progress": {
+    "phase": "online",
+    "condition": "B",
+    "seed": 49003,
+    "complete": false,
+    "last_completed_step": {
+      "event": "evaluation_condition_complete",
+      "model": "P49-controlled-online-49003-B-N5",
+      "condition": "MCTS100_no_noise_maxN",
+      "games": 1
+    },
+    "last_update_utc": "2026-10-22T05:26:48.534970+00:00",
+    "worker_seconds": 158.96124896200126
+  },
+  "calculations_complete": true,
+  "total_formal_wall_seconds": 751.6468325800015,
+  "finished_utc": "2026-10-22T05:27:18.505035+00:00"
+}

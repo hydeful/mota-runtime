@@ -1,0 +1,138 @@
+{
+  "passed": true,
+  "jobs": [
+    {
+      "phase": "fit",
+      "seed": 49001,
+      "condition": "A",
+      "initial_hash": "c08e52b9a01230abacc4cbc03292a36e6b237807775f4082e7a2a92b5d7d8251",
+      "runtime_no_grid_profile": {},
+      "denied_input_reads": [],
+      "worker_seconds": 4.326127506003104
+    },
+    {
+      "phase": "fit",
+      "seed": 49001,
+      "condition": "B",
+      "initial_hash": "c08e52b9a01230abacc4cbc03292a36e6b237807775f4082e7a2a92b5d7d8251",
+      "runtime_no_grid_profile": {
+        "forbidden_grid_calls": 0,
+        "profiled_calls": 3793904
+      },
+      "denied_input_reads": [],
+      "worker_seconds": 9.356445896999503
+    },
+    {
+      "phase": "fit",
+      "seed": 49002,
+      "condition": "A",
+      "initial_hash": "d9ac526a7cfbb45ea21a6c2bc801afb595513a2254219bf535382c85df8b28f1",
+      "runtime_no_grid_profile": {},
+      "denied_input_reads": [],
+      "worker_seconds": 4.50749980999899
+    },
+    {
+      "phase": "fit",
+      "seed": 49002,
+      "condition": "B",
+      "initial_hash": "d9ac526a7cfbb45ea21a6c2bc801afb595513a2254219bf535382c85df8b28f1",
+      "runtime_no_grid_profile": {
+        "forbidden_grid_calls": 0,
+        "profiled_calls": 3311405
+      },
+      "denied_input_reads": [],
+      "worker_seconds": 8.202820008002163
+    },
+    {
+      "phase": "fit",
+      "seed": 49003,
+      "condition": "A",
+      "initial_hash": "ff70159307c92331a48459f3bd24d3f9b6fcf0d841c476d03d721dd3f958c36a",
+      "runtime_no_grid_profile": {},
+      "denied_input_reads": [],
+      "worker_seconds": 3.982860519001406
+    },
+    {
+      "phase": "fit",
+      "seed": 49003,
+      "condition": "B",
+      "initial_hash": "ff70159307c92331a48459f3bd24d3f9b6fcf0d841c476d03d721dd3f958c36a",
+      "runtime_no_grid_profile": {
+        "forbidden_grid_calls": 0,
+        "profiled_calls": 3168705
+      },
+      "denied_input_reads": [],
+      "worker_seconds": 7.476803104997089
+    },
+    {
+      "phase": "online",
+      "seed": 49001,
+      "condition": "A",
+      "initial_hash": "c08e52b9a01230abacc4cbc03292a36e6b237807775f4082e7a2a92b5d7d8251",
+      "runtime_no_grid_profile": {},
+      "denied_input_reads": [],
+      "worker_seconds": 51.5847299149973
+    },
+    {
+      "phase": "online",
+      "seed": 49001,
+      "condition": "B",
+      "initial_hash": "c08e52b9a01230abacc4cbc03292a36e6b237807775f4082e7a2a92b5d7d8251",
+      "runtime_no_grid_profile": {
+        "forbidden_grid_calls": 0,
+        "profiled_calls": 123176516
+      },
+      "denied_input_reads": [],
+      "worker_seconds": 163.5759129149992
+    },
+    {
+      "phase": "online",
+      "seed": 49002,
+      "condition": "A",
+      "initial_hash": "d9ac526a7cfbb45ea21a6c2bc801afb595513a2254219bf535382c85df8b28f1",
+      "runtime_no_grid_profile": {},
+      "denied_input_reads": [],
+      "worker_seconds": 53.76322031499876
+    },
+    {
+      "phase": "online",
+      "seed": 49002,
+      "condition": "B",
+      "initial_hash": "d9ac526a7cfbb45ea21a6c2bc801afb595513a2254219bf535382c85df8b28f1",
+      "runtime_no_grid_profile": {
+        "forbidden_grid_calls": 0,
+        "profiled_calls": 136513238
+      },
+      "denied_input_reads": [],
+      "worker_seconds": 177.1857321159987
+    },
+    {
+      "phase": "online",
+      "seed": 49003,
+      "condition": "A",
+      "initial_hash": "ff70159307c92331a48459f3bd24d3f9b6fcf0d841c476d03d721dd3f958c36a",
+      "runtime_no_grid_profile": {},
+      "denied_input_reads": [],
+      "worker_seconds": 50.87120759000027
+    },
+    {
+      "phase": "online",
+      "seed": 49003,
+      "condition": "B",
+      "initial_hash": "ff70159307c92331a48459f3bd24d3f9b6fcf0d841c476d03d721dd3f958c36a",
+      "runtime_no_grid_profile": {
+        "forbidden_grid_calls": 0,
+        "profiled_calls": 141099524
+      },
+      "denied_input_reads": [],
+      "worker_seconds": 185.01183048299936
+    }
+  ],
+  "evaluation_games": 864,
+  "fit_games": 216,
+  "online_games": 648,
+  "fit_SGD_per_condition": 56,
+  "all_pair_initial_hashes_equal": true,
+  "frozen_batches_used_exactly": true,
+  "source_hashes_unchanged": true
+}

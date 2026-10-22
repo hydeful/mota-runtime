@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "states": 76849,
+  "edges": 266443,
+  "equivalence_checks": 266444,
+  "memo_aliases_checked": 189595,
+  "seconds": 199.42915850099962,
+  "runtime_grid_function_calls": [],
+  "object_nodes": 21,
+  "runtime_grid_nodes": 0,
+  "policy_equivariance_max_abs": 5.960464477539063e-08,
+  "value_invariance_max_abs": 0.0,
+  "relation_ablation_influence": {
+    "policy_max_abs": 0.04331526160240173,
+    "value_abs": 0.019308749586343765
+  },
+  "node_shape": [
+    21,
+    27
+  ],
+  "relation_shape": [
+    2,
+    21,
+    21
+  ],
+  "global_shape": [
+    7
+  ],
+  "frozen_physical_initial": "cdf06981a2391182e94efe14241f5370c12cfc2d76e8188a42fd9517f8976eb9",
+  "topology_initial": "f751fc5032485b7d5a39e0a83ac0670badbbb4a8075b4c4a7bb8de79dbfddfe2",
+  "old_evidence_reuse": "old summary only, no persisted states/transitions; reconstruct one joint equivalence traversal without optimal-value computation",
+  "scope": "fixed P49; empty corridor event/stair/fly programs asserted; projected decision-state equivalence, not equality of physical replay coordinates or step counters"
+}

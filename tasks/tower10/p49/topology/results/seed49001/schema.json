@@ -1,0 +1,157 @@
+{
+  "task": "p49-object-topology-learning-v1",
+  "nodes": [
+    "e00",
+    "e01",
+    "e02",
+    "e03",
+    "e04",
+    "e05",
+    "e06",
+    "e07",
+    "e08",
+    "e09",
+    "e10",
+    "e11",
+    "e12",
+    "e13",
+    "e14",
+    "e15",
+    "e16",
+    "e17",
+    "e18",
+    "e19",
+    "e20"
+  ],
+  "node_features": [
+    "type:bat",
+    "type:bluePotion",
+    "type:bluePriest",
+    "type:greenSlime",
+    "type:redPotion",
+    "type:redSlime",
+    "type:shield1",
+    "type:skeletonSoldier",
+    "type:sword1",
+    "type:yellowDoor",
+    "type:yellowKey",
+    "status:absent",
+    "status:active",
+    "status:hidden",
+    "status:resolved",
+    "status:moved",
+    "enemy_hp",
+    "enemy_atk",
+    "enemy_def",
+    "yellow_key_cost",
+    "pickup_hp",
+    "pickup_atk",
+    "pickup_def",
+    "pickup_key",
+    "frontier",
+    "source_component",
+    "goal_object"
+  ],
+  "relations": [
+    "direct_corridor",
+    "destination_resolved"
+  ],
+  "global": [
+    "hp/900",
+    "atk/20",
+    "def/20",
+    "yellowKey/4",
+    "money/100",
+    "t/21",
+    "goal"
+  ],
+  "tensor_shapes": {
+    "nodes": [
+      21,
+      27
+    ],
+    "relations": [
+      2,
+      21,
+      21
+    ],
+    "hero": [
+      7
+    ]
+  },
+  "serialization_envelope": [
+    21,
+    76
+  ],
+  "actions": [
+    {
+      "target": "e00"
+    },
+    {
+      "target": "e01"
+    },
+    {
+      "target": "e02"
+    },
+    {
+      "target": "e03"
+    },
+    {
+      "target": "e04"
+    },
+    {
+      "target": "e05"
+    },
+    {
+      "target": "e06"
+    },
+    {
+      "target": "e07"
+    },
+    {
+      "target": "e08"
+    },
+    {
+      "target": "e09"
+    },
+    {
+      "target": "e10"
+    },
+    {
+      "target": "e11"
+    },
+    {
+      "target": "e12"
+    },
+    {
+      "target": "e13"
+    },
+    {
+      "target": "e14"
+    },
+    {
+      "target": "e15"
+    },
+    {
+      "target": "e16"
+    },
+    {
+      "target": "e17"
+    },
+    {
+      "target": "e18"
+    },
+    {
+      "target": "e19"
+    },
+    {
+      "target": "e20"
+    }
+  ],
+  "initial": {
+    "initialSHA256": "f751fc5032485b7d5a39e0a83ac0670badbbb4a8075b4c4a7bb8de79dbfddfe2",
+    "rulesSHA256": "592e2b0757bafb84baa91ef47ed879d03b03063632f0c3bb12fb934ea8cb8be1",
+    "physical_initial_sha256": "cdf06981a2391182e94efe14241f5370c12cfc2d76e8188a42fd9517f8976eb9"
+  },
+  "coordinate_input": false
+}

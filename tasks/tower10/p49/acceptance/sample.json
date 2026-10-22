@@ -1,0 +1,222 @@
+{
+  "kind": "uniform_legal_effective_interactions_no_MCTS_no_training",
+  "initial_sha256": "cdf06981a2391182e94efe14241f5370c12cfc2d76e8188a42fd9517f8976eb9",
+  "rules_sha256": "7b5eb976ad7f073cdcfecb526c1cd2e42d8f697e85a70dd7f053821930dc958e",
+  "games": 30000,
+  "wins": 30000,
+  "rate": 1.0,
+  "wilson95": [
+    0.9998719677669952,
+    1
+  ],
+  "batches": [
+    {
+      "seed": 49101,
+      "games": 10000,
+      "wins": 10000,
+      "min_goal_hp": 2,
+      "max_goal_hp": 574,
+      "mean_goal_hp": 185.7178,
+      "min_length": 5,
+      "max_length": 21
+    },
+    {
+      "seed": 49102,
+      "games": 10000,
+      "wins": 10000,
+      "min_goal_hp": 2,
+      "max_goal_hp": 574,
+      "mean_goal_hp": 187.4648,
+      "min_length": 5,
+      "max_length": 21
+    },
+    {
+      "seed": 49103,
+      "games": 10000,
+      "wins": 10000,
+      "min_goal_hp": 2,
+      "max_goal_hp": 574,
+      "mean_goal_hp": 185.5658,
+      "min_length": 5,
+      "max_length": 21
+    }
+  ],
+  "first_success_independent_replay": {
+    "terminal": {
+      "end": "GOAL",
+      "score": 148
+    },
+    "records": [
+      {
+        "action": {
+          "target": "o:MT1:3:2"
+        },
+        "hp_before": 400,
+        "hp_after": 400,
+        "state_sha256": "de0ede174511cab6d3c4bac31ef3df88bb05f5011e203e97c508b29718ea8638"
+      },
+      {
+        "action": {
+          "target": "o:MT1:3:3"
+        },
+        "hp_before": 400,
+        "hp_after": 400,
+        "state_sha256": "e1883da64066b4f0e0694fbecefa26fd71d057e59fd1a293f43169bb1205f16f"
+      },
+      {
+        "action": {
+          "target": "o:MT1:5:3"
+        },
+        "hp_before": 400,
+        "hp_after": 400,
+        "state_sha256": "95408aa4d8f6e4eb6d9527aa0fe9d10cce8612a22ce3036bdfbce7e06e49442b"
+      },
+      {
+        "action": {
+          "target": "o:MT1:5:2"
+        },
+        "hp_before": 400,
+        "hp_after": 400,
+        "state_sha256": "55b778bdf22449029ba51e7d9152fee5ee74fe4cdb5f04b19660c7dee0018f09"
+      },
+      {
+        "action": {
+          "target": "o:MT1:2:1"
+        },
+        "hp_before": 400,
+        "hp_after": 350,
+        "state_sha256": "b4c1ff2d3aa16c2cf4750d47da9fd032d4c8e07b70c26960fb7b2a0b83be8524"
+      },
+      {
+        "action": {
+          "target": "o:MT1:0:2"
+        },
+        "hp_before": 350,
+        "hp_after": 350,
+        "state_sha256": "cb870bd2decb36e04c22f8eea2b37959e6f500e0cdd4320ed6ed19627fbad3d7"
+      },
+      {
+        "action": {
+          "target": "o:MT1:6:4"
+        },
+        "hp_before": 350,
+        "hp_after": 350,
+        "state_sha256": "ea36c3becf4d7f0367c3e352b5955f55ac37484a2e9dcb3f1202838af96ffe3e"
+      },
+      {
+        "action": {
+          "target": "o:MT1:7:4"
+        },
+        "hp_before": 350,
+        "hp_after": 300,
+        "state_sha256": "d5b16b3a133e7fa3382c8a6677c03856a1a217206db05f73a2eee9570ca8f593"
+      },
+      {
+        "action": {
+          "target": "o:MT1:6:1"
+        },
+        "hp_before": 300,
+        "hp_after": 188,
+        "state_sha256": "20ad7165980491089a34df98d116ca08ae45ff99e72d05d3097cbd0547bf8208"
+      },
+      {
+        "action": {
+          "target": "o:MT1:8:4"
+        },
+        "hp_before": 188,
+        "hp_after": 188,
+        "state_sha256": "dfea33c86285bdbb84d7e2f8af18e1592eb0455fe595136b0c5a60c33976f78e"
+      },
+      {
+        "action": {
+          "target": "o:MT1:6:0"
+        },
+        "hp_before": 188,
+        "hp_after": 388,
+        "state_sha256": "77ad1c943d362deef628d7a1fa9f466e10296fbf11f83b772ee702bf87e343e0"
+      },
+      {
+        "action": {
+          "target": "o:MT1:8:2"
+        },
+        "hp_before": 388,
+        "hp_after": 388,
+        "state_sha256": "e3201f82a7967e07536ce520eb7ea9bb44957fce35791fd691e88cb4a8f254df"
+      },
+      {
+        "action": {
+          "target": "o:MT1:2:0"
+        },
+        "hp_before": 388,
+        "hp_after": 438,
+        "state_sha256": "8257667f16faa1e62bb0d755c5b665c426ba393da126604bcf3a5380b070b50a"
+      },
+      {
+        "action": {
+          "target": "o:MT1:8:1"
+        },
+        "hp_before": 438,
+        "hp_after": 90,
+        "state_sha256": "2aebab68d05e6cc12fb932d49a62141e58c5977e342aeb0837ab3112948f7e49"
+      },
+      {
+        "action": {
+          "target": "o:MT1:8:0"
+        },
+        "hp_before": 90,
+        "hp_after": 290,
+        "state_sha256": "92525a078ca897f95a4736955eb46976178c3647c0c0c8438941d6585a407df9"
+      },
+      {
+        "action": {
+          "target": "o:MT1:0:1"
+        },
+        "hp_before": 290,
+        "hp_after": 290,
+        "state_sha256": "166ab87ce4f0dddc36e774335e08fae5f9920fedd0697f6efdc48ce999479733"
+      },
+      {
+        "action": {
+          "target": "o:MT1:2:4"
+        },
+        "hp_before": 290,
+        "hp_after": 290,
+        "state_sha256": "605b52e933408ee6526f8a8ba1e552a9a12692728660020305e693cb00a89191"
+      },
+      {
+        "action": {
+          "target": "o:MT1:1:4"
+        },
+        "hp_before": 290,
+        "hp_after": 290,
+        "state_sha256": "48279f392146cffd46bca255cb2c6c53886446969bd5a4c146707726b0671fc3"
+      },
+      {
+        "action": {
+          "target": "o:MT1:0:0"
+        },
+        "hp_before": 290,
+        "hp_after": 340,
+        "state_sha256": "37fed6170f4da54ff9445f4e0eea4f0b9094167a999a2814b43f9da5081f506e"
+      },
+      {
+        "action": {
+          "target": "o:MT1:0:4"
+        },
+        "hp_before": 340,
+        "hp_after": 340,
+        "state_sha256": "962944451948f5e472e55f7d33be5903f1ff49d40bb6802c3a4467736f9d4abf"
+      },
+      {
+        "action": {
+          "target": "o:MT1:4:1"
+        },
+        "hp_before": 340,
+        "hp_after": 148,
+        "state_sha256": "8ffaae66564ebdbf5d0efbceacf104f907749d122ddbf2b4f399a3def5a8c8e1"
+      }
+    ]
+  },
+  "first_failure_independent_replay": null,
+  "reference_replay_scope": "first 20 full episodes per seed and first overall success/failure"
+}

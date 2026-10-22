@@ -1,0 +1,839 @@
+{
+  "schema": "P49-object-topology-v1",
+  "hero": {
+    "hp": 400,
+    "atk": 10,
+    "def": 10,
+    "money": 0,
+    "items": {
+      "tools": {},
+      "constants": {},
+      "equips": {}
+    },
+    "experience": null,
+    "floorId": "MT1",
+    "anchors": []
+  },
+  "flags": {},
+  "graph": {
+    "order": [
+      "e00",
+      "e01",
+      "e02",
+      "e03",
+      "e04",
+      "e05",
+      "e06",
+      "e07",
+      "e08",
+      "e09",
+      "e10",
+      "e11",
+      "e12",
+      "e13",
+      "e14",
+      "e15",
+      "e16",
+      "e17",
+      "e18",
+      "e19",
+      "e20"
+    ],
+    "adjacency": {
+      "e00": [
+        "e01"
+      ],
+      "e01": [
+        "e00",
+        "e02"
+      ],
+      "e02": [
+        "e01",
+        "e06",
+        "e08"
+      ],
+      "e03": [
+        "e04"
+      ],
+      "e04": [
+        "e03",
+        "e07"
+      ],
+      "e05": [
+        "e06"
+      ],
+      "e06": [
+        "e02",
+        "e05",
+        "e08"
+      ],
+      "e07": [
+        "e04",
+        "e08",
+        "e09",
+        "e10",
+        "e11",
+        "e12",
+        "e15"
+      ],
+      "e08": [
+        "e02",
+        "e06",
+        "e07",
+        "e09",
+        "e10",
+        "e11",
+        "e12",
+        "e15"
+      ],
+      "e09": [
+        "e07",
+        "e08",
+        "e10",
+        "e11",
+        "e12",
+        "e15"
+      ],
+      "e10": [
+        "e07",
+        "e08",
+        "e09",
+        "e11",
+        "e12",
+        "e15"
+      ],
+      "e11": [
+        "e07",
+        "e08",
+        "e09",
+        "e10",
+        "e12",
+        "e14",
+        "e15",
+        "e19"
+      ],
+      "e12": [
+        "e07",
+        "e08",
+        "e09",
+        "e10",
+        "e11",
+        "e15"
+      ],
+      "e13": [
+        "e14"
+      ],
+      "e14": [
+        "e11",
+        "e13",
+        "e19"
+      ],
+      "e15": [
+        "e07",
+        "e08",
+        "e09",
+        "e10",
+        "e11",
+        "e12",
+        "e16"
+      ],
+      "e16": [
+        "e15",
+        "e20"
+      ],
+      "e17": [
+        "e18"
+      ],
+      "e18": [
+        "e17",
+        "e19"
+      ],
+      "e19": [
+        "e11",
+        "e14",
+        "e18"
+      ],
+      "e20": [
+        "e16"
+      ]
+    },
+    "entry": [
+      "e07",
+      "e08",
+      "e09",
+      "e10",
+      "e11",
+      "e12",
+      "e15"
+    ]
+  },
+  "rules": {
+    "enemies": {
+      "bat": {
+        "atk": 38,
+        "def": 3,
+        "experience": 0,
+        "hp": 35,
+        "money": 3,
+        "name": "小蝙蝠",
+        "special": 0
+      },
+      "bluePriest": {
+        "atk": 32,
+        "def": 8,
+        "experience": 0,
+        "hp": 60,
+        "money": 5,
+        "name": "初级法师",
+        "special": 0
+      },
+      "greenSlime": {
+        "atk": 18,
+        "def": 1,
+        "experience": 0,
+        "hp": 35,
+        "money": 1,
+        "name": "绿色史来姆",
+        "special": 0
+      },
+      "redSlime": {
+        "atk": 20,
+        "def": 2,
+        "experience": 0,
+        "hp": 45,
+        "money": 2,
+        "name": "红色史来姆",
+        "special": 0
+      },
+      "skeletonSoldier": {
+        "atk": 52,
+        "def": 12,
+        "experience": 0,
+        "hp": 55,
+        "money": 8,
+        "name": "骷髅士兵",
+        "special": 0
+      }
+    },
+    "items": {
+      "bluePotion": {
+        "canUseItemEffect": "true",
+        "cls": "items",
+        "itemEffect": "core.status.hero.hp += core.values.bluePotion * core.status.thisMap.ratio",
+        "itemEffectTip": "你的生命增加了 ${core.values.bluePotion * core.status.thisMap.ratio} 点",
+        "name": "蓝血瓶",
+        "text": "，生命+${core.values.bluePotion}",
+        "useItemEffect": "core.status.hero.hp += core.values.bluePotion"
+      },
+      "redPotion": {
+        "canUseItemEffect": "true",
+        "cls": "items",
+        "itemEffect": "core.status.hero.hp += core.values.redPotion * core.status.thisMap.ratio",
+        "itemEffectTip": "你的生命增加了 ${core.values.redPotion * core.status.thisMap.ratio} 点",
+        "name": "红血瓶",
+        "text": "，生命+${core.values.redPotion}",
+        "useItemEffect": "core.status.hero.hp += core.values.redPotion"
+      },
+      "shield1": {
+        "cls": "items",
+        "equip": {
+          "type": 1,
+          "value": {
+            "def": 10
+          }
+        },
+        "itemEffect": "core.status.hero.def += 10; core.setFlag('nowShield', 'shield1');",
+        "itemEffectTip": "你得到了铁盾，防御力增加10点",
+        "name": "铁盾",
+        "text": "一个很普通的铁盾"
+      },
+      "sword1": {
+        "cls": "items",
+        "equip": {
+          "animate": "sword",
+          "type": 0,
+          "value": {
+            "atk": 10
+          }
+        },
+        "itemEffect": "core.status.hero.atk += 10; core.setFlag('nowWeapon', 'sword1');",
+        "itemEffectTip": "你得到了铁剑，攻击力增加10点",
+        "name": "铁剑",
+        "text": "一把很普通的铁剑"
+      },
+      "yellowKey": {
+        "cls": "tools",
+        "hideInReplay": true,
+        "hideInToolbox": true,
+        "name": "黄钥匙",
+        "text": "可以打开一扇黄门"
+      }
+    },
+    "values": {
+      "animateSpeed": 200,
+      "blueGem": 1,
+      "bluePotion": 200,
+      "breakArmor": 0.9,
+      "counterAttack": 0.1,
+      "floorChangeTime": 0,
+      "greenGem": 5,
+      "greenPotion": 800,
+      "hatred": 2,
+      "lavaDamage": 100,
+      "moveSpeed": 100,
+      "poisonDamage": 10,
+      "purify": 3,
+      "redGem": 1,
+      "redPotion": 50,
+      "statusCanvasRowsOnMobile": 3,
+      "weakValue": 20,
+      "yellowPotion": 500
+    },
+    "ratios": {
+      "MT1": 1
+    },
+    "eventPrograms": [],
+    "stairs": [],
+    "fly": {
+      "floors": {}
+    },
+    "templates": {},
+    "version": "P49-object-topology-v1/P48-rule-primitives"
+  },
+  "objects": {
+    "e00": {
+      "entity": "entity:e00",
+      "event": {
+        "cls": "items",
+        "id": "redPotion",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "e00",
+      "kind": "item",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 31,
+      "trigger": "getItem"
+    },
+    "e01": {
+      "entity": "entity:e01",
+      "event": {
+        "cls": "enemys",
+        "id": "greenSlime",
+        "noPass": true,
+        "trigger": "battle"
+      },
+      "excluded": false,
+      "id": "e01",
+      "kind": "enemy",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 201,
+      "trigger": "battle"
+    },
+    "e02": {
+      "entity": "entity:e02",
+      "event": {
+        "animate": 1,
+        "cls": "animates",
+        "doorInfo": {
+          "closeSound": "开关门",
+          "keys": {
+            "yellowKey": 1
+          },
+          "openSound": "开关门",
+          "time": 120
+        },
+        "id": "yellowDoor",
+        "name": "黄门",
+        "noPass": true,
+        "trigger": "openDoor"
+      },
+      "excluded": false,
+      "id": "e02",
+      "kind": "door",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 81,
+      "trigger": "openDoor"
+    },
+    "e03": {
+      "entity": "entity:e03",
+      "event": {
+        "cls": "items",
+        "id": "sword1",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "e03",
+      "kind": "item",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 35,
+      "trigger": "getItem"
+    },
+    "e04": {
+      "entity": "entity:e04",
+      "event": {
+        "cls": "enemys",
+        "id": "redSlime",
+        "noPass": true,
+        "trigger": "battle"
+      },
+      "excluded": false,
+      "id": "e04",
+      "kind": "enemy",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 202,
+      "trigger": "battle"
+    },
+    "e05": {
+      "entity": "entity:e05",
+      "event": {
+        "cls": "items",
+        "id": "redPotion",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "e05",
+      "kind": "item",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 31,
+      "trigger": "getItem"
+    },
+    "e06": {
+      "entity": "entity:e06",
+      "event": {
+        "cls": "enemys",
+        "id": "redSlime",
+        "noPass": true,
+        "trigger": "battle"
+      },
+      "excluded": false,
+      "id": "e06",
+      "kind": "enemy",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 202,
+      "trigger": "battle"
+    },
+    "e07": {
+      "entity": "entity:e07",
+      "event": {
+        "animate": 1,
+        "cls": "animates",
+        "doorInfo": {
+          "closeSound": "开关门",
+          "keys": {
+            "yellowKey": 1
+          },
+          "openSound": "开关门",
+          "time": 120
+        },
+        "id": "yellowDoor",
+        "name": "黄门",
+        "noPass": true,
+        "trigger": "openDoor"
+      },
+      "excluded": false,
+      "id": "e07",
+      "kind": "door",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 81,
+      "trigger": "openDoor"
+    },
+    "e08": {
+      "entity": "entity:e08",
+      "event": {
+        "cls": "items",
+        "id": "yellowKey",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "e08",
+      "kind": "item",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 21,
+      "trigger": "getItem"
+    },
+    "e09": {
+      "entity": "entity:e09",
+      "event": {
+        "cls": "items",
+        "id": "yellowKey",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "e09",
+      "kind": "item",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 21,
+      "trigger": "getItem"
+    },
+    "e10": {
+      "entity": "entity:e10",
+      "event": {
+        "cls": "enemys",
+        "id": "skeletonSoldier",
+        "noPass": true,
+        "trigger": "battle"
+      },
+      "excluded": false,
+      "id": "e10",
+      "kind": "enemy",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 210,
+      "trigger": "battle"
+    },
+    "e11": {
+      "entity": "entity:e11",
+      "event": {
+        "cls": "items",
+        "id": "yellowKey",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "e11",
+      "kind": "item",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 21,
+      "trigger": "getItem"
+    },
+    "e12": {
+      "entity": "entity:e12",
+      "event": {
+        "cls": "items",
+        "id": "yellowKey",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "e12",
+      "kind": "item",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 21,
+      "trigger": "getItem"
+    },
+    "e13": {
+      "entity": "entity:e13",
+      "event": {
+        "cls": "items",
+        "id": "bluePotion",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "e13",
+      "kind": "item",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 32,
+      "trigger": "getItem"
+    },
+    "e14": {
+      "entity": "entity:e14",
+      "event": {
+        "cls": "enemys",
+        "id": "bat",
+        "noPass": true,
+        "trigger": "battle"
+      },
+      "excluded": false,
+      "id": "e14",
+      "kind": "enemy",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 205,
+      "trigger": "battle"
+    },
+    "e15": {
+      "entity": "entity:e15",
+      "event": {
+        "animate": 1,
+        "cls": "animates",
+        "doorInfo": {
+          "closeSound": "开关门",
+          "keys": {
+            "yellowKey": 1
+          },
+          "openSound": "开关门",
+          "time": 120
+        },
+        "id": "yellowDoor",
+        "name": "黄门",
+        "noPass": true,
+        "trigger": "openDoor"
+      },
+      "excluded": false,
+      "id": "e15",
+      "kind": "door",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 81,
+      "trigger": "openDoor"
+    },
+    "e16": {
+      "entity": "entity:e16",
+      "event": {
+        "cls": "enemys",
+        "id": "redSlime",
+        "noPass": true,
+        "trigger": "battle"
+      },
+      "excluded": false,
+      "id": "e16",
+      "kind": "enemy",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 202,
+      "trigger": "battle"
+    },
+    "e17": {
+      "entity": "entity:e17",
+      "event": {
+        "cls": "items",
+        "id": "bluePotion",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "e17",
+      "kind": "item",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 32,
+      "trigger": "getItem"
+    },
+    "e18": {
+      "entity": "entity:e18",
+      "event": {
+        "cls": "enemys",
+        "id": "bluePriest",
+        "noPass": true,
+        "trigger": "battle"
+      },
+      "excluded": false,
+      "id": "e18",
+      "kind": "enemy",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 217,
+      "trigger": "battle"
+    },
+    "e19": {
+      "entity": "entity:e19",
+      "event": {
+        "animate": 1,
+        "cls": "animates",
+        "doorInfo": {
+          "closeSound": "开关门",
+          "keys": {
+            "yellowKey": 1
+          },
+          "openSound": "开关门",
+          "time": 120
+        },
+        "id": "yellowDoor",
+        "name": "黄门",
+        "noPass": true,
+        "trigger": "openDoor"
+      },
+      "excluded": false,
+      "id": "e19",
+      "kind": "door",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 81,
+      "trigger": "openDoor"
+    },
+    "e20": {
+      "entity": "entity:e20",
+      "event": {
+        "cls": "items",
+        "id": "shield1",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "e20",
+      "kind": "item",
+      "position": [
+        "MT1"
+      ],
+      "status": "active",
+      "tile": 36,
+      "trigger": "getItem"
+    }
+  },
+  "entities": {
+    "entity:e00": {
+      "status": "active",
+      "slot": "e00",
+      "enemy": "redPotion"
+    },
+    "entity:e01": {
+      "status": "active",
+      "slot": "e01",
+      "enemy": "greenSlime"
+    },
+    "entity:e02": {
+      "status": "active",
+      "slot": "e02",
+      "enemy": "yellowDoor"
+    },
+    "entity:e03": {
+      "status": "active",
+      "slot": "e03",
+      "enemy": "sword1"
+    },
+    "entity:e04": {
+      "status": "active",
+      "slot": "e04",
+      "enemy": "redSlime"
+    },
+    "entity:e05": {
+      "status": "active",
+      "slot": "e05",
+      "enemy": "redPotion"
+    },
+    "entity:e06": {
+      "status": "active",
+      "slot": "e06",
+      "enemy": "redSlime"
+    },
+    "entity:e07": {
+      "status": "active",
+      "slot": "e07",
+      "enemy": "yellowDoor"
+    },
+    "entity:e08": {
+      "status": "active",
+      "slot": "e08",
+      "enemy": "yellowKey"
+    },
+    "entity:e09": {
+      "status": "active",
+      "slot": "e09",
+      "enemy": "yellowKey"
+    },
+    "entity:e10": {
+      "status": "active",
+      "slot": "e10",
+      "enemy": "skeletonSoldier"
+    },
+    "entity:e11": {
+      "status": "active",
+      "slot": "e11",
+      "enemy": "yellowKey"
+    },
+    "entity:e12": {
+      "status": "active",
+      "slot": "e12",
+      "enemy": "yellowKey"
+    },
+    "entity:e13": {
+      "status": "active",
+      "slot": "e13",
+      "enemy": "bluePotion"
+    },
+    "entity:e14": {
+      "status": "active",
+      "slot": "e14",
+      "enemy": "bat"
+    },
+    "entity:e15": {
+      "status": "active",
+      "slot": "e15",
+      "enemy": "yellowDoor"
+    },
+    "entity:e16": {
+      "status": "active",
+      "slot": "e16",
+      "enemy": "redSlime"
+    },
+    "entity:e17": {
+      "status": "active",
+      "slot": "e17",
+      "enemy": "bluePotion"
+    },
+    "entity:e18": {
+      "status": "active",
+      "slot": "e18",
+      "enemy": "bluePriest"
+    },
+    "entity:e19": {
+      "status": "active",
+      "slot": "e19",
+      "enemy": "yellowDoor"
+    },
+    "entity:e20": {
+      "status": "active",
+      "slot": "e20",
+      "enemy": "shield1"
+    }
+  },
+  "barriers": {},
+  "events": {},
+  "serial": 0,
+  "actionCount": 0,
+  "task": {
+    "status": "ACTIVE",
+    "id": "p49-object-topology-learning-v1",
+    "boss": "e10"
+  }
+}

@@ -1,0 +1,3773 @@
+{
+  "source_commit": "adf01c88b54891ba90aad0da8f7641f8efda749b",
+  "runtime_commit": "d8da913bc466db6276ef3222abf0e2bd063820d6",
+  "evidence_sha256": {
+    "REVIEW_HANDOFF.md": "ab825d5e3efb9f34cffb334a2535c47bdc811380950e0321f2ffef8a33818708",
+    "state.json": "170720c4aca2d7fda404b51d5a585c4af4aace637f3fdab500b0a6e1422416af",
+    "summary.json": "9b72eb551b5b7d1cfd0b170d544dc39e448e4a5cd3e8e62e4c4739e1c8dd748c",
+    "summary.csv": "827ca96b9967fa229a9d9add5ef8186f6c1ecf1e6aac7d683ee4a0a60b58b0fe"
+  },
+  "full_state_scalar_inventory": {
+    "str": 4081,
+    "int": 5070,
+    "bool": 845,
+    "NoneType": 159,
+    "float": 6706
+  },
+  "nonempty_error_fields": [],
+  "elapsed_from_iso_seconds": 2360.6636,
+  "budget_seconds": 3600,
+  "attempt_wall_sum": 2357.5862298719585,
+  "comparisons": [
+    {
+      "baseline": "baseline600",
+      "candidate": "candidate600",
+      "collection_rate_ratio": 2.182625437983069,
+      "outer_rate_ratio": 2.106782445972112,
+      "cpu_cost_per_position_ratio": 1.1007763368669758
+    },
+    {
+      "baseline": "repeat-baseline300",
+      "candidate": "repeat-candidate300",
+      "collection_rate_ratio": 2.138731812228674,
+      "outer_rate_ratio": 2.0575525490980526,
+      "cpu_cost_per_position_ratio": 1.1978419308855806
+    }
+  ],
+  "attempts": [
+    {
+      "index": 0,
+      "label": "baseline600",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 619.2204916104674,
+      "all_related_cpu_seconds": 625.7072145129999,
+      "observed_avg_cores": 1.0104756270026882,
+      "sampled_peak_sum_rss_gib": 1.9770469665527344,
+      "cleanup_before": [],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 0,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real full window",
+      "options": {
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 1,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 1932,
+      "complete_episodes": 109,
+      "committed_episodes": 108,
+      "decisions": 1974,
+      "simulations": 197445,
+      "complete_episode_positions": 1961,
+      "complete_but_uncommitted_positions": 29,
+      "completed_decisions_not_in_complete_episodes": 13,
+      "partial_search_simulations": 45,
+      "model_updates": 3,
+      "sgd_steps": 208,
+      "sgd_steps_due": 208,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 13312,
+      "updated_model_decisions": 1442,
+      "collection_seconds": 600.0619843304157,
+      "audit_wall_seconds": 16.435825504362583,
+      "outer_minus_collection_and_audit": 2.722681775689125,
+      "collection_positions_per_hour_extrapolated": 11590.80258643783,
+      "outer_positions_per_hour_extrapolated": 11232.186425082493,
+      "cpu_seconds_per_committed_position": 0.3238650178638716,
+      "parent_profile": {
+        "save": 82.13176929205656,
+        "rules": 127.91420429199934,
+        "encoding": 97.8281339481473,
+        "hash": 41.63980336487293,
+        "network_forward": 135.9239279292524,
+        "episode_finalize": 33.98329709842801,
+        "cohort_commit": 0.001087777316570282,
+        "sample_read": 15.319309417158365,
+        "publication": 0.06845114380121231,
+        "train_other": 12.736289095133543
+      },
+      "parent_profile_calls": {
+        "save": 2435,
+        "rules": 491488,
+        "encoding": 170050,
+        "hash": 156738,
+        "network_forward": 96608,
+        "episode_finalize": 109,
+        "cohort_commit": 27,
+        "sample_read": 360,
+        "publication": 3,
+        "train_other": 3
+      },
+      "actor_profile_sum_seconds": {},
+      "actor_job_wall_sum": 0,
+      "cohort_sum_of_longest_job_seconds": 0,
+      "actor_jobs_divided_by_four_seconds": 0.0,
+      "coordinator_wait_inclusive_seconds": 0,
+      "reconcile_inclusive_seconds": 0,
+      "parent_profile_sum": 547.5462733581662,
+      "residual_after_parent_profile_and_wait": 52.51571097224951,
+      "train_sample_load_encode": 16.85436762496829,
+      "train_forward_backward_step": 19.827241003513336,
+      "training_profile": [
+        {
+          "generation": "training-N1",
+          "profile": {
+            "sample_load_encode_seconds": 4.008073046803474,
+            "forward_backward_step_seconds": 6.491182383149862
+          }
+        },
+        {
+          "generation": "training-N2",
+          "profile": {
+            "sample_load_encode_seconds": 5.394956145435572,
+            "forward_backward_step_seconds": 6.659708969295025
+          }
+        },
+        {
+          "generation": "training-N3",
+          "profile": {
+            "sample_load_encode_seconds": 7.451338432729244,
+            "forward_backward_step_seconds": 6.676349651068449
+          }
+        }
+      ],
+      "completed_episode_search_totals": {
+        "new_simulations": 196100,
+        "forwards": 95461,
+        "expanded": 150150,
+        "terminal_backups": 46059,
+        "root_expansions": 109,
+        "encoding_seconds": 127.22517673298717,
+        "network_seconds": 131.36856274306774,
+        "rule_seconds": 120.51020497083664,
+        "traversal_backup_seconds": 18.982510838657618,
+        "cache_seconds": 0.5202728547155857,
+        "pv_cache_hits": 54689,
+        "cache_evictions": 19394
+      },
+      "search_cache_hit_rate": 0.3642291042291042,
+      "inference_forward_seconds_per_call": 0.0013761490319928321,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0,
+        "rpc_response_wait_seconds": 0,
+        "rpc_wait_seconds": 0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {},
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 109
+      },
+      "z_min": -0.9371309610541979,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9286444868989544,
+      "length_min": 10,
+      "length_max": 31,
+      "length_mean": 17.990825688073393,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        },
+        {
+          "id": "P48-perf-s4801-N1",
+          "hash": "672516b2daa836c515d223860af59c55068ab37f0b86f58fd70c63b6637b91a2",
+          "generation": 1,
+          "parent": "P48-perf-s4801-N0",
+          "initial_random": false,
+          "positions": 532,
+          "sgd_steps": 67
+        },
+        {
+          "id": "P48-perf-s4801-N2",
+          "hash": "607c47c6bbcb5e9e7104e62aa0a04167d06624f9024bc23b942b05a5078025c2",
+          "generation": 2,
+          "parent": "P48-perf-s4801-N1",
+          "initial_random": false,
+          "positions": 1095,
+          "sgd_steps": 138
+        },
+        {
+          "id": "P48-perf-s4801-N3",
+          "hash": "6610529a557f00c315dae760b13934a0fc4f11c9dd4bb1bc7200d0e32a598dff",
+          "generation": 3,
+          "parent": "P48-perf-s4801-N2",
+          "initial_random": false,
+          "positions": 1654,
+          "sgd_steps": 208
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 1,
+      "label": "micro-cpu",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 8.975164670497179,
+      "all_related_cpu_seconds": 9.550632051999969,
+      "observed_avg_cores": 1.0641177518886584,
+      "sampled_peak_sum_rss_gib": 0.8573837280273438,
+      "cleanup_before": [],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 0,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real micro process exit; micro payload absent"
+    },
+    {
+      "index": 2,
+      "label": "micro-gpu",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 9.441812131553888,
+      "all_related_cpu_seconds": 10.193966133000004,
+      "observed_avg_cores": 1.079662038490733,
+      "sampled_peak_sum_rss_gib": 1.8008041381835938,
+      "cleanup_before": [],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 0,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real micro process exit; micro payload absent"
+    },
+    {
+      "index": 3,
+      "label": "screen-reference",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 23.6985528357327,
+      "all_related_cpu_seconds": 23.903264851999893,
+      "observed_avg_cores": 1.0086381652789587,
+      "sampled_peak_sum_rss_gib": 0.7357826232910156,
+      "cleanup_before": [],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 0,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 1,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 20.472931541502476,
+      "audit_wall_seconds": 0.6504772268235683,
+      "outer_minus_collection_and_audit": 2.5751440674066544,
+      "collection_positions_per_hour_extrapolated": 13188.145500934212,
+      "outer_positions_per_hour_extrapolated": 11393.100746341514,
+      "cpu_seconds_per_committed_position": 0.3187101980266652,
+      "parent_profile": {
+        "save": 2.5283987298607826,
+        "rules": 5.655361611396074,
+        "encoding": 3.023991610854864,
+        "hash": 1.3952681384980679,
+        "network_forward": 5.032632153481245,
+        "episode_finalize": 1.2857894003391266,
+        "cohort_commit": 3.3542513847351074e-05
+      },
+      "parent_profile_calls": {
+        "save": 85,
+        "rules": 17093,
+        "encoding": 5272,
+        "hash": 5272,
+        "network_forward": 3835,
+        "episode_finalize": 4,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {},
+      "actor_job_wall_sum": 0,
+      "cohort_sum_of_longest_job_seconds": 0,
+      "actor_jobs_divided_by_four_seconds": 0.0,
+      "coordinator_wait_inclusive_seconds": 0,
+      "reconcile_inclusive_seconds": 0,
+      "parent_profile_sum": 18.921475186944008,
+      "residual_after_parent_profile_and_wait": 1.5514563545584679,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 3835,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 4.375959824770689,
+        "network_seconds": 5.250580038875341,
+        "rule_seconds": 5.542874991893768,
+        "traversal_backup_seconds": 0.730066005140543,
+        "cache_seconds": 0.0143016017973423,
+        "pv_cache_hits": 1362,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.2620742736193958,
+      "inference_forward_seconds_per_call": 0.0013691212617667123,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0,
+        "rpc_response_wait_seconds": 0,
+        "rpc_wait_seconds": 0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {},
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 4,
+      "label": "screen-serial-packed",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 22.11750989407301,
+      "all_related_cpu_seconds": 21.88450091599998,
+      "observed_avg_cores": 0.9894649542742843,
+      "sampled_peak_sum_rss_gib": 0.7351188659667969,
+      "cleanup_before": [],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 0,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "packed": true,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 1,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 18.584362637251616,
+      "audit_wall_seconds": 0.6704788617789745,
+      "outer_minus_collection_and_audit": 2.8626683950424194,
+      "collection_positions_per_hour_extrapolated": 14528.343278170636,
+      "outer_positions_per_hour_extrapolated": 12207.522514654956,
+      "cpu_seconds_per_committed_position": 0.29179334554666636,
+      "parent_profile": {
+        "save": 1.1452718302607536,
+        "rules": 5.700401168316603,
+        "encoding": 3.0370201021432877,
+        "hash": 1.3921308480203152,
+        "network_forward": 4.988223914057016,
+        "episode_finalize": 0.7571952156722546,
+        "cohort_commit": 2.9321759939193726e-05
+      },
+      "parent_profile_calls": {
+        "save": 85,
+        "rules": 17093,
+        "encoding": 5272,
+        "hash": 5272,
+        "network_forward": 3835,
+        "episode_finalize": 4,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {},
+      "actor_job_wall_sum": 0,
+      "cohort_sum_of_longest_job_seconds": 0,
+      "actor_jobs_divided_by_four_seconds": 0.0,
+      "coordinator_wait_inclusive_seconds": 0,
+      "reconcile_inclusive_seconds": 0,
+      "parent_profile_sum": 17.02027240023017,
+      "residual_after_parent_profile_and_wait": 1.5640902370214462,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 3835,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 4.3899297043681145,
+        "network_seconds": 5.210138112306595,
+        "rule_seconds": 5.58968236669898,
+        "traversal_backup_seconds": 0.7303444594144821,
+        "cache_seconds": 0.01468045637011528,
+        "pv_cache_hits": 1362,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.2620742736193958,
+      "inference_forward_seconds_per_call": 0.001358575778958695,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0,
+        "rpc_response_wait_seconds": 0,
+        "rpc_wait_seconds": 0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {},
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 5,
+      "label": "screen-serial-hash",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 24.040787056088448,
+      "all_related_cpu_seconds": 24.166534318000004,
+      "observed_avg_cores": 1.0052305800811838,
+      "sampled_peak_sum_rss_gib": 0.72625732421875,
+      "cleanup_before": [],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 0,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "direct_hash": true,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 1,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 20.692113857716322,
+      "audit_wall_seconds": 0.6503281965851784,
+      "outer_minus_collection_and_audit": 2.6983450017869473,
+      "collection_positions_per_hour_extrapolated": 13048.44936851698,
+      "outer_positions_per_hour_extrapolated": 11230.913504207476,
+      "cpu_seconds_per_committed_position": 0.3222204575733334,
+      "parent_profile": {
+        "save": 2.6743001639842987,
+        "rules": 5.721149999648333,
+        "encoding": 3.0386135578155518,
+        "hash": 1.3368642926216125,
+        "network_forward": 5.072947692126036,
+        "episode_finalize": 1.2904604487121105,
+        "cohort_commit": 3.492087125778198e-05
+      },
+      "parent_profile_calls": {
+        "save": 85,
+        "rules": 17093,
+        "encoding": 5272,
+        "hash": 5272,
+        "network_forward": 3835,
+        "episode_finalize": 4,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {},
+      "actor_job_wall_sum": 0,
+      "cohort_sum_of_longest_job_seconds": 0,
+      "actor_jobs_divided_by_four_seconds": 0.0,
+      "coordinator_wait_inclusive_seconds": 0,
+      "reconcile_inclusive_seconds": 0,
+      "parent_profile_sum": 19.1343710757792,
+      "residual_after_parent_profile_and_wait": 1.5577427819371223,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 3835,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 4.335857026278973,
+        "network_seconds": 5.292437255382538,
+        "rule_seconds": 5.609257113188505,
+        "traversal_backup_seconds": 0.7314472571015358,
+        "cache_seconds": 0.014530204236507416,
+        "pv_cache_hits": 1362,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.2620742736193958,
+      "inference_forward_seconds_per_call": 0.0013800357901910137,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0,
+        "rpc_response_wait_seconds": 0,
+        "rpc_wait_seconds": 0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {},
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 6,
+      "label": "screen-serial-combined",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 22.17758509889245,
+      "all_related_cpu_seconds": 22.32613075000006,
+      "observed_avg_cores": 1.0066980083920423,
+      "sampled_peak_sum_rss_gib": 0.7448196411132812,
+      "cleanup_before": [],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 0,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "packed": true,
+        "direct_hash": true,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 1,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 18.57788137719035,
+      "audit_wall_seconds": 0.9844221659004688,
+      "outer_minus_collection_and_audit": 2.61528155580163,
+      "collection_positions_per_hour_extrapolated": 14533.411777055591,
+      "outer_positions_per_hour_extrapolated": 12174.45446815054,
+      "cpu_seconds_per_committed_position": 0.29768174333333414,
+      "parent_profile": {
+        "save": 1.1677786968648434,
+        "rules": 5.690883211791515,
+        "encoding": 3.017660867422819,
+        "hash": 1.3308380991220474,
+        "network_forward": 5.048536829650402,
+        "episode_finalize": 0.7560728006064892,
+        "cohort_commit": 2.9359012842178345e-05
+      },
+      "parent_profile_calls": {
+        "save": 85,
+        "rules": 17093,
+        "encoding": 5272,
+        "hash": 5272,
+        "network_forward": 3835,
+        "episode_finalize": 4,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {},
+      "actor_job_wall_sum": 0,
+      "cohort_sum_of_longest_job_seconds": 0,
+      "actor_jobs_divided_by_four_seconds": 0.0,
+      "coordinator_wait_inclusive_seconds": 0,
+      "reconcile_inclusive_seconds": 0,
+      "parent_profile_sum": 17.01179986447096,
+      "residual_after_parent_profile_and_wait": 1.5660815127193928,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 3835,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 4.309427082538605,
+        "network_seconds": 5.276036150753498,
+        "rule_seconds": 5.580515269190073,
+        "traversal_backup_seconds": 0.7271792739629745,
+        "cache_seconds": 0.01476101204752922,
+        "pv_cache_hits": 1362,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.2620742736193958,
+      "inference_forward_seconds_per_call": 0.0013757591005876136,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0,
+        "rpc_response_wait_seconds": 0,
+        "rpc_wait_seconds": 0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {},
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 7,
+      "label": "screen-serial-threads4",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 22.663962349295616,
+      "all_related_cpu_seconds": 60.27955379599996,
+      "observed_avg_cores": 2.659709404162217,
+      "sampled_peak_sum_rss_gib": 0.7288970947265625,
+      "cleanup_before": [],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 0,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "threads": 4,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 4,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 19.455623041838408,
+      "audit_wall_seconds": 0.6652461960911751,
+      "outer_minus_collection_and_audit": 2.5430931113660336,
+      "collection_positions_per_hour_extrapolated": 13877.735985086554,
+      "outer_positions_per_hour_extrapolated": 11913.18604570447,
+      "cpu_seconds_per_committed_position": 0.8037273839466661,
+      "parent_profile": {
+        "save": 2.577421545982361,
+        "rules": 5.645301271229982,
+        "encoding": 3.071145847439766,
+        "hash": 1.4342098236083984,
+        "network_forward": 3.907582774758339,
+        "episode_finalize": 1.2817032486200333,
+        "cohort_commit": 3.5896897315979004e-05
+      },
+      "parent_profile_calls": {
+        "save": 85,
+        "rules": 17093,
+        "encoding": 5272,
+        "hash": 5272,
+        "network_forward": 3835,
+        "episode_finalize": 4,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {},
+      "actor_job_wall_sum": 0,
+      "cohort_sum_of_longest_job_seconds": 0,
+      "actor_jobs_divided_by_four_seconds": 0.0,
+      "coordinator_wait_inclusive_seconds": 0,
+      "reconcile_inclusive_seconds": 0,
+      "parent_profile_sum": 17.917400408536196,
+      "residual_after_parent_profile_and_wait": 1.5382226333022118,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 3835,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 4.464162841439247,
+        "network_seconds": 4.12542487680912,
+        "rule_seconds": 5.5328659154474735,
+        "traversal_backup_seconds": 0.7213836573064327,
+        "cache_seconds": 0.014455430209636688,
+        "pv_cache_hits": 1362,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.2620742736193958,
+      "inference_forward_seconds_per_call": 0.001075730085217502,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0,
+        "rpc_response_wait_seconds": 0,
+        "rpc_wait_seconds": 0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {},
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 8,
+      "label": "screen-cpu2",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 17.97853910923004,
+      "all_related_cpu_seconds": 30.737008842000023,
+      "observed_avg_cores": 1.7096499696251672,
+      "sampled_peak_sum_rss_gib": 1.4583587646484375,
+      "cleanup_before": [
+        {
+          "pid": 14680,
+          "created": 1792579157.98,
+          "status": "zombie"
+        }
+      ],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [
+          {
+            "pid": 14680,
+            "created": 1792579157.98,
+            "status": "zombie"
+          }
+        ],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 1,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "workers": 2,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 1,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 13.992854088544846,
+      "audit_wall_seconds": 0.9918719604611397,
+      "outer_minus_collection_and_audit": 2.9938130602240562,
+      "collection_positions_per_hour_extrapolated": 19295.56317042094,
+      "outer_positions_per_hour_extrapolated": 15017.90542377184,
+      "cpu_seconds_per_committed_position": 0.4098267845600003,
+      "parent_profile": {
+        "save": 0.10158853977918625,
+        "rules": 0.12209116667509079,
+        "encoding": 0.0630793645977974,
+        "hash": 0.029456976801156998,
+        "cohort_commit": 4.2766332626342773e-05
+      },
+      "parent_profile_calls": {
+        "save": 8,
+        "rules": 308,
+        "encoding": 75,
+        "hash": 75,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {
+        "save": 2.53738234564662,
+        "rules": 5.6700836308300495,
+        "encoding": 3.0028335861861706,
+        "hash": 1.3997676260769367,
+        "network_forward": 5.413243059068918,
+        "episode_finalize": 1.2899138554930687
+      },
+      "actor_job_wall_sum": 21.047854606062174,
+      "cohort_sum_of_longest_job_seconds": 7.279168777167797,
+      "actor_jobs_divided_by_four_seconds": 5.2619636515155435,
+      "coordinator_wait_inclusive_seconds": 13.412024158984423,
+      "reconcile_inclusive_seconds": 13.412006616592407,
+      "parent_profile_sum": 0.3162588141858578,
+      "residual_after_parent_profile_and_wait": 0.2645711153745651,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 4276,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 4.362440928816795,
+        "network_seconds": 5.6531088426709175,
+        "rule_seconds": 5.5580257549881935,
+        "traversal_backup_seconds": 0.7490481212735176,
+        "cache_seconds": 0.0140683613717556,
+        "pv_cache_hits": 921,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.17721762555320378,
+      "inference_forward_seconds_per_call": 0.0013220553888379134,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0.0,
+        "rpc_response_wait_seconds": 0.0,
+        "rpc_wait_seconds": 0.0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {
+        "14684": 0,
+        "14681": 0
+      },
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 9,
+      "label": "screen-cpu2-persistent",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 17.913089223206043,
+      "all_related_cpu_seconds": 31.214705414999912,
+      "observed_avg_cores": 1.7425640561518498,
+      "sampled_peak_sum_rss_gib": 1.4605903625488281,
+      "cleanup_before": [
+        {
+          "pid": 14713,
+          "created": 1792579175.98,
+          "status": "zombie"
+        }
+      ],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [
+          {
+            "pid": 14713,
+            "created": 1792579175.98,
+            "status": "zombie"
+          }
+        ],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 1,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "workers": 2,
+        "persistent_cache": true,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 1,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 14.237191934138536,
+      "audit_wall_seconds": 0.9675644487142563,
+      "outer_minus_collection_and_audit": 2.7083328403532505,
+      "collection_positions_per_hour_extrapolated": 18964.413856961688,
+      "outer_positions_per_hour_extrapolated": 15072.777042288188,
+      "cpu_seconds_per_committed_position": 0.4161960721999988,
+      "parent_profile": {
+        "save": 0.07437749952077866,
+        "rules": 0.10499033704400063,
+        "encoding": 0.0554739348590374,
+        "hash": 0.0251917727291584,
+        "cohort_commit": 4.5862048864364624e-05
+      },
+      "parent_profile_calls": {
+        "save": 8,
+        "rules": 308,
+        "encoding": 75,
+        "hash": 75,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {
+        "save": 2.5895467698574066,
+        "rules": 5.665571618825197,
+        "encoding": 3.012833420187235,
+        "hash": 1.4044706486165524,
+        "network_forward": 5.062771532684565,
+        "episode_finalize": 1.303701650351286
+      },
+      "actor_job_wall_sum": 20.769708313047886,
+      "cohort_sum_of_longest_job_seconds": 7.0546076856553555,
+      "actor_jobs_divided_by_four_seconds": 5.1924270782619715,
+      "coordinator_wait_inclusive_seconds": 13.599527094513178,
+      "reconcile_inclusive_seconds": 13.599515695124865,
+      "parent_profile_sum": 0.26007940620183945,
+      "residual_after_parent_profile_and_wait": 0.37758543342351913,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 3981,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 4.378224715590477,
+        "network_seconds": 5.299627050757408,
+        "rule_seconds": 5.553319916129112,
+        "traversal_backup_seconds": 0.7390068806707859,
+        "cache_seconds": 0.014140713959932327,
+        "pv_cache_hits": 1216,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.2339811429670964,
+      "inference_forward_seconds_per_call": 0.001331230105691386,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0.0,
+        "rpc_response_wait_seconds": 0.0,
+        "rpc_wait_seconds": 0.0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {
+        "14714": 1,
+        "14717": 1
+      },
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 10,
+      "label": "screen-cpu2-combined",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 16.315410017967224,
+      "all_related_cpu_seconds": 28.244731125000044,
+      "observed_avg_cores": 1.7311689435874271,
+      "sampled_peak_sum_rss_gib": 1.4694709777832031,
+      "cleanup_before": [
+        {
+          "pid": 14744,
+          "created": 1792579193.9,
+          "status": "zombie"
+        }
+      ],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [
+          {
+            "pid": 14744,
+            "created": 1792579193.9,
+            "status": "zombie"
+          }
+        ],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 1,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "workers": 2,
+        "persistent_cache": true,
+        "packed": true,
+        "direct_hash": true,
+        "completion_order": true,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 1,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 12.626044806092978,
+      "audit_wall_seconds": 0.9573768265545368,
+      "outer_minus_collection_and_audit": 2.7319883853197098,
+      "collection_positions_per_hour_extrapolated": 21384.368909391604,
+      "outer_positions_per_hour_extrapolated": 16548.771970956568,
+      "cpu_seconds_per_committed_position": 0.3765964150000006,
+      "parent_profile": {
+        "save": 0.07650861144065857,
+        "rules": 0.12811749055981636,
+        "encoding": 0.06739773601293564,
+        "hash": 0.02668285369873047,
+        "cohort_commit": 4.3235719203948975e-05
+      },
+      "parent_profile_calls": {
+        "save": 8,
+        "rules": 308,
+        "encoding": 75,
+        "hash": 75,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {
+        "save": 1.1603079624474049,
+        "rules": 5.683386664837599,
+        "encoding": 3.025874648243189,
+        "hash": 1.3334699086844921,
+        "network_forward": 5.032834891229868,
+        "episode_finalize": 0.7615109719336033
+      },
+      "actor_job_wall_sum": 18.70408983901143,
+      "cohort_sum_of_longest_job_seconds": 6.489548996090889,
+      "actor_jobs_divided_by_four_seconds": 4.676022459752858,
+      "coordinator_wait_inclusive_seconds": 12.183063048869371,
+      "reconcile_inclusive_seconds": 0.9138661623001099,
+      "parent_profile_sum": 0.298749927431345,
+      "residual_after_parent_profile_and_wait": 0.14423182979226112,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 3981,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 4.3198301158845425,
+        "network_seconds": 5.25774846971035,
+        "rule_seconds": 5.571338966488838,
+        "traversal_backup_seconds": 0.7373741194605827,
+        "cache_seconds": 0.016004707664251328,
+        "pv_cache_hits": 1216,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.2339811429670964,
+      "inference_forward_seconds_per_call": 0.0013207104922658504,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0.0,
+        "rpc_response_wait_seconds": 0.0,
+        "rpc_wait_seconds": 0.0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {
+        "14748": 1,
+        "14745": 1
+      },
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 11,
+      "label": "screen-cpu4",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 13.668416120111942,
+      "all_related_cpu_seconds": 35.45148998899981,
+      "observed_avg_cores": 2.5936794488452746,
+      "sampled_peak_sum_rss_gib": 2.1803207397460938,
+      "cleanup_before": [
+        {
+          "pid": 14775,
+          "created": 1792579210.27,
+          "status": "zombie"
+        }
+      ],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [
+          {
+            "pid": 14775,
+            "created": 1792579210.27,
+            "status": "zombie"
+          }
+        ],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 1,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "workers": 4,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 1,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 10.418939981609583,
+      "audit_wall_seconds": 0.6497078128159046,
+      "outer_minus_collection_and_audit": 2.5997683256864548,
+      "collection_positions_per_hour_extrapolated": 25914.344499207753,
+      "outer_positions_per_hour_extrapolated": 19753.56893054473,
+      "cpu_seconds_per_committed_position": 0.47268653318666415,
+      "parent_profile": {
+        "save": 0.06302455067634583,
+        "rules": 0.08404833823442459,
+        "encoding": 0.04347565025091171,
+        "hash": 0.019848812371492386,
+        "cohort_commit": 3.3721327781677246e-05
+      },
+      "parent_profile_calls": {
+        "save": 8,
+        "rules": 308,
+        "encoding": 75,
+        "hash": 75,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {
+        "save": 2.585508469492197,
+        "rules": 5.671529054641724,
+        "encoding": 3.0133940018713474,
+        "hash": 1.3984025195240974,
+        "network_forward": 5.396708969026804,
+        "episode_finalize": 1.2901551388204098
+      },
+      "actor_job_wall_sum": 21.089527245610952,
+      "cohort_sum_of_longest_job_seconds": 7.312017414718866,
+      "actor_jobs_divided_by_four_seconds": 5.272381811402738,
+      "coordinator_wait_inclusive_seconds": 9.892791245132685,
+      "reconcile_inclusive_seconds": 9.892780680209398,
+      "parent_profile_sum": 0.2104310728609562,
+      "residual_after_parent_profile_and_wait": 0.315717663615942,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 4276,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 4.371848203241825,
+        "network_seconds": 5.63652416691184,
+        "rule_seconds": 5.556547403335571,
+        "traversal_backup_seconds": 0.7382107377052307,
+        "cache_seconds": 0.014148600399494171,
+        "pv_cache_hits": 921,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.17721762555320378,
+      "inference_forward_seconds_per_call": 0.0013181768397829375,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0.0,
+        "rpc_response_wait_seconds": 0.0,
+        "rpc_wait_seconds": 0.0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {
+        "14780": 0,
+        "14779": 0,
+        "14781": 0,
+        "14776": 0
+      },
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 12,
+      "label": "screen-cpu4-persistent",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 13.848072074353695,
+      "all_related_cpu_seconds": 35.62307666800007,
+      "observed_avg_cores": 2.572421379433255,
+      "sampled_peak_sum_rss_gib": 2.183277130126953,
+      "cleanup_before": [
+        {
+          "pid": 14802,
+          "created": 1792579223.99,
+          "status": "zombie"
+        }
+      ],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [
+          {
+            "pid": 14802,
+            "created": 1792579223.99,
+            "status": "zombie"
+          }
+        ],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 1,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "workers": 4,
+        "persistent_cache": true,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 1,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 10.431819193065166,
+      "audit_wall_seconds": 0.6526483669877052,
+      "outer_minus_collection_and_audit": 2.763604514300823,
+      "collection_positions_per_hour_extrapolated": 25882.35043217484,
+      "outer_positions_per_hour_extrapolated": 19497.298869496328,
+      "cpu_seconds_per_committed_position": 0.47497435557333423,
+      "parent_profile": {
+        "save": 0.06614476069808006,
+        "rules": 0.09702818095684052,
+        "encoding": 0.05167568102478981,
+        "hash": 0.02029431238770485,
+        "cohort_commit": 3.15345823764801e-05
+      },
+      "parent_profile_calls": {
+        "save": 8,
+        "rules": 308,
+        "encoding": 75,
+        "hash": 75,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {
+        "save": 2.711350977420807,
+        "rules": 5.721477210521698,
+        "encoding": 3.0310470052063465,
+        "hash": 1.4051091372966766,
+        "network_forward": 5.45281907916069,
+        "episode_finalize": 1.3154079094529152
+      },
+      "actor_job_wall_sum": 21.401759184896946,
+      "cohort_sum_of_longest_job_seconds": 7.4250269159674644,
+      "actor_jobs_divided_by_four_seconds": 5.3504397962242365,
+      "coordinator_wait_inclusive_seconds": 9.917036928236485,
+      "reconcile_inclusive_seconds": 9.917027015239,
+      "parent_profile_sum": 0.23517446964979172,
+      "residual_after_parent_profile_and_wait": 0.27960779517889023,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 4276,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 4.3923131711781025,
+        "network_seconds": 5.695417944341898,
+        "rule_seconds": 5.592013247311115,
+        "traversal_backup_seconds": 0.7485977038741112,
+        "cache_seconds": 0.014372061938047409,
+        "pv_cache_hits": 921,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.17721762555320378,
+      "inference_forward_seconds_per_call": 0.0013319499402109209,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0.0,
+        "rpc_response_wait_seconds": 0.0,
+        "rpc_wait_seconds": 0.0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {
+        "14807": 1,
+        "14803": 1,
+        "14806": 1,
+        "14808": 1
+      },
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 13,
+      "label": "screen-cpu4-combined",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 12.707619179040194,
+      "all_related_cpu_seconds": 33.349916184999984,
+      "observed_avg_cores": 2.6244031801021364,
+      "sampled_peak_sum_rss_gib": 2.1888275146484375,
+      "cleanup_before": [
+        {
+          "pid": 14831,
+          "created": 1792579237.84,
+          "status": "zombie"
+        }
+      ],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [
+          {
+            "pid": 14831,
+            "created": 1792579237.84,
+            "status": "zombie"
+          }
+        ],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 1,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "workers": 4,
+        "persistent_cache": true,
+        "packed": true,
+        "direct_hash": true,
+        "completion_order": true,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 1,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 9.456305585801601,
+      "audit_wall_seconds": 0.6566292680799961,
+      "outer_minus_collection_and_audit": 2.594684325158596,
+      "collection_positions_per_hour_extrapolated": 28552.376776549823,
+      "outer_positions_per_hour_extrapolated": 21247.095635769052,
+      "cpu_seconds_per_committed_position": 0.4446655491333331,
+      "parent_profile": {
+        "save": 0.05953279510140419,
+        "rules": 0.08640357106924057,
+        "encoding": 0.04696836322546005,
+        "hash": 0.019690677523612976,
+        "cohort_commit": 3.3270567655563354e-05
+      },
+      "parent_profile_calls": {
+        "save": 8,
+        "rules": 308,
+        "encoding": 75,
+        "hash": 75,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {
+        "save": 1.0872144363820553,
+        "rules": 5.681217033416033,
+        "encoding": 3.004095621407032,
+        "hash": 1.3355215229094028,
+        "network_forward": 5.41560648009181,
+        "episode_finalize": 0.7675157152116299
+      },
+      "actor_job_wall_sum": 19.031749457120895,
+      "cohort_sum_of_longest_job_seconds": 6.673403602093458,
+      "actor_jobs_divided_by_four_seconds": 4.757937364280224,
+      "coordinator_wait_inclusive_seconds": 8.939372535794973,
+      "reconcile_inclusive_seconds": 0.6603044793009758,
+      "parent_profile_sum": 0.21262867748737335,
+      "residual_after_parent_profile_and_wait": 0.3043043725192547,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 4276,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 4.301761634647846,
+        "network_seconds": 5.658550176769495,
+        "rule_seconds": 5.567302022129297,
+        "traversal_backup_seconds": 0.7426101714372635,
+        "cache_seconds": 0.014213532209396362,
+        "pv_cache_hits": 921,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.17721762555320378,
+      "inference_forward_seconds_per_call": 0.0013233279178600315,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0.0,
+        "rpc_response_wait_seconds": 0.0,
+        "rpc_wait_seconds": 0.0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {
+        "14837": 1,
+        "14836": 1,
+        "14835": 1,
+        "14832": 1
+      },
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 14,
+      "label": "screen-cpu4-trainthreads",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 13.337523873895407,
+      "all_related_cpu_seconds": 34.61155528300003,
+      "observed_avg_cores": 2.595051046224763,
+      "sampled_peak_sum_rss_gib": 2.195056915283203,
+      "cleanup_before": [
+        {
+          "pid": 14861,
+          "created": 1792579250.63,
+          "status": "zombie"
+        }
+      ],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [
+          {
+            "pid": 14861,
+            "created": 1792579250.63,
+            "status": "zombie"
+          }
+        ],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 1,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "workers": 4,
+        "persistent_cache": true,
+        "packed": true,
+        "direct_hash": true,
+        "threads": 4,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 4,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 9.886328473687172,
+      "audit_wall_seconds": 0.8109235092997551,
+      "outer_minus_collection_and_audit": 2.6402718909084797,
+      "collection_positions_per_hour_extrapolated": 27310.44196221226,
+      "outer_positions_per_hour_extrapolated": 20243.63761615842,
+      "cpu_seconds_per_committed_position": 0.46148740377333375,
+      "parent_profile": {
+        "save": 0.07891365513205528,
+        "rules": 0.123703233897686,
+        "encoding": 0.0641862004995346,
+        "hash": 0.02815401181578636,
+        "cohort_commit": 4.2807310819625854e-05
+      },
+      "parent_profile_calls": {
+        "save": 8,
+        "rules": 308,
+        "encoding": 75,
+        "hash": 75,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {
+        "save": 1.109069637954235,
+        "rules": 5.77728945761919,
+        "encoding": 3.0969960950315,
+        "hash": 1.3642487823963165,
+        "network_forward": 5.490644458681345,
+        "episode_finalize": 0.763169202953577
+      },
+      "actor_job_wall_sum": 19.38219966739416,
+      "cohort_sum_of_longest_job_seconds": 6.752965338528156,
+      "actor_jobs_divided_by_four_seconds": 4.84554991684854,
+      "coordinator_wait_inclusive_seconds": 9.365679170936346,
+      "reconcile_inclusive_seconds": 9.365668073296547,
+      "parent_profile_sum": 0.2949999086558819,
+      "residual_after_parent_profile_and_wait": 0.225649394094944,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 4276,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 4.4225991778075695,
+        "network_seconds": 5.736141260713339,
+        "rule_seconds": 5.666219480335712,
+        "traversal_backup_seconds": 0.7570567615330219,
+        "cache_seconds": 0.014208942651748657,
+        "pv_cache_hits": 921,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.17721762555320378,
+      "inference_forward_seconds_per_call": 0.001341473634404429,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0.0,
+        "rpc_response_wait_seconds": 0.0,
+        "rpc_wait_seconds": 0.0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {
+        "14862": 1,
+        "14866": 1,
+        "14865": 1,
+        "14867": 1
+      },
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 15,
+      "label": "screen-cpu-shared-batch",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 30.72474418580532,
+      "all_related_cpu_seconds": 72.8513009620001,
+      "observed_avg_cores": 2.3710954441618113,
+      "sampled_peak_sum_rss_gib": 2.5170860290527344,
+      "cleanup_before": [
+        {
+          "pid": 14888,
+          "created": 1792579263.96,
+          "status": "zombie"
+        }
+      ],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [
+          {
+            "pid": 14888,
+            "created": 1792579263.96,
+            "status": "zombie"
+          }
+        ],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 1,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "workers": 4,
+        "persistent_cache": true,
+        "packed": true,
+        "direct_hash": true,
+        "rpc_device": "cpu",
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 1,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": "cpu"
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 26.8484146296978,
+      "audit_wall_seconds": 0.9886754415929317,
+      "outer_minus_collection_and_audit": 2.8876541145145893,
+      "collection_positions_per_hour_extrapolated": 10056.459709965344,
+      "outer_positions_per_hour_extrapolated": 8787.705387136752,
+      "cpu_seconds_per_committed_position": 0.9713506794933346,
+      "parent_profile": {
+        "save": 0.09680067747831345,
+        "rules": 0.13201219588518143,
+        "encoding": 0.06675759702920914,
+        "hash": 0.02841753140091896,
+        "cohort_commit": 5.954131484031677e-05
+      },
+      "parent_profile_calls": {
+        "save": 8,
+        "rules": 308,
+        "encoding": 75,
+        "hash": 75,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {
+        "save": 2.246030542999506,
+        "rules": 14.821790631860495,
+        "encoding": 10.064306996762753,
+        "hash": 4.437514062970877,
+        "network_forward": 22.75056817755103,
+        "episode_finalize": 1.1893918439745903
+      },
+      "actor_job_wall_sum": 59.842606138437986,
+      "cohort_sum_of_longest_job_seconds": 21.11250527948141,
+      "actor_jobs_divided_by_four_seconds": 14.960651534609497,
+      "coordinator_wait_inclusive_seconds": 23.89014906063676,
+      "reconcile_inclusive_seconds": 23.89013070613146,
+      "parent_profile_sum": 0.3240475431084633,
+      "residual_after_parent_profile_and_wait": 2.6342180259525776,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 4276,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 14.475108534097672,
+        "network_seconds": 23.331029068678617,
+        "rule_seconds": 14.69580115377903,
+        "traversal_backup_seconds": 1.9376996830105782,
+        "cache_seconds": 0.0363604873418808,
+        "pv_cache_hits": 921,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.17721762555320378,
+      "inference_forward_seconds_per_call": 0.005456274337857487,
+      "rpc": {
+        "requests": 4276,
+        "kernel_batches": 3363,
+        "kernel_rows": 3835,
+        "cache_hits": 441,
+        "invalidations": 1,
+        "evictions": 0,
+        "h2d_seconds": 0.29069532454013824,
+        "forward_seconds": 8.410536866635084,
+        "d2h_seconds": 0.04740939289331436,
+        "batch_fill_wait_seconds": 1.0231454707682133,
+        "max_batch": 3,
+        "hash_seconds": 2.5661126039922237,
+        "request_bytes": 1589816800,
+        "deduplicated_rows": 0,
+        "max_request_batch": 3,
+        "device": "cpu",
+        "cleanup_errors": [],
+        "cleanup_complete": true,
+        "service_pid": 14889
+      },
+      "actor_rpc_sum": {
+        "rpc_requests": 4276,
+        "rpc_send_seconds": 2.1604900658130646,
+        "rpc_response_wait_seconds": 20.309989795088768,
+        "rpc_wait_seconds": 22.467269226908684
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {
+        "14900": 1,
+        "14899": 1,
+        "14901": 1,
+        "14896": 1
+      },
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums",
+      "rpc_mean_kernel_batch": 1.1403508771929824,
+      "rpc_mean_forward_ms_per_row": 2.193099574089983
+    },
+    {
+      "index": 16,
+      "label": "screen-gpu-serial",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 23.090814501047134,
+      "all_related_cpu_seconds": 23.217483471999913,
+      "observed_avg_cores": 1.0054856865680089,
+      "sampled_peak_sum_rss_gib": 1.4919319152832031,
+      "cleanup_before": [],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 0,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "serial_gpu": true,
+        "gpu_train": true,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cu130",
+        "numpy": "2.3.5",
+        "torch_cuda": "13.0",
+        "threads": 1,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cuda:0",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 19.002151612192392,
+      "audit_wall_seconds": 0.6708696335554123,
+      "outer_minus_collection_and_audit": 3.4177932552993298,
+      "collection_positions_per_hour_extrapolated": 14208.917258967625,
+      "outer_positions_per_hour_extrapolated": 11692.961285006031,
+      "cpu_seconds_per_committed_position": 0.3095664462933322,
+      "parent_profile": {
+        "save": 2.8499058075249195,
+        "rules": 5.659324448555708,
+        "encoding": 2.982124738395214,
+        "hash": 1.3768519014120102,
+        "network_forward": 3.2800461873412132,
+        "episode_finalize": 1.302655402570963,
+        "cohort_commit": 3.468245267868042e-05
+      },
+      "parent_profile_calls": {
+        "save": 85,
+        "rules": 17093,
+        "encoding": 5272,
+        "hash": 5272,
+        "network_forward": 3835,
+        "episode_finalize": 4,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {},
+      "actor_job_wall_sum": 0,
+      "cohort_sum_of_longest_job_seconds": 0,
+      "actor_jobs_divided_by_four_seconds": 0.0,
+      "coordinator_wait_inclusive_seconds": 0,
+      "reconcile_inclusive_seconds": 0,
+      "parent_profile_sum": 17.450943168252707,
+      "residual_after_parent_profile_and_wait": 1.5512084439396858,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 3835,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 4.319083292037249,
+        "network_seconds": 3.505005892366171,
+        "rule_seconds": 5.546388760209084,
+        "traversal_backup_seconds": 0.72899329662323,
+        "cache_seconds": 0.014233551919460297,
+        "pv_cache_hits": 1362,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.2620742736193958,
+      "inference_forward_seconds_per_call": 0.0009139519927943079,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0,
+        "rpc_response_wait_seconds": 0,
+        "rpc_wait_seconds": 0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {},
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 17,
+      "label": "screen-gpu-shared-0.0002",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 30.20036255195737,
+      "all_related_cpu_seconds": 73.98777757400012,
+      "observed_avg_cores": 2.4498969986439705,
+      "sampled_peak_sum_rss_gib": 4.816211700439453,
+      "cleanup_before": [
+        {
+          "pid": 14990,
+          "created": 1792579318.02,
+          "status": "zombie"
+        }
+      ],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [
+          {
+            "pid": 14990,
+            "created": 1792579318.02,
+            "status": "zombie"
+          }
+        ],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 1,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "workers": 4,
+        "persistent_cache": true,
+        "packed": true,
+        "direct_hash": true,
+        "completion_order": true,
+        "rpc_device": "cuda",
+        "rpc_batch_wait": 0.0002,
+        "gpu_train": false,
+        "threads": 4,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cu130",
+        "numpy": "2.3.5",
+        "torch_cuda": "13.0",
+        "threads": 4,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": "cuda"
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 26.387130726128817,
+      "audit_wall_seconds": 0.9855981953442097,
+      "outer_minus_collection_and_audit": 2.8276336304843426,
+      "collection_positions_per_hour_extrapolated": 10232.260672913677,
+      "outer_positions_per_hour_extrapolated": 8940.290022528241,
+      "cpu_seconds_per_committed_position": 0.9865037009866683,
+      "parent_profile": {
+        "save": 0.1130145788192749,
+        "rules": 0.14593537896871567,
+        "encoding": 0.07378299906849861,
+        "hash": 0.028779219835996628,
+        "cohort_commit": 6.301328539848328e-05
+      },
+      "parent_profile_calls": {
+        "save": 8,
+        "rules": 308,
+        "encoding": 75,
+        "hash": 75,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {
+        "save": 2.310202769935131,
+        "rules": 14.408633779734373,
+        "encoding": 9.589213095605373,
+        "hash": 4.198180180042982,
+        "network_forward": 22.276790507137775,
+        "episode_finalize": 1.1896453015506268
+      },
+      "actor_job_wall_sum": 58.40463100373745,
+      "cohort_sum_of_longest_job_seconds": 19.963057830929756,
+      "actor_jobs_divided_by_four_seconds": 14.601157750934362,
+      "coordinator_wait_inclusive_seconds": 22.709057174623013,
+      "reconcile_inclusive_seconds": 1.0917990431189537,
+      "parent_profile_sum": 0.3615751899778843,
+      "residual_after_parent_profile_and_wait": 3.3164983615279198,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 4276,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 13.767486199736595,
+        "network_seconds": 22.932924292981625,
+        "rule_seconds": 14.275648634880781,
+        "traversal_backup_seconds": 1.9619928747415543,
+        "cache_seconds": 0.0374804362654686,
+        "pv_cache_hits": 921,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.17721762555320378,
+      "inference_forward_seconds_per_call": 0.0053631721919975735,
+      "rpc": {
+        "requests": 4276,
+        "kernel_batches": 3356,
+        "kernel_rows": 3835,
+        "cache_hits": 438,
+        "invalidations": 1,
+        "evictions": 0,
+        "h2d_seconds": 1.0755928009748459,
+        "forward_seconds": 6.144690655171871,
+        "d2h_seconds": 0.46954646334052086,
+        "batch_fill_wait_seconds": 1.0480414070189,
+        "max_batch": 3,
+        "hash_seconds": 2.8774451836943626,
+        "request_bytes": 1589816800,
+        "deduplicated_rows": 3,
+        "max_request_batch": 3,
+        "device": "cuda",
+        "cuda_peak_allocated_bytes": 81664000,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "cleanup_errors": [],
+        "cleanup_complete": true,
+        "service_pid": 14991
+      },
+      "actor_rpc_sum": {
+        "rpc_requests": 4276,
+        "rpc_send_seconds": 2.333715260028839,
+        "rpc_response_wait_seconds": 19.613995410501957,
+        "rpc_wait_seconds": 21.94464150443673
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {
+        "15002": 1,
+        "15007": 1,
+        "15005": 1,
+        "15006": 1
+      },
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums",
+      "rpc_mean_kernel_batch": 1.1427294398092969,
+      "rpc_mean_forward_ms_per_row": 1.6022661421569417
+    },
+    {
+      "index": 18,
+      "label": "screen-gpu-shared-0.001",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 35.41933170706034,
+      "all_related_cpu_seconds": 80.50838685600002,
+      "observed_avg_cores": 2.2730069421369636,
+      "sampled_peak_sum_rss_gib": 4.799800872802734,
+      "cleanup_before": [
+        {
+          "pid": 15060,
+          "created": 1792579348.88,
+          "status": "zombie"
+        }
+      ],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [
+          {
+            "pid": 15060,
+            "created": 1792579348.88,
+            "status": "zombie"
+          }
+        ],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 1,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real fixed four episodes",
+      "options": {
+        "workers": 4,
+        "persistent_cache": true,
+        "packed": true,
+        "direct_hash": true,
+        "completion_order": true,
+        "rpc_device": "cuda",
+        "rpc_batch_wait": 0.001,
+        "gpu_train": false,
+        "threads": 4,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cu130",
+        "numpy": "2.3.5",
+        "torch_cuda": "13.0",
+        "threads": 4,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": "cuda"
+      },
+      "seed": 4801,
+      "qualified_positions": 75,
+      "complete_episodes": 4,
+      "committed_episodes": 4,
+      "decisions": 75,
+      "simulations": 7500,
+      "complete_episode_positions": 75,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 0,
+      "sgd_steps": 0,
+      "sgd_steps_due": 0,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 0,
+      "updated_model_decisions": 0,
+      "collection_seconds": 30.593584917485714,
+      "audit_wall_seconds": 0.9754175804555416,
+      "outer_minus_collection_and_audit": 3.8503292091190815,
+      "collection_positions_per_hour_extrapolated": 8825.379592755144,
+      "outer_positions_per_hour_extrapolated": 7622.955798067172,
+      "cpu_seconds_per_committed_position": 1.0734451580800002,
+      "parent_profile": {
+        "save": 0.14725182577967644,
+        "rules": 0.13924122601747513,
+        "encoding": 0.0697660930454731,
+        "hash": 0.028623174875974655,
+        "cohort_commit": 8.364766836166382e-05
+      },
+      "parent_profile_calls": {
+        "save": 8,
+        "rules": 308,
+        "encoding": 75,
+        "hash": 75,
+        "cohort_commit": 1
+      },
+      "actor_profile_sum_seconds": {
+        "save": 2.552725374698639,
+        "rules": 15.54483650997281,
+        "encoding": 10.444034069776535,
+        "hash": 4.662064258009195,
+        "network_forward": 32.196291733533144,
+        "episode_finalize": 1.1890949495136738
+      },
+      "actor_job_wall_sum": 71.43769511207938,
+      "cohort_sum_of_longest_job_seconds": 23.760221619158983,
+      "actor_jobs_divided_by_four_seconds": 17.859423778019845,
+      "coordinator_wait_inclusive_seconds": 26.797183074057102,
+      "reconcile_inclusive_seconds": 1.0570960082113743,
+      "parent_profile_sum": 0.384965967386961,
+      "residual_after_parent_profile_and_wait": 3.4114358760416508,
+      "train_sample_load_encode": 0,
+      "train_forward_backward_step": 0,
+      "training_profile": [],
+      "completed_episode_search_totals": {
+        "new_simulations": 7500,
+        "forwards": 4276,
+        "expanded": 5197,
+        "terminal_backups": 2307,
+        "root_expansions": 4,
+        "encoding_seconds": 15.08956240862608,
+        "network_seconds": 32.91746558994055,
+        "rule_seconds": 15.407380979508162,
+        "traversal_backup_seconds": 2.159510999917984,
+        "cache_seconds": 0.040531884878873825,
+        "pv_cache_hits": 921,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.17721762555320378,
+      "inference_forward_seconds_per_call": 0.007698191204382729,
+      "rpc": {
+        "requests": 4276,
+        "kernel_batches": 2854,
+        "kernel_rows": 3835,
+        "cache_hits": 438,
+        "invalidations": 1,
+        "evictions": 0,
+        "h2d_seconds": 1.2465709261596203,
+        "forward_seconds": 6.457937389612198,
+        "d2h_seconds": 0.4792946130037308,
+        "batch_fill_wait_seconds": 3.3226135931909084,
+        "max_batch": 4,
+        "hash_seconds": 3.925650678575039,
+        "request_bytes": 1589816800,
+        "deduplicated_rows": 3,
+        "max_request_batch": 4,
+        "device": "cuda",
+        "cuda_peak_allocated_bytes": 83324416,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "cleanup_errors": [],
+        "cleanup_complete": true,
+        "service_pid": 15061
+      },
+      "actor_rpc_sum": {
+        "rpc_requests": 4276,
+        "rpc_send_seconds": 2.5736361853778362,
+        "rpc_response_wait_seconds": 29.252883434295654,
+        "rpc_wait_seconds": 31.823100175708532
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {
+        "15072": 1,
+        "15076": 1,
+        "15077": 1,
+        "15075": 1
+      },
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 4
+      },
+      "z_min": -0.9359912056579907,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9283470631299103,
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 18.75,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums",
+      "rpc_mean_kernel_batch": 1.343728100911002,
+      "rpc_mean_forward_ms_per_row": 1.6839471680866227
+    },
+    {
+      "index": 19,
+      "label": "selected-learning-gate",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 100.86699130013585,
+      "all_related_cpu_seconds": 238.6446656579999,
+      "observed_avg_cores": 2.3659342127881877,
+      "sampled_peak_sum_rss_gib": 2.792877197265625,
+      "cleanup_before": [
+        {
+          "pid": 15135,
+          "created": 1792579383.94,
+          "status": "zombie"
+        }
+      ],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [
+          {
+            "pid": 15135,
+            "created": 1792579383.94,
+            "status": "zombie"
+          }
+        ],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 1,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real learning/reload gate",
+      "options": {
+        "workers": 4,
+        "persistent_cache": true,
+        "packed": true,
+        "direct_hash": true,
+        "threads": 4,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4803.npz",
+        "initial_hash": "a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 4,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4803,
+      "qualified_positions": 610,
+      "complete_episodes": 32,
+      "committed_episodes": 32,
+      "decisions": 610,
+      "simulations": 61000,
+      "complete_episode_positions": 610,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 1,
+      "sgd_steps": 67,
+      "sgd_steps_due": 67,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 4288,
+      "updated_model_decisions": 74,
+      "collection_seconds": 92.5086672231555,
+      "audit_wall_seconds": 5.0677787363529205,
+      "outer_minus_collection_and_audit": 3.290545340627432,
+      "collection_positions_per_hour_extrapolated": 23738.31626719542,
+      "outer_positions_per_hour_extrapolated": 21771.24519820036,
+      "cpu_seconds_per_committed_position": 0.3912207633737703,
+      "parent_profile": {
+        "save": 2.466560438275337,
+        "rules": 1.502367403358221,
+        "encoding": 3.1957959942519665,
+        "hash": 0.3414246663451195,
+        "cohort_commit": 0.0002577267587184906,
+        "sample_read": 3.9398907348513603,
+        "network_forward": 1.1244346275925636,
+        "publication": 0.006556622684001923,
+        "train_other": 1.8970317207276821
+      },
+      "parent_profile_calls": {
+        "save": 127,
+        "rules": 4704,
+        "encoding": 5434,
+        "hash": 1146,
+        "cohort_commit": 8,
+        "sample_read": 84,
+        "network_forward": 67,
+        "publication": 1,
+        "train_other": 1
+      },
+      "actor_profile_sum_seconds": {
+        "save": 8.450940355658531,
+        "rules": 41.68480020016432,
+        "encoding": 28.38716209679842,
+        "hash": 12.567162990570068,
+        "network_forward": 44.80271902307868,
+        "episode_finalize": 6.234399702399969
+      },
+      "actor_job_wall_sum": 156.8593122921884,
+      "cohort_sum_of_longest_job_seconds": 48.37625785544515,
+      "actor_jobs_divided_by_four_seconds": 39.2148280730471,
+      "coordinator_wait_inclusive_seconds": 56.941155936568975,
+      "reconcile_inclusive_seconds": 56.94103408977389,
+      "parent_profile_sum": 14.47431993484497,
+      "residual_after_parent_profile_and_wait": 21.093191351741552,
+      "train_sample_load_encode": 4.013044197112322,
+      "train_forward_backward_step": 2.596002656966448,
+      "training_profile": [
+        {
+          "generation": "training-N1",
+          "profile": {
+            "sample_load_encode_seconds": 4.013044197112322,
+            "forward_backward_step_seconds": 2.596002656966448
+          }
+        }
+      ],
+      "completed_episode_search_totals": {
+        "new_simulations": 61000,
+        "forwards": 34311,
+        "expanded": 46986,
+        "terminal_backups": 14046,
+        "root_expansions": 32,
+        "encoding_seconds": 40.645624320954084,
+        "network_seconds": 46.780932761728764,
+        "rule_seconds": 40.78210270777345,
+        "traversal_backup_seconds": 6.285342413932085,
+        "cache_seconds": 0.130754254758358,
+        "pv_cache_hits": 12675,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.2697612054654578,
+      "inference_forward_seconds_per_call": 0.0013634383364439615,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0.0,
+        "rpc_response_wait_seconds": 0.0,
+        "rpc_wait_seconds": 0.0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {
+        "15141": 1,
+        "15136": 1,
+        "15140": 1,
+        "15139": 1,
+        "15258": 1,
+        "15259": 1,
+        "15257": 1,
+        "15254": 1
+      },
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 32
+      },
+      "z_min": -0.9384456609413598,
+      "z_max": -0.9202573487803289,
+      "z_mean": -0.9299017248006339,
+      "length_min": 12,
+      "length_max": 28,
+      "length_mean": 19.0625,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4803-N0",
+          "hash": "a0575ce475cb23a6f5dce64e99c9902b8387dba7982719155ea9d5a5b2dda69b",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        },
+        {
+          "id": "P48-perf-s4803-N1",
+          "hash": "83599ef2e0261fdffd9d30f79b52f011d1044e91034eb9b44374b2d2338dd21b",
+          "generation": 1,
+          "parent": "P48-perf-s4803-N0",
+          "initial_random": false,
+          "positions": 536,
+          "sgd_steps": 67
+        }
+      ],
+      "recovery_fingerprint_equal": true,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 20,
+      "label": "candidate600",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 642.7546392418444,
+      "all_related_cpu_seconds": 1506.224955315,
+      "observed_avg_cores": 2.343390250892089,
+      "sampled_peak_sum_rss_gib": 4.987953186035156,
+      "cleanup_before": [
+        {
+          "pid": 15287,
+          "created": 1792579484.49,
+          "status": "zombie"
+        }
+      ],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [
+          {
+            "pid": 15287,
+            "created": 1792579484.49,
+            "status": "zombie"
+          }
+        ],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 1,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real full window",
+      "options": {
+        "workers": 4,
+        "persistent_cache": true,
+        "packed": true,
+        "direct_hash": true,
+        "threads": 4,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+        "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 4,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4801,
+      "qualified_positions": 4225,
+      "complete_episodes": 240,
+      "committed_episodes": 236,
+      "decisions": 4308,
+      "simulations": 430800,
+      "complete_episode_positions": 4308,
+      "complete_but_uncommitted_positions": 83,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 7,
+      "sgd_steps": 486,
+      "sgd_steps_due": 486,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 31104,
+      "updated_model_decisions": 3776,
+      "collection_seconds": 601.2242545261979,
+      "audit_wall_seconds": 38.69355119392276,
+      "outer_minus_collection_and_audit": 2.8368335217237473,
+      "collection_positions_per_hour_extrapolated": 25298.380571799164,
+      "outer_positions_per_hour_extrapolated": 23663.77319025005,
+      "cpu_seconds_per_committed_position": 0.3565029480035503,
+      "parent_profile": {
+        "save": 33.697261951863766,
+        "rules": 23.84493399783969,
+        "encoding": 31.79328415170312,
+        "hash": 5.30960888043046,
+        "cohort_commit": 0.005692705512046814,
+        "sample_read": 72.51171115413308,
+        "network_forward": 8.417993620038033,
+        "publication": 0.045079369097948074,
+        "train_other": 16.095218304544687
+      },
+      "parent_profile_calls": {
+        "save": 919,
+        "rules": 81228,
+        "encoding": 50859,
+        "hash": 19755,
+        "cohort_commit": 59,
+        "sample_read": 1728,
+        "network_forward": 486,
+        "publication": 7,
+        "train_other": 7
+      },
+      "actor_profile_sum_seconds": {
+        "save": 73.37140128016472,
+        "rules": 274.3055616132915,
+        "encoding": 202.1745207309723,
+        "hash": 88.1595843359828,
+        "network_forward": 314.45656402781606,
+        "episode_finalize": 44.539914425462484
+      },
+      "actor_job_wall_sum": 1102.97330987826,
+      "cohort_sum_of_longest_job_seconds": 334.4508263133466,
+      "actor_jobs_divided_by_four_seconds": 275.743327469565,
+      "coordinator_wait_inclusive_seconds": 372.0569172091782,
+      "reconcile_inclusive_seconds": 372.056038800627,
+      "parent_profile_sum": 191.72078413516283,
+      "residual_after_parent_profile_and_wait": 37.44655318185687,
+      "train_sample_load_encode": 62.3490127697587,
+      "train_forward_backward_step": 19.586738970130682,
+      "training_profile": [
+        {
+          "generation": "training-N1",
+          "profile": {
+            "sample_load_encode_seconds": 4.166596934199333,
+            "forward_backward_step_seconds": 2.6190142519772053
+          }
+        },
+        {
+          "generation": "training-N2",
+          "profile": {
+            "sample_load_encode_seconds": 5.689765591174364,
+            "forward_backward_step_seconds": 2.7295588441193104
+          }
+        },
+        {
+          "generation": "training-N3",
+          "profile": {
+            "sample_load_encode_seconds": 7.060705937445164,
+            "forward_backward_step_seconds": 2.768979486078024
+          }
+        },
+        {
+          "generation": "training-N4",
+          "profile": {
+            "sample_load_encode_seconds": 8.578723784536123,
+            "forward_backward_step_seconds": 2.9472667649388313
+          }
+        },
+        {
+          "generation": "training-N5",
+          "profile": {
+            "sample_load_encode_seconds": 11.090905766934156,
+            "forward_backward_step_seconds": 2.8625990971922874
+          }
+        },
+        {
+          "generation": "training-N6",
+          "profile": {
+            "sample_load_encode_seconds": 12.295814089477062,
+            "forward_backward_step_seconds": 2.919517196714878
+          }
+        },
+        {
+          "generation": "training-N7",
+          "profile": {
+            "sample_load_encode_seconds": 13.466500665992498,
+            "forward_backward_step_seconds": 2.7398033291101456
+          }
+        }
+      ],
+      "completed_episode_search_totals": {
+        "new_simulations": 430800,
+        "forwards": 238609,
+        "expanded": 329178,
+        "terminal_backups": 101862,
+        "root_expansions": 240,
+        "encoding_seconds": 288.0907685533166,
+        "network_seconds": 328.12307576462626,
+        "rule_seconds": 267.59964567795396,
+        "traversal_backup_seconds": 43.840201668441296,
+        "cache_seconds": 0.9238344319164753,
+        "pv_cache_hits": 90569,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.275136856047488,
+      "inference_forward_seconds_per_call": 0.0013751496203606162,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0.0,
+        "rpc_response_wait_seconds": 0.0,
+        "rpc_wait_seconds": 0.0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {
+        "15291": 8,
+        "15293": 8,
+        "15292": 8,
+        "15288": 8
+      },
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 240
+      },
+      "z_min": -0.9393899971987761,
+      "z_max": -0.918942648893167,
+      "z_mean": -0.9292503446553182,
+      "length_min": 10,
+      "length_max": 26,
+      "length_mean": 17.95,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4801-N0",
+          "hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        },
+        {
+          "id": "P48-perf-s4801-N1",
+          "hash": "6bf7bf7d7179d6882a1bf12fab39fd1e3307bffb004e3763930d9fbec8698bc7",
+          "generation": 1,
+          "parent": "P48-perf-s4801-N0",
+          "initial_random": false,
+          "positions": 532,
+          "sgd_steps": 67
+        },
+        {
+          "id": "P48-perf-s4801-N2",
+          "hash": "d74865b68cf07b4fd9cb92f71138a30c86960880cceb80b5b0f3fc3761aa161d",
+          "generation": 2,
+          "parent": "P48-perf-s4801-N1",
+          "initial_random": false,
+          "positions": 1089,
+          "sgd_steps": 137
+        },
+        {
+          "id": "P48-perf-s4801-N3",
+          "hash": "74a6f2668bfea6315569d1d2dd69ddf46ee0f11673983033187946894735f975",
+          "generation": 3,
+          "parent": "P48-perf-s4801-N2",
+          "initial_random": false,
+          "positions": 1641,
+          "sgd_steps": 206
+        },
+        {
+          "id": "P48-perf-s4801-N4",
+          "hash": "5d88e56fe2a85ca5a92b4f46ded03362fbf0963c673796eac86bd4e1c1b8145a",
+          "generation": 4,
+          "parent": "P48-perf-s4801-N3",
+          "initial_random": false,
+          "positions": 2211,
+          "sgd_steps": 278
+        },
+        {
+          "id": "P48-perf-s4801-N5",
+          "hash": "8355f69a2039f569e64d89e260bf5d54aded7f325a8cf3dfdc0c74f05464a0d4",
+          "generation": 5,
+          "parent": "P48-perf-s4801-N4",
+          "initial_random": false,
+          "positions": 2767,
+          "sgd_steps": 348
+        },
+        {
+          "id": "P48-perf-s4801-N6",
+          "hash": "2a626f618d4776510b9200a6d8fd6230610e86b098c5224785c01b01a5a86790",
+          "generation": 6,
+          "parent": "P48-perf-s4801-N5",
+          "initial_random": false,
+          "positions": 3342,
+          "sgd_steps": 420
+        },
+        {
+          "id": "P48-perf-s4801-N7",
+          "hash": "bbbad9a0dffd6f76b0cbc36342a02725b4f2b0b8e924c243e671f7d9aa39eea3",
+          "generation": 7,
+          "parent": "P48-perf-s4801-N6",
+          "initial_random": false,
+          "positions": 3865,
+          "sgd_steps": 486
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 21,
+      "label": "repeat-candidate300",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 324.6548403762281,
+      "all_related_cpu_seconds": 805.3575435910002,
+      "observed_avg_cores": 2.480657743028587,
+      "sampled_peak_sum_rss_gib": 3.9744110107421875,
+      "cleanup_before": [
+        {
+          "pid": 16177,
+          "created": 1792580128.12,
+          "status": "zombie"
+        }
+      ],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [
+          {
+            "pid": 16177,
+            "created": 1792580128.12,
+            "status": "zombie"
+          }
+        ],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 1,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real full window",
+      "options": {
+        "workers": 4,
+        "persistent_cache": true,
+        "packed": true,
+        "direct_hash": true,
+        "threads": 4,
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4802.npz",
+        "initial_hash": "b573c73bce43620a2453b12d9d6dad9f2a5ee45ca1017223bd9a063ba905ef4b"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 4,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4802,
+      "qualified_positions": 2269,
+      "complete_episodes": 128,
+      "committed_episodes": 124,
+      "decisions": 2349,
+      "simulations": 234900,
+      "complete_episode_positions": 2349,
+      "complete_but_uncommitted_positions": 80,
+      "completed_decisions_not_in_complete_episodes": 0,
+      "partial_search_simulations": 0,
+      "model_updates": 4,
+      "sgd_steps": 285,
+      "sgd_steps_due": 285,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 18240,
+      "updated_model_decisions": 1799,
+      "collection_seconds": 300.5904476903379,
+      "audit_wall_seconds": 20.502366941422224,
+      "outer_minus_collection_and_audit": 3.5620257444679737,
+      "collection_positions_per_hour_extrapolated": 27174.516232182195,
+      "outer_positions_per_hour_extrapolated": 25160.25940205913,
+      "cpu_seconds_per_committed_position": 0.3549394198285589,
+      "parent_profile": {
+        "save": 16.66885420680046,
+        "rules": 10.059770427644253,
+        "encoding": 16.04957105219364,
+        "hash": 2.244958333671093,
+        "cohort_commit": 0.002057895064353943,
+        "sample_read": 25.41374320536852,
+        "network_forward": 4.848737731575966,
+        "publication": 0.025595512241125107,
+        "train_other": 8.82566399499774
+      },
+      "parent_profile_calls": {
+        "save": 516,
+        "rules": 32900,
+        "encoding": 26249,
+        "hash": 8009,
+        "cohort_commit": 31,
+        "sample_read": 608,
+        "network_forward": 285,
+        "publication": 4,
+        "train_other": 4
+      },
+      "actor_profile_sum_seconds": {
+        "save": 41.810750130563974,
+        "rules": 153.97365624457598,
+        "encoding": 110.18789805844426,
+        "hash": 48.6293730288744,
+        "network_forward": 172.70492148399353,
+        "episode_finalize": 24.633173920214176
+      },
+      "actor_job_wall_sum": 609.7869356162846,
+      "cohort_sum_of_longest_job_seconds": 184.73190819472075,
+      "actor_jobs_divided_by_four_seconds": 152.44673390407115,
+      "coordinator_wait_inclusive_seconds": 205.39621084183455,
+      "reconcile_inclusive_seconds": 205.39580445736647,
+      "parent_profile_sum": 84.13895235955715,
+      "residual_after_parent_profile_and_wait": 11.0552844889462,
+      "train_sample_load_encode": 25.703716199845076,
+      "train_forward_backward_step": 11.325473487377167,
+      "training_profile": [
+        {
+          "generation": "training-N1",
+          "profile": {
+            "sample_load_encode_seconds": 4.188976678997278,
+            "forward_backward_step_seconds": 2.7260793074965477
+          }
+        },
+        {
+          "generation": "training-N2",
+          "profile": {
+            "sample_load_encode_seconds": 5.931806448847055,
+            "forward_backward_step_seconds": 2.8615603521466255
+          }
+        },
+        {
+          "generation": "training-N3",
+          "profile": {
+            "sample_load_encode_seconds": 7.152408268302679,
+            "forward_backward_step_seconds": 2.9324366450309753
+          }
+        },
+        {
+          "generation": "training-N4",
+          "profile": {
+            "sample_load_encode_seconds": 8.430524803698063,
+            "forward_backward_step_seconds": 2.805397182703018
+          }
+        }
+      ],
+      "completed_episode_search_totals": {
+        "new_simulations": 234900,
+        "forwards": 129779,
+        "expanded": 178899,
+        "terminal_backups": 56129,
+        "root_expansions": 128,
+        "encoding_seconds": 157.56480782851577,
+        "network_seconds": 180.40954769402742,
+        "rule_seconds": 150.1837302222848,
+        "traversal_backup_seconds": 23.93900729343295,
+        "cache_seconds": 0.5006584636867046,
+        "pv_cache_hits": 49120,
+        "cache_evictions": 0
+      },
+      "search_cache_hit_rate": 0.2745683318520506,
+      "inference_forward_seconds_per_call": 0.0013901289707427813,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0.0,
+        "rpc_response_wait_seconds": 0.0,
+        "rpc_wait_seconds": 0.0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {
+        "16183": 5,
+        "16178": 5,
+        "16181": 5,
+        "16182": 5
+      },
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 128
+      },
+      "z_min": -0.9376906014283835,
+      "z_max": -0.9189833153558661,
+      "z_mean": -0.9293663371954777,
+      "length_min": 10,
+      "length_max": 28,
+      "length_mean": 18.3515625,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4802-N0",
+          "hash": "b573c73bce43620a2453b12d9d6dad9f2a5ee45ca1017223bd9a063ba905ef4b",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        },
+        {
+          "id": "P48-perf-s4802-N1",
+          "hash": "e0770d6f295df241527ee0c1759c7186964425b9203f910a22245b00a31d0052",
+          "generation": 1,
+          "parent": "P48-perf-s4802-N0",
+          "initial_random": false,
+          "positions": 550,
+          "sgd_steps": 69
+        },
+        {
+          "id": "P48-perf-s4802-N2",
+          "hash": "1e4168410036c36094166975ffb403b4024e78028e6b53a8f29a6be0469093f0",
+          "generation": 2,
+          "parent": "P48-perf-s4802-N1",
+          "initial_random": false,
+          "positions": 1129,
+          "sgd_steps": 142
+        },
+        {
+          "id": "P48-perf-s4802-N3",
+          "hash": "5e27bf1e5923c6d604ec44f9f01d7efb112a6f95399a0eb08c8d37b5edc40331",
+          "generation": 3,
+          "parent": "P48-perf-s4802-N2",
+          "initial_random": false,
+          "positions": 1712,
+          "sgd_steps": 215
+        },
+        {
+          "id": "P48-perf-s4802-N4",
+          "hash": "516bab9785a72e0b99b1e2399d166fe3ddf9d37d3fed16f25fbb4a21e7cac06c",
+          "generation": 4,
+          "parent": "P48-perf-s4802-N3",
+          "initial_random": false,
+          "positions": 2269,
+          "sgd_steps": 285
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    },
+    {
+      "index": 22,
+      "label": "repeat-baseline300",
+      "status": "finished",
+      "exit_code": 0,
+      "wall_seconds": 311.7699707634747,
+      "all_related_cpu_seconds": 313.7983701410003,
+      "observed_avg_cores": 1.0065060768122034,
+      "sampled_peak_sum_rss_gib": 1.284637451171875,
+      "cleanup_before": [],
+      "cleanup_remaining": [],
+      "cleanup_complete": true,
+      "cleanup_errors": [],
+      "unreadable_process_count": 0,
+      "process_assessment": {
+        "live_process_status": "pass",
+        "reaping_status": "pass",
+        "live_before": [],
+        "terminal_before": [],
+        "unknown_before": [],
+        "unknown_remaining": [],
+        "live_remaining": [],
+        "observation_scope_confirmed": true,
+        "terminal_records_successfully_reaped": 0,
+        "issues": [],
+        "execution_status": "pass",
+        "accepted": true
+      },
+      "evidence_class": "real full window",
+      "options": {
+        "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4802.npz",
+        "initial_hash": "b573c73bce43620a2453b12d9d6dad9f2a5ee45ca1017223bd9a063ba905ef4b"
+      },
+      "software": {
+        "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+        "torch": "2.14.1+cpu",
+        "numpy": "2.3.5",
+        "torch_cuda": null,
+        "threads": 1,
+        "interop_threads": 1,
+        "coordinator_parameter_device": "cpu",
+        "actor_device": "cpu",
+        "inference_service_device": null
+      },
+      "seed": 4802,
+      "qualified_positions": 1059,
+      "complete_episodes": 56,
+      "committed_episodes": 56,
+      "decisions": 1065,
+      "simulations": 106549,
+      "complete_episode_positions": 1059,
+      "complete_but_uncommitted_positions": 0,
+      "completed_decisions_not_in_complete_episodes": 6,
+      "partial_search_simulations": 49,
+      "model_updates": 1,
+      "sgd_steps": 69,
+      "sgd_steps_due": 69,
+      "sgd_steps_unfinished": 0,
+      "actual_training_draws": 4416,
+      "updated_model_decisions": 515,
+      "collection_seconds": 300.0495424196124,
+      "audit_wall_seconds": 8.846844024956226,
+      "outer_minus_collection_and_audit": 2.873584318906069,
+      "collection_positions_per_hour_extrapolated": 12705.901729616526,
+      "outer_positions_per_hour_extrapolated": 12228.246327457528,
+      "cpu_seconds_per_committed_position": 0.29631574139848943,
+      "parent_profile": {
+        "save": 40.29927621781826,
+        "rules": 69.43785793334246,
+        "encoding": 50.28827664628625,
+        "hash": 21.947147741913795,
+        "network_forward": 69.19358070939779,
+        "episode_finalize": 18.206105042248964,
+        "cohort_commit": 0.0004495158791542053,
+        "sample_read": 2.5905735678970814,
+        "publication": 0.020144235342741013,
+        "train_other": 4.221981082111597
+      },
+      "parent_profile_calls": {
+        "save": 1264,
+        "rules": 261005,
+        "encoding": 87762,
+        "hash": 83346,
+        "network_forward": 51775,
+        "episode_finalize": 56,
+        "cohort_commit": 14,
+        "sample_read": 56,
+        "publication": 1,
+        "train_other": 1
+      },
+      "actor_profile_sum_seconds": {},
+      "actor_job_wall_sum": 0,
+      "cohort_sum_of_longest_job_seconds": 0,
+      "actor_jobs_divided_by_four_seconds": 0.0,
+      "coordinator_wait_inclusive_seconds": 0,
+      "reconcile_inclusive_seconds": 0,
+      "parent_profile_sum": 276.2053926922381,
+      "residual_after_parent_profile_and_wait": 23.844149727374315,
+      "train_sample_load_encode": 4.133863959461451,
+      "train_forward_backward_step": 6.71056292578578,
+      "training_profile": [
+        {
+          "generation": "training-N1",
+          "profile": {
+            "sample_load_encode_seconds": 4.133863959461451,
+            "forward_backward_step_seconds": 6.71056292578578
+          }
+        }
+      ],
+      "completed_episode_search_totals": {
+        "new_simulations": 105900,
+        "forwards": 51414,
+        "expanded": 81087,
+        "terminal_backups": 24869,
+        "root_expansions": 56,
+        "encoding_seconds": 68.22925067692995,
+        "network_seconds": 68.70947225019336,
+        "rule_seconds": 66.89007901027799,
+        "traversal_backup_seconds": 10.190844725817442,
+        "cache_seconds": 0.2940785214304924,
+        "pv_cache_hits": 29673,
+        "cache_evictions": 11414
+      },
+      "search_cache_hit_rate": 0.3659402863590958,
+      "inference_forward_seconds_per_call": 0.0013363961615550893,
+      "rpc": null,
+      "actor_rpc_sum": {
+        "rpc_requests": 0,
+        "rpc_send_seconds": 0,
+        "rpc_response_wait_seconds": 0,
+        "rpc_wait_seconds": 0
+      },
+      "worker_cache_invalidation_lifetime_max_per_pid": {},
+      "terminal_counts": {
+        "T1_NO_INTERACTION": 56
+      },
+      "z_min": -0.9376906014283835,
+      "z_max": -0.9202573487803289,
+      "z_mean": -0.9295408711119033,
+      "length_min": 13,
+      "length_max": 28,
+      "length_mean": 18.910714285714285,
+      "model_chain": [
+        {
+          "id": "P48-perf-s4802-N0",
+          "hash": "b573c73bce43620a2453b12d9d6dad9f2a5ee45ca1017223bd9a063ba905ef4b",
+          "generation": 0,
+          "parent": null,
+          "initial_random": true,
+          "positions": 0,
+          "sgd_steps": 0
+        },
+        {
+          "id": "P48-perf-s4802-N1",
+          "hash": "db74b392d5b81965f5118ef42e8e3565cbfa1db92b350c0a317791f827669590",
+          "generation": 1,
+          "parent": "P48-perf-s4802-N0",
+          "initial_random": false,
+          "positions": 550,
+          "sgd_steps": 69
+        }
+      ],
+      "recovery_fingerprint_equal": null,
+      "offline_summary_consistency_checks": "unique episodes; model chain and episode hash binding; per-generation SGD ceil8n/64; completed simulation and updated-model decision sums"
+    }
+  ],
+  "note": "Offline arithmetic, not a new experiment. CPU/wall scopes and overlapping counters must not be summed indiscriminately."
+}

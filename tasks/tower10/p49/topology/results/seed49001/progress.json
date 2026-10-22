@@ -1,0 +1,74 @@
+{
+  "phase": "summarize",
+  "generation": 5,
+  "complete": true,
+  "formal_start_utc": "2026-10-22T04:06:58.287307+00:00",
+  "budget_seconds": 3600,
+  "rounds": [
+    {
+      "generation": 1,
+      "new_positions": 78,
+      "new_episodes": 4,
+      "SGD_steps": 10,
+      "SGD_target": 10,
+      "collect_train_publish_seconds": 21.163696085999618,
+      "model_id": "P49-topology-seed49001-N1",
+      "weight_hash": "5a05115dbf77e7aa00e19c84c0446af6d5112f51812bb7c134cdbaabb5d0a9d8"
+    },
+    {
+      "generation": 2,
+      "new_positions": 71,
+      "new_episodes": 4,
+      "SGD_steps": 9,
+      "SGD_target": 9,
+      "collect_train_publish_seconds": 20.238875916000325,
+      "model_id": "P49-topology-seed49001-N2",
+      "weight_hash": "3685e6c0195feb207cf7d09ead9defcc4a9521c59d67532bf36953bab50ec440"
+    },
+    {
+      "generation": 3,
+      "new_positions": 68,
+      "new_episodes": 4,
+      "SGD_steps": 9,
+      "SGD_target": 9,
+      "collect_train_publish_seconds": 21.744225513000856,
+      "model_id": "P49-topology-seed49001-N3",
+      "weight_hash": "e3e3f200e95e5a5302e6207ca073b2809d9c9897c47c072c95978f4478921d70"
+    },
+    {
+      "generation": 4,
+      "new_positions": 84,
+      "new_episodes": 4,
+      "SGD_steps": 11,
+      "SGD_target": 11,
+      "collect_train_publish_seconds": 26.02722557299967,
+      "model_id": "P49-topology-seed49001-N4",
+      "weight_hash": "2c7a80f3ddf2dc801dc9cadaebae93a099de7cd320f21d1511a54a0318f9be58"
+    },
+    {
+      "generation": 5,
+      "new_positions": 75,
+      "new_episodes": 4,
+      "SGD_steps": 10,
+      "SGD_target": 10,
+      "collect_train_publish_seconds": 26.380532770999707,
+      "model_id": "P49-topology-seed49001-N5",
+      "weight_hash": "b8544a5000becda38a88fe7b0f2f2a4a0a84778d9cabc972e32bd3a0c77d079a"
+    }
+  ],
+  "evaluation_files": [],
+  "elapsed_seconds": 353.55390696799986,
+  "last_event": {
+    "event": "learning_chain_complete",
+    "generation": 5
+  },
+  "runtime_no_grid_profile": {
+    "forbidden_grid_calls": 0,
+    "profiled_python_calls": 202649571
+  },
+  "denied_behavior_reads": [],
+  "experiment_seconds_before_report": 353.5549485619995,
+  "report_returncode": 0,
+  "total_formal_wall_seconds": 354.2323018169991,
+  "finished_utc": "2026-10-22T04:12:52.519623+00:00"
+}

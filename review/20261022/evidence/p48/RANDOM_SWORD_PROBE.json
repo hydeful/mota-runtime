@@ -1,0 +1,1842 @@
+{
+  "runtime_repository": "hydeful/mota-runtime",
+  "runtime_commit": "d8da913bc466db6276ef3222abf0e2bd063820d6",
+  "purpose": "uniform legal topology target sampling; not MCTS nor learning",
+  "initial_sha256": "80999d2e01da8253510c96bc2f52ba9b61fae19b74516b76bb58f25cd90a05e6",
+  "rules_sha256": "b78b162ef5a4e9ff353241eebc9f646cef7ed2e3b583f601ed3d1b81c83e806d",
+  "nodes": {
+    "episodes": 30000,
+    "sword_hits": 9,
+    "p_hat": 0.0003,
+    "wilson_95": [
+      0.00015784354185247615,
+      0.0005701118718124982
+    ],
+    "wall_seconds": 110.37716489400191,
+    "batches": [
+      {
+        "seed": 84101,
+        "mode": "nodes",
+        "episodes": 10000,
+        "sword_hits": 1,
+        "p_hat": 0.0001,
+        "seconds": 107.83030470200174,
+        "termination": {
+          "no_interaction": 9999,
+          "sword": 1
+        },
+        "mean_decisions": 17.6946,
+        "reference_mask_checks": 375,
+        "first_hit_trace": [
+          {
+            "choices": 8,
+            "targets": 8,
+            "action_probability": 0.125,
+            "action": {
+              "target": "o:MT3:8:10"
+            }
+          },
+          {
+            "choices": 8,
+            "targets": 8,
+            "action_probability": 0.125,
+            "action": {
+              "target": "o:MT1:10:9"
+            }
+          },
+          {
+            "choices": 8,
+            "targets": 8,
+            "action_probability": 0.125,
+            "action": {
+              "target": "o:MT3:3:5"
+            }
+          },
+          {
+            "choices": 9,
+            "targets": 9,
+            "action_probability": 0.1111111111111111,
+            "action": {
+              "target": "o:MT1:10:10"
+            }
+          },
+          {
+            "choices": 11,
+            "targets": 11,
+            "action_probability": 0.09090909090909091,
+            "action": {
+              "target": "o:MT3:1:4"
+            }
+          },
+          {
+            "choices": 11,
+            "targets": 11,
+            "action_probability": 0.09090909090909091,
+            "action": {
+              "target": "o:MT3:1:6"
+            }
+          },
+          {
+            "choices": 11,
+            "targets": 11,
+            "action_probability": 0.09090909090909091,
+            "action": {
+              "target": "o:MT3:9:11"
+            }
+          },
+          {
+            "choices": 11,
+            "targets": 11,
+            "action_probability": 0.09090909090909091,
+            "action": {
+              "target": "o:MT4:11:8"
+            }
+          },
+          {
+            "choices": 7,
+            "targets": 7,
+            "action_probability": 0.14285714285714285,
+            "action": {
+              "target": "o:MT1:10:11"
+            }
+          },
+          {
+            "choices": 6,
+            "targets": 6,
+            "action_probability": 0.16666666666666666,
+            "action": {
+              "target": "o:MT3:1:7"
+            }
+          },
+          {
+            "choices": 6,
+            "targets": 6,
+            "action_probability": 0.16666666666666666,
+            "action": {
+              "target": "o:MT4:3:7"
+            }
+          },
+          {
+            "choices": 6,
+            "targets": 6,
+            "action_probability": 0.16666666666666666,
+            "action": {
+              "target": "o:MT1:9:11"
+            }
+          },
+          {
+            "choices": 5,
+            "targets": 5,
+            "action_probability": 0.2,
+            "action": {
+              "target": "o:MT1:11:11"
+            }
+          },
+          {
+            "choices": 4,
+            "targets": 4,
+            "action_probability": 0.25,
+            "action": {
+              "target": "o:MT2:3:1"
+            }
+          },
+          {
+            "choices": 3,
+            "targets": 3,
+            "action_probability": 0.3333333333333333,
+            "action": {
+              "target": "o:MT3:2:8"
+            }
+          },
+          {
+            "choices": 10,
+            "targets": 10,
+            "action_probability": 0.1,
+            "action": {
+              "target": "o:MT4:1:7"
+            }
+          },
+          {
+            "choices": 10,
+            "targets": 10,
+            "action_probability": 0.1,
+            "action": {
+              "target": "o:MT4:4:8"
+            }
+          },
+          {
+            "choices": 3,
+            "targets": 3,
+            "action_probability": 0.3333333333333333,
+            "action": {
+              "target": "o:MT4:4:9"
+            }
+          },
+          {
+            "choices": 5,
+            "targets": 5,
+            "action_probability": 0.2,
+            "action": {
+              "target": "o:MT4:5:10"
+            }
+          },
+          {
+            "choices": 12,
+            "targets": 12,
+            "action_probability": 0.08333333333333333,
+            "action": {
+              "target": "o:MT4:1:8"
+            }
+          },
+          {
+            "choices": 6,
+            "targets": 6,
+            "action_probability": 0.16666666666666666,
+            "action": {
+              "target": "o:MT4:4:11"
+            }
+          },
+          {
+            "choices": 6,
+            "targets": 6,
+            "action_probability": 0.16666666666666666,
+            "action": {
+              "target": "o:MT4:5:11"
+            }
+          },
+          {
+            "choices": 11,
+            "targets": 11,
+            "action_probability": 0.09090909090909091,
+            "action": {
+              "target": "o:MT3:9:2"
+            }
+          },
+          {
+            "choices": 6,
+            "targets": 6,
+            "action_probability": 0.16666666666666666,
+            "action": {
+              "target": "o:MT3:1:9"
+            }
+          },
+          {
+            "choices": 5,
+            "targets": 5,
+            "action_probability": 0.2,
+            "action": {
+              "target": "o:MT5:6:8"
+            }
+          },
+          {
+            "choices": 6,
+            "targets": 6,
+            "action_probability": 0.16666666666666666,
+            "action": {
+              "target": "o:MT4:3:10"
+            }
+          },
+          {
+            "choices": 5,
+            "targets": 5,
+            "action_probability": 0.2,
+            "action": {
+              "target": "o:MT5:7:6"
+            }
+          },
+          {
+            "choices": 6,
+            "targets": 6,
+            "action_probability": 0.16666666666666666,
+            "action": {
+              "target": "o:MT4:3:11"
+            }
+          },
+          {
+            "choices": 10,
+            "targets": 10,
+            "action_probability": 0.1,
+            "action": {
+              "target": "o:MT4:8:8"
+            }
+          },
+          {
+            "choices": 5,
+            "targets": 5,
+            "action_probability": 0.2,
+            "action": {
+              "target": "o:MT5:6:4"
+            }
+          },
+          {
+            "choices": 5,
+            "targets": 5,
+            "action_probability": 0.2,
+            "action": {
+              "target": "o:MT5:11:2"
+            }
+          },
+          {
+            "choices": 3,
+            "targets": 3,
+            "action_probability": 0.3333333333333333,
+            "action": {
+              "target": "o:MT5:11:7"
+            }
+          },
+          {
+            "choices": 2,
+            "targets": 2,
+            "action_probability": 0.5,
+            "action": {
+              "target": "o:MT5:6:2"
+            }
+          },
+          {
+            "choices": 8,
+            "targets": 8,
+            "action_probability": 0.125,
+            "action": {
+              "target": "o:MT5:8:9"
+            }
+          },
+          {
+            "choices": 2,
+            "targets": 2,
+            "action_probability": 0.5,
+            "action": {
+              "target": "o:MT5:9:11"
+            }
+          },
+          {
+            "choices": 2,
+            "targets": 2,
+            "action_probability": 0.5,
+            "action": {
+              "target": "o:MT5:11:11"
+            }
+          }
+        ]
+      },
+      {
+        "seed": 84102,
+        "mode": "nodes",
+        "episodes": 10000,
+        "sword_hits": 4,
+        "p_hat": 0.0004,
+        "seconds": 110.12584641099966,
+        "termination": {
+          "no_interaction": 9996,
+          "sword": 4
+        },
+        "mean_decisions": 17.7356,
+        "reference_mask_checks": 392,
+        "first_hit_trace": [
+          {
+            "choices": 8,
+            "targets": 8,
+            "action_probability": 0.125,
+            "action": {
+              "target": "o:MT3:8:10"
+            }
+          },
+          {
+            "choices": 8,
+            "targets": 8,
+            "action_probability": 0.125,
+            "action": {
+              "target": "o:MT3:9:11"
+            }
+          },
+          {
+            "choices": 8,
+            "targets": 8,
+            "action_probability": 0.125,
+            "action": {
+              "target": "o:MT1:10:9"
+            }
+          },
+          {
+            "choices": 8,
+            "targets": 8,
+            "action_probability": 0.125,
+            "action": {
+              "target": "o:MT4:11:8"
+            }
+          },
+          {
+            "choices": 10,
+            "targets": 10,
+            "action_probability": 0.1,
+            "action": {
+              "target": "o:MT1:10:10"
+            }
+          },
+          {
+            "choices": 12,
+            "targets": 12,
+            "action_probability": 0.08333333333333333,
+            "action": {
+              "target": "o:MT4:3:7"
+            }
+          },
+          {
+            "choices": 14,
+            "targets": 14,
+            "action_probability": 0.07142857142857142,
+            "action": {
+              "target": "o:MT4:1:7"
+            }
+          },
+          {
+            "choices": 14,
+            "targets": 14,
+            "action_probability": 0.07142857142857142,
+            "action": {
+              "target": "o:MT4:1:8"
+            }
+          },
+          {
+            "choices": 14,
+            "targets": 14,
+            "action_probability": 0.07142857142857142,
+            "action": {
+              "target": "o:MT1:9:11"
+            }
+          },
+          {
+            "choices": 13,
+            "targets": 13,
+            "action_probability": 0.07692307692307693,
+            "action": {
+              "target": "o:MT1:11:11"
+            }
+          },
+          {
+            "choices": 12,
+            "targets": 12,
+            "action_probability": 0.08333333333333333,
+            "action": {
+              "target": "o:MT4:8:8"
+            }
+          },
+          {
+            "choices": 6,
+            "targets": 6,
+            "action_probability": 0.16666666666666666,
+            "action": {
+              "target": "o:MT5:6:8"
+            }
+          },
+          {
+            "choices": 7,
+            "targets": 7,
+            "action_probability": 0.14285714285714285,
+            "action": {
+              "target": "o:MT5:6:4"
+            }
+          },
+          {
+            "choices": 5,
+            "targets": 5,
+            "action_probability": 0.2,
+            "action": {
+              "target": "o:MT3:3:5"
+            }
+          },
+          {
+            "choices": 4,
+            "targets": 4,
+            "action_probability": 0.25,
+            "action": {
+              "target": "o:MT5:7:6"
+            }
+          },
+          {
+            "choices": 5,
+            "targets": 5,
+            "action_probability": 0.2,
+            "action": {
+              "target": "o:MT5:11:7"
+            }
+          },
+          {
+            "choices": 4,
+            "targets": 4,
+            "action_probability": 0.25,
+            "action": {
+              "target": "o:MT5:6:2"
+            }
+          },
+          {
+            "choices": 13,
+            "targets": 13,
+            "action_probability": 0.07692307692307693,
+            "action": {
+              "target": "o:MT5:11:2"
+            }
+          },
+          {
+            "choices": 13,
+            "targets": 13,
+            "action_probability": 0.07692307692307693,
+            "action": {
+              "target": "o:MT4:4:8"
+            }
+          },
+          {
+            "choices": 3,
+            "targets": 3,
+            "action_probability": 0.3333333333333333,
+            "action": {
+              "target": "o:MT1:10:11"
+            }
+          },
+          {
+            "choices": 2,
+            "targets": 2,
+            "action_probability": 0.5,
+            "action": {
+              "target": "o:MT4:4:9"
+            }
+          },
+          {
+            "choices": 4,
+            "targets": 4,
+            "action_probability": 0.25,
+            "action": {
+              "target": "o:MT4:3:10"
+            }
+          },
+          {
+            "choices": 4,
+            "targets": 4,
+            "action_probability": 0.25,
+            "action": {
+              "target": "o:MT4:3:11"
+            }
+          },
+          {
+            "choices": 13,
+            "targets": 13,
+            "action_probability": 0.07692307692307693,
+            "action": {
+              "target": "o:MT5:8:9"
+            }
+          },
+          {
+            "choices": 4,
+            "targets": 4,
+            "action_probability": 0.25,
+            "action": {
+              "target": "o:MT4:4:11"
+            }
+          },
+          {
+            "choices": 4,
+            "targets": 4,
+            "action_probability": 0.25,
+            "action": {
+              "target": "o:MT5:9:11"
+            }
+          },
+          {
+            "choices": 4,
+            "targets": 4,
+            "action_probability": 0.25,
+            "action": {
+              "target": "o:MT4:5:11"
+            }
+          },
+          {
+            "choices": 12,
+            "targets": 12,
+            "action_probability": 0.08333333333333333,
+            "action": {
+              "target": "o:MT2:3:1"
+            }
+          },
+          {
+            "choices": 11,
+            "targets": 11,
+            "action_probability": 0.09090909090909091,
+            "action": {
+              "target": "o:MT5:5:1"
+            }
+          },
+          {
+            "choices": 3,
+            "targets": 3,
+            "action_probability": 0.3333333333333333,
+            "action": {
+              "target": "o:MT5:11:11"
+            }
+          }
+        ]
+      },
+      {
+        "seed": 84103,
+        "mode": "nodes",
+        "episodes": 10000,
+        "sword_hits": 4,
+        "p_hat": 0.0004,
+        "seconds": 108.01645690300211,
+        "termination": {
+          "no_interaction": 9996,
+          "sword": 4
+        },
+        "mean_decisions": 17.7471,
+        "reference_mask_checks": 383,
+        "first_hit_trace": [
+          {
+            "choices": 8,
+            "targets": 8,
+            "action_probability": 0.125,
+            "action": {
+              "target": "o:MT3:8:10"
+            }
+          },
+          {
+            "choices": 8,
+            "targets": 8,
+            "action_probability": 0.125,
+            "action": {
+              "target": "o:MT3:9:11"
+            }
+          },
+          {
+            "choices": 8,
+            "targets": 8,
+            "action_probability": 0.125,
+            "action": {
+              "target": "o:MT1:4:3"
+            }
+          },
+          {
+            "choices": 9,
+            "targets": 9,
+            "action_probability": 0.1111111111111111,
+            "action": {
+              "target": "o:MT4:11:8"
+            }
+          },
+          {
+            "choices": 11,
+            "targets": 11,
+            "action_probability": 0.09090909090909091,
+            "action": {
+              "target": "o:MT1:10:9"
+            }
+          },
+          {
+            "choices": 11,
+            "targets": 11,
+            "action_probability": 0.09090909090909091,
+            "action": {
+              "target": "o:MT1:10:10"
+            }
+          },
+          {
+            "choices": 13,
+            "targets": 13,
+            "action_probability": 0.07692307692307693,
+            "action": {
+              "target": "o:MT4:4:8"
+            }
+          },
+          {
+            "choices": 9,
+            "targets": 9,
+            "action_probability": 0.1111111111111111,
+            "action": {
+              "target": "o:MT1:9:11"
+            }
+          },
+          {
+            "choices": 8,
+            "targets": 8,
+            "action_probability": 0.125,
+            "action": {
+              "target": "o:MT1:10:11"
+            }
+          },
+          {
+            "choices": 7,
+            "targets": 7,
+            "action_probability": 0.14285714285714285,
+            "action": {
+              "target": "o:MT2:3:1"
+            }
+          },
+          {
+            "choices": 6,
+            "targets": 6,
+            "action_probability": 0.16666666666666666,
+            "action": {
+              "target": "o:MT1:11:11"
+            }
+          },
+          {
+            "choices": 5,
+            "targets": 5,
+            "action_probability": 0.2,
+            "action": {
+              "target": "o:MT1:1:3"
+            }
+          },
+          {
+            "choices": 4,
+            "targets": 4,
+            "action_probability": 0.25,
+            "action": {
+              "target": "o:MT1:2:4"
+            }
+          },
+          {
+            "choices": 3,
+            "targets": 3,
+            "action_probability": 0.3333333333333333,
+            "action": {
+              "target": "o:MT4:3:7"
+            }
+          },
+          {
+            "choices": 3,
+            "targets": 3,
+            "action_probability": 0.3333333333333333,
+            "action": {
+              "target": "o:MT4:4:9"
+            }
+          },
+          {
+            "choices": 5,
+            "targets": 5,
+            "action_probability": 0.2,
+            "action": {
+              "target": "o:MT4:3:10"
+            }
+          },
+          {
+            "choices": 5,
+            "targets": 5,
+            "action_probability": 0.2,
+            "action": {
+              "target": "o:MT4:1:7"
+            }
+          },
+          {
+            "choices": 4,
+            "targets": 4,
+            "action_probability": 0.25,
+            "action": {
+              "target": "o:MT3:3:5"
+            }
+          },
+          {
+            "choices": 3,
+            "targets": 3,
+            "action_probability": 0.3333333333333333,
+            "action": {
+              "target": "o:MT4:4:11"
+            }
+          },
+          {
+            "choices": 3,
+            "targets": 3,
+            "action_probability": 0.3333333333333333,
+            "action": {
+              "target": "o:MT4:5:10"
+            }
+          },
+          {
+            "choices": 11,
+            "targets": 11,
+            "action_probability": 0.09090909090909091,
+            "action": {
+              "target": "o:MT4:1:8"
+            }
+          },
+          {
+            "choices": 3,
+            "targets": 3,
+            "action_probability": 0.3333333333333333,
+            "action": {
+              "target": "o:MT5:6:8"
+            }
+          },
+          {
+            "choices": 4,
+            "targets": 4,
+            "action_probability": 0.25,
+            "action": {
+              "target": "o:MT5:6:4"
+            }
+          },
+          {
+            "choices": 4,
+            "targets": 4,
+            "action_probability": 0.25,
+            "action": {
+              "target": "o:MT5:7:6"
+            }
+          },
+          {
+            "choices": 5,
+            "targets": 5,
+            "action_probability": 0.2,
+            "action": {
+              "target": "o:MT5:6:2"
+            }
+          },
+          {
+            "choices": 13,
+            "targets": 13,
+            "action_probability": 0.07692307692307693,
+            "action": {
+              "target": "o:MT3:9:8"
+            }
+          },
+          {
+            "choices": 4,
+            "targets": 4,
+            "action_probability": 0.25,
+            "action": {
+              "target": "o:MT5:11:2"
+            }
+          },
+          {
+            "choices": 3,
+            "targets": 3,
+            "action_probability": 0.3333333333333333,
+            "action": {
+              "target": "o:MT4:3:11"
+            }
+          },
+          {
+            "choices": 11,
+            "targets": 11,
+            "action_probability": 0.09090909090909091,
+            "action": {
+              "target": "o:MT5:11:7"
+            }
+          },
+          {
+            "choices": 11,
+            "targets": 11,
+            "action_probability": 0.09090909090909091,
+            "action": {
+              "target": "o:MT5:10:1"
+            }
+          },
+          {
+            "choices": 3,
+            "targets": 3,
+            "action_probability": 0.3333333333333333,
+            "action": {
+              "target": "o:MT5:9:2"
+            }
+          },
+          {
+            "choices": 2,
+            "targets": 2,
+            "action_probability": 0.5,
+            "action": {
+              "target": "o:MT4:5:11"
+            }
+          },
+          {
+            "choices": 10,
+            "targets": 10,
+            "action_probability": 0.1,
+            "action": {
+              "target": "o:MT1:6:6"
+            }
+          },
+          {
+            "choices": 1,
+            "targets": 1,
+            "action_probability": 1,
+            "action": {
+              "target": "o:MT5:9:3"
+            }
+          },
+          {
+            "choices": 10,
+            "targets": 10,
+            "action_probability": 0.1,
+            "action": {
+              "target": "o:MT5:8:3"
+            }
+          },
+          {
+            "choices": 10,
+            "targets": 10,
+            "action_probability": 0.1,
+            "action": {
+              "target": "o:MT5:5:1"
+            }
+          },
+          {
+            "choices": 9,
+            "targets": 9,
+            "action_probability": 0.1111111111111111,
+            "action": {
+              "target": "o:MT3:9:2"
+            }
+          },
+          {
+            "choices": 2,
+            "targets": 2,
+            "action_probability": 0.5,
+            "action": {
+              "target": "o:MT5:8:4"
+            }
+          },
+          {
+            "choices": 7,
+            "targets": 7,
+            "action_probability": 0.14285714285714285,
+            "action": {
+              "target": "o:MT5:8:9"
+            }
+          },
+          {
+            "choices": 2,
+            "targets": 2,
+            "action_probability": 0.5,
+            "action": {
+              "target": "o:MT5:9:11"
+            }
+          },
+          {
+            "choices": 2,
+            "targets": 2,
+            "action_probability": 0.5,
+            "action": {
+              "target": "o:MT5:11:11"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "actions": {
+    "episodes": 30000,
+    "sword_hits": 3,
+    "p_hat": 0.0001,
+    "wilson_95": [
+      0.000034009593858307005,
+      0.00029399703269986923
+    ],
+    "wall_seconds": 120.87460801099951,
+    "batches": [
+      {
+        "seed": 74101,
+        "episodes": 10000,
+        "sword_hits": 2,
+        "p_hat": 0.0002,
+        "seconds": 120.54089908100286,
+        "termination": {
+          "no_interaction": 9998,
+          "sword": 2
+        },
+        "mean_decisions": 17.7638,
+        "reference_mask_checks": 390,
+        "first_hit_trace": [
+          {
+            "choices": 8,
+            "action": {
+              "target": "o:MT3:8:10"
+            }
+          },
+          {
+            "choices": 8,
+            "action": {
+              "target": "o:MT3:9:11"
+            }
+          },
+          {
+            "choices": 8,
+            "action": {
+              "target": "o:MT4:11:8"
+            }
+          },
+          {
+            "choices": 10,
+            "action": {
+              "target": "o:MT4:4:8"
+            }
+          },
+          {
+            "choices": 10,
+            "action": {
+              "target": "o:MT1:4:3"
+            }
+          },
+          {
+            "choices": 11,
+            "action": {
+              "target": "o:MT1:1:3"
+            }
+          },
+          {
+            "choices": 10,
+            "action": {
+              "target": "o:MT4:3:7"
+            }
+          },
+          {
+            "choices": 12,
+            "action": {
+              "target": "o:MT1:10:9"
+            }
+          },
+          {
+            "choices": 7,
+            "action": {
+              "target": "o:MT1:2:4"
+            }
+          },
+          {
+            "choices": 5,
+            "action": {
+              "target": "o:MT2:3:1"
+            }
+          },
+          {
+            "choices": 4,
+            "action": {
+              "target": "o:MT1:10:10"
+            }
+          },
+          {
+            "choices": 6,
+            "action": {
+              "target": "o:MT1:11:11"
+            }
+          },
+          {
+            "choices": 5,
+            "action": {
+              "target": "o:MT4:4:9"
+            }
+          },
+          {
+            "choices": 7,
+            "action": {
+              "target": "o:MT4:1:7"
+            }
+          },
+          {
+            "choices": 6,
+            "action": {
+              "target": "o:MT3:3:5"
+            }
+          },
+          {
+            "choices": 5,
+            "action": {
+              "target": "o:MT4:4:11"
+            }
+          },
+          {
+            "choices": 6,
+            "action": {
+              "target": "o:MT4:5:10"
+            }
+          },
+          {
+            "choices": 14,
+            "action": {
+              "target": "o:MT4:1:8"
+            }
+          },
+          {
+            "choices": 6,
+            "action": {
+              "target": "o:MT4:3:10"
+            }
+          },
+          {
+            "choices": 5,
+            "action": {
+              "target": "o:MT5:6:8"
+            }
+          },
+          {
+            "choices": 5,
+            "action": {
+              "target": "o:MT4:5:11"
+            }
+          },
+          {
+            "choices": 12,
+            "action": {
+              "target": "o:MT4:3:11"
+            }
+          },
+          {
+            "choices": 11,
+            "action": {
+              "target": "o:MT4:8:8"
+            }
+          },
+          {
+            "choices": 10,
+            "action": {
+              "target": "o:MT3:9:8"
+            }
+          },
+          {
+            "choices": 3,
+            "action": {
+              "target": "o:MT1:10:11"
+            }
+          },
+          {
+            "choices": 3,
+            "action": {
+              "target": "o:MT5:7:6"
+            }
+          },
+          {
+            "choices": 4,
+            "action": {
+              "target": "o:MT1:9:11"
+            }
+          },
+          {
+            "choices": 3,
+            "action": {
+              "target": "o:MT5:11:7"
+            }
+          },
+          {
+            "choices": 2,
+            "action": {
+              "target": "o:MT5:6:4"
+            }
+          },
+          {
+            "choices": 2,
+            "action": {
+              "target": "o:MT5:6:2"
+            }
+          },
+          {
+            "choices": 9,
+            "action": {
+              "target": "o:MT5:8:9"
+            }
+          },
+          {
+            "choices": 2,
+            "action": {
+              "target": "o:MT5:11:2"
+            }
+          },
+          {
+            "choices": 1,
+            "action": {
+              "target": "o:MT5:9:11"
+            }
+          },
+          {
+            "choices": 1,
+            "action": {
+              "target": "o:MT5:11:11"
+            }
+          }
+        ]
+      },
+      {
+        "seed": 74102,
+        "episodes": 10000,
+        "sword_hits": 1,
+        "p_hat": 0.0001,
+        "seconds": 117.75336997799604,
+        "termination": {
+          "no_interaction": 9999,
+          "sword": 1
+        },
+        "mean_decisions": 17.7287,
+        "reference_mask_checks": 371,
+        "first_hit_trace": [
+          {
+            "choices": 8,
+            "action": {
+              "target": "o:MT3:8:10"
+            }
+          },
+          {
+            "choices": 8,
+            "action": {
+              "target": "o:MT3:9:11"
+            }
+          },
+          {
+            "choices": 8,
+            "action": {
+              "target": "o:MT4:11:8"
+            }
+          },
+          {
+            "choices": 10,
+            "action": {
+              "target": "o:MT1:4:3"
+            }
+          },
+          {
+            "choices": 11,
+            "action": {
+              "target": "o:MT1:2:4"
+            }
+          },
+          {
+            "choices": 11,
+            "action": {
+              "target": "o:MT1:2:5"
+            }
+          },
+          {
+            "choices": 11,
+            "action": {
+              "target": "o:MT4:3:7"
+            }
+          },
+          {
+            "choices": 12,
+            "action": {
+              "target": "o:MT3:9:2"
+            }
+          },
+          {
+            "choices": 6,
+            "action": {
+              "target": "o:MT3:3:5"
+            }
+          },
+          {
+            "choices": 5,
+            "action": {
+              "target": "o:MT3:10:2"
+            }
+          },
+          {
+            "choices": 5,
+            "action": {
+              "target": "o:MT3:11:1"
+            }
+          },
+          {
+            "choices": 4,
+            "action": {
+              "target": "o:MT2:3:1"
+            }
+          },
+          {
+            "choices": 3,
+            "action": {
+              "target": "o:MT4:1:7"
+            }
+          },
+          {
+            "choices": 2,
+            "action": {
+              "target": "o:MT1:1:3"
+            }
+          },
+          {
+            "choices": 1,
+            "action": {
+              "target": "o:MT1:1:6"
+            }
+          },
+          {
+            "choices": 9,
+            "action": {
+              "target": "o:MT4:1:8"
+            }
+          },
+          {
+            "choices": 1,
+            "action": {
+              "target": "o:MT5:6:8"
+            }
+          },
+          {
+            "choices": 2,
+            "action": {
+              "target": "o:MT5:6:4"
+            }
+          },
+          {
+            "choices": 2,
+            "action": {
+              "target": "o:MT5:7:6"
+            }
+          },
+          {
+            "choices": 3,
+            "action": {
+              "target": "o:MT5:11:2"
+            }
+          },
+          {
+            "choices": 2,
+            "action": {
+              "target": "o:MT5:6:2"
+            }
+          },
+          {
+            "choices": 11,
+            "action": {
+              "target": "o:MT5:10:1"
+            }
+          },
+          {
+            "choices": 3,
+            "action": {
+              "target": "o:MT5:8:2"
+            }
+          },
+          {
+            "choices": 3,
+            "action": {
+              "target": "o:MT5:9:2"
+            }
+          },
+          {
+            "choices": 3,
+            "action": {
+              "target": "o:MT5:11:7"
+            }
+          },
+          {
+            "choices": 2,
+            "action": {
+              "target": "o:MT5:8:3"
+            }
+          },
+          {
+            "choices": 12,
+            "action": {
+              "target": "o:MT5:8:4"
+            }
+          },
+          {
+            "choices": 12,
+            "action": {
+              "target": "o:MT5:5:1"
+            }
+          },
+          {
+            "choices": 11,
+            "action": {
+              "target": "o:MT5:8:9"
+            }
+          },
+          {
+            "choices": 3,
+            "action": {
+              "target": "o:MT5:9:3"
+            }
+          },
+          {
+            "choices": 10,
+            "action": {
+              "target": "o:MT5:9:11"
+            }
+          },
+          {
+            "choices": 10,
+            "action": {
+              "target": "o:MT3:1:4"
+            }
+          },
+          {
+            "choices": 2,
+            "action": {
+              "target": "o:MT5:9:4"
+            }
+          },
+          {
+            "choices": 8,
+            "action": {
+              "target": "o:MT4:4:5"
+            }
+          },
+          {
+            "choices": 1,
+            "action": {
+              "target": "o:MT5:11:11"
+            }
+          }
+        ]
+      },
+      {
+        "seed": 74103,
+        "episodes": 10000,
+        "sword_hits": 0,
+        "p_hat": 0,
+        "seconds": 116.86716442099714,
+        "termination": {
+          "no_interaction": 10000
+        },
+        "mean_decisions": 17.6922,
+        "reference_mask_checks": 381,
+        "first_hit_trace": null
+      }
+    ]
+  },
+  "pilot_not_pooled": {
+    "seed": 20261021,
+    "episodes": 1000,
+    "sword_hits": 1,
+    "p_hat": 0.001,
+    "seconds": 10.920912914996734,
+    "termination": {
+      "no_interaction": 999,
+      "sword": 1
+    },
+    "mean_decisions": 17.864,
+    "reference_mask_checks": 383,
+    "first_hit_trace": [
+      {
+        "choices": 8,
+        "action": {
+          "target": "o:MT3:8:10"
+        }
+      },
+      {
+        "choices": 8,
+        "action": {
+          "target": "o:MT3:9:2"
+        }
+      },
+      {
+        "choices": 8,
+        "action": {
+          "target": "o:MT3:9:11"
+        }
+      },
+      {
+        "choices": 8,
+        "action": {
+          "target": "o:MT4:11:8"
+        }
+      },
+      {
+        "choices": 10,
+        "action": {
+          "target": "o:MT1:6:6"
+        }
+      },
+      {
+        "choices": 10,
+        "action": {
+          "target": "o:MT3:10:2"
+        }
+      },
+      {
+        "choices": 10,
+        "action": {
+          "target": "o:MT3:11:1"
+        }
+      },
+      {
+        "choices": 9,
+        "action": {
+          "target": "o:MT3:3:5"
+        }
+      },
+      {
+        "choices": 10,
+        "action": {
+          "target": "o:MT4:4:8"
+        }
+      },
+      {
+        "choices": 4,
+        "action": {
+          "target": "o:MT2:3:1"
+        }
+      },
+      {
+        "choices": 3,
+        "action": {
+          "target": "o:MT4:3:7"
+        }
+      },
+      {
+        "choices": 4,
+        "action": {
+          "target": "o:MT4:4:9"
+        }
+      },
+      {
+        "choices": 5,
+        "action": {
+          "target": "o:MT4:4:11"
+        }
+      },
+      {
+        "choices": 6,
+        "action": {
+          "target": "o:MT1:7:6"
+        }
+      },
+      {
+        "choices": 5,
+        "action": {
+          "target": "o:MT4:3:10"
+        }
+      },
+      {
+        "choices": 4,
+        "action": {
+          "target": "o:MT4:5:10"
+        }
+      },
+      {
+        "choices": 10,
+        "action": {
+          "target": "o:MT4:4:5"
+        }
+      },
+      {
+        "choices": 4,
+        "action": {
+          "target": "o:MT4:3:11"
+        }
+      },
+      {
+        "choices": 9,
+        "action": {
+          "target": "o:MT3:1:4"
+        }
+      },
+      {
+        "choices": 3,
+        "action": {
+          "target": "o:MT4:1:7"
+        }
+      },
+      {
+        "choices": 2,
+        "action": {
+          "target": "o:MT4:6:5"
+        }
+      },
+      {
+        "choices": 1,
+        "action": {
+          "target": "o:MT4:5:11"
+        }
+      },
+      {
+        "choices": 6,
+        "action": {
+          "target": "o:MT4:1:8"
+        }
+      },
+      {
+        "choices": 1,
+        "action": {
+          "target": "o:MT5:6:8"
+        }
+      },
+      {
+        "choices": 2,
+        "action": {
+          "target": "o:MT5:7:6"
+        }
+      },
+      {
+        "choices": 3,
+        "action": {
+          "target": "o:MT5:11:2"
+        }
+      },
+      {
+        "choices": 2,
+        "action": {
+          "target": "o:MT5:6:4"
+        }
+      },
+      {
+        "choices": 2,
+        "action": {
+          "target": "o:MT5:11:7"
+        }
+      },
+      {
+        "choices": 1,
+        "action": {
+          "target": "o:MT5:6:2"
+        }
+      },
+      {
+        "choices": 8,
+        "action": {
+          "target": "o:MT5:10:1"
+        }
+      },
+      {
+        "choices": 2,
+        "action": {
+          "target": "o:MT5:8:2"
+        }
+      },
+      {
+        "choices": 2,
+        "action": {
+          "target": "o:MT5:8:3"
+        }
+      },
+      {
+        "choices": 10,
+        "action": {
+          "target": "o:MT1:4:3"
+        }
+      },
+      {
+        "choices": 4,
+        "action": {
+          "target": "o:MT1:1:3"
+        }
+      },
+      {
+        "choices": 3,
+        "action": {
+          "target": "o:MT5:9:3"
+        }
+      },
+      {
+        "choices": 9,
+        "action": {
+          "target": "o:MT5:5:1"
+        }
+      },
+      {
+        "choices": 4,
+        "action": {
+          "target": "o:MT5:9:4"
+        }
+      },
+      {
+        "choices": 8,
+        "action": {
+          "target": "o:MT5:4:1"
+        }
+      },
+      {
+        "choices": 8,
+        "action": {
+          "target": "o:MT5:8:9"
+        }
+      },
+      {
+        "choices": 3,
+        "action": {
+          "target": "o:MT5:8:4"
+        }
+      },
+      {
+        "choices": 7,
+        "action": {
+          "target": "o:MT5:9:11"
+        }
+      },
+      {
+        "choices": 7,
+        "action": {
+          "target": "o:MT5:11:11"
+        }
+      }
+    ]
+  },
+  "hit_validation": [
+    {
+      "source": "probe_result.json",
+      "steps": 42,
+      "sword_status": "resolved",
+      "atk": 20,
+      "all_states_equal_to_reference": true
+    },
+    {
+      "source": "probe_result_74101.json",
+      "steps": 34,
+      "sword_status": "resolved",
+      "atk": 20,
+      "all_states_equal_to_reference": true
+    },
+    {
+      "source": "probe_result_74102.json",
+      "steps": 35,
+      "sword_status": "resolved",
+      "atk": 20,
+      "all_states_equal_to_reference": true
+    },
+    {
+      "source": "probe_result_84101.json",
+      "steps": 36,
+      "sword_status": "resolved",
+      "atk": 20,
+      "all_states_equal_to_reference": true
+    },
+    {
+      "source": "probe_result_84102.json",
+      "steps": 30,
+      "sword_status": "resolved",
+      "atk": 20,
+      "all_states_equal_to_reference": true
+    },
+    {
+      "source": "probe_result_84103.json",
+      "steps": 41,
+      "sword_status": "resolved",
+      "atk": 20,
+      "all_states_equal_to_reference": true
+    }
+  ],
+  "scripts": {
+    "probe.py": "import json,time,random,collections,sys,math\nimport numpy as np\nfrom pathlib import Path\nfrom tasks.tower10.neural.common import Codec\nfrom tasks.tower10.neural.vendor.kernel import prepare\nfrom tasks.tower10.engineering_upgrade.topology import InteractionSession,InteractionMask\nfrom tasks.tower10.engineering_upgrade.fast import FastMask\n\nraw=json.loads(Path('tasks/tower10/p45/assets/shared_initial_topology.json').read_text())\nsession=InteractionSession(prepare(raw));initial=session.initial;codec=Codec(initial)\nmask=FastMask(codec,initial);ref=InteractionMask(codec,initial)\nids=np.flatnonzero(mask(initial));print('S0',json.dumps([{'id':int(i),'action':codec.actions[int(i)]} for i in ids]),flush=True)\nseed=int(sys.argv[2]) if len(sys.argv)>2 else 20261021\nrng=random.Random(seed);t=time.monotonic();hits=0;lengths=[];first=None;term=collections.Counter();audit=0\nN=int(sys.argv[1]) if len(sys.argv)>1 else 1000\nmode=sys.argv[3] if len(sys.argv)>3 else 'actions'\nfor ep in range(N):\n s=initial;trace=[]\n for step in range(10000):\n  ids=np.flatnonzero(mask(s))\n  if ep<20:\n   assert np.array_equal(mask(s),ref(s));audit+=1\n  if not len(ids):term['no_interaction']+=1;break\n  groups={}\n  for i in ids:groups.setdefault(codec.actions[int(i)]['target'],[]).append(int(i))\n  if mode=='nodes':\n   targets=sorted(groups);target=targets[rng.randrange(len(targets))];options=groups[target];aid=options[rng.randrange(len(options))];prob=1/len(targets)/len(options)\n  else:\n   aid=int(ids[rng.randrange(len(ids))]);prob=1/len(ids)\n  a=codec.actions[aid];trace.append({'choices':len(ids),'targets':len(groups),'action_probability':prob,'action':a})\n  out=session.step(s,a);assert out['result']['accepted'];s=out['state']\n  if s['objects']['o:MT5:11:11']['status']!='active':\n   hits+=1;term['sword']+=1\n   if first is None:first=trace\n   break\n  if s['task']['status']=='GOAL':term['goal_without_sword']+=1;break\n else:raise RuntimeError('truncated; do not report as full episode')\n lengths.append(len(trace))\n if (ep+1)%1000==0:print(json.dumps({'episodes':ep+1,'hits':hits,'seconds':time.monotonic()-t}),flush=True)\nout={'seed':seed,'mode':mode,'episodes':N,'sword_hits':hits,'p_hat':hits/N,'seconds':time.monotonic()-t,'termination':dict(term),'mean_decisions':sum(lengths)/N,'reference_mask_checks':audit,'first_hit_trace':first}\nPath(f'probe_result_{seed}.json').write_text(json.dumps(out,ensure_ascii=False,indent=2));print(json.dumps(out,ensure_ascii=False),flush=True)\n",
+    "run_batches.py": "import subprocess,concurrent.futures,time,json,sys\nfrom pathlib import Path\nMODE=sys.argv[1] if len(sys.argv)>1 else 'actions'\ndef run(seed):\n with open(f'batch_{seed}.log','w') as f:\n  r=subprocess.run(['python','probe.py','10000',str(seed),MODE],stdout=f,stderr=subprocess.STDOUT)\n if r.returncode:raise RuntimeError((seed,r.returncode))\n d=json.loads(Path(f'probe_result_{seed}.json').read_text());print(json.dumps({'seed':seed,'episodes':d['episodes'],'hits':d['sword_hits'],'seconds':d['seconds']}),flush=True)\n return d\nif __name__=='__main__':\n t=time.monotonic()\n with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex:\n  rows=list(ex.map(run,[84101,84102,84103] if MODE=='nodes' else [74101,74102,74103]))\n n=sum(r['episodes'] for r in rows);k=sum(r['sword_hits'] for r in rows);p=k/n;z=1.959963984540054;den=1+z*z/n;center=(p+z*z/(2*n))/den;half=z*((p*(1-p)/n+z*z/(4*n*n))**.5)/den\n d={'episodes':n,'sword_hits':k,'p_hat':p,'wilson_95':[center-half,center+half],'wall_seconds':time.monotonic()-t,'batches':rows}\n Path('aggregate_'+MODE+'.json').write_text(json.dumps(d,ensure_ascii=False,indent=2));print(json.dumps({k:v for k,v in d.items() if k!='batches'}),flush=True)\n",
+    "verify_hits.py": "import json\nfrom pathlib import Path\nfrom tasks.tower10.neural.vendor import topology_engine as reference\nfrom tasks.tower10.neural.vendor.kernel import prepare\nfrom tasks.tower10.neural.common import Codec,digest\nfrom tasks.tower10.engineering_upgrade.topology import InteractionSession,InteractionMask\n\nraw=json.loads(Path('tasks/tower10/p45/assets/shared_initial_topology.json').read_text())\nrows=[]\nfor p in sorted(Path('.').glob('probe_result*.json')):\n r=json.loads(p.read_text());trace=r.get('first_hit_trace')\n if not trace:continue\n s=raw;session=InteractionSession(prepare(raw));fast=session.initial;codec=Codec(raw);mask=InteractionMask(codec,raw)\n for item in trace:\n  m=mask(s);assert int(m.sum())==item['choices'];assert m[codec.action_id(item['action'])]\n  a=reference.step(s,item['action']);b=session.step(fast,item['action']);assert a['result']['accepted'] and b['result']['accepted'];s=a['state'];fast=b['state'];assert digest(s)==digest(fast)\n assert s['objects']['o:MT5:11:11']['status']=='resolved'\n rows.append({'source':p.name,'steps':len(trace),'sword_status':s['objects']['o:MT5:11:11']['status'],'atk':s['hero']['atk'],'all_states_equal_to_reference':True})\nPath('hit_validation.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2));print(json.dumps(rows,ensure_ascii=False))\n"
+  },
+  "source_files": [
+    {
+      "source": "tasks/tower10/p45/cli.py",
+      "destination": "tasks/tower10/p45/cli.py",
+      "sha256": "aba6015fa4832335c2249a9dfc6226242da8a4fcdd8719f9609e6ca03486571e",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/p45/search.py",
+      "destination": "tasks/tower10/p45/search.py",
+      "sha256": "0e674cdb501e5afda336928175c184aa1631ba27390ddd1773d0cb13f42ffcf8",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/p45/__init__.py",
+      "destination": "tasks/tower10/p45/__init__.py",
+      "sha256": "b99190b928c8c48bb4b9c23d33baf2b3abbbf797758b6f8919daaba5456ad1cf",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/p45/network.py",
+      "destination": "tasks/tower10/p45/network.py",
+      "sha256": "92d69e1e98706f7cb8691e0e20a5a7eb685d35dff8c6bd1133c21b93c02756d4",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/p45/contracts.py",
+      "destination": "tasks/tower10/p45/contracts.py",
+      "sha256": "bdf83bfce812110eafafa879ac152075a9ea5144b7d064f93acceab671951d2b",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/p45/environment.py",
+      "destination": "tasks/tower10/p45/environment.py",
+      "sha256": "3c7f576d5b4fbc43b0b3376f9c72a08cd5d82453de9fc0dd3d2ef8b4d7ea1928",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/p45/observation.py",
+      "destination": "tasks/tower10/p45/observation.py",
+      "sha256": "a3a10a3453bf1cbbd14ff2ec54b11e99a668a9c357d7403656233516e8e70b6a",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/p45/runtime.py",
+      "destination": "tasks/tower10/p45/runtime.py",
+      "sha256": "fc90ad2e9305ba4daabf7b93a162906284cae78d8090e83b97597f63fdf25c2d",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/p45/config.json",
+      "destination": "tasks/tower10/p45/config.json",
+      "sha256": "e9f79eefde0b14dec11c39b6205fbf7dacf96cfdbea4afe890dd9c6d7a59d985",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/p45/parallel.py",
+      "destination": "tasks/tower10/p45/parallel.py",
+      "sha256": "ca7f1982c53f2277492dc88e2bcdcd6c0f2312d2efb223b1a0f487335c6c6748",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/p45/assets/SHA256.json",
+      "destination": "tasks/tower10/p45/assets/SHA256.json",
+      "sha256": "b3d08364daab5ad0edb7bba27917955e3e585570863817d060babf75edb03c27",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/p45/assets/shared_initial_topology.json",
+      "destination": "tasks/tower10/p45/assets/shared_initial_topology.json",
+      "sha256": "80999d2e01da8253510c96bc2f52ba9b61fae19b74516b76bb58f25cd90a05e6",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/p45/assets/shared_identity.json",
+      "destination": "tasks/tower10/p45/assets/shared_identity.json",
+      "sha256": "4f5f9f0a173409dbec2871f206f6aa8279afbeed446ca264e3aeaef469842ea6",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/p45_v0.py",
+      "destination": "tasks/tower10/p45_v0.py",
+      "sha256": "eb7d550c7a4c487aba573e7b3e1361c961eab33c2bd91f6bcb5a2101121489e6",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/neural/common.py",
+      "destination": "tasks/tower10/neural/common.py",
+      "sha256": "921a99fa7ee7e0516ea794edb78760fdb15e6c2ad0d096e4eb7ea0dd820f4d1c",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/neural/vendor/kernel.py",
+      "destination": "tasks/tower10/neural/vendor/kernel.py",
+      "sha256": "e357d8785e283a9af2c5255488a9c8ede48ea72e70c9bde2410232d52fe3cc85",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/neural/vendor/path_index.py",
+      "destination": "tasks/tower10/neural/vendor/path_index.py",
+      "sha256": "48fb3d842f58c6191ec5d306ff50ba6ac85bd57b94c036a6f84a54e93ced7023",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/neural/vendor/topology_engine.py",
+      "destination": "tasks/tower10/neural/vendor/topology_engine.py",
+      "sha256": "f602d445d832904eb54a030bc0bf8ebf4e9b9d76ea8f2860fccd34d8b07355d6",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/engineering_upgrade/__init__.py",
+      "destination": "tasks/tower10/engineering_upgrade/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/engineering_upgrade/actions.py",
+      "destination": "tasks/tower10/engineering_upgrade/actions.py",
+      "sha256": "9d3587ef2a67361e399c2503d6a765ed2c72390b0997e8483d216e9b93dc1e4a",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/engineering_upgrade/topology.py",
+      "destination": "tasks/tower10/engineering_upgrade/topology.py",
+      "sha256": "344aa8d561dc01ffc71d1fc9ee47438c6737eeada9f5ecd31b4f8bdd63756501",
+      "modified": false
+    },
+    {
+      "source": "tasks/tower10/engineering_upgrade/fast.py",
+      "destination": "tasks/tower10/engineering_upgrade/fast.py",
+      "sha256": "d08db70092878454afb571d65bca0bcbb248ef86f1550d631145a2a63a6c6bd7",
+      "modified": false
+    }
+  ]
+}

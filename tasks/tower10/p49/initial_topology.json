@@ -1,0 +1,2081 @@
+{
+  "schema": "P49-topology-state-v1",
+  "hero": {
+    "animate": false,
+    "atk": 10,
+    "def": 10,
+    "direction": "up",
+    "equipment": [],
+    "experience": null,
+    "floorId": "MT1",
+    "followers": [],
+    "hp": 400,
+    "hpmax": -1,
+    "image": "hero.png",
+    "items": {
+      "tools": {},
+      "constants": {},
+      "equips": {}
+    },
+    "lv": 1,
+    "mana": 0,
+    "manamax": -1,
+    "mdef": 0,
+    "money": 0,
+    "name": "勇者",
+    "steps": 0,
+    "x": 4,
+    "y": 4
+  },
+  "flags": {},
+  "graph": {
+    "nodes": {
+      "v:MT1:0:0": {
+        "position": [
+          "MT1",
+          0,
+          0
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:2:0": {
+        "position": [
+          "MT1",
+          2,
+          0
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:4:0": {
+        "position": [
+          "MT1",
+          4,
+          0
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:6:0": {
+        "position": [
+          "MT1",
+          6,
+          0
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:8:0": {
+        "position": [
+          "MT1",
+          8,
+          0
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:0:1": {
+        "position": [
+          "MT1",
+          0,
+          1
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:2:1": {
+        "position": [
+          "MT1",
+          2,
+          1
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:4:1": {
+        "position": [
+          "MT1",
+          4,
+          1
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:6:1": {
+        "position": [
+          "MT1",
+          6,
+          1
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:8:1": {
+        "position": [
+          "MT1",
+          8,
+          1
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:0:2": {
+        "position": [
+          "MT1",
+          0,
+          2
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:1:2": {
+        "position": [
+          "MT1",
+          1,
+          2
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:2:2": {
+        "position": [
+          "MT1",
+          2,
+          2
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:3:2": {
+        "position": [
+          "MT1",
+          3,
+          2
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:4:2": {
+        "position": [
+          "MT1",
+          4,
+          2
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:5:2": {
+        "position": [
+          "MT1",
+          5,
+          2
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:6:2": {
+        "position": [
+          "MT1",
+          6,
+          2
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:7:2": {
+        "position": [
+          "MT1",
+          7,
+          2
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:8:2": {
+        "position": [
+          "MT1",
+          8,
+          2
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:3:3": {
+        "position": [
+          "MT1",
+          3,
+          3
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:4:3": {
+        "position": [
+          "MT1",
+          4,
+          3
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:5:3": {
+        "position": [
+          "MT1",
+          5,
+          3
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:0:4": {
+        "position": [
+          "MT1",
+          0,
+          4
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:1:4": {
+        "position": [
+          "MT1",
+          1,
+          4
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:2:4": {
+        "position": [
+          "MT1",
+          2,
+          4
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:3:4": {
+        "position": [
+          "MT1",
+          3,
+          4
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:4:4": {
+        "position": [
+          "MT1",
+          4,
+          4
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:5:4": {
+        "position": [
+          "MT1",
+          5,
+          4
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:6:4": {
+        "position": [
+          "MT1",
+          6,
+          4
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:7:4": {
+        "position": [
+          "MT1",
+          7,
+          4
+        ],
+        "role": "anchor"
+      },
+      "v:MT1:8:4": {
+        "position": [
+          "MT1",
+          8,
+          4
+        ],
+        "role": "anchor"
+      }
+    },
+    "out": {
+      "v:MT1:0:0": [
+        {
+          "target": "v:MT1:0:1",
+          "path": [
+            [
+              "MT1",
+              0,
+              0
+            ],
+            [
+              "MT1",
+              0,
+              1
+            ]
+          ]
+        }
+      ],
+      "v:MT1:2:0": [
+        {
+          "target": "v:MT1:2:1",
+          "path": [
+            [
+              "MT1",
+              2,
+              0
+            ],
+            [
+              "MT1",
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "v:MT1:4:0": [
+        {
+          "target": "v:MT1:4:1",
+          "path": [
+            [
+              "MT1",
+              4,
+              0
+            ],
+            [
+              "MT1",
+              4,
+              1
+            ]
+          ]
+        }
+      ],
+      "v:MT1:6:0": [
+        {
+          "target": "v:MT1:6:1",
+          "path": [
+            [
+              "MT1",
+              6,
+              0
+            ],
+            [
+              "MT1",
+              6,
+              1
+            ]
+          ]
+        }
+      ],
+      "v:MT1:8:0": [
+        {
+          "target": "v:MT1:8:1",
+          "path": [
+            [
+              "MT1",
+              8,
+              0
+            ],
+            [
+              "MT1",
+              8,
+              1
+            ]
+          ]
+        }
+      ],
+      "v:MT1:0:1": [
+        {
+          "target": "v:MT1:0:0",
+          "path": [
+            [
+              "MT1",
+              0,
+              1
+            ],
+            [
+              "MT1",
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:0:2",
+          "path": [
+            [
+              "MT1",
+              0,
+              1
+            ],
+            [
+              "MT1",
+              0,
+              2
+            ]
+          ]
+        }
+      ],
+      "v:MT1:2:1": [
+        {
+          "target": "v:MT1:2:0",
+          "path": [
+            [
+              "MT1",
+              2,
+              1
+            ],
+            [
+              "MT1",
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:2:2",
+          "path": [
+            [
+              "MT1",
+              2,
+              1
+            ],
+            [
+              "MT1",
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "v:MT1:4:1": [
+        {
+          "target": "v:MT1:4:0",
+          "path": [
+            [
+              "MT1",
+              4,
+              1
+            ],
+            [
+              "MT1",
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:4:2",
+          "path": [
+            [
+              "MT1",
+              4,
+              1
+            ],
+            [
+              "MT1",
+              4,
+              2
+            ]
+          ]
+        }
+      ],
+      "v:MT1:6:1": [
+        {
+          "target": "v:MT1:6:0",
+          "path": [
+            [
+              "MT1",
+              6,
+              1
+            ],
+            [
+              "MT1",
+              6,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:6:2",
+          "path": [
+            [
+              "MT1",
+              6,
+              1
+            ],
+            [
+              "MT1",
+              6,
+              2
+            ]
+          ]
+        }
+      ],
+      "v:MT1:8:1": [
+        {
+          "target": "v:MT1:8:0",
+          "path": [
+            [
+              "MT1",
+              8,
+              1
+            ],
+            [
+              "MT1",
+              8,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:8:2",
+          "path": [
+            [
+              "MT1",
+              8,
+              1
+            ],
+            [
+              "MT1",
+              8,
+              2
+            ]
+          ]
+        }
+      ],
+      "v:MT1:0:2": [
+        {
+          "target": "v:MT1:0:1",
+          "path": [
+            [
+              "MT1",
+              0,
+              2
+            ],
+            [
+              "MT1",
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:1:2",
+          "path": [
+            [
+              "MT1",
+              0,
+              2
+            ],
+            [
+              "MT1",
+              1,
+              2
+            ]
+          ]
+        }
+      ],
+      "v:MT1:1:2": [
+        {
+          "target": "v:MT1:2:2",
+          "path": [
+            [
+              "MT1",
+              1,
+              2
+            ],
+            [
+              "MT1",
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:0:2",
+          "path": [
+            [
+              "MT1",
+              1,
+              2
+            ],
+            [
+              "MT1",
+              0,
+              2
+            ]
+          ]
+        }
+      ],
+      "v:MT1:2:2": [
+        {
+          "target": "v:MT1:2:1",
+          "path": [
+            [
+              "MT1",
+              2,
+              2
+            ],
+            [
+              "MT1",
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:3:2",
+          "path": [
+            [
+              "MT1",
+              2,
+              2
+            ],
+            [
+              "MT1",
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:1:2",
+          "path": [
+            [
+              "MT1",
+              2,
+              2
+            ],
+            [
+              "MT1",
+              1,
+              2
+            ]
+          ]
+        }
+      ],
+      "v:MT1:3:2": [
+        {
+          "target": "v:MT1:4:2",
+          "path": [
+            [
+              "MT1",
+              3,
+              2
+            ],
+            [
+              "MT1",
+              4,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:3:3",
+          "path": [
+            [
+              "MT1",
+              3,
+              2
+            ],
+            [
+              "MT1",
+              3,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:2:2",
+          "path": [
+            [
+              "MT1",
+              3,
+              2
+            ],
+            [
+              "MT1",
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "v:MT1:4:2": [
+        {
+          "target": "v:MT1:4:1",
+          "path": [
+            [
+              "MT1",
+              4,
+              2
+            ],
+            [
+              "MT1",
+              4,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:5:2",
+          "path": [
+            [
+              "MT1",
+              4,
+              2
+            ],
+            [
+              "MT1",
+              5,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:4:3",
+          "path": [
+            [
+              "MT1",
+              4,
+              2
+            ],
+            [
+              "MT1",
+              4,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:3:2",
+          "path": [
+            [
+              "MT1",
+              4,
+              2
+            ],
+            [
+              "MT1",
+              3,
+              2
+            ]
+          ]
+        }
+      ],
+      "v:MT1:5:2": [
+        {
+          "target": "v:MT1:6:2",
+          "path": [
+            [
+              "MT1",
+              5,
+              2
+            ],
+            [
+              "MT1",
+              6,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:5:3",
+          "path": [
+            [
+              "MT1",
+              5,
+              2
+            ],
+            [
+              "MT1",
+              5,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:4:2",
+          "path": [
+            [
+              "MT1",
+              5,
+              2
+            ],
+            [
+              "MT1",
+              4,
+              2
+            ]
+          ]
+        }
+      ],
+      "v:MT1:6:2": [
+        {
+          "target": "v:MT1:6:1",
+          "path": [
+            [
+              "MT1",
+              6,
+              2
+            ],
+            [
+              "MT1",
+              6,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:7:2",
+          "path": [
+            [
+              "MT1",
+              6,
+              2
+            ],
+            [
+              "MT1",
+              7,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:5:2",
+          "path": [
+            [
+              "MT1",
+              6,
+              2
+            ],
+            [
+              "MT1",
+              5,
+              2
+            ]
+          ]
+        }
+      ],
+      "v:MT1:7:2": [
+        {
+          "target": "v:MT1:8:2",
+          "path": [
+            [
+              "MT1",
+              7,
+              2
+            ],
+            [
+              "MT1",
+              8,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:6:2",
+          "path": [
+            [
+              "MT1",
+              7,
+              2
+            ],
+            [
+              "MT1",
+              6,
+              2
+            ]
+          ]
+        }
+      ],
+      "v:MT1:8:2": [
+        {
+          "target": "v:MT1:8:1",
+          "path": [
+            [
+              "MT1",
+              8,
+              2
+            ],
+            [
+              "MT1",
+              8,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:7:2",
+          "path": [
+            [
+              "MT1",
+              8,
+              2
+            ],
+            [
+              "MT1",
+              7,
+              2
+            ]
+          ]
+        }
+      ],
+      "v:MT1:3:3": [
+        {
+          "target": "v:MT1:3:2",
+          "path": [
+            [
+              "MT1",
+              3,
+              3
+            ],
+            [
+              "MT1",
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:4:3",
+          "path": [
+            [
+              "MT1",
+              3,
+              3
+            ],
+            [
+              "MT1",
+              4,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:3:4",
+          "path": [
+            [
+              "MT1",
+              3,
+              3
+            ],
+            [
+              "MT1",
+              3,
+              4
+            ]
+          ]
+        }
+      ],
+      "v:MT1:4:3": [
+        {
+          "target": "v:MT1:4:2",
+          "path": [
+            [
+              "MT1",
+              4,
+              3
+            ],
+            [
+              "MT1",
+              4,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:5:3",
+          "path": [
+            [
+              "MT1",
+              4,
+              3
+            ],
+            [
+              "MT1",
+              5,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:4:4",
+          "path": [
+            [
+              "MT1",
+              4,
+              3
+            ],
+            [
+              "MT1",
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:3:3",
+          "path": [
+            [
+              "MT1",
+              4,
+              3
+            ],
+            [
+              "MT1",
+              3,
+              3
+            ]
+          ]
+        }
+      ],
+      "v:MT1:5:3": [
+        {
+          "target": "v:MT1:5:2",
+          "path": [
+            [
+              "MT1",
+              5,
+              3
+            ],
+            [
+              "MT1",
+              5,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:5:4",
+          "path": [
+            [
+              "MT1",
+              5,
+              3
+            ],
+            [
+              "MT1",
+              5,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:4:3",
+          "path": [
+            [
+              "MT1",
+              5,
+              3
+            ],
+            [
+              "MT1",
+              4,
+              3
+            ]
+          ]
+        }
+      ],
+      "v:MT1:0:4": [
+        {
+          "target": "v:MT1:1:4",
+          "path": [
+            [
+              "MT1",
+              0,
+              4
+            ],
+            [
+              "MT1",
+              1,
+              4
+            ]
+          ]
+        }
+      ],
+      "v:MT1:1:4": [
+        {
+          "target": "v:MT1:2:4",
+          "path": [
+            [
+              "MT1",
+              1,
+              4
+            ],
+            [
+              "MT1",
+              2,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:0:4",
+          "path": [
+            [
+              "MT1",
+              1,
+              4
+            ],
+            [
+              "MT1",
+              0,
+              4
+            ]
+          ]
+        }
+      ],
+      "v:MT1:2:4": [
+        {
+          "target": "v:MT1:3:4",
+          "path": [
+            [
+              "MT1",
+              2,
+              4
+            ],
+            [
+              "MT1",
+              3,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:1:4",
+          "path": [
+            [
+              "MT1",
+              2,
+              4
+            ],
+            [
+              "MT1",
+              1,
+              4
+            ]
+          ]
+        }
+      ],
+      "v:MT1:3:4": [
+        {
+          "target": "v:MT1:3:3",
+          "path": [
+            [
+              "MT1",
+              3,
+              4
+            ],
+            [
+              "MT1",
+              3,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:4:4",
+          "path": [
+            [
+              "MT1",
+              3,
+              4
+            ],
+            [
+              "MT1",
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:2:4",
+          "path": [
+            [
+              "MT1",
+              3,
+              4
+            ],
+            [
+              "MT1",
+              2,
+              4
+            ]
+          ]
+        }
+      ],
+      "v:MT1:4:4": [
+        {
+          "target": "v:MT1:4:3",
+          "path": [
+            [
+              "MT1",
+              4,
+              4
+            ],
+            [
+              "MT1",
+              4,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:5:4",
+          "path": [
+            [
+              "MT1",
+              4,
+              4
+            ],
+            [
+              "MT1",
+              5,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:3:4",
+          "path": [
+            [
+              "MT1",
+              4,
+              4
+            ],
+            [
+              "MT1",
+              3,
+              4
+            ]
+          ]
+        }
+      ],
+      "v:MT1:5:4": [
+        {
+          "target": "v:MT1:5:3",
+          "path": [
+            [
+              "MT1",
+              5,
+              4
+            ],
+            [
+              "MT1",
+              5,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:6:4",
+          "path": [
+            [
+              "MT1",
+              5,
+              4
+            ],
+            [
+              "MT1",
+              6,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:4:4",
+          "path": [
+            [
+              "MT1",
+              5,
+              4
+            ],
+            [
+              "MT1",
+              4,
+              4
+            ]
+          ]
+        }
+      ],
+      "v:MT1:6:4": [
+        {
+          "target": "v:MT1:7:4",
+          "path": [
+            [
+              "MT1",
+              6,
+              4
+            ],
+            [
+              "MT1",
+              7,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:5:4",
+          "path": [
+            [
+              "MT1",
+              6,
+              4
+            ],
+            [
+              "MT1",
+              5,
+              4
+            ]
+          ]
+        }
+      ],
+      "v:MT1:7:4": [
+        {
+          "target": "v:MT1:8:4",
+          "path": [
+            [
+              "MT1",
+              7,
+              4
+            ],
+            [
+              "MT1",
+              8,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "v:MT1:6:4",
+          "path": [
+            [
+              "MT1",
+              7,
+              4
+            ],
+            [
+              "MT1",
+              6,
+              4
+            ]
+          ]
+        }
+      ],
+      "v:MT1:8:4": [
+        {
+          "target": "v:MT1:7:4",
+          "path": [
+            [
+              "MT1",
+              8,
+              4
+            ],
+            [
+              "MT1",
+              7,
+              4
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "rules": {
+    "version": "P49-map-v1/P48-rules",
+    "widths": {
+      "MT1": 9
+    },
+    "enemies": {
+      "bat": {
+        "atk": 38,
+        "def": 3,
+        "experience": 0,
+        "hp": 35,
+        "money": 3,
+        "name": "小蝙蝠",
+        "special": 0
+      },
+      "bluePriest": {
+        "atk": 32,
+        "def": 8,
+        "experience": 0,
+        "hp": 60,
+        "money": 5,
+        "name": "初级法师",
+        "special": 0
+      },
+      "greenSlime": {
+        "atk": 18,
+        "def": 1,
+        "experience": 0,
+        "hp": 35,
+        "money": 1,
+        "name": "绿色史来姆",
+        "special": 0
+      },
+      "redSlime": {
+        "atk": 20,
+        "def": 2,
+        "experience": 0,
+        "hp": 45,
+        "money": 2,
+        "name": "红色史来姆",
+        "special": 0
+      },
+      "skeletonSoldier": {
+        "atk": 52,
+        "def": 12,
+        "experience": 0,
+        "hp": 55,
+        "money": 8,
+        "name": "骷髅士兵",
+        "special": 0
+      }
+    },
+    "items": {
+      "bluePotion": {
+        "canUseItemEffect": "true",
+        "cls": "items",
+        "itemEffect": "core.status.hero.hp += core.values.bluePotion * core.status.thisMap.ratio",
+        "itemEffectTip": "你的生命增加了 ${core.values.bluePotion * core.status.thisMap.ratio} 点",
+        "name": "蓝血瓶",
+        "text": "，生命+${core.values.bluePotion}",
+        "useItemEffect": "core.status.hero.hp += core.values.bluePotion"
+      },
+      "redPotion": {
+        "canUseItemEffect": "true",
+        "cls": "items",
+        "itemEffect": "core.status.hero.hp += core.values.redPotion * core.status.thisMap.ratio",
+        "itemEffectTip": "你的生命增加了 ${core.values.redPotion * core.status.thisMap.ratio} 点",
+        "name": "红血瓶",
+        "text": "，生命+${core.values.redPotion}",
+        "useItemEffect": "core.status.hero.hp += core.values.redPotion"
+      },
+      "shield1": {
+        "cls": "items",
+        "equip": {
+          "type": 1,
+          "value": {
+            "def": 10
+          }
+        },
+        "itemEffect": "core.status.hero.def += 10; core.setFlag('nowShield', 'shield1');",
+        "itemEffectTip": "你得到了铁盾，防御力增加10点",
+        "name": "铁盾",
+        "text": "一个很普通的铁盾"
+      },
+      "sword1": {
+        "cls": "items",
+        "equip": {
+          "animate": "sword",
+          "type": 0,
+          "value": {
+            "atk": 10
+          }
+        },
+        "itemEffect": "core.status.hero.atk += 10; core.setFlag('nowWeapon', 'sword1');",
+        "itemEffectTip": "你得到了铁剑，攻击力增加10点",
+        "name": "铁剑",
+        "text": "一把很普通的铁剑"
+      },
+      "yellowKey": {
+        "cls": "tools",
+        "hideInReplay": true,
+        "hideInToolbox": true,
+        "name": "黄钥匙",
+        "text": "可以打开一扇黄门"
+      }
+    },
+    "values": {
+      "animateSpeed": 200,
+      "blueGem": 1,
+      "bluePotion": 200,
+      "breakArmor": 0.9,
+      "counterAttack": 0.1,
+      "floorChangeTime": 0,
+      "greenGem": 5,
+      "greenPotion": 800,
+      "hatred": 2,
+      "lavaDamage": 100,
+      "moveSpeed": 100,
+      "poisonDamage": 10,
+      "purify": 3,
+      "redGem": 1,
+      "redPotion": 50,
+      "statusCanvasRowsOnMobile": 3,
+      "weakValue": 20,
+      "yellowPotion": 500
+    },
+    "ratios": {
+      "MT1": 1
+    },
+    "templates": {},
+    "stairs": [],
+    "eventPrograms": [],
+    "fly": {
+      "floors": {}
+    }
+  },
+  "objects": {
+    "o:MT1:0:0": {
+      "entity": "initial:o:MT1:0:0",
+      "event": {
+        "cls": "items",
+        "id": "redPotion",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "o:MT1:0:0",
+      "kind": "item",
+      "position": [
+        "MT1",
+        0,
+        0
+      ],
+      "status": "active",
+      "tile": 31,
+      "trigger": "getItem"
+    },
+    "o:MT1:2:0": {
+      "entity": "initial:o:MT1:2:0",
+      "event": {
+        "cls": "items",
+        "id": "redPotion",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "o:MT1:2:0",
+      "kind": "item",
+      "position": [
+        "MT1",
+        2,
+        0
+      ],
+      "status": "active",
+      "tile": 31,
+      "trigger": "getItem"
+    },
+    "o:MT1:6:0": {
+      "entity": "initial:o:MT1:6:0",
+      "event": {
+        "cls": "items",
+        "id": "bluePotion",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "o:MT1:6:0",
+      "kind": "item",
+      "position": [
+        "MT1",
+        6,
+        0
+      ],
+      "status": "active",
+      "tile": 32,
+      "trigger": "getItem"
+    },
+    "o:MT1:8:0": {
+      "entity": "initial:o:MT1:8:0",
+      "event": {
+        "cls": "items",
+        "id": "bluePotion",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "o:MT1:8:0",
+      "kind": "item",
+      "position": [
+        "MT1",
+        8,
+        0
+      ],
+      "status": "active",
+      "tile": 32,
+      "trigger": "getItem"
+    },
+    "o:MT1:0:1": {
+      "entity": "initial:o:MT1:0:1",
+      "event": {
+        "cls": "enemys",
+        "id": "greenSlime",
+        "noPass": true,
+        "trigger": "battle"
+      },
+      "excluded": false,
+      "id": "o:MT1:0:1",
+      "kind": "enemy",
+      "position": [
+        "MT1",
+        0,
+        1
+      ],
+      "status": "active",
+      "tile": 201,
+      "trigger": "battle"
+    },
+    "o:MT1:2:1": {
+      "entity": "initial:o:MT1:2:1",
+      "event": {
+        "cls": "enemys",
+        "id": "redSlime",
+        "noPass": true,
+        "trigger": "battle"
+      },
+      "excluded": false,
+      "id": "o:MT1:2:1",
+      "kind": "enemy",
+      "position": [
+        "MT1",
+        2,
+        1
+      ],
+      "status": "active",
+      "tile": 202,
+      "trigger": "battle"
+    },
+    "o:MT1:4:1": {
+      "entity": "initial:o:MT1:4:1",
+      "event": {
+        "cls": "enemys",
+        "id": "skeletonSoldier",
+        "noPass": true,
+        "trigger": "battle"
+      },
+      "excluded": false,
+      "id": "o:MT1:4:1",
+      "kind": "enemy",
+      "position": [
+        "MT1",
+        4,
+        1
+      ],
+      "status": "active",
+      "tile": 210,
+      "trigger": "battle"
+    },
+    "o:MT1:6:1": {
+      "entity": "initial:o:MT1:6:1",
+      "event": {
+        "cls": "enemys",
+        "id": "bat",
+        "noPass": true,
+        "trigger": "battle"
+      },
+      "excluded": false,
+      "id": "o:MT1:6:1",
+      "kind": "enemy",
+      "position": [
+        "MT1",
+        6,
+        1
+      ],
+      "status": "active",
+      "tile": 205,
+      "trigger": "battle"
+    },
+    "o:MT1:8:1": {
+      "entity": "initial:o:MT1:8:1",
+      "event": {
+        "cls": "enemys",
+        "id": "bluePriest",
+        "noPass": true,
+        "trigger": "battle"
+      },
+      "excluded": false,
+      "id": "o:MT1:8:1",
+      "kind": "enemy",
+      "position": [
+        "MT1",
+        8,
+        1
+      ],
+      "status": "active",
+      "tile": 217,
+      "trigger": "battle"
+    },
+    "o:MT1:0:2": {
+      "entity": "initial:o:MT1:0:2",
+      "event": {
+        "animate": 1,
+        "cls": "animates",
+        "doorInfo": {
+          "closeSound": "开关门",
+          "keys": {
+            "yellowKey": 1
+          },
+          "openSound": "开关门",
+          "time": 120
+        },
+        "id": "yellowDoor",
+        "name": "黄门",
+        "noPass": true,
+        "trigger": "openDoor"
+      },
+      "excluded": false,
+      "id": "o:MT1:0:2",
+      "kind": "door",
+      "position": [
+        "MT1",
+        0,
+        2
+      ],
+      "status": "active",
+      "tile": 81,
+      "trigger": "openDoor"
+    },
+    "o:MT1:3:2": {
+      "entity": "initial:o:MT1:3:2",
+      "event": {
+        "cls": "items",
+        "id": "yellowKey",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "o:MT1:3:2",
+      "kind": "item",
+      "position": [
+        "MT1",
+        3,
+        2
+      ],
+      "status": "active",
+      "tile": 21,
+      "trigger": "getItem"
+    },
+    "o:MT1:5:2": {
+      "entity": "initial:o:MT1:5:2",
+      "event": {
+        "cls": "items",
+        "id": "yellowKey",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "o:MT1:5:2",
+      "kind": "item",
+      "position": [
+        "MT1",
+        5,
+        2
+      ],
+      "status": "active",
+      "tile": 21,
+      "trigger": "getItem"
+    },
+    "o:MT1:8:2": {
+      "entity": "initial:o:MT1:8:2",
+      "event": {
+        "animate": 1,
+        "cls": "animates",
+        "doorInfo": {
+          "closeSound": "开关门",
+          "keys": {
+            "yellowKey": 1
+          },
+          "openSound": "开关门",
+          "time": 120
+        },
+        "id": "yellowDoor",
+        "name": "黄门",
+        "noPass": true,
+        "trigger": "openDoor"
+      },
+      "excluded": false,
+      "id": "o:MT1:8:2",
+      "kind": "door",
+      "position": [
+        "MT1",
+        8,
+        2
+      ],
+      "status": "active",
+      "tile": 81,
+      "trigger": "openDoor"
+    },
+    "o:MT1:3:3": {
+      "entity": "initial:o:MT1:3:3",
+      "event": {
+        "cls": "items",
+        "id": "yellowKey",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "o:MT1:3:3",
+      "kind": "item",
+      "position": [
+        "MT1",
+        3,
+        3
+      ],
+      "status": "active",
+      "tile": 21,
+      "trigger": "getItem"
+    },
+    "o:MT1:5:3": {
+      "entity": "initial:o:MT1:5:3",
+      "event": {
+        "cls": "items",
+        "id": "yellowKey",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "o:MT1:5:3",
+      "kind": "item",
+      "position": [
+        "MT1",
+        5,
+        3
+      ],
+      "status": "active",
+      "tile": 21,
+      "trigger": "getItem"
+    },
+    "o:MT1:0:4": {
+      "entity": "initial:o:MT1:0:4",
+      "event": {
+        "cls": "items",
+        "id": "sword1",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "o:MT1:0:4",
+      "kind": "item",
+      "position": [
+        "MT1",
+        0,
+        4
+      ],
+      "status": "active",
+      "tile": 35,
+      "trigger": "getItem"
+    },
+    "o:MT1:1:4": {
+      "entity": "initial:o:MT1:1:4",
+      "event": {
+        "cls": "enemys",
+        "id": "redSlime",
+        "noPass": true,
+        "trigger": "battle"
+      },
+      "excluded": false,
+      "id": "o:MT1:1:4",
+      "kind": "enemy",
+      "position": [
+        "MT1",
+        1,
+        4
+      ],
+      "status": "active",
+      "tile": 202,
+      "trigger": "battle"
+    },
+    "o:MT1:2:4": {
+      "entity": "initial:o:MT1:2:4",
+      "event": {
+        "animate": 1,
+        "cls": "animates",
+        "doorInfo": {
+          "closeSound": "开关门",
+          "keys": {
+            "yellowKey": 1
+          },
+          "openSound": "开关门",
+          "time": 120
+        },
+        "id": "yellowDoor",
+        "name": "黄门",
+        "noPass": true,
+        "trigger": "openDoor"
+      },
+      "excluded": false,
+      "id": "o:MT1:2:4",
+      "kind": "door",
+      "position": [
+        "MT1",
+        2,
+        4
+      ],
+      "status": "active",
+      "tile": 81,
+      "trigger": "openDoor"
+    },
+    "o:MT1:6:4": {
+      "entity": "initial:o:MT1:6:4",
+      "event": {
+        "animate": 1,
+        "cls": "animates",
+        "doorInfo": {
+          "closeSound": "开关门",
+          "keys": {
+            "yellowKey": 1
+          },
+          "openSound": "开关门",
+          "time": 120
+        },
+        "id": "yellowDoor",
+        "name": "黄门",
+        "noPass": true,
+        "trigger": "openDoor"
+      },
+      "excluded": false,
+      "id": "o:MT1:6:4",
+      "kind": "door",
+      "position": [
+        "MT1",
+        6,
+        4
+      ],
+      "status": "active",
+      "tile": 81,
+      "trigger": "openDoor"
+    },
+    "o:MT1:7:4": {
+      "entity": "initial:o:MT1:7:4",
+      "event": {
+        "cls": "enemys",
+        "id": "redSlime",
+        "noPass": true,
+        "trigger": "battle"
+      },
+      "excluded": false,
+      "id": "o:MT1:7:4",
+      "kind": "enemy",
+      "position": [
+        "MT1",
+        7,
+        4
+      ],
+      "status": "active",
+      "tile": 202,
+      "trigger": "battle"
+    },
+    "o:MT1:8:4": {
+      "entity": "initial:o:MT1:8:4",
+      "event": {
+        "cls": "items",
+        "id": "shield1",
+        "noPass": false,
+        "trigger": "getItem"
+      },
+      "excluded": false,
+      "id": "o:MT1:8:4",
+      "kind": "item",
+      "position": [
+        "MT1",
+        8,
+        4
+      ],
+      "status": "active",
+      "tile": 36,
+      "trigger": "getItem"
+    }
+  },
+  "entities": {
+    "initial:o:MT1:0:0": {
+      "slot": "o:MT1:0:0",
+      "status": "active",
+      "enemy": "redPotion"
+    },
+    "initial:o:MT1:2:0": {
+      "slot": "o:MT1:2:0",
+      "status": "active",
+      "enemy": "redPotion"
+    },
+    "initial:o:MT1:6:0": {
+      "slot": "o:MT1:6:0",
+      "status": "active",
+      "enemy": "bluePotion"
+    },
+    "initial:o:MT1:8:0": {
+      "slot": "o:MT1:8:0",
+      "status": "active",
+      "enemy": "bluePotion"
+    },
+    "initial:o:MT1:0:1": {
+      "slot": "o:MT1:0:1",
+      "status": "active",
+      "enemy": "greenSlime"
+    },
+    "initial:o:MT1:2:1": {
+      "slot": "o:MT1:2:1",
+      "status": "active",
+      "enemy": "redSlime"
+    },
+    "initial:o:MT1:4:1": {
+      "slot": "o:MT1:4:1",
+      "status": "active",
+      "enemy": "skeletonSoldier"
+    },
+    "initial:o:MT1:6:1": {
+      "slot": "o:MT1:6:1",
+      "status": "active",
+      "enemy": "bat"
+    },
+    "initial:o:MT1:8:1": {
+      "slot": "o:MT1:8:1",
+      "status": "active",
+      "enemy": "bluePriest"
+    },
+    "initial:o:MT1:0:2": {
+      "slot": "o:MT1:0:2",
+      "status": "active",
+      "enemy": "yellowDoor"
+    },
+    "initial:o:MT1:3:2": {
+      "slot": "o:MT1:3:2",
+      "status": "active",
+      "enemy": "yellowKey"
+    },
+    "initial:o:MT1:5:2": {
+      "slot": "o:MT1:5:2",
+      "status": "active",
+      "enemy": "yellowKey"
+    },
+    "initial:o:MT1:8:2": {
+      "slot": "o:MT1:8:2",
+      "status": "active",
+      "enemy": "yellowDoor"
+    },
+    "initial:o:MT1:3:3": {
+      "slot": "o:MT1:3:3",
+      "status": "active",
+      "enemy": "yellowKey"
+    },
+    "initial:o:MT1:5:3": {
+      "slot": "o:MT1:5:3",
+      "status": "active",
+      "enemy": "yellowKey"
+    },
+    "initial:o:MT1:0:4": {
+      "slot": "o:MT1:0:4",
+      "status": "active",
+      "enemy": "sword1"
+    },
+    "initial:o:MT1:1:4": {
+      "slot": "o:MT1:1:4",
+      "status": "active",
+      "enemy": "redSlime"
+    },
+    "initial:o:MT1:2:4": {
+      "slot": "o:MT1:2:4",
+      "status": "active",
+      "enemy": "yellowDoor"
+    },
+    "initial:o:MT1:6:4": {
+      "slot": "o:MT1:6:4",
+      "status": "active",
+      "enemy": "yellowDoor"
+    },
+    "initial:o:MT1:7:4": {
+      "slot": "o:MT1:7:4",
+      "status": "active",
+      "enemy": "redSlime"
+    },
+    "initial:o:MT1:8:4": {
+      "slot": "o:MT1:8:4",
+      "status": "active",
+      "enemy": "shield1"
+    }
+  },
+  "barriers": {},
+  "events": {},
+  "serial": 0,
+  "actionCount": 0,
+  "task": {
+    "status": "ACTIVE",
+    "id": "p49-handdrawn-v1",
+    "boss": "o:MT1:4:1"
+  }
+}

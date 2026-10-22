@@ -1,0 +1,191 @@
+[
+  {
+    "node": "e00",
+    "reference_slot": "o:MT1:0:0",
+    "display_position": [
+      "MT1",
+      0,
+      0
+    ]
+  },
+  {
+    "node": "e01",
+    "reference_slot": "o:MT1:0:1",
+    "display_position": [
+      "MT1",
+      0,
+      1
+    ]
+  },
+  {
+    "node": "e02",
+    "reference_slot": "o:MT1:0:2",
+    "display_position": [
+      "MT1",
+      0,
+      2
+    ]
+  },
+  {
+    "node": "e03",
+    "reference_slot": "o:MT1:0:4",
+    "display_position": [
+      "MT1",
+      0,
+      4
+    ]
+  },
+  {
+    "node": "e04",
+    "reference_slot": "o:MT1:1:4",
+    "display_position": [
+      "MT1",
+      1,
+      4
+    ]
+  },
+  {
+    "node": "e05",
+    "reference_slot": "o:MT1:2:0",
+    "display_position": [
+      "MT1",
+      2,
+      0
+    ]
+  },
+  {
+    "node": "e06",
+    "reference_slot": "o:MT1:2:1",
+    "display_position": [
+      "MT1",
+      2,
+      1
+    ]
+  },
+  {
+    "node": "e07",
+    "reference_slot": "o:MT1:2:4",
+    "display_position": [
+      "MT1",
+      2,
+      4
+    ]
+  },
+  {
+    "node": "e08",
+    "reference_slot": "o:MT1:3:2",
+    "display_position": [
+      "MT1",
+      3,
+      2
+    ]
+  },
+  {
+    "node": "e09",
+    "reference_slot": "o:MT1:3:3",
+    "display_position": [
+      "MT1",
+      3,
+      3
+    ]
+  },
+  {
+    "node": "e10",
+    "reference_slot": "o:MT1:4:1",
+    "display_position": [
+      "MT1",
+      4,
+      1
+    ]
+  },
+  {
+    "node": "e11",
+    "reference_slot": "o:MT1:5:2",
+    "display_position": [
+      "MT1",
+      5,
+      2
+    ]
+  },
+  {
+    "node": "e12",
+    "reference_slot": "o:MT1:5:3",
+    "display_position": [
+      "MT1",
+      5,
+      3
+    ]
+  },
+  {
+    "node": "e13",
+    "reference_slot": "o:MT1:6:0",
+    "display_position": [
+      "MT1",
+      6,
+      0
+    ]
+  },
+  {
+    "node": "e14",
+    "reference_slot": "o:MT1:6:1",
+    "display_position": [
+      "MT1",
+      6,
+      1
+    ]
+  },
+  {
+    "node": "e15",
+    "reference_slot": "o:MT1:6:4",
+    "display_position": [
+      "MT1",
+      6,
+      4
+    ]
+  },
+  {
+    "node": "e16",
+    "reference_slot": "o:MT1:7:4",
+    "display_position": [
+      "MT1",
+      7,
+      4
+    ]
+  },
+  {
+    "node": "e17",
+    "reference_slot": "o:MT1:8:0",
+    "display_position": [
+      "MT1",
+      8,
+      0
+    ]
+  },
+  {
+    "node": "e18",
+    "reference_slot": "o:MT1:8:1",
+    "display_position": [
+      "MT1",
+      8,
+      1
+    ]
+  },
+  {
+    "node": "e19",
+    "reference_slot": "o:MT1:8:2",
+    "display_position": [
+      "MT1",
+      8,
+      2
+    ]
+  },
+  {
+    "node": "e20",
+    "reference_slot": "o:MT1:8:4",
+    "display_position": [
+      "MT1",
+      8,
+      4
+    ]
+  }
+]

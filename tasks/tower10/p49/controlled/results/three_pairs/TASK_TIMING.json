@@ -1,0 +1,104 @@
+{
+  "task_start_utc": "2026-10-22T05:01:11+00:00",
+  "task_cap_seconds": 7200,
+  "development_and_interface_to_formal_start_seconds": 815.858202,
+  "precheck_data_replay_encoding_directory_interval_seconds": 1.75804353,
+  "precheck_save_reload_network_short_games_directory_interval_seconds": 2.036206699,
+  "precheck_interval_definition": "directory birth to final result file mtime; interpreter import/setup is in inclusive development time",
+  "precheck_actual_short_games": {
+    "A": {
+      "seconds": 0.572289849000299,
+      "decisions": 7,
+      "forwards": 454,
+      "simulations": 700
+    },
+    "B": {
+      "seconds": 0.630046157999459,
+      "decisions": 11,
+      "forwards": 328,
+      "simulations": 1100
+    }
+  },
+  "freeze_commit": "8073025dc9ce94727baf3d12ca5c8df3bcd30ac8",
+  "formal_start_utc": "2026-10-22T05:14:46.858202+00:00",
+  "formal_finish_utc": "2026-10-22T05:27:18.505035+00:00",
+  "formal_budget_seconds": 3600,
+  "formal_total_seconds": 751.6468325800015,
+  "formal_local_report_seconds": 3.3797513610006717,
+  "all_worker_timing": [
+    {
+      "phase": "fit",
+      "seed": 49001,
+      "condition": "A",
+      "seconds": 4.326127506003104
+    },
+    {
+      "phase": "fit",
+      "seed": 49001,
+      "condition": "B",
+      "seconds": 9.356445896999503
+    },
+    {
+      "phase": "fit",
+      "seed": 49002,
+      "condition": "A",
+      "seconds": 4.50749980999899
+    },
+    {
+      "phase": "fit",
+      "seed": 49002,
+      "condition": "B",
+      "seconds": 8.202820008002163
+    },
+    {
+      "phase": "fit",
+      "seed": 49003,
+      "condition": "A",
+      "seconds": 3.982860519001406
+    },
+    {
+      "phase": "fit",
+      "seed": 49003,
+      "condition": "B",
+      "seconds": 7.476803104997089
+    },
+    {
+      "phase": "online",
+      "seed": 49001,
+      "condition": "A",
+      "seconds": 51.5847299149973
+    },
+    {
+      "phase": "online",
+      "seed": 49001,
+      "condition": "B",
+      "seconds": 163.5759129149992
+    },
+    {
+      "phase": "online",
+      "seed": 49002,
+      "condition": "A",
+      "seconds": 53.76322031499876
+    },
+    {
+      "phase": "online",
+      "seed": 49002,
+      "condition": "B",
+      "seconds": 177.1857321159987
+    },
+    {
+      "phase": "online",
+      "seed": 49003,
+      "condition": "A",
+      "seconds": 50.87120759000027
+    },
+    {
+      "phase": "online",
+      "seed": 49003,
+      "condition": "B",
+      "seconds": 185.01183048299936
+    }
+  ],
+  "archive_started_utc": "2026-10-22T05:35:30.503881+00:00",
+  "archive_upload_fixed_readback_timing": "delivery receipt separately records those later endpoints; no formal budget reset"
+}

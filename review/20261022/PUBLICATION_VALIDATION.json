@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-22",
+  "p49_original_blob_identities_verified": 169,
+  "new_manifest_files_verified": 203,
+  "existing_environment_tests": {
+    "executed": 6,
+    "passed": 6,
+    "seconds": 0.095
+  },
+  "authored_document_links": "all local targets exist",
+  "credential_pattern_scan": "no matching credentials found in changed UTF-8 text",
+  "p48_code_vs_measured_commit": "all executable files identical; only perf/SMOKE.md differs",
+  "training_started": false,
+  "cloud_experiment_started": false,
+  "limits": [
+    "Static/identity checks and environment unit tests only",
+    "Original whole-graph certification not rerun",
+    "Full model archives omitted",
+    "Pattern scans are not a guarantee of detecting every possible secret"
+  ]
+}

@@ -1,0 +1,7 @@
+Offline evidence audit, first attempt (after formal chain finished):
+Traceback (most recent call last):
+  File "/workspace/scratch/p49_topology_finalize.py", line 30, in <module>
+    assert rec['weight_hash']==g['weight_hash']
+KeyError: 'weight_hash'
+
+Correction: direct-policy identity belongs to game envelope, MCTS also has per-decision identity. No experimental records or executed code were changed.

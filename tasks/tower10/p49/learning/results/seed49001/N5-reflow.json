@@ -1,0 +1,169 @@
+{
+  "reload": true,
+  "model_id": "P49-seed49001-N5",
+  "weight_hash": "80c864fb1586e778235bc6399ae7ecfa13d38d5e0e35505b7dbeb79f813ccfc1",
+  "episodes": [
+    {
+      "episode_id": 24,
+      "model_id": "P49-seed49001-N5",
+      "weight_hash": "80c864fb1586e778235bc6399ae7ecfa13d38d5e0e35505b7dbeb79f813ccfc1",
+      "end": "GOAL",
+      "task_hp": 98,
+      "z": 0.10888888888888888,
+      "terminal": {
+        "end": "GOAL",
+        "task_hp": 98,
+        "z": 0.10888888888888888,
+        "proof": {
+          "atomic_settled": true,
+          "post_goal_actions": 0
+        }
+      },
+      "floors": [
+        1
+      ],
+      "search_stats": {
+        "new_simulations": 1500,
+        "forwards": 613,
+        "expanded": 1277,
+        "terminal_backups": 224,
+        "root_expansions": 1,
+        "encoding_seconds": 0.05998872398686217,
+        "network_seconds": 0.3100047500029177,
+        "rule_seconds": 0.41623843301022134,
+        "traversal_backup_seconds": 0.14562044096419413,
+        "cache_seconds": 0.002044091032985307,
+        "max_depth": 11,
+        "pv_cache_hits": 664,
+        "cache_evictions": 0
+      },
+      "terminal_utc": "2026-10-22T02:46:00.360981+00:00",
+      "terminal_monotonic": 7780.893932245,
+      "path": "episode-000024.json.gz",
+      "positions": 15,
+      "sha256": "bc024bcfccb3bd405c5025bee76c6bd64da6703bd7e3d866ebcdbc8cc327f981"
+    },
+    {
+      "episode_id": 25,
+      "model_id": "P49-seed49001-N5",
+      "weight_hash": "80c864fb1586e778235bc6399ae7ecfa13d38d5e0e35505b7dbeb79f813ccfc1",
+      "end": "GOAL",
+      "task_hp": 398,
+      "z": 0.44222222222222224,
+      "terminal": {
+        "end": "GOAL",
+        "task_hp": 398,
+        "z": 0.44222222222222224,
+        "proof": {
+          "atomic_settled": true,
+          "post_goal_actions": 0
+        }
+      },
+      "floors": [
+        1
+      ],
+      "search_stats": {
+        "new_simulations": 1800,
+        "forwards": 457,
+        "expanded": 1291,
+        "terminal_backups": 510,
+        "root_expansions": 1,
+        "encoding_seconds": 0.06235552899852337,
+        "network_seconds": 0.25741318100244825,
+        "rule_seconds": 0.4538136210094308,
+        "traversal_backup_seconds": 0.16634014397641295,
+        "cache_seconds": 0.0024756700076977722,
+        "max_depth": 11,
+        "pv_cache_hits": 834,
+        "cache_evictions": 0
+      },
+      "terminal_utc": "2026-10-22T02:46:02.016608+00:00",
+      "terminal_monotonic": 7782.54956043,
+      "path": "episode-000025.json.gz",
+      "positions": 18,
+      "sha256": "da2b08dd04bf9b4db19766ac011b08a472856a4ee81c7d82627ce53b835a5f16"
+    },
+    {
+      "episode_id": 26,
+      "model_id": "P49-seed49001-N5",
+      "weight_hash": "80c864fb1586e778235bc6399ae7ecfa13d38d5e0e35505b7dbeb79f813ccfc1",
+      "end": "GOAL",
+      "task_hp": 124,
+      "z": 0.13777777777777778,
+      "terminal": {
+        "end": "GOAL",
+        "task_hp": 124,
+        "z": 0.13777777777777778,
+        "proof": {
+          "atomic_settled": true,
+          "post_goal_actions": 0
+        }
+      },
+      "floors": [
+        1
+      ],
+      "search_stats": {
+        "new_simulations": 1700,
+        "forwards": 568,
+        "expanded": 1400,
+        "terminal_backups": 301,
+        "root_expansions": 1,
+        "encoding_seconds": 0.0659032300227409,
+        "network_seconds": 0.29012935400169226,
+        "rule_seconds": 0.4628789410162426,
+        "traversal_backup_seconds": 0.14907415697143733,
+        "cache_seconds": 0.0026942169906760682,
+        "max_depth": 8,
+        "pv_cache_hits": 832,
+        "cache_evictions": 0
+      },
+      "terminal_utc": "2026-10-22T02:46:03.606045+00:00",
+      "terminal_monotonic": 7784.138996887,
+      "path": "episode-000026.json.gz",
+      "positions": 17,
+      "sha256": "3ad625c4e6f2232ca34d2b04fe636eafe11fee711a256715ece4959dcbb531e7"
+    },
+    {
+      "episode_id": 27,
+      "model_id": "P49-seed49001-N5",
+      "weight_hash": "80c864fb1586e778235bc6399ae7ecfa13d38d5e0e35505b7dbeb79f813ccfc1",
+      "end": "GOAL",
+      "task_hp": 364,
+      "z": 0.40444444444444444,
+      "terminal": {
+        "end": "GOAL",
+        "task_hp": 364,
+        "z": 0.40444444444444444,
+        "proof": {
+          "atomic_settled": true,
+          "post_goal_actions": 0
+        }
+      },
+      "floors": [
+        1
+      ],
+      "search_stats": {
+        "new_simulations": 1900,
+        "forwards": 629,
+        "expanded": 1291,
+        "terminal_backups": 610,
+        "root_expansions": 1,
+        "encoding_seconds": 0.05881552803111845,
+        "network_seconds": 0.30718795800021326,
+        "rule_seconds": 0.4105242580153572,
+        "traversal_backup_seconds": 0.1434995729214279,
+        "cache_seconds": 0.0023767279999447055,
+        "max_depth": 9,
+        "pv_cache_hits": 662,
+        "cache_evictions": 0
+      },
+      "terminal_utc": "2026-10-22T02:46:05.178808+00:00",
+      "terminal_monotonic": 7785.711759994,
+      "path": "episode-000027.json.gz",
+      "positions": 19,
+      "sha256": "81b5d73d27019e54bd037ab11541e55282f3db7cf59e6743c24c12c63e925957"
+    }
+  ],
+  "seconds": 6.489470253000036,
+  "N6_triggered": false
+}

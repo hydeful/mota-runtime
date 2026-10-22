@@ -1,0 +1,11 @@
+{
+  "physical_initial_sha256": "cdf06981a2391182e94efe14241f5370c12cfc2d76e8188a42fd9517f8976eb9",
+  "physical_rules_sha256": "7b5eb976ad7f073cdcfecb526c1cd2e42d8f697e85a70dd7f053821930dc958e",
+  "topology_initial_sha256": "f751fc5032485b7d5a39e0a83ac0670badbbb4a8075b4c4a7bb8de79dbfddfe2",
+  "topology_rules_sha256": "592e2b0757bafb84baa91ef47ed879d03b03063632f0c3bb12fb934ea8cb8be1",
+  "scope": "single frozen P49 task; no corridor-triggered events, stairs or fly; unsupported event programs fail at build",
+  "contraction": "object-to-object direct corridors; initial entry is a frontier vector, never a graph/decision node",
+  "object_nodes": 21,
+  "runtime_grid_vertices": 0,
+  "relations": 74
+}

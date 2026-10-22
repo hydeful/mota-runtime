@@ -1,0 +1,67 @@
+{
+  "repository": "hydeful/mota-project",
+  "commit": "0f732f99d9c0db093258fa807a1dbd4e879fc111",
+  "retrieval": "GitHub connector file contents; selected source snapshot, not a full Git checkout",
+  "files": [
+    {
+      "path": "tasks/tower10/neural/vendor/topology_engine.py",
+      "git_blob": "ff228df25999cee0d7618a8b35d8eb40d5b6a991"
+    },
+    {
+      "path": "20_handoff/session_p48_to_minimal_tower_20261021/HANDOFF.md",
+      "git_blob": "8851a98eba74761c8cb828f85e3585860d465781"
+    },
+    {
+      "path": "tasks/tower10/p45/environment.py",
+      "git_blob": "f4ddc0ea4d3fd8b0aa7114923ac34cf3fe2ec081"
+    },
+    {
+      "path": "tasks/tower10/p45/contracts.py",
+      "git_blob": "052c112c818d18b3ba47225234244c8a76ef6a8e"
+    },
+    {
+      "path": "tasks/tower10/p45/observation.py",
+      "git_blob": "19003b897f7ba8faa9fc47b003a979f2165d3460"
+    },
+    {
+      "path": "tasks/tower10/neural/common.py",
+      "git_blob": "b555a316b9c3575a143c2c4cc0c1555f9bbfb6a6"
+    },
+    {
+      "path": "tasks/tower10/neural/vendor/kernel.py",
+      "git_blob": "8bd41b6a63013e4dd81af43b8a207ac1f6995569"
+    },
+    {
+      "path": "tasks/tower10/neural/vendor/path_index.py",
+      "git_blob": "4df21f5708658890f368c1d31e4a5ff71fa2317b"
+    },
+    {
+      "path": "tasks/tower10/neural/vendor/README.md",
+      "git_blob": "a292667ca9d5536c347938da752c64b9585a9301"
+    },
+    {
+      "path": "tasks/tower10/p45/assets/shared_initial_topology.json",
+      "git_blob": "55edaae3525f00fabc917affa99c1b135e6ce0b3"
+    },
+    {
+      "path": "tasks/tower10/p45/assets/shared_identity.json",
+      "git_blob": "abed8e06392bbf938f60a259a1b8a9a240b5dc23"
+    },
+    {
+      "path": "tasks/tower10/p45/assets/SHA256.json",
+      "git_blob": "680abb82b2946cdf5780f674ae03a2067b6a78ee"
+    },
+    {
+      "path": "tasks/tower10/engineering_upgrade/actions.py",
+      "git_blob": "d8eac94d9da5fd70267e82befc45a2fe42f89da4"
+    },
+    {
+      "path": "tasks/tower10/engineering_upgrade/topology.py",
+      "git_blob": "47fbd9645fab8fe8b9d9bd94ad851628dcf1a32f"
+    },
+    {
+      "path": "tasks/tower10/engineering_upgrade/fast.py",
+      "git_blob": "7065ffe6f5e13644bef7c80a53282990c0fc948d"
+    }
+  ]
+}

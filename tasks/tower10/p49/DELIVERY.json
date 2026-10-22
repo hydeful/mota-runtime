@@ -1,0 +1,38 @@
+{
+  "repository": "hydeful/mota-project",
+  "branch": "p49/minimal-tower-20261022",
+  "base_commit": "0f732f99d9c0db093258fa807a1dbd4e879fc111",
+  "verified_code_commit": "efeba5fafd3416e72a2de7d9df9fd899a467abe0",
+  "remote_readback": "20 of 20 added files matched local UTF-8 content at verified_code_commit",
+  "site": {
+    "provider": "Sites",
+    "audience": "owner-private",
+    "project_id": "appgprj_6ad95d6101cc8191bba154d47048a90f",
+    "version_id": "appgprj_6ad95d6101cc8191bba154d47048a90f~appgver_38ebc5f77e6c81918ec86d3db0f20754",
+    "deployment_id": "appgdep_6ad95f504804819192e1b47efc6c2ddc",
+    "source_commit": "26bb109f41e23b07ca08ed2231f6f72f967261d7",
+    "status": "succeeded",
+    "url": "https://p49-little-tower-20261022.yellow-owlet-4013.chatgpt.site"
+  },
+  "validation": {
+    "tests_passed": 6,
+    "browser": "actual local Chromium desktop/mobile QA before publication; native deployment succeeded",
+    "random_games": 30000,
+    "random_wins": 30000,
+    "exhaustive_reduced_states": 76849,
+    "all_legal_complete_sequences_win": true,
+    "goal_hp_range": [
+      2,
+      574
+    ]
+  },
+  "scope": {
+    "map_and_static_topology": true,
+    "frontend": true,
+    "independent_acceptance": true,
+    "training": false,
+    "MCTS_evaluation": false,
+    "AutoDL_experiment": false,
+    "difficulty_adjusted": false
+  }
+}

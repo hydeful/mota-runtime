@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "H_bound": 900,
+  "shape": [
+    34,
+    5,
+    9
+  ],
+  "action_count": 21,
+  "output": 713,
+  "permanently_masked_padding": 692,
+  "prefix_checks": [
+    {
+      "target": "o:MT1:3:3",
+      "id": "yellowKey",
+      "hp_before": 400,
+      "hp_after": 400,
+      "atk": 10,
+      "def": 10,
+      "keys": 1,
+      "state_id": "52aabb166b72aa6f78cd3428aaff65b93f136a28ec00df5f617d1503ac13ccfd"
+    },
+    {
+      "target": "o:MT1:6:4",
+      "id": "yellowDoor",
+      "hp_before": 400,
+      "hp_after": 400,
+      "atk": 10,
+      "def": 10,
+      "keys": 0,
+      "state_id": "c911f9a32ab7093348af3c643b2a333162dd45c6e1507086cf728e643c8ee194"
+    },
+    {
+      "target": "o:MT1:7:4",
+      "id": "redSlime",
+      "hp_before": 400,
+      "hp_after": 350,
+      "atk": 10,
+      "def": 10,
+      "keys": 0,
+      "state_id": "c31eba5d76eff5c757389a0a2d6625ff2b6623930d23fb6aa110448180184dc8"
+    },
+    {
+      "target": "o:MT1:8:4",
+      "id": "shield1",
+      "hp_before": 350,
+      "hp_after": 350,
+      "atk": 10,
+      "def": 20,
+      "keys": 0,
+      "state_id": "ab8b4db9b09d4ba8ee0d1bfe53f3eb81b264c8d4d8e28bbb02ecf89c76807696"
+    },
+    {
+      "target": "o:MT1:3:2",
+      "id": "yellowKey",
+      "hp_before": 350,
+      "hp_after": 350,
+      "atk": 10,
+      "def": 20,
+      "keys": 1,
+      "state_id": "01892a5a68e94553d15373c74d59a5de7a64590c942f5726a20d04526cc2b47a"
+    },
+    {
+      "target": "o:MT1:2:4",
+      "id": "yellowDoor",
+      "hp_before": 350,
+      "hp_after": 350,
+      "atk": 10,
+      "def": 20,
+      "keys": 0,
+      "state_id": "ff08425fc0ebd72173c12df741e5a039e20c1b0af19975b12ba1218218a7d6e9"
+    },
+    {
+      "target": "o:MT1:1:4",
+      "id": "redSlime",
+      "hp_before": 350,
+      "hp_after": 350,
+      "atk": 10,
+      "def": 20,
+      "keys": 0,
+      "state_id": "f7d6cd438e8293998edac2dba847c6a2dbd62ed6202bb8733c44386873658e1b"
+    },
+    {
+      "target": "o:MT1:0:4",
+      "id": "sword1",
+      "hp_before": 350,
+      "hp_after": 350,
+      "atk": 20,
+      "def": 20,
+      "keys": 0,
+      "state_id": "8ed25e62feaf727b4936dff3246ecef886d3935c895cf90a1fb4f52293b75c4e"
+    },
+    {
+      "target": "o:MT1:4:1",
+      "id": "skeletonSoldier",
+      "hp_before": 350,
+      "hp_after": 158,
+      "atk": 20,
+      "def": 20,
+      "keys": 0,
+      "state_id": "c683b1080c14e13a4104944bb1f008184c873d1969b416c8efd05dd17a18879f"
+    }
+  ],
+  "normal_checkpoint_reload": true,
+  "task_schema_mismatch_rejections": [
+    "P49_MODEL_TASK_SCHEMA_MISMATCH",
+    "P49_MODEL_TASK_SCHEMA_MISMATCH"
+  ],
+  "timing_probe": {
+    "seconds": 1.0004438089999894,
+    "decisions": 16,
+    "new_simulations": 1600,
+    "forwards": 843,
+    "estimated_96_MCTS_evaluation_games_seconds": 96.04260566399898
+  },
+  "torch": "2.10.0+cpu",
+  "SGD_steps": 0
+}

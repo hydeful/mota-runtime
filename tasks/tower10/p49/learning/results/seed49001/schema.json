@@ -1,0 +1,119 @@
+{
+  "task": "p49-handdrawn-learning-v1",
+  "shape": [
+    34,
+    5,
+    9
+  ],
+  "channels": [
+    "walkable",
+    "wall",
+    "barrier",
+    "hero",
+    "type:bat",
+    "type:bluePotion",
+    "type:bluePriest",
+    "type:greenSlime",
+    "type:redPotion",
+    "type:redSlime",
+    "type:shield1",
+    "type:skeletonSoldier",
+    "type:sword1",
+    "type:yellowDoor",
+    "type:yellowKey",
+    "status:absent",
+    "status:active",
+    "status:hidden",
+    "status:resolved",
+    "status:moved",
+    "enemy_hp",
+    "enemy_atk",
+    "enemy_def",
+    "door_key_cost",
+    "item_hp",
+    "item_atk",
+    "item_def",
+    "item_key",
+    "hp",
+    "atk",
+    "def",
+    "yellowKey",
+    "goal",
+    "t"
+  ],
+  "actions": [
+    {
+      "target": "o:MT1:0:0"
+    },
+    {
+      "target": "o:MT1:0:1"
+    },
+    {
+      "target": "o:MT1:0:2"
+    },
+    {
+      "target": "o:MT1:0:4"
+    },
+    {
+      "target": "o:MT1:1:4"
+    },
+    {
+      "target": "o:MT1:2:0"
+    },
+    {
+      "target": "o:MT1:2:1"
+    },
+    {
+      "target": "o:MT1:2:4"
+    },
+    {
+      "target": "o:MT1:3:2"
+    },
+    {
+      "target": "o:MT1:3:3"
+    },
+    {
+      "target": "o:MT1:4:1"
+    },
+    {
+      "target": "o:MT1:5:2"
+    },
+    {
+      "target": "o:MT1:5:3"
+    },
+    {
+      "target": "o:MT1:6:0"
+    },
+    {
+      "target": "o:MT1:6:1"
+    },
+    {
+      "target": "o:MT1:6:4"
+    },
+    {
+      "target": "o:MT1:7:4"
+    },
+    {
+      "target": "o:MT1:8:0"
+    },
+    {
+      "target": "o:MT1:8:1"
+    },
+    {
+      "target": "o:MT1:8:2"
+    },
+    {
+      "target": "o:MT1:8:4"
+    }
+  ],
+  "padding": [
+    21,
+    713
+  ],
+  "map": {
+    "initialSHA256": "cdf06981a2391182e94efe14241f5370c12cfc2d76e8188a42fd9517f8976eb9",
+    "rulesSHA256": "7b5eb976ad7f073cdcfecb526c1cd2e42d8f697e85a70dd7f053821930dc958e",
+    "engineSHA256": "f602d445d832904eb54a030bc0bf8ebf4e9b9d76ea8f2860fccd34d8b07355d6"
+  },
+  "H_bound": 900
+}

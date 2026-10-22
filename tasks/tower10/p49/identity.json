@@ -1,0 +1,12 @@
+{
+  "map": "p49-handdrawn-v1",
+  "source_commit": "0f732f99d9c0db093258fa807a1dbd4e879fc111",
+  "engine_sha256": "f602d445d832904eb54a030bc0bf8ebf4e9b9d76ea8f2860fccd34d8b07355d6",
+  "initial_sha256": "cdf06981a2391182e94efe14241f5370c12cfc2d76e8188a42fd9517f8976eb9",
+  "rules_sha256": "7b5eb976ad7f073cdcfecb526c1cd2e42d8f697e85a70dd7f053821930dc958e",
+  "map_sha256": "10de5cb49acabf37d60fce8213b70317748fbefde6563fd8237c8c840d4d5eab",
+  "task_adapter": "p49-boss-resolved-after-original-step-v1",
+  "adapter_sha256": "77754056d47d293f6c9ac0a8e4471454f98fd46f7fa8322c2bf37ab9cb6f57c2",
+  "browser_adapter_sha256": "460daa1187f1e90cf563e271b1094f9af4505eacc6afe51e9a73771a372cd062",
+  "training_started": false
+}

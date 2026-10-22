@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "evaluation_games": 192,
+  "all_outcomes_success": true,
+  "actual_mcts_budget_per_decision": 100,
+  "training_rounds": 5,
+  "SGD_expected_and_actual": 56,
+  "training_new_positions": 425,
+  "training_episodes": 24,
+  "N5_reloaded_reflow_episodes": 4,
+  "N6": false,
+  "model_weight_hash_matches_all_collected_and_evaluated_episodes": true,
+  "value_labels_preserve_hp_variation": true,
+  "first_formal_step_data_gradients_nonzero_finite": true,
+  "formal_executed_source_hashes_verified_before_delivery_patches": true,
+  "formal_source_commit": "9fe7b7fb28a08d69ed6f8e100e4ff3a8d35a8b25",
+  "first_artifact_manifest_mismatch": [
+    "progress.json"
+  ],
+  "artifact_manifest_repaired_after_final_progress": true,
+  "learning_errors": null
+}

@@ -1,0 +1,22 @@
+{
+  "desktop_viewport": [
+    1440,
+    1100
+  ],
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "tiles": 45,
+  "walls": 14,
+  "initial_legal": 4,
+  "manual_goal_hp": 98,
+  "random_UI_result": {
+    "end": "GOAL",
+    "score": 212
+  },
+  "undo_reset_topology_verified": true,
+  "mobile_horizontal_overflow": false,
+  "page_errors": [],
+  "runtime": "vendored Pyodide 0.27.7, original engine identity verified before play"
+}

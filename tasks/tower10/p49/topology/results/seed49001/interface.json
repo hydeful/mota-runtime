@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "normal_reload": true,
+  "mismatch_rejections": [
+    "TOPOLOGY_MODEL_TASK_SCHEMA_MISMATCH",
+    "TOPOLOGY_MODEL_TASK_SCHEMA_MISMATCH"
+  ],
+  "actual_graph_order_permutation": [
+    6,
+    1,
+    17,
+    11,
+    13,
+    14,
+    15,
+    16,
+    3,
+    20,
+    18,
+    8,
+    12,
+    5,
+    4,
+    19,
+    9,
+    7,
+    0,
+    10,
+    2
+  ],
+  "policy_equivariance_max_abs": 5.960464477539063e-08,
+  "value_invariance_max_abs": 0.0,
+  "tensor_shapes": {
+    "nodes": [
+      1,
+      21,
+      27
+    ],
+    "relations": [
+      1,
+      2,
+      21,
+      21
+    ],
+    "hero": [
+      1,
+      7
+    ],
+    "policy": [
+      1,
+      21
+    ],
+    "value": [
+      1
+    ]
+  },
+  "parameters": 27586,
+  "runtime_binding": {
+    "original_sha256": "fc90ad2e9305ba4daabf7b93a162906284cae78d8090e83b97597f63fdf25c2d",
+    "bound_sha256": "3bcceb2030f1b0c1b32d721056e4b2b095aec91f583f55120cfec92f462802c7",
+    "changes": "exactly two action mask/target allocations: 713 -> len(codec.actions)"
+  },
+  "seconds_per_full_MCTS100_game": 0.7839907750003476,
+  "decisions": 19,
+  "new_simulations": 1900,
+  "forwards": 387,
+  "SGD_steps": 0,
+  "estimated_MCTS96_games_seconds": 75.26311440003337
+}

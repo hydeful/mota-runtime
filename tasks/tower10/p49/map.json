@@ -1,0 +1,10 @@
+{
+  "id": "p49-handdrawn-v1",
+  "rows": ["p#p#X#q#q", "A#B#M#C#D", "Y..K.K..Y", "###K.K###", "SBY.@.YBT"],
+  "hero": {"hp": 400, "atk": 10, "def": 10, "yellowKey": 0},
+  "enemies": {"A": "greenSlime", "B": "redSlime", "C": "bat", "D": "bluePriest", "M": "skeletonSoldier"},
+  "items": {"p": "redPotion", "q": "bluePotion", "K": "yellowKey", "S": "sword1", "T": "shield1"},
+  "goal": {"symbol": "M", "stop": "immediately_after_settled_battle", "score": "remaining_hp"},
+  "coordinates": "zero-based x right, y down; floor MT1",
+  "random_policy": "uniform over legal effective object interactions; no movement actions, no MCTS"
+}

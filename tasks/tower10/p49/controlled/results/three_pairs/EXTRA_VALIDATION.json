@@ -1,0 +1,374 @@
+{
+  "passed": true,
+  "pair_initializations": [
+    {
+      "phase": "fit",
+      "seed": 49001,
+      "A_hash": "c08e52b9a01230abacc4cbc03292a36e6b237807775f4082e7a2a92b5d7d8251",
+      "B_hash": "c08e52b9a01230abacc4cbc03292a36e6b237807775f4082e7a2a92b5d7d8251",
+      "online_initial_RNG_hashes": []
+    },
+    {
+      "phase": "fit",
+      "seed": 49002,
+      "A_hash": "d9ac526a7cfbb45ea21a6c2bc801afb595513a2254219bf535382c85df8b28f1",
+      "B_hash": "d9ac526a7cfbb45ea21a6c2bc801afb595513a2254219bf535382c85df8b28f1",
+      "online_initial_RNG_hashes": []
+    },
+    {
+      "phase": "fit",
+      "seed": 49003,
+      "A_hash": "ff70159307c92331a48459f3bd24d3f9b6fcf0d841c476d03d721dd3f958c36a",
+      "B_hash": "ff70159307c92331a48459f3bd24d3f9b6fcf0d841c476d03d721dd3f958c36a",
+      "online_initial_RNG_hashes": []
+    },
+    {
+      "phase": "online",
+      "seed": 49001,
+      "A_hash": "c08e52b9a01230abacc4cbc03292a36e6b237807775f4082e7a2a92b5d7d8251",
+      "B_hash": "c08e52b9a01230abacc4cbc03292a36e6b237807775f4082e7a2a92b5d7d8251",
+      "online_initial_RNG_hashes": [
+        "546e9c3665cbf10e472326cc781a17b50759b9ed7a3709ff57827a279f397c47",
+        "546e9c3665cbf10e472326cc781a17b50759b9ed7a3709ff57827a279f397c47"
+      ]
+    },
+    {
+      "phase": "online",
+      "seed": 49002,
+      "A_hash": "d9ac526a7cfbb45ea21a6c2bc801afb595513a2254219bf535382c85df8b28f1",
+      "B_hash": "d9ac526a7cfbb45ea21a6c2bc801afb595513a2254219bf535382c85df8b28f1",
+      "online_initial_RNG_hashes": [
+        "1b57c584979f10e721d6baacdc67b0d01b365845729552c1fe20fe8a0a8b58b2",
+        "1b57c584979f10e721d6baacdc67b0d01b365845729552c1fe20fe8a0a8b58b2"
+      ]
+    },
+    {
+      "phase": "online",
+      "seed": 49003,
+      "A_hash": "ff70159307c92331a48459f3bd24d3f9b6fcf0d841c476d03d721dd3f958c36a",
+      "B_hash": "ff70159307c92331a48459f3bd24d3f9b6fcf0d841c476d03d721dd3f958c36a",
+      "online_initial_RNG_hashes": [
+        "9e1367f47234a6d94ae8deacfdbb829cf65c2839411e6b94c85134b9edfe5a81",
+        "9e1367f47234a6d94ae8deacfdbb829cf65c2839411e6b94c85134b9edfe5a81"
+      ]
+    }
+  ],
+  "fit_checks": [
+    {
+      "seed": 49001,
+      "condition": "A",
+      "SGD_steps": 56,
+      "all_checkpoints_optimizer_RNG_BN_match": true
+    },
+    {
+      "seed": 49001,
+      "condition": "B",
+      "SGD_steps": 56,
+      "all_checkpoints_optimizer_RNG_BN_match": true
+    },
+    {
+      "seed": 49002,
+      "condition": "A",
+      "SGD_steps": 56,
+      "all_checkpoints_optimizer_RNG_BN_match": true
+    },
+    {
+      "seed": 49002,
+      "condition": "B",
+      "SGD_steps": 56,
+      "all_checkpoints_optimizer_RNG_BN_match": true
+    },
+    {
+      "seed": 49003,
+      "condition": "A",
+      "SGD_steps": 56,
+      "all_checkpoints_optimizer_RNG_BN_match": true
+    },
+    {
+      "seed": 49003,
+      "condition": "B",
+      "SGD_steps": 56,
+      "all_checkpoints_optimizer_RNG_BN_match": true
+    }
+  ],
+  "online_checks": [
+    {
+      "seed": 49001,
+      "condition": "A",
+      "training_episodes": 24,
+      "training_positions": 425,
+      "SGD_steps": 56,
+      "reflow_episodes": 4,
+      "reflow_positions": 69,
+      "model_chain_hashes": [
+        "c08e52b9a01230abacc4cbc03292a36e6b237807775f4082e7a2a92b5d7d8251",
+        "a9062097c2a57c465c8b141d931d245dd365518b9651a9724f8ea407015627ca",
+        "64ff06d06d2c9d9cd53615d8005ca1bd6c768d5301a18179d1886e5ff3c3cf57",
+        "45ef14e5c63789828944390f39c1f626f0703794cbe38df6bc53b4beccb83eb9",
+        "e49db2d258118c8666987db77dd5b34197002575bf0e905fbd1462e7fa47d387",
+        "80c864fb1586e778235bc6399ae7ecfa13d38d5e0e35505b7dbeb79f813ccfc1"
+      ]
+    },
+    {
+      "seed": 49001,
+      "condition": "B",
+      "training_episodes": 20,
+      "training_positions": 385,
+      "SGD_steps": 50,
+      "reflow_episodes": 4,
+      "reflow_positions": 62,
+      "model_chain_hashes": [
+        "c08e52b9a01230abacc4cbc03292a36e6b237807775f4082e7a2a92b5d7d8251",
+        "4ea21ed3a7b6e7a0a15d2b97f0b6c427eeebac9479d6ad6330796490a49a44c0",
+        "5dbf586506bd06e6cb24c82fa868207d2ada00d45550cf78557f1727344289f8",
+        "7f618f454f4cf3b69bfe73cab22a90c536c1b466633c0619c1f31359577f27dc",
+        "9e4fa022f27889f6f78e1953cc2059aaf13ee102bd4a957d0fff513c651df34c",
+        "a09e9f002de284a7dcb062638d40044997cbba26aa2c25736f30fd2b46527ff3"
+      ]
+    },
+    {
+      "seed": 49002,
+      "condition": "A",
+      "training_episodes": 24,
+      "training_positions": 420,
+      "SGD_steps": 55,
+      "reflow_episodes": 4,
+      "reflow_positions": 84,
+      "model_chain_hashes": [
+        "d9ac526a7cfbb45ea21a6c2bc801afb595513a2254219bf535382c85df8b28f1",
+        "e43de6516bc513ef57834a99cc7c7de24e0fe47af90b83b4d996420f6ba2a2cc",
+        "65eb3d6f25a2b673f2c2c2e7b541a83873cbd15d7a3d3c84b5ca68599bfee08e",
+        "fad479a4fa7c424870ac23906458acbb57816fff6737e55630a5d134ede9cccb",
+        "94b9d3ed5b8dcd6859ea9295d9afae4183bb33f71860b94fe004a4e82232eeac",
+        "698fd84320a6b370e17c987412d651338fa5d5ba8a8fadfda7d12b336dc2e8b4"
+      ]
+    },
+    {
+      "seed": 49002,
+      "condition": "B",
+      "training_episodes": 24,
+      "training_positions": 405,
+      "SGD_steps": 53,
+      "reflow_episodes": 4,
+      "reflow_positions": 82,
+      "model_chain_hashes": [
+        "d9ac526a7cfbb45ea21a6c2bc801afb595513a2254219bf535382c85df8b28f1",
+        "e336890322270f2347fed5481f25612c8a4b4136e1843b0dc97f2afc7cfb277b",
+        "01acdc625287dbcacda12b9e87ddd38cd04892a0d0739636314ea4398d357462",
+        "9ebd91493c730e96105522aee6058ee997abb4e6c714e028a441485956d485ee",
+        "ed3835aa2408053e8a8adc493d5f5e2f72cc2185dc16bc16b0cd4ec1a622aa12",
+        "f9a8eb33d1bef243fa9e5af2e29fa5febf133267eb4d5037560a89b9fd9b46af"
+      ]
+    },
+    {
+      "seed": 49003,
+      "condition": "A",
+      "training_episodes": 24,
+      "training_positions": 424,
+      "SGD_steps": 56,
+      "reflow_episodes": 4,
+      "reflow_positions": 80,
+      "model_chain_hashes": [
+        "ff70159307c92331a48459f3bd24d3f9b6fcf0d841c476d03d721dd3f958c36a",
+        "a60555a5c47a30e1b1c0bed5e3010eefeefc9e5f12956054694d9345cbb09ed8",
+        "6f2fdb506e7108e7a16cf75581498d6df864bdc9c3afc3938c55f2fe530e8ad6",
+        "19c0ddb5df696c99048ada7a279fb2b8fb56af9b5640de7231171ff3781fc978",
+        "79c5cbfc4156dead18a1f6772dd251db58dd086b033852cc1298f764bbd8fbcf",
+        "824398428024a6c1040d89c7f29aa07f9ed4062cf468e0499dc29cdc6ccf28a4"
+      ]
+    },
+    {
+      "seed": 49003,
+      "condition": "B",
+      "training_episodes": 24,
+      "training_positions": 444,
+      "SGD_steps": 57,
+      "reflow_episodes": 4,
+      "reflow_positions": 74,
+      "model_chain_hashes": [
+        "ff70159307c92331a48459f3bd24d3f9b6fcf0d841c476d03d721dd3f958c36a",
+        "c4526dc01ef94a3adcf8db1d2856c8d382b070e2e162fb41ca15d105d20602e3",
+        "dff0f4ec0b3268117d85c2d931cc457bbaf4b76778a1375a957d7000b724d33e",
+        "3fefc1b0406061c18aff7088d94cf39bd3b2c664765ed7a70249feddfd4713f9",
+        "af6d115f55bd729789e6960e68d3469eb1eb3d23fb4ce65625340b6832ce035d",
+        "4f6f685d22ddcc02c7a311e116e0b31543474de407076753096ba9b0138ce43a"
+      ]
+    }
+  ],
+  "schema_rejections": [
+    {
+      "phase": "fit",
+      "seed": 49001,
+      "condition": "A",
+      "check": "cross_condition",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "fit",
+      "seed": 49001,
+      "condition": "A",
+      "check": "cross_phase",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "fit",
+      "seed": 49001,
+      "condition": "B",
+      "check": "cross_condition",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "fit",
+      "seed": 49001,
+      "condition": "B",
+      "check": "cross_phase",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "fit",
+      "seed": 49002,
+      "condition": "A",
+      "check": "cross_condition",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "fit",
+      "seed": 49002,
+      "condition": "A",
+      "check": "cross_phase",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "fit",
+      "seed": 49002,
+      "condition": "B",
+      "check": "cross_condition",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "fit",
+      "seed": 49002,
+      "condition": "B",
+      "check": "cross_phase",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "fit",
+      "seed": 49003,
+      "condition": "A",
+      "check": "cross_condition",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "fit",
+      "seed": 49003,
+      "condition": "A",
+      "check": "cross_phase",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "fit",
+      "seed": 49003,
+      "condition": "B",
+      "check": "cross_condition",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "fit",
+      "seed": 49003,
+      "condition": "B",
+      "check": "cross_phase",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "online",
+      "seed": 49001,
+      "condition": "A",
+      "check": "cross_condition",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "online",
+      "seed": 49001,
+      "condition": "A",
+      "check": "cross_phase",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "online",
+      "seed": 49001,
+      "condition": "B",
+      "check": "cross_condition",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "online",
+      "seed": 49001,
+      "condition": "B",
+      "check": "cross_phase",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "online",
+      "seed": 49002,
+      "condition": "A",
+      "check": "cross_condition",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "online",
+      "seed": 49002,
+      "condition": "A",
+      "check": "cross_phase",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "online",
+      "seed": 49002,
+      "condition": "B",
+      "check": "cross_condition",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "online",
+      "seed": 49002,
+      "condition": "B",
+      "check": "cross_phase",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "online",
+      "seed": 49003,
+      "condition": "A",
+      "check": "cross_condition",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "online",
+      "seed": 49003,
+      "condition": "A",
+      "check": "cross_phase",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "online",
+      "seed": 49003,
+      "condition": "B",
+      "check": "cross_condition",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    },
+    {
+      "phase": "online",
+      "seed": 49003,
+      "condition": "B",
+      "check": "cross_phase",
+      "error": "P49_MODEL_TASK_SCHEMA_MISMATCH"
+    }
+  ],
+  "old_delivery_files_unchanged": 192,
+  "all_original_formal_artifact_hashes_match": true,
+  "current_Python_Torch": {
+    "torch": "2.10.0+cpu",
+    "numpy": "2.3.5"
+  }
+}

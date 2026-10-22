@@ -1,0 +1,120 @@
+{
+  "experiment_status": "finished",
+  "comparisons": [
+    {
+      "baseline": "baseline600",
+      "candidate": "candidate600",
+      "qualified_positions_rate_ratio": 2.182625437983069,
+      "outer_wall_including_init_and_reference_audit_rate_ratio": 2.106782445972112,
+      "candidate_additional_unfinished_sgd_steps": 0,
+      "training_backlog_qualified": true
+    },
+    {
+      "baseline": "repeat-baseline300",
+      "candidate": "repeat-candidate300",
+      "qualified_positions_rate_ratio": 2.138731812228674,
+      "outer_wall_including_init_and_reference_audit_rate_ratio": 2.0575525490980526,
+      "candidate_additional_unfinished_sgd_steps": 0,
+      "training_backlog_qualified": true
+    }
+  ],
+  "performance_improvement": "see measured per-pair ratios",
+  "default_recommendation": "eligible for review, not automatically changed",
+  "script_delivery_and_performance_are_separate": true,
+  "hourly_rates_are_extrapolations_not_one_hour_measurements": true,
+  "elapsed_controller_seconds": 2360.6635999679565,
+  "budget_seconds": 3600,
+  "remaining_seconds": 1239.2920191287994,
+  "errors": [],
+  "controller_total_cpu_seconds": 33.411169607,
+  "controller_peak_rss_mib": 348.28515625,
+  "all_recorded_related_cpu_seconds": 4144.809269599,
+  "selection": {
+    "label": "screen-cpu4-trainthreads",
+    "options": {
+      "workers": 4,
+      "persistent_cache": true,
+      "packed": true,
+      "direct_hash": true,
+      "threads": 4,
+      "initial_state": "/root/autodl-tmp/p48-perf/experiments/probe2/fresh-initials/seed4801.npz",
+      "initial_hash": "da6329085a5481b144a45045a14043eb14fb58238d8abdb2562dfaf45147cb5d"
+    },
+    "python": "/root/autodl-tmp/p48-perf/envs/7a53d1220bdf21eb7a18e1ae65bc33bdff9f3bab-cpu/bin/python",
+    "basis": "fixed4-episode time/qualified position plus measured one-stepSGD+checkpoint cost/8 positions; prediction only, not speedup; full600s decides",
+    "ranking": [
+      {
+        "label": "screen-cpu4-trainthreads",
+        "predicted_seconds_per_position": 0.13863543637407322
+      },
+      {
+        "label": "screen-cpu4-combined",
+        "predicted_seconds_per_position": 0.14018527917253473
+      },
+      {
+        "label": "screen-cpu4",
+        "predicted_seconds_per_position": 0.1568454296172907
+      },
+      {
+        "label": "screen-cpu4-persistent",
+        "predicted_seconds_per_position": 0.15701715243669848
+      },
+      {
+        "label": "screen-cpu2-combined",
+        "predicted_seconds_per_position": 0.18244846877641976
+      },
+      {
+        "label": "screen-cpu2",
+        "predicted_seconds_per_position": 0.20449761770976085
+      },
+      {
+        "label": "screen-cpu2-persistent",
+        "predicted_seconds_per_position": 0.20775545565101008
+      },
+      {
+        "label": "screen-serial-combined",
+        "predicted_seconds_per_position": 0.26180628972438474
+      },
+      {
+        "label": "screen-serial-packed",
+        "predicted_seconds_per_position": 0.2618927065252016
+      },
+      {
+        "label": "screen-serial-threads4",
+        "predicted_seconds_per_position": 0.2700510557834059
+      },
+      {
+        "label": "screen-gpu-serial",
+        "predicted_seconds_per_position": 0.2830035079674174
+      },
+      {
+        "label": "screen-reference",
+        "predicted_seconds_per_position": 0.2908986504158626
+      },
+      {
+        "label": "screen-serial-hash",
+        "predicted_seconds_per_position": 0.29382108129871387
+      },
+      {
+        "label": "screen-gpu-shared-0.0002",
+        "predicted_seconds_per_position": 0.35804162323164446
+      },
+      {
+        "label": "screen-cpu-shared-batch",
+        "predicted_seconds_per_position": 0.37208006642448405
+      },
+      {
+        "label": "screen-gpu-shared-0.001",
+        "predicted_seconds_per_position": 0.4141276791164031
+      }
+    ]
+  },
+  "decisions": [
+    "CPU micro subitems recorded independently; failed serialization blocks only dependent options",
+    "NoCPU2-thread serial screen: no>5% batch1 micro gain",
+    "CPU4 threads batch1 micro improved>5%; include full4-episode screen",
+    "8/16 actors not run: original logical cohort is4, synchronous training barrier permits at most4 active episodes. More processes only idle; no cohort expansion/training delay allowed.",
+    "Object-plane cache not retried: three prior full-loop slowdowns; no new mechanism to overcome key/copy/miss costs.",
+    "Blocked failed packed-save dependent candidates: []"
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "reload": true,
+  "model_id": "P49-topology-seed49001-N5",
+  "weight_hash": "b8544a5000becda38a88fe7b0f2f2a4a0a84778d9cabc972e32bd3a0c77d079a",
+  "episodes": [
+    {
+      "episode_id": 20,
+      "model_id": "P49-topology-seed49001-N5",
+      "weight_hash": "b8544a5000becda38a88fe7b0f2f2a4a0a84778d9cabc972e32bd3a0c77d079a",
+      "end": "GOAL",
+      "task_hp": 124,
+      "z": 0.13777777777777778,
+      "terminal": {
+        "end": "GOAL",
+        "task_hp": 124,
+        "z": 0.13777777777777778,
+        "proof": {
+          "atomic_settled": true,
+          "post_goal_actions": 0,
+          "representation": "objects"
+        }
+      },
+      "floors": [
+        1
+      ],
+      "search_stats": {
+        "new_simulations": 1000,
+        "forwards": 435,
+        "expanded": 913,
+        "terminal_backups": 88,
+        "root_expansions": 1,
+        "encoding_seconds": 0.11097638104365615,
+        "network_seconds": 0.2368043039841723,
+        "rule_seconds": 0.9041055860434426,
+        "traversal_backup_seconds": 0.14060474597499706,
+        "cache_seconds": 0.0024408879908150993,
+        "max_depth": 6,
+        "pv_cache_hits": 478,
+        "cache_evictions": 0
+      },
+      "terminal_utc": "2026-10-22T04:12:32.563099+00:00",
+      "terminal_monotonic": 12973.096051158,
+      "path": "episode-000020.json.gz",
+      "positions": 10,
+      "sha256": "8a55b32a7c95ae1d5d2bd092cfb2769ecc0dded6cadcc2f239803bc88c93b934"
+    },
+    {
+      "episode_id": 21,
+      "model_id": "P49-topology-seed49001-N5",
+      "weight_hash": "b8544a5000becda38a88fe7b0f2f2a4a0a84778d9cabc972e32bd3a0c77d079a",
+      "end": "GOAL",
+      "task_hp": 486,
+      "z": 0.54,
+      "terminal": {
+        "end": "GOAL",
+        "task_hp": 486,
+        "z": 0.54,
+        "proof": {
+          "atomic_settled": true,
+          "post_goal_actions": 0,
+          "representation": "objects"
+        }
+      },
+      "floors": [
+        1
+      ],
+      "search_stats": {
+        "new_simulations": 2100,
+        "forwards": 396,
+        "expanded": 1405,
+        "terminal_backups": 696,
+        "root_expansions": 1,
+        "encoding_seconds": 0.16865638103445235,
+        "network_seconds": 0.22112704800383653,
+        "rule_seconds": 1.4090802290320426,
+        "traversal_backup_seconds": 0.24812649589875946,
+        "cache_seconds": 0.00382729805278359,
+        "max_depth": 6,
+        "pv_cache_hits": 1009,
+        "cache_evictions": 0
+      },
+      "terminal_utc": "2026-10-22T04:12:38.629553+00:00",
+      "terminal_monotonic": 12979.162506615,
+      "path": "episode-000021.json.gz",
+      "positions": 21,
+      "sha256": "ab068ad6c188e6af36e4003e846ec36d4516e04c7bd5f482e1a7239c9da09c0d"
+    },
+    {
+      "episode_id": 22,
+      "model_id": "P49-topology-seed49001-N5",
+      "weight_hash": "b8544a5000becda38a88fe7b0f2f2a4a0a84778d9cabc972e32bd3a0c77d079a",
+      "end": "GOAL",
+      "task_hp": 198,
+      "z": 0.22,
+      "terminal": {
+        "end": "GOAL",
+        "task_hp": 198,
+        "z": 0.22,
+        "proof": {
+          "atomic_settled": true,
+          "post_goal_actions": 0,
+          "representation": "objects"
+        }
+      },
+      "floors": [
+        1
+      ],
+      "search_stats": {
+        "new_simulations": 1800,
+        "forwards": 395,
+        "expanded": 1517,
+        "terminal_backups": 284,
+        "root_expansions": 1,
+        "encoding_seconds": 0.19924464402174635,
+        "network_seconds": 0.23266594296546828,
+        "rule_seconds": 1.5241566129752755,
+        "traversal_backup_seconds": 0.2767067400072847,
+        "cache_seconds": 0.004428943953826092,
+        "max_depth": 7,
+        "pv_cache_hits": 1122,
+        "cache_evictions": 0
+      },
+      "terminal_utc": "2026-10-22T04:12:44.936082+00:00",
+      "terminal_monotonic": 12985.46903647,
+      "path": "episode-000022.json.gz",
+      "positions": 18,
+      "sha256": "8210db4e6954109b41ece0b8704b2c27cebd5d50541cff149431a9b20a0cba36"
+    },
+    {
+      "episode_id": 23,
+      "model_id": "P49-topology-seed49001-N5",
+      "weight_hash": "b8544a5000becda38a88fe7b0f2f2a4a0a84778d9cabc972e32bd3a0c77d079a",
+      "end": "GOAL",
+      "task_hp": 174,
+      "z": 0.19333333333333333,
+      "terminal": {
+        "end": "GOAL",
+        "task_hp": 174,
+        "z": 0.19333333333333333,
+        "proof": {
+          "atomic_settled": true,
+          "post_goal_actions": 0,
+          "representation": "objects"
+        }
+      },
+      "floors": [
+        1
+      ],
+      "search_stats": {
+        "new_simulations": 2100,
+        "forwards": 318,
+        "expanded": 1490,
+        "terminal_backups": 611,
+        "root_expansions": 1,
+        "encoding_seconds": 0.18554910100829147,
+        "network_seconds": 0.18352560497987724,
+        "rule_seconds": 1.4519250870271208,
+        "traversal_backup_seconds": 0.27382976595799846,
+        "cache_seconds": 0.004410897023262805,
+        "max_depth": 7,
+        "pv_cache_hits": 1172,
+        "cache_evictions": 0
+      },
+      "terminal_utc": "2026-10-22T04:12:51.274168+00:00",
+      "terminal_monotonic": 12991.807121267,
+      "path": "episode-000023.json.gz",
+      "positions": 21,
+      "sha256": "2614094d532534a205a3cb56fe6f16570f9f660e234db0990b7f8602326833a7"
+    }
+  ],
+  "seconds": 22.443178558,
+  "N6_triggered": false
+}

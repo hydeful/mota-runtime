@@ -1,0 +1,257 @@
+{
+  "passed": true,
+  "parameter_count": 123994,
+  "network_class_identical": true,
+  "forward_identical_to_original_P45": true,
+  "parameter_signatures_identical": true,
+  "signature": [
+    {
+      "name": "body.0.weight",
+      "shape": [
+        32,
+        34,
+        3,
+        3
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "body.1.weight",
+      "shape": [
+        32
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "body.1.bias",
+      "shape": [
+        32
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "body.3.layers.0.weight",
+      "shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "body.3.layers.1.weight",
+      "shape": [
+        32
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "body.3.layers.1.bias",
+      "shape": [
+        32
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "body.3.layers.3.weight",
+      "shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "body.3.layers.4.weight",
+      "shape": [
+        32
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "body.3.layers.4.bias",
+      "shape": [
+        32
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "body.4.layers.0.weight",
+      "shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "body.4.layers.1.weight",
+      "shape": [
+        32
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "body.4.layers.1.bias",
+      "shape": [
+        32
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "body.4.layers.3.weight",
+      "shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "body.4.layers.4.weight",
+      "shape": [
+        32
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "body.4.layers.4.bias",
+      "shape": [
+        32
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "policy.0.weight",
+      "shape": [
+        2,
+        32,
+        1,
+        1
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "policy.1.weight",
+      "shape": [
+        2
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "policy.1.bias",
+      "shape": [
+        2
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "policy.4.weight",
+      "shape": [
+        713,
+        90
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "policy.4.bias",
+      "shape": [
+        713
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "value.0.weight",
+      "shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "value.1.weight",
+      "shape": [
+        1
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "value.1.bias",
+      "shape": [
+        1
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "value.4.weight",
+      "shape": [
+        256,
+        45
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "value.4.bias",
+      "shape": [
+        256
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "value.6.weight",
+      "shape": [
+        1,
+        256
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "name": "value.6.bias",
+      "shape": [
+        1
+      ],
+      "dtype": "torch.float32"
+    }
+  ],
+  "paired_state_dict_hashes": {
+    "A": "81a8c79965ae182893b1bd0f3d88350ae61c2b3cceaa7a6aeff6d4b5f8afb2fa",
+    "B": "81a8c79965ae182893b1bd0f3d88350ae61c2b3cceaa7a6aeff6d4b5f8afb2fa"
+  },
+  "BatchNorm_buffers_in_hash": true,
+  "save_reload_equal": true,
+  "cross_schema_rejected": [
+    "A",
+    "B"
+  ],
+  "configuration_difference_whitelist": [
+    "condition",
+    "environment_representation",
+    "input_encoding",
+    "task"
+  ],
+  "MCTS100_timings": {
+    "A": {
+      "seconds": 0.572289849000299,
+      "decisions": 7,
+      "forwards": 454,
+      "simulations": 700
+    },
+    "B": {
+      "seconds": 0.630046157999459,
+      "decisions": 11,
+      "forwards": 328,
+      "simulations": 1100
+    }
+  },
+  "SGD_steps": 0,
+  "encoding_checks": "940 real replay states in frozen data MANIFEST, exact roundtrips and same masks/targets",
+  "conservative_estimate_seconds": 900,
+  "formal_budget_seconds": 3600,
+  "protocol_size_unchanged": true
+}
