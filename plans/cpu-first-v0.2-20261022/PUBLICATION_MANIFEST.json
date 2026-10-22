@@ -1,0 +1,54 @@
+{
+  "version": "0.2",
+  "status": "final_candidate_pending_final_review_not_implemented",
+  "date_asia_shanghai": "2026-10-22",
+  "repository": "hydeful/mota-runtime",
+  "repository_visibility_checked": "public",
+  "publication_parent_commit": "c1dd86e9f802cc7415881b69832ae5486f72cc78",
+  "reference_code_commit": "840eccef6bcfdbbb2219e64d4a9f4a5f4db9184f",
+  "supersedes_plan_commit": "c8bfee764d005898d4edfcb76d82d08c8660739e",
+  "files": {
+    "F0_TASK.md": {
+      "bytes": 5111,
+      "sha256": "624cc16caf828822b2f241e80d572f34fd8d658dc4ed4ff8e6808f34a1d9b677"
+    },
+    "FINAL_REVIEW.md": {
+      "bytes": 3319,
+      "sha256": "39db4a5e2850574db849f3eab03e81f28ea9e739021e66185e6b4e6598f2b323"
+    },
+    "PROJECT.md": {
+      "bytes": 23996,
+      "sha256": "781a62fcefd4df67a61e6ced1c1da13b9870d2c8114dd46650d3b2d188ab06aa"
+    },
+    "README.md": {
+      "bytes": 2269,
+      "sha256": "c29e9f39cf93b1f1a1625ed875cc306a28590a7943091c10ae3d18cc7b9790d5"
+    },
+    "REVIEW_DECISIONS.md": {
+      "bytes": 8131,
+      "sha256": "8ced36448e7e583843108b07fbc75a4374a579dcc9648cad9a01308d8cb73665"
+    },
+    "TASKS.md": {
+      "bytes": 16984,
+      "sha256": "af7249fc6f087cbafefb9ff7166f9da3e893f7d64f82e9dcde294469ac6592e6"
+    }
+  },
+  "review_input_hashes_not_full_publications": {
+    "claude_round2": "526beec0b8a6028065fd307cd8b4ea7b0cedd0fc9d9227fc027648b559337dec",
+    "qwen_round2": "e4de56ff405e7202e6af3965f65aa69b2e935cdc56e9c3445bf3f60a4e8cfeca"
+  },
+  "document_validation": {
+    "documents": 6,
+    "local_links_checked": 13,
+    "issues": [],
+    "development_hours_range": [
+      18,
+      32
+    ],
+    "initial_test_wall_minutes": 43,
+    "final_ABBA_arms": 4,
+    "work_window_seconds": 2400,
+    "max_ABBA_outer_seconds": 3600
+  },
+  "note": "Manifest excludes itself. No code, experiment, deployment, GPU or model update was performed in preparing this candidate. Fixed remote commit and exact text readback are checked after publication."
+}
